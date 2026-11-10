@@ -27,3 +27,6 @@ __pycache__/
 # Internal working notes (device serials, test history) stay local
 /STAND.md
 /screenshots-vorschau/
+
+# Signed release APKs are attached to GitHub releases, not committed
+/*.apk
