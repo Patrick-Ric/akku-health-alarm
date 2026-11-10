@@ -1,1 +1,1 @@
-Feature-rich charge alarm, light in the background thanks to a tiny core
+Charge alarm for a longer battery life, with charge history and battery health

@@ -1,7 +1,5 @@
 <p>Lithium batteries age slowest in the middle of their range. <b>Akku Health Alarm</b> tells you when to unplug the charger and when to plug it in – at limits you set yourself, or with one tap on a preset: 20–80 %, 25–70 % (gentle) or 30–60 % (very gentle).</p>
 
-<p>Feature-rich, yet light in the background: the watcher is a tiny core in its own process, apart from the user interface.</p>
-
 <p><b>Alarm</b></p>
 <ul>
 <li>Free limits from 1 to 100 %, with − / + or the keypad; three quick choices, the two gentle ones can be changed (hold the button)</li>
@@ -27,6 +25,7 @@
 <p><b>Privacy</b></p>
 <ul>
 <li>No internet permission, no ads, no tracking – all data stays on the phone</li>
+<li>The watcher runs in its own small process, apart from the user interface</li>
 <li>Help for the battery savers of the phone makers (Huawei, Xiaomi, Samsung …)</li>
 </ul>
 

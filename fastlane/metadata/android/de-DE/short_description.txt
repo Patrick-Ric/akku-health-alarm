@@ -1,1 +1,1 @@
-Funktionsreicher Lade-Alarm, sparsam im Hintergrund dank kleinem eigenem Kern
+Lade-Alarm für ein längeres Akkuleben, mit Ladeverlauf und Akku-Gesundheit

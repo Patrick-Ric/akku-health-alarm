@@ -2,8 +2,7 @@
 
 Android app that helps your battery live longer: it tells you when to unplug the charger and when
 to plug it in – at limits you set yourself, or with one tap on a gentle preset (25–70 %, 30–60 %).
-It keeps a history of every charge and measures the real battery capacity. Feature-rich, yet light in
-the background: the watcher is a tiny core in its own process, apart from the user interface.
+It keeps a history of every charge and measures the real battery capacity.
 
 <p>
 <img src="fastlane/metadata/android/en-US/images/phoneScreenshots/1.png" width="200" alt="Start page">

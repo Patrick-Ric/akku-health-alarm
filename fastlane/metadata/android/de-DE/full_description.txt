@@ -1,7 +1,5 @@
 <p>Lithium-Akkus altern in der Mitte ihres Bereichs am langsamsten. <b>Akku Health Alarm</b> sagt dir, wann du das Ladegerät abziehen und wann du es anstecken solltest – bei Grenzen, die du selbst festlegst, oder mit einem Tipp auf eine Stufe: 20–80 %, 25–70 % (schonend) oder 30–60 % (sehr schonend).</p>
 
-<p>Funktionsreich und trotzdem sparsam im Hintergrund: Der Wächter ist ein kleiner Kern in einem eigenen Prozess, getrennt von der Oberfläche.</p>
-
 <p><b>Alarm</b></p>
 <ul>
 <li>Freie Grenzen von 1 bis 100 %, mit − / + oder per Eingabe; drei Schnellwahl-Tasten, die beiden schonenden lassen sich anpassen (Taste gedrückt halten)</li>
@@ -27,6 +25,7 @@
 <p><b>Datenschutz</b></p>
 <ul>
 <li>Keine Internet-Berechtigung, keine Werbung, kein Tracking – alle Daten bleiben auf dem Handy</li>
+<li>Der Wächter läuft in einem eigenen kleinen Prozess, getrennt von der Oberfläche</li>
 <li>Hilfe für die Akku-Sparer der Hersteller (Huawei, Xiaomi, Samsung …)</li>
 </ul>
 
