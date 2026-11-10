@@ -27,7 +27,7 @@
 <p><b>Privacy</b></p>
 <ul>
 <li>No internet permission, no ads, no tracking – all data stays on the phone</li>
-<li>The watcher runs in its own small process; help for maker battery savers (Huawei, Xiaomi, Samsung …)</li>
+<li>Help for the battery savers of the phone makers (Huawei, Xiaomi, Samsung …)</li>
 </ul>
 
 <p>20 languages, language can be chosen in the app. Android 7 and newer. Free software under GPL-3.0.</p>

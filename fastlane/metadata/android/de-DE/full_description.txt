@@ -27,7 +27,7 @@
 <p><b>Datenschutz</b></p>
 <ul>
 <li>Keine Internet-Berechtigung, keine Werbung, kein Tracking – alle Daten bleiben auf dem Handy</li>
-<li>Der Wächter läuft in einem eigenen kleinen Prozess; Hilfe für Akku-Sparer der Hersteller (Huawei, Xiaomi, Samsung …)</li>
+<li>Hilfe für die Akku-Sparer der Hersteller (Huawei, Xiaomi, Samsung …)</li>
 </ul>
 
 <p>20 Sprachen, Sprache in der App wählbar. Ab Android 7. Freie Software unter GPL-3.0.</p>
