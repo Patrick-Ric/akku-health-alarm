@@ -1,1 +1,1 @@
-Charge alarm with your own limits and gentle presets, charge history, capacity
+Feature-rich charge alarm, light in the background thanks to a tiny core

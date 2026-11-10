@@ -1,1 +1,1 @@
-Lade-Alarm mit eigenen Grenzen und Schonstufen, Ladeverlauf und Kapazität
+Funktionsreicher Lade-Alarm, sparsam im Hintergrund dank kleinem eigenem Kern
