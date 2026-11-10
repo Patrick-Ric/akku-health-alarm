@@ -362,8 +362,8 @@ private fun rememberRowLayout(maxWidth: Dp, twelveHour: Boolean): RowLayout {
             base.copy(fontSize = base.fontSize * f),
             baseLabel.copy(fontSize = baseLabel.fontSize * f),
             time * f + 2.dp,
-            level * f + 6.dp,
-            temp * f + 6.dp,
+            level * f + 2.dp,
+            temp * f + 2.dp,
             status * f + 2.dp,
         )
     }
@@ -436,7 +436,12 @@ private fun ReadingRow(r: ReadingEntry, timeFormat: java.text.DateFormat, layout
         verticalAlignment = Alignment.CenterVertically,
     ) {
         Box(Modifier.width(5.dp).fillMaxHeight().background(accent))
-        Row(Modifier.weight(1f).padding(start = 8.dp, end = 8.dp, top = 7.dp, bottom = 7.dp), verticalAlignment = Alignment.CenterVertically) {
+        // The four columns spread over the whole width with equal gaps.
+        Row(
+            Modifier.weight(1f).padding(start = 8.dp, end = 8.dp, top = 7.dp, bottom = 7.dp),
+            horizontalArrangement = Arrangement.SpaceBetween,
+            verticalAlignment = Alignment.CenterVertically,
+        ) {
             // 12-hour clocks ("11:01 PM", e.g. English): a small AM/PM.
             val time = timeFormat.format(java.util.Date(r.time))
             val twelveHour = !Format.is24Hour(LocalContext.current)
@@ -478,7 +483,6 @@ private fun ReadingRow(r: ReadingEntry, timeFormat: java.text.DateFormat, layout
                 autoSize = fit(row),
                 modifier = Modifier.width(layout.temp),
             )
-            Spacer(Modifier.weight(1f))
             Row(Modifier.width(layout.status), verticalAlignment = Alignment.CenterVertically) {
                 Icon(icon, contentDescription = null, tint = accent, modifier = Modifier.size(16.dp))
                 Spacer(Modifier.width(4.dp))
