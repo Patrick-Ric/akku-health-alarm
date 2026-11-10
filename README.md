@@ -1,8 +1,9 @@
 # Akku Health Alarm
 
-Android app that helps your battery live longer: it reminds you to unplug the charger at 80 %
-and to plug it in at 20 % (or at your own limits), keeps a history of every charge and measures
-the real battery capacity. Fully offline – the app has no internet permission.
+Android app that helps your battery live longer: it tells you when to unplug the charger and when
+to plug it in – at limits you set yourself, or with one tap on a gentle preset (25–70 %, 30–60 %).
+It keeps a history of every charge and measures the real battery capacity. Fully offline – the app
+has no internet permission.
 
 <p>
 <img src="fastlane/metadata/android/en-US/images/phoneScreenshots/1.png" width="200" alt="Start page">
@@ -14,8 +15,8 @@ the real battery capacity. Fully offline – the app has no internet permission.
 ## Features
 
 **Alarm**
-- Limits 20–80 % by default; quick choices 25–70 and 30–60, two of them can be changed (hold the button)
-- Exact input with − / + or the keypad; a recommendation is shown, no fixed bounds
+- Free limits from 1 to 100 %, with − / + or the keypad (a recommendation is shown, no fixed bounds)
+- Quick choices 20–80 %, 25–70 % (gentle) and 30–60 % (very gentle); the two gentle ones can be changed (hold the button)
 - Repeat until you react (10 s … 12 h), with a countdown in the app and in the notification
 - App sound or phone sound, short spoken announcement (app voice or the phone's offline voice), vibration
 - Night rest, "also when muted", the alarm notification can be switched off

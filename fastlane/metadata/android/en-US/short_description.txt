@@ -1,1 +1,1 @@
-Battery alarm at 20 and 80 %, charge history and capacity – fully offline
+Charge alarm with your own limits and gentle presets, history, capacity, offline

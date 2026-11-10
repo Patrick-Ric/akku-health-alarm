@@ -1,8 +1,8 @@
-<p>Lithium-Akkus altern in der Mitte ihres Bereichs am langsamsten. <b>Akku Health Alarm</b> erinnert dich, bei 80 % das Ladegerät abzuziehen und bei 20 % anzustecken – oder bei deinen eigenen Grenzen.</p>
+<p>Lithium-Akkus altern in der Mitte ihres Bereichs am langsamsten. <b>Akku Health Alarm</b> sagt dir, wann du das Ladegerät abziehen und wann du es anstecken solltest – bei Grenzen, die du selbst festlegst, oder mit einem Tipp auf eine Stufe: 20–80 %, 25–70 % (schonend) oder 30–60 % (sehr schonend).</p>
 
 <p><b>Alarm</b></p>
 <ul>
-<li>Grenzen standardmäßig 20–80 %, Schnellwahl 25–70 und 30–60 (Taste gedrückt halten zum Anpassen), genaue Eingabe</li>
+<li>Freie Grenzen von 1 bis 100 %, mit − / + oder per Eingabe; drei Schnellwahl-Tasten, die beiden schonenden lassen sich anpassen (Taste gedrückt halten)</li>
 <li>Wiederholen, bis du reagierst (alle 10 s bis 12 Std.), mit Countdown</li>
 <li>App-Ton oder Handy-Ton, kurze Ansage, Vibration</li>
 <li>Nachtruhe, „Auch wenn stumm“, Benachrichtigung abschaltbar</li>

@@ -1,8 +1,8 @@
-<p>Lithium batteries age slowest in the middle of their range. <b>Akku Health Alarm</b> reminds you to unplug the charger at 80 % and to plug it in at 20 % – or at the limits you choose.</p>
+<p>Lithium batteries age slowest in the middle of their range. <b>Akku Health Alarm</b> tells you when to unplug the charger and when to plug it in – at limits you set yourself, or with one tap on a preset: 20–80 %, 25–70 % (gentle) or 30–60 % (very gentle).</p>
 
 <p><b>Alarm</b></p>
 <ul>
-<li>Limits 20–80 % by default, quick choices 25–70 and 30–60 (hold a button to change it), exact input</li>
+<li>Free limits from 1 to 100 %, with − / + or the keypad; three quick choices, the two gentle ones can be changed (hold the button)</li>
 <li>Repeat until you react (every 10 s to 12 h), with a countdown</li>
 <li>App sound or phone sound, short spoken announcement, vibration</li>
 <li>Night rest, "also when muted", notification can be switched off</li>

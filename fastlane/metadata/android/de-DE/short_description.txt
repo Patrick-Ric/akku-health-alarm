@@ -1,1 +1,1 @@
-Akku-Alarm bei 20 und 80 %, Ladeverlauf und Kapazität – komplett offline
+Lade-Alarm mit eigenen Grenzen und Schonstufen, Verlauf, Kapazität, offline
