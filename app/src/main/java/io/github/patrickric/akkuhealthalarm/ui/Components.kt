@@ -5,7 +5,6 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.gestures.awaitEachGesture
 import androidx.compose.foundation.gestures.awaitFirstDown
 import androidx.compose.foundation.gestures.waitForUpOrCancellation
-import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.icons.rounded.Add
 import androidx.compose.material.icons.rounded.Remove
@@ -73,6 +72,8 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.res.stringResource
 import io.github.patrickric.akkuhealthalarm.R
+import androidx.compose.foundation.text.TextAutoSize
+import androidx.compose.ui.unit.sp
 
 @Composable
 fun IconBadge(
@@ -256,13 +257,18 @@ fun ValueStepper(
                 RepeatButton(Icons.Rounded.Remove, stringResource(R.string.step_less), color, value > min) {
                     onChange((value - 1).coerceIn(min, max))
                 }
+                // Fixed width, so two steppers side by side fit even a narrow phone with a large font;
+                // "100 %" then gets a slightly smaller font instead of pushing the buttons apart.
                 Text(
                     "$value $unit",
                     style = MaterialTheme.typography.titleLarge,
                     fontWeight = FontWeight.Bold,
                     color = color,
                     textAlign = TextAlign.Center,
-                    modifier = Modifier.widthIn(min = 72.dp).clip(RoundedCornerShape(8.dp))
+                    maxLines = 1,
+                    softWrap = false,
+                    autoSize = TextAutoSize.StepBased(minFontSize = 12.sp, maxFontSize = MaterialTheme.typography.titleLarge.fontSize),
+                    modifier = Modifier.width(64.dp).clip(RoundedCornerShape(8.dp))
                         .clickable(onClickLabel = label) { editing = true }
                         .padding(horizontal = 4.dp, vertical = 2.dp),
                 )

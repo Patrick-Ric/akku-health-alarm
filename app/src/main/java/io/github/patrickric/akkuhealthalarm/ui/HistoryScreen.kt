@@ -102,6 +102,9 @@ import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.text.SpanStyle
 import androidx.compose.foundation.text.TextAutoSize
 import androidx.compose.ui.unit.sp
+import androidx.compose.foundation.layout.BoxWithConstraints
+import androidx.compose.ui.platform.LocalDensity
+import androidx.compose.ui.unit.Dp
 
 private const val DAY_MS = 24 * 60 * 60 * 1000L
 
@@ -310,15 +313,59 @@ private fun LogList(dao: LogDao) {
         color = MaterialTheme.colorScheme.onSurfaceVariant,
         modifier = Modifier.padding(horizontal = 20.dp, vertical = 4.dp),
     )
-    LazyColumn(Modifier.fillMaxSize(), contentPadding = PaddingValues(bottom = 8.dp)) {
-        items.forEach { item ->
-            when (item) {
-                is LogItem.Day -> stickyHeader { DayHeader(item.label) }
-                is LogItem.Reading -> item { ReadingRow(item.entry, timeFormat) }
-                is LogItem.Alarm -> item { AlarmRow(item.entry, timeFormat) }
-                is LogItem.Gap -> item { GapRow(item) }
+    BoxWithConstraints(Modifier.fillMaxSize()) {
+        val layout = rememberRowLayout(maxWidth, twelveHour = !Format.is24Hour(context))
+        LazyColumn(Modifier.fillMaxSize(), contentPadding = PaddingValues(bottom = 8.dp)) {
+            items.forEach { item ->
+                when (item) {
+                    is LogItem.Day -> stickyHeader { DayHeader(item.label) }
+                    is LogItem.Reading -> item { ReadingRow(item.entry, timeFormat, layout) }
+                    is LogItem.Alarm -> item { AlarmRow(item.entry, timeFormat, layout) }
+                    is LogItem.Gap -> item { GapRow(item) }
+                }
             }
         }
+    }
+}
+
+/** Column widths and fonts of the log rows, measured for the screen width and the phone's font size. */
+private class RowLayout(val style: TextStyle, val label: TextStyle, val time: Dp, val level: Dp, val temp: Dp, val status: Dp)
+
+/** Space of a row outside the text columns: outer padding, colour bar, inner padding, gaps, a little air. */
+private val ROW_FIXED = 24.dp + 5.dp + 16.dp + 6.dp * 2 + 16.dp
+
+/**
+ * Measures the widest content of each column once. If a row does not fit the screen (narrow phone,
+ * large font), all texts of the row get the same smaller font, so every row stays one line.
+ */
+@Composable
+private fun rememberRowLayout(maxWidth: Dp, twelveHour: Boolean): RowLayout {
+    val measurer = rememberTextMeasurer()
+    val density = LocalDensity.current
+    val base = MaterialTheme.typography.bodyMedium.merge(Tabular)
+    val baseLabel = MaterialTheme.typography.labelMedium.copy(fontWeight = FontWeight.SemiBold)
+    val statuses = listOf(
+        stringResource(R.string.status_charging) + " · USB",
+        stringResource(R.string.log_discharging),
+        stringResource(R.string.status_plugged),
+    )
+    return remember(maxWidth, twelveHour, base, statuses, density) {
+        fun width(text: String, style: TextStyle) =
+            with(density) { measurer.measure(text, style, softWrap = false, maxLines = 1).size.width.toDp() }
+        val time = width(if (twelveHour) "12:59 PM" else "23:59", base.copy(fontWeight = FontWeight.SemiBold))
+        val level = width("100\u00a0%", base.copy(fontWeight = FontWeight.Bold))
+        val temp = width(Format.celsius(38.8f), base)
+        val status = 20.dp + statuses.maxOf { width(it, baseLabel) }
+        val texts = time + level + temp + status
+        val f = ((maxWidth - ROW_FIXED) / texts).coerceAtMost(1f)
+        RowLayout(
+            base.copy(fontSize = base.fontSize * f),
+            baseLabel.copy(fontSize = baseLabel.fontSize * f),
+            time * f + 2.dp,
+            level * f + 6.dp,
+            temp * f + 6.dp,
+            status * f + 2.dp,
+        )
     }
 }
 
@@ -355,7 +402,7 @@ private fun ReadingEntry.isCharging(): Boolean = status == BatteryManager.BATTER
     (plugged != 0 && status != BatteryManager.BATTERY_STATUS_NOT_CHARGING && status != BatteryManager.BATTERY_STATUS_FULL)
 
 @Composable
-private fun ReadingRow(r: ReadingEntry, timeFormat: java.text.DateFormat) {
+private fun ReadingRow(r: ReadingEntry, timeFormat: java.text.DateFormat, layout: RowLayout) {
     val scheme = MaterialTheme.colorScheme
     val plugged = r.plugged != 0
     val charging = r.isCharging()
@@ -381,7 +428,7 @@ private fun ReadingRow(r: ReadingEntry, timeFormat: java.text.DateFormat) {
         r.plugged == BatteryManager.BATTERY_PLUGGED_AC -> " · AC"
         else -> ""
     }
-    val row = MaterialTheme.typography.bodyMedium.merge(Tabular)
+    val row = layout.style
     Row(
         Modifier.fillMaxWidth().height(IntrinsicSize.Min).padding(horizontal = 12.dp, vertical = 1.dp)
             .clip(RoundedCornerShape(8.dp))
@@ -390,7 +437,7 @@ private fun ReadingRow(r: ReadingEntry, timeFormat: java.text.DateFormat) {
     ) {
         Box(Modifier.width(5.dp).fillMaxHeight().background(accent))
         Row(Modifier.weight(1f).padding(start = 8.dp, end = 8.dp, top = 7.dp, bottom = 7.dp), verticalAlignment = Alignment.CenterVertically) {
-            // 12-hour clocks ("11:01 PM", e.g. English): wider column and a small AM/PM, never a second line.
+            // 12-hour clocks ("11:01 PM", e.g. English): a small AM/PM.
             val time = timeFormat.format(java.util.Date(r.time))
             val twelveHour = !Format.is24Hour(LocalContext.current)
             Text(
@@ -407,7 +454,8 @@ private fun ReadingRow(r: ReadingEntry, timeFormat: java.text.DateFormat) {
                 fontWeight = FontWeight.SemiBold,
                 maxLines = 1,
                 softWrap = false,
-                modifier = Modifier.width(if (twelveHour) 66.dp else 52.dp),
+                autoSize = fit(row),
+                modifier = Modifier.width(layout.time),
             )
             Text(
                 "${r.level}\u00a0%",
@@ -415,40 +463,44 @@ private fun ReadingRow(r: ReadingEntry, timeFormat: java.text.DateFormat) {
                 fontWeight = FontWeight.Bold,
                 color = accent,
                 textAlign = TextAlign.End,
-                modifier = Modifier.width(48.dp),
+                maxLines = 1,
+                softWrap = false,
+                autoSize = fit(row),
+                modifier = Modifier.width(layout.level),
             )
             Text(
                 Format.celsius(r.tempDeciC / 10f),
                 style = row,
                 color = scheme.onSurfaceVariant,
                 textAlign = TextAlign.End,
-                modifier = Modifier.width(62.dp),
+                maxLines = 1,
+                softWrap = false,
+                autoSize = fit(row),
+                modifier = Modifier.width(layout.temp),
             )
-            Text(
-                r.currentMa?.let(Format::milliAmps) ?: Format.volts(r.voltageMv),
-                style = row,
-                color = scheme.onSurfaceVariant,
-                textAlign = TextAlign.End,
-                modifier = Modifier.weight(1f),
-            )
-            Spacer(Modifier.width(8.dp))
-            Row(Modifier.width(108.dp), verticalAlignment = Alignment.CenterVertically) {
+            Spacer(Modifier.weight(1f))
+            Row(Modifier.width(layout.status), verticalAlignment = Alignment.CenterVertically) {
                 Icon(icon, contentDescription = null, tint = accent, modifier = Modifier.size(16.dp))
                 Spacer(Modifier.width(4.dp))
                 // "Charging · USB" and the like are longer in some languages: smaller font, not cut off.
                 Text(
                     stringResource(label) + chargerSuffix,
-                    style = MaterialTheme.typography.labelMedium,
-                    fontWeight = FontWeight.SemiBold,
+                    style = layout.label,
                     color = accent,
                     maxLines = 1,
                     softWrap = false,
-                    autoSize = TextAutoSize.StepBased(minFontSize = 9.sp, maxFontSize = MaterialTheme.typography.labelMedium.fontSize),
+                    autoSize = fit(layout.label),
                 )
             }
         }
     }
 }
+
+/**
+ * Rows of the log always stay one line, whatever the screen width and the phone's font size:
+ * a text that does not fit gets a smaller font instead of a second line.
+ */
+private fun fit(style: TextStyle) = TextAutoSize.StepBased(minFontSize = 7.sp, maxFontSize = style.fontSize)
 
 /** Quiet grey line: the app recorded nothing in this time. */
 @Composable
@@ -475,12 +527,15 @@ private fun GapRow(gap: LogItem.Gap) {
             stringResource(R.string.gap_row, range),
             style = MaterialTheme.typography.bodyMedium,
             color = MaterialTheme.colorScheme.outline,
+            maxLines = 1,
+            softWrap = false,
+            autoSize = fit(MaterialTheme.typography.bodyMedium),
         )
     }
 }
 
 @Composable
-private fun AlarmRow(e: EventEntry, timeFormat: java.text.DateFormat) {
+private fun AlarmRow(e: EventEntry, timeFormat: java.text.DateFormat, layout: RowLayout) {
     val scheme = MaterialTheme.colorScheme
     val extra = LocalExtraColors.current
     val (icon, label, colors) = when (e.type) {
@@ -498,9 +553,12 @@ private fun AlarmRow(e: EventEntry, timeFormat: java.text.DateFormat) {
         Row(Modifier.padding(horizontal = 8.dp, vertical = 6.dp), verticalAlignment = Alignment.CenterVertically) {
             Text(
                 timeFormat.format(java.util.Date(e.time)),
-                style = MaterialTheme.typography.bodyMedium.merge(Tabular),
+                style = layout.style,
                 fontWeight = FontWeight.SemiBold,
-                modifier = Modifier.width(64.dp),
+                maxLines = 1,
+                softWrap = false,
+                autoSize = fit(layout.style),
+                modifier = Modifier.width(layout.time + 8.dp),
             )
             Icon(icon, contentDescription = null, modifier = Modifier.size(18.dp))
             Spacer(Modifier.width(8.dp))
@@ -509,13 +567,23 @@ private fun AlarmRow(e: EventEntry, timeFormat: java.text.DateFormat) {
                 Text(
                     stringResource(label) + if (e.repeats > 0) " · ${e.repeats + 1}×" else "",
                     style = MaterialTheme.typography.bodyMedium,
+                    maxLines = 1,
+                    softWrap = false,
+                    autoSize = fit(MaterialTheme.typography.bodyMedium),
                 )
                 val until = e.lastRepeat?.let { stringResource(R.string.repeat_until, timeFormat.format(java.util.Date(it))) }
                 listOfNotNull(deliveryText(e.delivery), until).joinToString(" · ").takeIf { it.isNotEmpty() }?.let {
-                    Text(it, style = MaterialTheme.typography.labelSmall, color = colors.second.copy(alpha = 0.8f))
+                    Text(
+                        it,
+                        style = MaterialTheme.typography.labelSmall,
+                        color = colors.second.copy(alpha = 0.8f),
+                        maxLines = 1,
+                        softWrap = false,
+                        autoSize = fit(MaterialTheme.typography.labelSmall),
+                    )
                 }
             }
-            Text("${e.level}\u00a0%", style = MaterialTheme.typography.bodyMedium, fontWeight = FontWeight.Bold)
+            Text("${e.level}\u00a0%", style = MaterialTheme.typography.bodyMedium, fontWeight = FontWeight.Bold, maxLines = 1, softWrap = false)
         }
     }
 }
