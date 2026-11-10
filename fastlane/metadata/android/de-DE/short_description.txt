@@ -1,1 +1,1 @@
-Lade-Alarm mit eigenen Grenzen und Schonstufen, Verlauf, Kapazität, offline
+Lade-Alarm mit eigenen Grenzen und Schonstufen, Ladeverlauf und Kapazität
