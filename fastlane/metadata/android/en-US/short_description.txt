@@ -1,1 +1,1 @@
-Charge alarm for a longer battery life, with charge history and battery health
+Feature-rich battery alarm for a longer battery life, with charge history
