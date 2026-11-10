@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Only the window before Compose draws; all colours come from ui/Theme.kt.
+         Android before 10 has no system dark mode; the app starts dark there. -->
+    <style name="Theme.AkkuHealthAlarm" parent="android:Theme.Material.NoActionBar">
+        <item name="android:windowBackground">@color/window_background_dark</item>
+        <item name="android:colorAccent">@color/brand</item>
+    </style>
+</resources>

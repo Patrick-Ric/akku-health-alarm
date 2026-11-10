@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="settings">Einstellungen</string>
+    <string name="back">Zurück</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Abbrechen</string>
+    <string name="close">Schließen</string>
+    <string name="status_charging">Lädt</string>
+    <string name="status_discharging">Akkubetrieb</string>
+    <string name="status_full">Voll</string>
+    <string name="status_plugged">Angesteckt</string>
+    <string name="metric_current">Strom</string>
+    <string name="metric_temp">Temperatur</string>
+    <string name="metric_voltage">Spannung</string>
+    <string name="alarm_title">Alarm</string>
+    <string name="alarm_on_summary">bei %1$d %% und %2$d %%</string>
+    <string name="alarm_off_summary">Keine Alarme</string>
+    <string name="range_title">Akku-Bereich</string>
+    <string name="range_info">Warum diese Bereiche?</string>
+    <string name="range_info_text" formatted="false">Lithium-Akkus altern am langsamsten im mittleren Ladebereich. Ein hoher Ladestand belastet den Akku mehr als ein niedriger, darum hören die schonenden Stufen früher mit dem Laden auf.\n\n20–80 %: ausgewogen\n25–70 %: schonend\n30–60 %: sehr schonend\n\nJe enger der Bereich, desto weniger vom Akku nutzt du am Tag. Wähle den Bereich, der zu deinem Alltag passt.</string>
+    <string name="preset_balanced">Ausgewogen</string>
+    <string name="preset_gentle">Schonend</string>
+    <string name="preset_very_gentle">Sehr schonend</string>
+    <string name="preset_custom">Eigene</string>
+    <string name="percent_range">%1$d–%2$d %%</string>
+    <string name="alarm_below">Alarm unter</string>
+    <string name="alarm_above">Alarm über</string>
+    <string name="recommendation">Empfehlung: %s</string>
+    <string name="allowed_range">Möglich: %s</string>
+    <string name="usable">nutzbar %d %%</string>
+    <string name="tab_start">Start</string>
+    <string name="history_title">Verlauf</string>
+    <string name="health_title">Gesundheit</string>
+    <string name="setup_title">Für zuverlässige Alarme</string>
+    <string name="setup_text">Android beendet Apps im Hintergrund manchmal. Zwei Einstellungen sorgen dafür, dass der Alarm pünktlich kommt.</string>
+    <string name="setup_notifications">Benachrichtigungen erlauben</string>
+    <string name="setup_battery_opt">Akku-Optimierung ausschalten</string>
+    <string name="voice_title">Ansage</string>
+    <string name="voice_off">Aus</string>
+    <string name="voice_builtin">App-Stimme</string>
+    <string name="voice_system">Handy-Stimme</string>
+    <string name="voice_builtin_hint">Kurze englische Ansage: „Battery charged.“ oder „Battery low.“</string>
+    <string name="voice_system_hint">Nutzt eine Offline-Stimme deines Handys in der App-Sprache. Fehlt sie, kommt die App-Stimme.</string>
+    <string name="voice_percent">Prozentzahl ansagen</string>
+    <string name="test_charged">Geladen</string>
+    <string name="test_low">Schwach</string>
+    <string name="test_hint">Alarm testen</string>
+    <string name="tone_title">Ton</string>
+    <string name="tone_off">Aus</string>
+    <string name="tone_builtin">App-Ton</string>
+    <string name="tone_system">Handy-Ton</string>
+    <string name="tone_pick">Ton auswählen</string>
+    <string name="tone_none_selected">Kein Ton gewählt</string>
+    <string name="vibration_title">Vibration</string>
+    <string name="loud_title">Auch wenn stumm</string>
+    <string name="loud_summary">Nutzt die Wecker-Lautstärke</string>
+    <string name="alarm_notif_title">Benachrichtigung anzeigen</string>
+    <string name="alarm_notif_summary">Mit Countdown bis zur nächsten Wiederholung. Aus: nur Ton, Ansage und Vibration.</string>
+    <string name="quiet_title">Nachtruhe</string>
+    <string name="quiet_summary">In dieser Zeit nur eine stille Benachrichtigung</string>
+    <string name="quiet_from">Von %s</string>
+    <string name="quiet_to">Bis %s</string>
+    <string name="temp_title">Temperaturalarm</string>
+    <string name="temp_summary">Warnt, wenn der Akku zu heiß oder zu kalt wird</string>
+    <string name="temp_danger">Nur Gefahr</string>
+    <string name="temp_normal">Normal</string>
+    <string name="temp_strict">Streng</string>
+    <string name="temp_custom">Eigene</string>
+    <string name="temp_range">%1$d–%2$d °C</string>
+    <string name="temp_cold_charging">Kälte nur beim Laden melden</string>
+    <string name="temp_cold_charging_summary">Laden bei Kälte schadet dem Akku, Benutzen kaum.</string>
+    <string name="temp_strict_hint">Beim Schnellladen sind 35–40 °C üblich, diese Stufe meldet sich dann oft.</string>
+    <string name="notif_title">Benachrichtigung</string>
+    <string name="notif_summary">Standardmäßig nur Ladestand und Status. Hier kannst du weitere Werte zuschalten.</string>
+    <string name="notif_current">Strom (mA)</string>
+    <string name="notif_temp">Temperatur</string>
+    <string name="notif_voltage">Spannung</string>
+    <string name="notif_percent_icon">Prozent als Symbol in der Statusleiste</string>
+    <string name="about_title">Über</string>
+    <string name="about_text">Version %1$s · GPL-3.0 · Funktioniert komplett offline</string>
+    <string name="channel_status">Akku-Status</string>
+    <string name="channel_alarm">Akku-Alarme</string>
+    <string name="notif_alarm_at">Alarm bei %d %%</string>
+    <string name="notif_alarm_off">Alarm aus</string>
+    <string name="alarm_high_title">Akku geladen: %d %%</string>
+    <string name="alarm_high_text">Ladegerät trennen</string>
+    <string name="alarm_low_title">Akku schwach: %d %%</string>
+    <string name="alarm_low_text">Ladegerät anschließen</string>
+    <string name="alarm_hot_title">Akku heiß: %s</string>
+    <string name="alarm_hot_text">Handy abkühlen lassen</string>
+    <string name="alarm_cold_title">Akku kalt: %s</string>
+    <string name="alarm_cold_text">Bei Kälte nicht laden</string>
+    <string name="tts_charged">Akku geladen.</string>
+    <string name="tts_charged_percent">Akku geladen, %d Prozent.</string>
+    <string name="tts_low">Akku schwach.</string>
+    <string name="tts_low_percent">Akku schwach, %d Prozent.</string>
+    <string name="tts_hot">Akku heiß.</string>
+    <string name="tts_cold">Akku kalt.</string>
+    <string name="view_list">Liste</string>
+    <string name="view_chart">Grafik</string>
+    <plurals name="entries_count">
+        <item quantity="one">%d Eintrag</item>
+        <item quantity="other">%d Einträge</item>
+    </plurals>
+    <string name="list_empty">Noch keine Einträge. Hier erscheint jede Änderung des Ladestands.</string>
+    <string name="plug_ac">Netzteil</string>
+    <string name="plug_usb">USB</string>
+    <string name="plug_wireless">Kabellos</string>
+    <string name="plug_battery">Akku</string>
+    <string name="chart_title">Letzte 24 Stunden</string>
+    <string name="chart_empty">Noch keine Daten. Die Aufzeichnung läuft.</string>
+    <string name="chart_now">jetzt</string>
+    <string name="events_title">Ereignisse</string>
+    <string name="events_empty">Noch keine Ereignisse.</string>
+    <string name="event_plugged">Ladegerät angeschlossen</string>
+    <string name="event_unplugged">Ladegerät getrennt</string>
+    <string name="event_alarm_high">Alarm: Akku geladen</string>
+    <string name="event_alarm_low">Alarm: Akku schwach</string>
+    <string name="event_alarm_hot">Alarm: Akku heiß</string>
+    <string name="event_alarm_cold">Alarm: Akku kalt</string>
+    <string name="health_status">Zustand laut Android</string>
+    <string name="health_good">Gut</string>
+    <string name="health_overheat">Überhitzt</string>
+    <string name="health_cold">Zu kalt</string>
+    <string name="health_over_voltage">Überspannung</string>
+    <string name="health_dead">Defekt</string>
+    <string name="health_failure">Unbekannter Fehler</string>
+    <string name="health_unknown">Nicht gemeldet</string>
+    <string name="health_technology">Technologie</string>
+    <string name="health_charge_counter">Ladezähler</string>
+    <string name="range_day">Tag</string>
+    <string name="range_week">Woche</string>
+    <string name="range_month">Monat</string>
+    <string name="range_all">Alles</string>
+    <string name="chart_temp">Temperatur</string>
+    <string name="chart_hint">Mit zwei Fingern zoomen, doppelt tippen setzt zurück.</string>
+    <string name="eta">%1$d %% in ca. %2$s</string>
+    <string name="duration_min">%d Min.</string>
+    <string name="duration_h">%d Std.</string>
+    <string name="duration_h_min">%1$d Std. %2$d Min.</string>
+    <string name="keep_title">Verlauf</string>
+    <string name="keep_summary">Wie lange der Verlauf gespeichert wird. Ältere Einträge werden gelöscht.</string>
+    <string name="keep_1d">1 Tag</string>
+    <string name="keep_7d">1 Woche</string>
+    <string name="keep_30d">1 Monat</string>
+    <string name="keep_365d">1 Jahr</string>
+    <string name="keep_forever">Immer</string>
+    <string name="log_discharging">Entlädt</string>
+    <string name="tone_listen">Anhören</string>
+    <string name="health_state">Akku-Zustand</string>
+    <string name="health_measuring">Noch nicht gemessen</string>
+    <string name="health_capacity_of">%1$s von %2$s</string>
+    <plurals name="health_from_sessions">
+        <item quantity="one">gemessen aus %1$d Ladung (zusammen %2$d %%)</item>
+        <item quantity="other">gemessen aus %1$d Ladungen (zusammen %2$d %%)</item>
+    </plurals>
+    <string name="health_need_charge" formatted="false">Lade einmal mindestens 15 % am Stück, dann wird die Kapazität gemessen.</string>
+    <string name="health_android_says">Android meldet: %s</string>
+    <string name="health_estimate_note">± ist die Messunsicherheit. Je mehr und je größer die Ladungen, desto kleiner wird sie.</string>
+    <string name="design_title">Nennkapazität</string>
+    <string name="design_auto">vom Handy gelesen</string>
+    <string name="design_manual">von dir eingetragen</string>
+    <string name="design_unknown">Unbekannt. Trag sie ein, dann siehst du den Zustand in Prozent.</string>
+    <string name="design_edit">Ändern</string>
+    <string name="design_dialog_hint">In mAh, siehe Datenblatt deines Handys</string>
+    <string name="design_reset">Automatisch</string>
+    <string name="cycles_title">Ladezyklen</string>
+    <string name="cycles_text">%1$s volle Zyklen seit Beginn der Aufzeichnung</string>
+    <string name="speed_title">Ladegeschwindigkeit</string>
+    <string name="speed_row">Ø %1$s · %2$s %%/Std.</string>
+    <string name="sessions_title">Letzte Ladungen</string>
+    <string name="sessions_empty">Noch keine Ladung aufgezeichnet. Hier erscheint jede Ladung vom Anstecken bis zum Abstecken.</string>
+    <string name="session_cycles">%s Zyklen</string>
+    <string name="capacity_trend">Kapazität im Lauf der Zeit</string>
+    <string name="measures_title">Aktuelle Messwerte</string>
+    <string name="channel_hints">Hinweise</string>
+    <string name="hint_capacity_title">Akku-Kapazität nur noch %d %%</string>
+    <string name="hint_capacity_text">Der Akku fasst nur noch etwa %1$s von %2$s. Ein Tausch kann sich lohnen.</string>
+    <string name="sessions_count">Ladungen</string>
+    <string name="measures_hint">Tippe auf einen umrandeten Wert, um seine Kurve zu sehen.</string>
+    <string name="health_counter_from_level">Der Ladezähler dieses Handys wird nur aus dem Prozentstand berechnet und kann deshalb keine Alterung zeigen. Die App misst darum selbst den Ladestrom – das ist ungenauer.</string>
+    <string name="session_full">voll</string>
+    <string name="gap_row">App nicht aktiv · %s</string>
+    <string name="reliability_title">Zuverlässigkeit</string>
+    <string name="reliability_ok">Erledigt</string>
+    <string name="reliability_vendor">Zusätzlich für %s:</string>
+    <string name="reliability_general">Allgemein:</string>
+    <string name="reliability_open">Einstellungen öffnen</string>
+    <string name="reliability_open_failed">Diese Seite gibt es auf deinem Handy nicht. Die App-Info ist offen; folge den Schritten oben.</string>
+    <string name="reliability_link_label">Mehr Hilfe für dein Handy (Link zum Kopieren):</string>
+    <string name="link_copied">Link kopiert</string>
+    <string name="setup_vendor">Für %s-Handys sind weitere Einstellungen nötig.</string>
+    <string name="setup_vendor_show">Ansehen</string>
+    <string name="setup_vendor_done">Erledigt</string>
+    <string-array name="vendor_steps_xiaomi">
+        <item>Autostart für Akku Health Alarm erlauben.</item>
+        <item>Einstellungen → Apps → Akku Health Alarm → Energiesparen: „Keine Einschränkungen“.</item>
+        <item>In der Übersicht der letzten Apps die App gedrückt halten und das Schloss antippen.</item>
+    </string-array>
+    <string-array name="vendor_steps_huawei">
+        <item>Telefonmanager → App-Start: Akku Health Alarm auf „Manuell verwalten“ stellen und alle drei Schalter einschalten.</item>
+        <item>Ältere Geräte: Telefonmanager → „Bereinigen im Sperrzustand“ bzw. „Geschützte Apps“: Akku Health Alarm nicht schließen lassen.</item>
+        <item>In der Übersicht der letzten Apps die App nach unten ziehen, bis ein Schloss erscheint.</item>
+    </string-array>
+    <string-array name="vendor_steps_samsung">
+        <item>Einstellungen → Akku → Hintergrund-Nutzungslimits → „Nie schlafende Apps“ → Akku Health Alarm hinzufügen.</item>
+        <item>In der Übersicht der letzten Apps auf das App-Symbol tippen und „Diese App sperren“ wählen.</item>
+    </string-array>
+    <string-array name="vendor_steps_oppo">
+        <item>Einstellungen → Apps → Akku Health Alarm → Akku: Autostart und Hintergrundaktivität erlauben.</item>
+        <item>„Einfrieren im Hintergrund“ und „Optimierung abnormaler Apps“ ausschalten.</item>
+        <item>In der Übersicht der letzten Apps die App sperren (Schloss).</item>
+    </string-array>
+    <string-array name="vendor_steps_vivo">
+        <item>i Manager → App-Manager → Autostart: Akku Health Alarm einschalten.</item>
+        <item>Einstellungen → Akku → Hoher Hintergrund-Stromverbrauch: Akku Health Alarm erlauben.</item>
+        <item>In der Übersicht der letzten Apps die App sperren (Schloss).</item>
+    </string-array>
+    <string-array name="vendor_steps_oneplus">
+        <item>Einstellungen → Akku → Akku-Optimierung: Akku Health Alarm auf „Nicht optimieren“.</item>
+        <item>Einstellungen → Akku → Erweiterte Optimierung ausschalten.</item>
+        <item>In der Übersicht der letzten Apps die App sperren (Schloss).</item>
+    </string-array>
+    <string-array name="vendor_steps_other">
+        <item>Falls es die Einstellung „Autostart“ gibt: für Akku Health Alarm erlauben.</item>
+        <item>Wenn möglich, die App in der Übersicht der letzten Apps sperren.</item>
+    </string-array>
+    <string name="delivery_sound">mit Ton</string>
+    <string name="delivery_quiet">still · Nachtruhe</string>
+    <string name="delivery_muted_vibrate">nur Vibration · Handy stumm</string>
+    <string name="delivery_muted">still · Handy stumm</string>
+    <string name="delivery_silent">nur Benachrichtigung · Ton und Ansage aus</string>
+    <string name="language_title">Sprache</string>
+    <string name="language_system">Wie Handy</string>
+    <string name="theme_title">Design</string>
+    <string name="theme_system">System</string>
+    <string name="theme_light">Hell</string>
+    <string name="theme_dark">Dunkel</string>
+    <string name="reliability_all_done">Alles eingerichtet</string>
+    <string name="reliability_vendor_confirmed">Diese Schritte habe ich erledigt</string>
+    <string name="step_less">Weniger</string>
+    <string name="step_more">Mehr</string>
+    <string name="preset_standard">Standard</string>
+    <string name="quick_slot">Schnellwahl %d</string>
+    <string name="quick_edit_title">Schnellwahl %d anpassen</string>
+    <string name="quick_take_current">Aktuellen Bereich übernehmen</string>
+    <string name="quick_reset">Zurücksetzen</string>
+    <string name="quick_hint">Taste gedrückt halten zum Anpassen</string>
+    <string name="repeat_title">Alarm wiederholen</string>
+    <string name="repeat_off">Einmal</string>
+    <string name="duration_sec">%d s</string>
+    <string name="repeat_doze_hint">Im Akkubetrieb bei ausgeschaltetem Bildschirm erlaubt Android das nur etwa alle 9 Minuten.</string>
+    <string name="repeat_next">Nächster Alarm in %s</string>
+    <string name="repeat_until">bis %s</string>
+    <string name="running_title">Laufende Ladung</string>
+    <string name="running_since">seit %s</string>
+    <string name="running_mah">bisher etwa %s geladen</string>
+    <string name="running_need">Noch %d %% bis zur Kapazitätsmessung. Gemessen wird beim Abstecken.</string>
+    <string name="running_ready">Genug für eine Messung. Die Kapazität wird beim Abstecken berechnet.</string>
+    <string name="no_capacity_short" formatted="false">keine Messung: unter 15 %</string>
+    <string name="no_capacity_broken">keine Messung: Aufzeichnung unterbrochen</string>
+    <string name="no_capacity_implausible">keine Messung: Werte unplausibel</string>
+</resources>

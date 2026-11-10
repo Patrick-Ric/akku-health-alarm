@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="settings">Beállítások</string>
+    <string name="back">Vissza</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Mégse</string>
+    <string name="close">Bezárás</string>
+    <string name="status_charging">Töltődik</string>
+    <string name="status_discharging">Akkumulátorról</string>
+    <string name="status_full">Teli</string>
+    <string name="status_plugged">Csatlakoztatva</string>
+    <string name="metric_current">Áram</string>
+    <string name="metric_temp">Hőmérséklet</string>
+    <string name="metric_voltage">Feszültség</string>
+    <string name="alarm_title">Riasztás</string>
+    <string name="alarm_on_summary">%1$d %% és %2$d %% esetén</string>
+    <string name="alarm_off_summary">Nincs riasztás</string>
+    <string name="range_title">Akkumulátortartomány</string>
+    <string name="range_info">Miért ezek a tartományok?</string>
+    <string name="range_info_text" formatted="false">A lítiumos akkumulátorok a töltési tartomány közepén öregszenek a leglassabban. A magas töltöttség jobban terheli az akkut, mint az alacsony, ezért a kímélő beállítások korábban állítják le a töltést.\n\n20–80 %: kiegyensúlyozott\n25–70 %: kímélő\n30–60 %: nagyon kímélő\n\nMinél szűkebb a tartomány, annál kevesebbet használsz naponta az akkuból. Válaszd a napodhoz illő tartományt.</string>
+    <string name="preset_balanced">Kiegyensúlyozott</string>
+    <string name="preset_gentle">Kímélő</string>
+    <string name="preset_very_gentle">Nagyon kímélő</string>
+    <string name="preset_custom">Egyéni</string>
+    <string name="percent_range">%1$d–%2$d %%</string>
+    <string name="alarm_below">Riasztás ez alatt</string>
+    <string name="alarm_above">Riasztás ez felett</string>
+    <string name="recommendation">Ajánlott: %s</string>
+    <string name="allowed_range">Lehetséges: %s</string>
+    <string name="usable">használható %d %%</string>
+    <string name="tab_start">Kezdőlap</string>
+    <string name="history_title">Előzmények</string>
+    <string name="health_title">Állapot</string>
+    <string name="setup_title">A megbízható riasztásokért</string>
+    <string name="setup_text">Az Android leállíthatja a háttérben futó alkalmazásokat. Két beállítás biztosítja, hogy a riasztás időben megérkezzen.</string>
+    <string name="setup_notifications">Értesítések engedélyezése</string>
+    <string name="setup_battery_opt">Akkumulátor-optimalizálás kikapcsolása</string>
+    <string name="voice_title">Hangos bemondás</string>
+    <string name="voice_off">Ki</string>
+    <string name="voice_builtin">App-bemondó</string>
+    <string name="voice_system">Telefon-bemondó</string>
+    <string name="voice_builtin_hint">Rövid angol bemondás: \"Battery charged.\" vagy \"Battery low.\"</string>
+    <string name="voice_system_hint">A telefon offline hangját használja az alkalmazás nyelvén. Ha nincs ilyen, az app bemondója szól.</string>
+    <string name="voice_percent">Százalék bemondása</string>
+    <string name="test_charged">Feltöltve</string>
+    <string name="test_low">Alacsony</string>
+    <string name="test_hint">Riasztás kipróbálása</string>
+    <string name="tone_title">Hang</string>
+    <string name="tone_off">Ki</string>
+    <string name="tone_builtin">App-hang</string>
+    <string name="tone_system">Telefonhang</string>
+    <string name="tone_pick">Hang kiválasztása</string>
+    <string name="tone_none_selected">Nincs kiválasztott hang</string>
+    <string name="vibration_title">Rezgés</string>
+    <string name="loud_title">Némítva is</string>
+    <string name="loud_summary">Az ébresztő hangerejét használja</string>
+    <string name="alarm_notif_title">Értesítés megjelenítése</string>
+    <string name="alarm_notif_summary">Visszaszámlálással a következő ismétlésig. Ki: csak hang, bemondás és rezgés.</string>
+    <string name="quiet_title">Éjszakai csend</string>
+    <string name="quiet_summary">Ebben az időben csak néma értesítés</string>
+    <string name="quiet_from">%s-tól</string>
+    <string name="quiet_to">%s-ig</string>
+    <string name="temp_title">Hőmérséklet-riasztás</string>
+    <string name="temp_summary">Figyelmeztet, ha az akku túl meleg vagy túl hideg</string>
+    <string name="temp_danger">Csak veszély</string>
+    <string name="temp_normal">Normál</string>
+    <string name="temp_strict">Szigorú</string>
+    <string name="temp_custom">Egyéni</string>
+    <string name="temp_range">%1$d–%2$d °C</string>
+    <string name="temp_cold_charging">Hideget csak töltés közben jelezzen</string>
+    <string name="temp_cold_charging_summary">Hidegben tölteni árt az akkunak, használni alig.</string>
+    <string name="temp_strict_hint">A gyorstöltés gyakran eléri a 35–40 °C-ot, ezért ez a szint gyakran riaszthat.</string>
+    <string name="notif_title">Értesítés</string>
+    <string name="notif_summary">Alapból csak a töltöttség és az állapot. Itt további értékeket adhatsz hozzá.</string>
+    <string name="notif_current">Áram (mA)</string>
+    <string name="notif_temp">Hőmérséklet</string>
+    <string name="notif_voltage">Feszültség</string>
+    <string name="notif_percent_icon">Százalék ikonként az állapotsorban</string>
+    <string name="about_title">Névjegy</string>
+    <string name="about_text">Verzió: %1$s · GPL-3.0 · Teljesen offline működik</string>
+    <string name="channel_status">Akkumulátor állapota</string>
+    <string name="channel_alarm">Akkumulátor-riasztások</string>
+    <string name="notif_alarm_at">Riasztás %d %% esetén</string>
+    <string name="notif_alarm_off">Riasztás ki</string>
+    <string name="alarm_high_title">Akku feltöltve: %d %%</string>
+    <string name="alarm_high_text">Húzd ki a töltőt</string>
+    <string name="alarm_low_title">Akku alacsony: %d %%</string>
+    <string name="alarm_low_text">Csatlakoztasd a töltőt</string>
+    <string name="alarm_hot_title">Akku meleg: %s</string>
+    <string name="alarm_hot_text">Hagyd lehűlni a telefont</string>
+    <string name="alarm_cold_title">Akku hideg: %s</string>
+    <string name="alarm_cold_text">Hidegben ne töltsd</string>
+    <string name="tts_charged">Akku feltöltve.</string>
+    <string name="tts_charged_percent">Akku feltöltve, %d százalék.</string>
+    <string name="tts_low">Akku alacsony.</string>
+    <string name="tts_low_percent">Akku alacsony, %d százalék.</string>
+    <string name="tts_hot">Akku meleg.</string>
+    <string name="tts_cold">Akku hideg.</string>
+    <string name="view_list">Lista</string>
+    <string name="view_chart">Grafikon</string>
+    <plurals name="entries_count">
+        <item quantity="one">%d bejegyzés</item>
+        <item quantity="other">%d bejegyzés</item>
+    </plurals>
+    <string name="list_empty">Még nincs bejegyzés. Itt jelenik meg a töltöttség minden változása.</string>
+    <string name="plug_ac">Töltő</string>
+    <string name="plug_usb">USB</string>
+    <string name="plug_wireless">Vezeték nélküli</string>
+    <string name="plug_battery">Akkumulátor</string>
+    <string name="chart_title">Utolsó 24 óra</string>
+    <string name="chart_empty">Még nincs adat. A rögzítés fut.</string>
+    <string name="chart_now">most</string>
+    <string name="events_title">Események</string>
+    <string name="events_empty">Még nincs esemény.</string>
+    <string name="event_plugged">Töltő csatlakoztatva</string>
+    <string name="event_unplugged">Töltő leválasztva</string>
+    <string name="event_alarm_high">Riasztás: akku feltöltve</string>
+    <string name="event_alarm_low">Riasztás: akku alacsony</string>
+    <string name="event_alarm_hot">Riasztás: akku meleg</string>
+    <string name="event_alarm_cold">Riasztás: akku hideg</string>
+    <string name="health_status">Állapot az Android szerint</string>
+    <string name="health_good">Jó</string>
+    <string name="health_overheat">Túlmelegedett</string>
+    <string name="health_cold">Túl hideg</string>
+    <string name="health_over_voltage">Túlfeszültség</string>
+    <string name="health_dead">Hibás</string>
+    <string name="health_failure">Ismeretlen hiba</string>
+    <string name="health_unknown">Nincs jelentve</string>
+    <string name="health_technology">Technológia</string>
+    <string name="health_charge_counter">Töltésszámláló</string>
+    <string name="range_day">Nap</string>
+    <string name="range_week">Hét</string>
+    <string name="range_month">Hónap</string>
+    <string name="range_all">Összes</string>
+    <string name="chart_temp">Hőmérséklet</string>
+    <string name="chart_hint">Nagyíts két ujjal, dupla koppintással visszaállítod.</string>
+    <string name="eta">%1$d %% kb. %2$s múlva</string>
+    <string name="duration_min">%d perc</string>
+    <string name="duration_h">%d óra</string>
+    <string name="duration_h_min">%1$d óra %2$d perc</string>
+    <string name="keep_title">Előzmények</string>
+    <string name="keep_summary">Meddig maradjanak meg az előzmények. A régebbi bejegyzések törlődnek.</string>
+    <string name="keep_1d">1 nap</string>
+    <string name="keep_7d">1 hét</string>
+    <string name="keep_30d">1 hónap</string>
+    <string name="keep_365d">1 év</string>
+    <string name="keep_forever">Mindig</string>
+    <string name="log_discharging">Merül</string>
+    <string name="tone_listen">Meghallgatás</string>
+    <string name="health_state">Akkumulátor állapota</string>
+    <string name="health_measuring">Még nincs mérve</string>
+    <string name="health_capacity_of">%1$s / %2$s</string>
+    <plurals name="health_from_sessions">
+        <item quantity="one">%1$d töltésből mérve (összesen %2$d %%)</item>
+        <item quantity="other">%1$d töltésből mérve (összesen %2$d %%)</item>
+    </plurals>
+    <string name="health_need_charge" formatted="false">Tölts egyszerre legalább 15 %-ot, akkor megméri a kapacitást.</string>
+    <string name="health_android_says">Az Android jelentése: %s</string>
+    <string name="health_estimate_note">A ± a mérési bizonytalanság. Minél több és hosszabb a töltés, annál kisebb.</string>
+    <string name="design_title">Névleges kapacitás</string>
+    <string name="design_auto">a telefonból kiolvasva</string>
+    <string name="design_manual">általad megadva</string>
+    <string name="design_unknown">Ismeretlen. Add meg, hogy százalékban lásd az állapotot.</string>
+    <string name="design_edit">Módosítás</string>
+    <string name="design_dialog_hint">mAh-ban, lásd a telefon adatlapját</string>
+    <string name="design_reset">Automatikus</string>
+    <string name="cycles_title">Töltési ciklusok</string>
+    <string name="cycles_text">%1$s teljes ciklus a rögzítés kezdete óta</string>
+    <string name="speed_title">Töltési sebesség</string>
+    <string name="speed_row">Ø %1$s · %2$s %%/óra</string>
+    <string name="sessions_title">Legutóbbi töltések</string>
+    <string name="sessions_empty">Még nincs rögzített töltés. Itt jelenik meg minden töltés a csatlakoztatástól a leválasztásig.</string>
+    <string name="session_cycles">%s ciklus</string>
+    <string name="capacity_trend">Kapacitás az idő múlásával</string>
+    <string name="measures_title">Aktuális értékek</string>
+    <string name="channel_hints">Tippek</string>
+    <string name="hint_capacity_title">Az akku kapacitása már csak %d %%</string>
+    <string name="hint_capacity_text">Az akku már csak kb. %1$s-t tárol a(z) %2$s-ből. A csere megérheti.</string>
+    <string name="sessions_count">Töltések</string>
+    <string name="measures_hint">Koppints egy keretes értékre a görbéjéhez.</string>
+    <string name="health_counter_from_level">Ez a telefon a töltésszámlálót csak a százalékból számolja, ezért az nem mutatja a kopást. Az alkalmazás ezért maga méri a töltőáramot; ez kevésbé pontos.</string>
+    <string name="session_full">teli</string>
+    <string name="gap_row">Az alkalmazás nem volt aktív · %s</string>
+    <string name="reliability_title">Megbízhatóság</string>
+    <string name="reliability_ok">Kész</string>
+    <string name="reliability_vendor">Ezenkívül a(z) %s esetén:</string>
+    <string name="reliability_general">Általában:</string>
+    <string name="reliability_open">Beállítások megnyitása</string>
+    <string name="reliability_open_failed">Ez az oldal nem létezik a telefonodon. Megnyílt az alkalmazás adatlapja; kövesd a fenti lépéseket.</string>
+    <string name="reliability_link_label">További segítség a telefonodhoz (másolható link):</string>
+    <string name="link_copied">Link másolva</string>
+    <string name="setup_vendor">A(z) %s telefonokhoz még néhány beállítás kell.</string>
+    <string name="setup_vendor_show">Megtekintés</string>
+    <string name="setup_vendor_done">Kész</string>
+    <string-array name="vendor_steps_xiaomi">
+        <item>Engedélyezd az automatikus indítást az Akku Health Alarm számára.</item>
+        <item>Beállítások → Alkalmazások → Akku Health Alarm → Energiatakarékosság: „Nincs korlátozás”.</item>
+        <item>A legutóbbi alkalmazások nézetben tartsd nyomva az alkalmazást, és koppints a lakatra.</item>
+    </string-array>
+    <string-array name="vendor_steps_huawei">
+        <item>Telefonkezelő → Alkalmazásindítás: állítsd az Akku Health Alarmot „Kézi kezelés” módra, és kapcsold be mindhárom kapcsolót.</item>
+        <item>Régebbi telefonok: Telefonkezelő → „Tisztítás zárolt képernyőn” vagy „Védett alkalmazások”: ne engedd bezárni az Akku Health Alarmot.</item>
+        <item>A legutóbbi alkalmazások nézetben húzd lefelé az alkalmazást, amíg meg nem jelenik egy lakat.</item>
+    </string-array>
+    <string-array name="vendor_steps_samsung">
+        <item>Beállítások → Akkumulátor → Háttérhasználati korlátok → „Soha nem alvó alkalmazások” → add hozzá az Akku Health Alarmot.</item>
+        <item>A legutóbbi alkalmazások nézetben koppints az alkalmazás ikonjára, és válaszd az „Alkalmazás zárolása” lehetőséget.</item>
+    </string-array>
+    <string-array name="vendor_steps_oppo">
+        <item>Beállítások → Alkalmazások → Akku Health Alarm → Akkumulátor: engedélyezd az automatikus indítást és a háttértevékenységet.</item>
+        <item>Kapcsold ki a „Fagyasztás a háttérben” és a „Rendellenes alkalmazások optimalizálása” lehetőséget.</item>
+        <item>Zárold az alkalmazást a legutóbbi alkalmazások nézetben.</item>
+    </string-array>
+    <string-array name="vendor_steps_vivo">
+        <item>i Manager → Alkalmazáskezelő → Automatikus indítás: kapcsold be az Akku Health Alarmot.</item>
+        <item>Beállítások → Akkumulátor → Magas háttérfogyasztás: engedélyezd az Akku Health Alarmot.</item>
+        <item>Zárold az alkalmazást a legutóbbi alkalmazások nézetben.</item>
+    </string-array>
+    <string-array name="vendor_steps_oneplus">
+        <item>Beállítások → Akkumulátor → Akkumulátor-optimalizálás: állítsd az Akku Health Alarmot „Nincs optimalizálás” értékre.</item>
+        <item>Beállítások → Akkumulátor → kapcsold ki a speciális optimalizálást.</item>
+        <item>Zárold az alkalmazást a legutóbbi alkalmazások nézetben.</item>
+    </string-array>
+    <string-array name="vendor_steps_other">
+        <item>Ha van „Automatikus indítás” beállítás: engedélyezd az Akku Health Alarm számára.</item>
+        <item>Ha lehet, zárold az alkalmazást a legutóbbi alkalmazások nézetben.</item>
+    </string-array>
+    <string name="delivery_sound">hanggal</string>
+    <string name="delivery_quiet">némán · éjszakai csend</string>
+    <string name="delivery_muted_vibrate">csak rezgés · telefon némítva</string>
+    <string name="delivery_muted">némán · telefon némítva</string>
+    <string name="delivery_silent">csak értesítés · hang és beszéd ki</string>
+    <string name="language_title">Nyelv</string>
+    <string name="language_system">A telefon nyelve</string>
+    <string name="theme_title">Megjelenés</string>
+    <string name="theme_system">Rendszer</string>
+    <string name="theme_light">Világos</string>
+    <string name="theme_dark">Sötét</string>
+    <string name="reliability_all_done">Minden be van állítva</string>
+    <string name="reliability_vendor_confirmed">Ezeket a lépéseket elvégeztem</string>
+    <string name="step_less">Kevesebb</string>
+    <string name="step_more">Több</string>
+    <string name="preset_standard">Alapértelmezett</string>
+    <string name="quick_slot">%d. gyorsválasztás</string>
+    <string name="quick_edit_title">%d. gyorsválasztás módosítása</string>
+    <string name="quick_take_current">Aktuális tartomány átvétele</string>
+    <string name="quick_reset">Visszaállítás</string>
+    <string name="quick_hint">Tartsd nyomva a gombot a módosításhoz</string>
+    <string name="repeat_title">Riasztás ismétlése</string>
+    <string name="repeat_off">Egyszer</string>
+    <string name="duration_sec">%d mp</string>
+    <string name="repeat_doze_hint">Akkuról, kikapcsolt képernyővel az Android ezt csak kb. 9 percenként engedi.</string>
+    <string name="repeat_next">Következő riasztás: %s múlva</string>
+    <string name="repeat_until">eddig: %s</string>
+    <string name="running_title">Töltés folyamatban</string>
+    <string name="running_since">%s óta</string>
+    <string name="running_mah">eddig kb. %s töltődött</string>
+    <string name="running_need">Még %d %% a kapacitásméréshez. A mérés kihúzáskor történik.</string>
+    <string name="running_ready">Elég a méréshez. A kapacitást kihúzáskor számolja ki.</string>
+    <string name="no_capacity_short" formatted="false">nincs mérés: 15 % alatt</string>
+    <string name="no_capacity_broken">nincs mérés: a rögzítés megszakadt</string>
+    <string name="no_capacity_implausible">nincs mérés: valószínűtlen értékek</string>
+</resources>

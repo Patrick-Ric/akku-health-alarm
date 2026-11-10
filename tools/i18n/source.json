@@ -1,0 +1,1454 @@
+[
+[
+"s",
+"settings",
+null,
+"Settings"
+],
+[
+"s",
+"back",
+null,
+"Back"
+],
+[
+"s",
+"ok",
+null,
+"OK"
+],
+[
+"s",
+"cancel",
+null,
+"Cancel"
+],
+[
+"s",
+"close",
+null,
+"Close"
+],
+[
+"s",
+"status_charging",
+null,
+"Charging"
+],
+[
+"s",
+"status_discharging",
+null,
+"On battery"
+],
+[
+"s",
+"status_full",
+null,
+"Full"
+],
+[
+"s",
+"status_plugged",
+null,
+"Plugged in"
+],
+[
+"s",
+"metric_current",
+null,
+"Current"
+],
+[
+"s",
+"metric_temp",
+null,
+"Temperature"
+],
+[
+"s",
+"metric_voltage",
+null,
+"Voltage"
+],
+[
+"s",
+"alarm_title",
+null,
+"Alarm"
+],
+[
+"s",
+"alarm_on_summary",
+null,
+"At %1$d %% and %2$d %%"
+],
+[
+"s",
+"alarm_off_summary",
+null,
+"No alerts"
+],
+[
+"s",
+"range_title",
+null,
+"Battery range"
+],
+[
+"s",
+"range_info",
+null,
+"Why these ranges?"
+],
+[
+"s",
+"range_info_text",
+null,
+"Lithium batteries age slowest in the middle of the charge range. A high charge level strains the battery more than a low one, so the gentle presets stop charging earlier.\\n\\n20–80 %: balanced\\n25–70 %: gentle\\n30–60 %: very gentle\\n\\nThe narrower the range, the less of the battery you use each day. Pick the range that fits your day."
+],
+[
+"s",
+"preset_balanced",
+null,
+"Balanced"
+],
+[
+"s",
+"preset_gentle",
+null,
+"Gentle"
+],
+[
+"s",
+"preset_very_gentle",
+null,
+"Very gentle"
+],
+[
+"s",
+"preset_custom",
+null,
+"Custom"
+],
+[
+"s",
+"percent_range",
+null,
+"%1$d–%2$d %%"
+],
+[
+"s",
+"alarm_below",
+null,
+"Alarm below"
+],
+[
+"s",
+"alarm_above",
+null,
+"Alarm above"
+],
+[
+"s",
+"recommendation",
+null,
+"Recommended: %s"
+],
+[
+"s",
+"allowed_range",
+null,
+"Possible: %s"
+],
+[
+"s",
+"usable",
+null,
+"usable %d %%"
+],
+[
+"s",
+"tab_start",
+null,
+"Start"
+],
+[
+"s",
+"history_title",
+null,
+"History"
+],
+[
+"s",
+"health_title",
+null,
+"Health"
+],
+[
+"s",
+"setup_title",
+null,
+"For reliable alerts"
+],
+[
+"s",
+"setup_text",
+null,
+"Android may stop apps in the background. Two settings make sure the alarm arrives on time."
+],
+[
+"s",
+"setup_notifications",
+null,
+"Allow notifications"
+],
+[
+"s",
+"setup_battery_opt",
+null,
+"Turn off battery optimization"
+],
+[
+"s",
+"voice_title",
+null,
+"Announcement"
+],
+[
+"s",
+"voice_off",
+null,
+"Off"
+],
+[
+"s",
+"voice_builtin",
+null,
+"App voice"
+],
+[
+"s",
+"voice_system",
+null,
+"Phone voice"
+],
+[
+"s",
+"voice_builtin_hint",
+null,
+"Short English announcement: \"Battery charged.\" or \"Battery low.\""
+],
+[
+"s",
+"voice_system_hint",
+null,
+"Uses an offline voice of your phone in the app language. If there is none, the app voice plays."
+],
+[
+"s",
+"voice_percent",
+null,
+"Say the percentage"
+],
+[
+"s",
+"test_charged",
+null,
+"Charged"
+],
+[
+"s",
+"test_low",
+null,
+"Low"
+],
+[
+"s",
+"test_hint",
+null,
+"Test the alarm"
+],
+[
+"s",
+"tone_title",
+null,
+"Sound"
+],
+[
+"s",
+"tone_off",
+null,
+"Off"
+],
+[
+"s",
+"tone_builtin",
+null,
+"App sound"
+],
+[
+"s",
+"tone_system",
+null,
+"Phone sound"
+],
+[
+"s",
+"tone_pick",
+null,
+"Choose sound"
+],
+[
+"s",
+"tone_none_selected",
+null,
+"No sound selected"
+],
+[
+"s",
+"vibration_title",
+null,
+"Vibrate"
+],
+[
+"s",
+"loud_title",
+null,
+"Also when muted"
+],
+[
+"s",
+"loud_summary",
+null,
+"Uses the alarm volume"
+],
+[
+"s",
+"alarm_notif_title",
+null,
+"Show notification"
+],
+[
+"s",
+"alarm_notif_summary",
+null,
+"With a countdown to the next repeat. Off: only sound, announcement and vibration."
+],
+[
+"s",
+"quiet_title",
+null,
+"Night rest"
+],
+[
+"s",
+"quiet_summary",
+null,
+"Only a silent notification during this time"
+],
+[
+"s",
+"quiet_from",
+null,
+"From %s"
+],
+[
+"s",
+"quiet_to",
+null,
+"To %s"
+],
+[
+"s",
+"temp_title",
+null,
+"Temperature alarm"
+],
+[
+"s",
+"temp_summary",
+null,
+"Warns when the battery gets too hot or too cold"
+],
+[
+"s",
+"temp_danger",
+null,
+"Danger only"
+],
+[
+"s",
+"temp_normal",
+null,
+"Normal"
+],
+[
+"s",
+"temp_strict",
+null,
+"Strict"
+],
+[
+"s",
+"temp_custom",
+null,
+"Custom"
+],
+[
+"s",
+"temp_range",
+null,
+"%1$d–%2$d °C"
+],
+[
+"s",
+"temp_cold_charging",
+null,
+"Report cold only while charging"
+],
+[
+"s",
+"temp_cold_charging_summary",
+null,
+"Charging in the cold harms the battery, using it hardly does."
+],
+[
+"s",
+"temp_strict_hint",
+null,
+"Fast charging often reaches 35–40 °C, so this level may alert often."
+],
+[
+"s",
+"notif_title",
+null,
+"Notification"
+],
+[
+"s",
+"notif_summary",
+null,
+"By default only charge level and status. Add more values here."
+],
+[
+"s",
+"notif_current",
+null,
+"Current (mA)"
+],
+[
+"s",
+"notif_temp",
+null,
+"Temperature"
+],
+[
+"s",
+"notif_voltage",
+null,
+"Voltage"
+],
+[
+"s",
+"notif_percent_icon",
+null,
+"Percentage as status bar icon"
+],
+[
+"s",
+"about_title",
+null,
+"About"
+],
+[
+"s",
+"about_text",
+null,
+"Version %1$s · GPL-3.0 · Works completely offline"
+],
+[
+"s",
+"channel_status",
+null,
+"Battery status"
+],
+[
+"s",
+"channel_alarm",
+null,
+"Battery alarms"
+],
+[
+"s",
+"notif_alarm_at",
+null,
+"Alarm at %d %%"
+],
+[
+"s",
+"notif_alarm_off",
+null,
+"Alarm off"
+],
+[
+"s",
+"alarm_high_title",
+null,
+"Battery charged: %d %%"
+],
+[
+"s",
+"alarm_high_text",
+null,
+"Unplug the charger"
+],
+[
+"s",
+"alarm_low_title",
+null,
+"Battery low: %d %%"
+],
+[
+"s",
+"alarm_low_text",
+null,
+"Connect the charger"
+],
+[
+"s",
+"alarm_hot_title",
+null,
+"Battery hot: %s"
+],
+[
+"s",
+"alarm_hot_text",
+null,
+"Let the phone cool down"
+],
+[
+"s",
+"alarm_cold_title",
+null,
+"Battery cold: %s"
+],
+[
+"s",
+"alarm_cold_text",
+null,
+"Do not charge in the cold"
+],
+[
+"s",
+"tts_charged",
+null,
+"Battery charged."
+],
+[
+"s",
+"tts_charged_percent",
+null,
+"Battery charged, %d percent."
+],
+[
+"s",
+"tts_low",
+null,
+"Battery low."
+],
+[
+"s",
+"tts_low_percent",
+null,
+"Battery low, %d percent."
+],
+[
+"s",
+"tts_hot",
+null,
+"Battery hot."
+],
+[
+"s",
+"tts_cold",
+null,
+"Battery cold."
+],
+[
+"s",
+"view_list",
+null,
+"List"
+],
+[
+"s",
+"view_chart",
+null,
+"Chart"
+],
+[
+"p",
+"entries_count",
+"one",
+"%d entry"
+],
+[
+"p",
+"entries_count",
+"other",
+"%d entries"
+],
+[
+"s",
+"list_empty",
+null,
+"No entries yet. Every change of the charge level will appear here."
+],
+[
+"s",
+"plug_ac",
+null,
+"Charger"
+],
+[
+"s",
+"plug_usb",
+null,
+"USB"
+],
+[
+"s",
+"plug_wireless",
+null,
+"Wireless"
+],
+[
+"s",
+"plug_battery",
+null,
+"Battery"
+],
+[
+"s",
+"chart_title",
+null,
+"Last 24 hours"
+],
+[
+"s",
+"chart_empty",
+null,
+"No data yet. Recording is running."
+],
+[
+"s",
+"chart_now",
+null,
+"now"
+],
+[
+"s",
+"events_title",
+null,
+"Events"
+],
+[
+"s",
+"events_empty",
+null,
+"No events yet."
+],
+[
+"s",
+"event_plugged",
+null,
+"Charger connected"
+],
+[
+"s",
+"event_unplugged",
+null,
+"Charger disconnected"
+],
+[
+"s",
+"event_alarm_high",
+null,
+"Alarm: battery charged"
+],
+[
+"s",
+"event_alarm_low",
+null,
+"Alarm: battery low"
+],
+[
+"s",
+"event_alarm_hot",
+null,
+"Alarm: battery hot"
+],
+[
+"s",
+"event_alarm_cold",
+null,
+"Alarm: battery cold"
+],
+[
+"s",
+"health_status",
+null,
+"Condition reported by Android"
+],
+[
+"s",
+"health_good",
+null,
+"Good"
+],
+[
+"s",
+"health_overheat",
+null,
+"Overheated"
+],
+[
+"s",
+"health_cold",
+null,
+"Too cold"
+],
+[
+"s",
+"health_over_voltage",
+null,
+"Over voltage"
+],
+[
+"s",
+"health_dead",
+null,
+"Defective"
+],
+[
+"s",
+"health_failure",
+null,
+"Unknown fault"
+],
+[
+"s",
+"health_unknown",
+null,
+"Not reported"
+],
+[
+"s",
+"health_technology",
+null,
+"Technology"
+],
+[
+"s",
+"health_charge_counter",
+null,
+"Charge counter"
+],
+[
+"s",
+"range_day",
+null,
+"Day"
+],
+[
+"s",
+"range_week",
+null,
+"Week"
+],
+[
+"s",
+"range_month",
+null,
+"Month"
+],
+[
+"s",
+"range_all",
+null,
+"All"
+],
+[
+"s",
+"chart_temp",
+null,
+"Temperature"
+],
+[
+"s",
+"chart_hint",
+null,
+"Zoom with two fingers, double-tap to reset."
+],
+[
+"s",
+"eta",
+null,
+"%1$d %% in about %2$s"
+],
+[
+"s",
+"duration_min",
+null,
+"%d min"
+],
+[
+"s",
+"duration_h",
+null,
+"%d h"
+],
+[
+"s",
+"duration_h_min",
+null,
+"%1$d h %2$d min"
+],
+[
+"s",
+"keep_title",
+null,
+"History"
+],
+[
+"s",
+"keep_summary",
+null,
+"How long the history is kept. Older entries are deleted."
+],
+[
+"s",
+"keep_1d",
+null,
+"1 day"
+],
+[
+"s",
+"keep_7d",
+null,
+"1 week"
+],
+[
+"s",
+"keep_30d",
+null,
+"1 month"
+],
+[
+"s",
+"keep_365d",
+null,
+"1 year"
+],
+[
+"s",
+"keep_forever",
+null,
+"Forever"
+],
+[
+"s",
+"log_discharging",
+null,
+"Discharging"
+],
+[
+"s",
+"tone_listen",
+null,
+"Listen"
+],
+[
+"s",
+"health_state",
+null,
+"Battery condition"
+],
+[
+"s",
+"health_measuring",
+null,
+"Not measured yet"
+],
+[
+"s",
+"health_capacity_of",
+null,
+"%1$s of %2$s"
+],
+[
+"p",
+"health_from_sessions",
+"one",
+"measured from %1$d charge (%2$d %% in total)"
+],
+[
+"p",
+"health_from_sessions",
+"other",
+"measured from %1$d charges (%2$d %% in total)"
+],
+[
+"s",
+"health_need_charge",
+null,
+"Charge at least 15 % in one go, then the capacity is measured."
+],
+[
+"s",
+"health_android_says",
+null,
+"Android reports: %s"
+],
+[
+"s",
+"health_estimate_note",
+null,
+"± is the measurement uncertainty. The more and the longer the charges, the smaller it gets."
+],
+[
+"s",
+"design_title",
+null,
+"Rated capacity"
+],
+[
+"s",
+"design_auto",
+null,
+"read from the phone"
+],
+[
+"s",
+"design_manual",
+null,
+"entered by you"
+],
+[
+"s",
+"design_unknown",
+null,
+"Unknown. Enter it to see the condition in percent."
+],
+[
+"s",
+"design_edit",
+null,
+"Change"
+],
+[
+"s",
+"design_dialog_hint",
+null,
+"In mAh, see the data sheet of your phone"
+],
+[
+"s",
+"design_reset",
+null,
+"Automatic"
+],
+[
+"s",
+"cycles_title",
+null,
+"Charge cycles"
+],
+[
+"s",
+"cycles_text",
+null,
+"%1$s full cycles since recording started"
+],
+[
+"s",
+"speed_title",
+null,
+"Charging speed"
+],
+[
+"s",
+"speed_row",
+null,
+"Ø %1$s · %2$s %%/h"
+],
+[
+"s",
+"sessions_title",
+null,
+"Recent charges"
+],
+[
+"s",
+"sessions_empty",
+null,
+"No charge recorded yet. Every charge from plugging in to unplugging appears here."
+],
+[
+"s",
+"session_cycles",
+null,
+"%s cycles"
+],
+[
+"s",
+"capacity_trend",
+null,
+"Capacity over time"
+],
+[
+"s",
+"measures_title",
+null,
+"Current values"
+],
+[
+"s",
+"channel_hints",
+null,
+"Hints"
+],
+[
+"s",
+"hint_capacity_title",
+null,
+"Battery capacity only %d %%"
+],
+[
+"s",
+"hint_capacity_text",
+null,
+"The battery holds only about %1$s of %2$s. A replacement may be worth it."
+],
+[
+"s",
+"sessions_count",
+null,
+"Charges"
+],
+[
+"s",
+"measures_hint",
+null,
+"Tap a framed value to see its curve."
+],
+[
+"s",
+"health_counter_from_level",
+null,
+"This phone calculates its charge counter only from the percentage, so the counter cannot show wear. The app therefore measures the charging current itself; this is less exact."
+],
+[
+"s",
+"session_full",
+null,
+"full"
+],
+[
+"s",
+"gap_row",
+null,
+"App not active · %s"
+],
+[
+"s",
+"reliability_title",
+null,
+"Reliability"
+],
+[
+"s",
+"reliability_ok",
+null,
+"Done"
+],
+[
+"s",
+"reliability_vendor",
+null,
+"Also for %s:"
+],
+[
+"s",
+"reliability_general",
+null,
+"In general:"
+],
+[
+"s",
+"reliability_open",
+null,
+"Open settings"
+],
+[
+"s",
+"reliability_open_failed",
+null,
+"This page does not exist on your phone. The app info is open; follow the steps above."
+],
+[
+"s",
+"reliability_link_label",
+null,
+"More help for your phone (link to copy):"
+],
+[
+"s",
+"link_copied",
+null,
+"Link copied"
+],
+[
+"s",
+"setup_vendor",
+null,
+"%s phones need some more settings."
+],
+[
+"s",
+"setup_vendor_show",
+null,
+"Show"
+],
+[
+"s",
+"setup_vendor_done",
+null,
+"Done"
+],
+[
+"a",
+"vendor_steps_xiaomi",
+null,
+"Allow autostart for Akku Health Alarm."
+],
+[
+"a",
+"vendor_steps_xiaomi",
+null,
+"Settings → Apps → Akku Health Alarm → Battery saver: \"No restrictions\"."
+],
+[
+"a",
+"vendor_steps_xiaomi",
+null,
+"In the recent apps view, hold the app and tap the lock."
+],
+[
+"a",
+"vendor_steps_huawei",
+null,
+"Phone Manager → App launch: set Akku Health Alarm to \"Manage manually\" and turn on all three switches."
+],
+[
+"a",
+"vendor_steps_huawei",
+null,
+"Older phones: Phone Manager → \"Lock screen cleanup\" or \"Protected apps\": do not let Akku Health Alarm be closed."
+],
+[
+"a",
+"vendor_steps_huawei",
+null,
+"In the recent apps view, pull the app down until a lock appears."
+],
+[
+"a",
+"vendor_steps_samsung",
+null,
+"Settings → Battery → Background usage limits → \"Never sleeping apps\" → add Akku Health Alarm."
+],
+[
+"a",
+"vendor_steps_samsung",
+null,
+"In the recent apps view, tap the app icon and choose \"Lock this app\"."
+],
+[
+"a",
+"vendor_steps_oppo",
+null,
+"Settings → Apps → Akku Health Alarm → Battery: allow autostart and background activity."
+],
+[
+"a",
+"vendor_steps_oppo",
+null,
+"Turn off \"Freeze in background\" and \"Optimize abnormal apps\"."
+],
+[
+"a",
+"vendor_steps_oppo",
+null,
+"Lock the app in the recent apps view."
+],
+[
+"a",
+"vendor_steps_vivo",
+null,
+"i Manager → App manager → Autostart: turn on Akku Health Alarm."
+],
+[
+"a",
+"vendor_steps_vivo",
+null,
+"Settings → Battery → High background power use: allow Akku Health Alarm."
+],
+[
+"a",
+"vendor_steps_vivo",
+null,
+"Lock the app in the recent apps view."
+],
+[
+"a",
+"vendor_steps_oneplus",
+null,
+"Settings → Battery → Battery optimization: set Akku Health Alarm to \"Don't optimize\"."
+],
+[
+"a",
+"vendor_steps_oneplus",
+null,
+"Settings → Battery → turn off Advanced optimization."
+],
+[
+"a",
+"vendor_steps_oneplus",
+null,
+"Lock the app in the recent apps view."
+],
+[
+"a",
+"vendor_steps_other",
+null,
+"If there is an \"Autostart\" setting: allow it for Akku Health Alarm."
+],
+[
+"a",
+"vendor_steps_other",
+null,
+"If possible, lock the app in the recent apps view."
+],
+[
+"s",
+"delivery_sound",
+null,
+"with sound"
+],
+[
+"s",
+"delivery_quiet",
+null,
+"silent · night rest"
+],
+[
+"s",
+"delivery_muted_vibrate",
+null,
+"vibration only · phone muted"
+],
+[
+"s",
+"delivery_muted",
+null,
+"silent · phone muted"
+],
+[
+"s",
+"delivery_silent",
+null,
+"only notification · sound and voice off"
+],
+[
+"s",
+"language_title",
+null,
+"Language"
+],
+[
+"s",
+"language_system",
+null,
+"Phone language"
+],
+[
+"s",
+"theme_title",
+null,
+"Design"
+],
+[
+"s",
+"theme_system",
+null,
+"System"
+],
+[
+"s",
+"theme_light",
+null,
+"Light"
+],
+[
+"s",
+"theme_dark",
+null,
+"Dark"
+],
+[
+"s",
+"reliability_all_done",
+null,
+"All set up"
+],
+[
+"s",
+"reliability_vendor_confirmed",
+null,
+"I have done these steps"
+],
+[
+"s",
+"step_less",
+null,
+"Less"
+],
+[
+"s",
+"step_more",
+null,
+"More"
+],
+[
+"s",
+"preset_standard",
+null,
+"Standard"
+],
+[
+"s",
+"quick_slot",
+null,
+"Quick choice %d"
+],
+[
+"s",
+"quick_edit_title",
+null,
+"Change quick choice %d"
+],
+[
+"s",
+"quick_take_current",
+null,
+"Use the current range"
+],
+[
+"s",
+"quick_reset",
+null,
+"Reset"
+],
+[
+"s",
+"quick_hint",
+null,
+"Hold a button to change it"
+],
+[
+"s",
+"repeat_title",
+null,
+"Repeat alarm"
+],
+[
+"s",
+"repeat_off",
+null,
+"Once"
+],
+[
+"s",
+"duration_sec",
+null,
+"%d s"
+],
+[
+"s",
+"repeat_doze_hint",
+null,
+"On battery with the screen off, Android allows this only about every 9 minutes."
+],
+[
+"s",
+"repeat_next",
+null,
+"Next alarm in %s"
+],
+[
+"s",
+"repeat_until",
+null,
+"until %s"
+],
+[
+"s",
+"running_title",
+null,
+"Charging now"
+],
+[
+"s",
+"running_since",
+null,
+"since %s"
+],
+[
+"s",
+"running_mah",
+null,
+"about %s charged so far"
+],
+[
+"s",
+"running_need",
+null,
+"%d %% more for a capacity measurement. It is measured when you unplug."
+],
+[
+"s",
+"running_ready",
+null,
+"Enough for a measurement. The capacity is calculated when you unplug."
+],
+[
+"s",
+"no_capacity_short",
+null,
+"no measurement: under 15 %"
+],
+[
+"s",
+"no_capacity_broken",
+null,
+"no measurement: recording interrupted"
+],
+[
+"s",
+"no_capacity_implausible",
+null,
+"no measurement: values implausible"
+]
+]

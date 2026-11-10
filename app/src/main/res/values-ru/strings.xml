@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="settings">Настройки</string>
+    <string name="back">Назад</string>
+    <string name="ok">ОК</string>
+    <string name="cancel">Отмена</string>
+    <string name="close">Закрыть</string>
+    <string name="status_charging">Заряжается</string>
+    <string name="status_discharging">От батареи</string>
+    <string name="status_full">Полная</string>
+    <string name="status_plugged">Подключено</string>
+    <string name="metric_current">Ток</string>
+    <string name="metric_temp">Температура</string>
+    <string name="metric_voltage">Напряжение</string>
+    <string name="alarm_title">Сигнал</string>
+    <string name="alarm_on_summary">При %1$d %% и %2$d %%</string>
+    <string name="alarm_off_summary">Без сигналов</string>
+    <string name="range_title">Диапазон батареи</string>
+    <string name="range_info">Почему такие диапазоны?</string>
+    <string name="range_info_text" formatted="false">Литиевые батареи стареют медленнее всего в середине диапазона заряда. Высокий уровень заряда нагружает батарею сильнее, чем низкий, поэтому щадящие настройки прекращают зарядку раньше.\n\n20–80 %: сбалансированный\n25–70 %: щадящий\n30–60 %: очень щадящий\n\nЧем уже диапазон, тем меньше батареи вы используете за день. Выберите диапазон, подходящий вашему дню.</string>
+    <string name="preset_balanced">Сбалансированный</string>
+    <string name="preset_gentle">Щадящий</string>
+    <string name="preset_very_gentle">Очень щадящий</string>
+    <string name="preset_custom">Свой</string>
+    <string name="percent_range">%1$d–%2$d %%</string>
+    <string name="alarm_below">Сигнал ниже</string>
+    <string name="alarm_above">Сигнал выше</string>
+    <string name="recommendation">Рекомендуется: %s</string>
+    <string name="allowed_range">Возможно: %s</string>
+    <string name="usable">доступно %d %%</string>
+    <string name="tab_start">Главная</string>
+    <string name="history_title">История</string>
+    <string name="health_title">Здоровье</string>
+    <string name="setup_title">Для надёжных сигналов</string>
+    <string name="setup_text">Android может останавливать приложения в фоне. Две настройки обеспечат, чтобы сигнал пришёл вовремя.</string>
+    <string name="setup_notifications">Разрешить уведомления</string>
+    <string name="setup_battery_opt">Отключить оптимизацию батареи</string>
+    <string name="voice_title">Голосовое сообщение</string>
+    <string name="voice_off">Выкл.</string>
+    <string name="voice_builtin">Голос приложения</string>
+    <string name="voice_system">Голос телефона</string>
+    <string name="voice_builtin_hint">Короткое сообщение на английском: \"Battery charged.\" или \"Battery low.\"</string>
+    <string name="voice_system_hint">Использует офлайн-голос телефона на языке приложения. Если его нет, звучит голос приложения.</string>
+    <string name="voice_percent">Называть процент</string>
+    <string name="test_charged">Заряжена</string>
+    <string name="test_low">Разряжена</string>
+    <string name="test_hint">Проверить сигнал</string>
+    <string name="tone_title">Звук</string>
+    <string name="tone_off">Выкл.</string>
+    <string name="tone_builtin">Звук приложения</string>
+    <string name="tone_system">Звук телефона</string>
+    <string name="tone_pick">Выбрать звук</string>
+    <string name="tone_none_selected">Звук не выбран</string>
+    <string name="vibration_title">Вибрация</string>
+    <string name="loud_title">Даже в беззвучном режиме</string>
+    <string name="loud_summary">Использует громкость будильника</string>
+    <string name="alarm_notif_title">Показывать уведомление</string>
+    <string name="alarm_notif_summary">С обратным отсчётом до следующего повтора. Выкл.: только звук, голосовое сообщение и вибрация.</string>
+    <string name="quiet_title">Ночной покой</string>
+    <string name="quiet_summary">В это время только беззвучное уведомление</string>
+    <string name="quiet_from">С %s</string>
+    <string name="quiet_to">До %s</string>
+    <string name="temp_title">Сигнал температуры</string>
+    <string name="temp_summary">Предупреждает, когда батарея слишком горячая или холодная</string>
+    <string name="temp_danger">Только опасность</string>
+    <string name="temp_normal">Обычный</string>
+    <string name="temp_strict">Строгий</string>
+    <string name="temp_custom">Свой</string>
+    <string name="temp_range">%1$d–%2$d °C</string>
+    <string name="temp_cold_charging">Сообщать о холоде только при зарядке</string>
+    <string name="temp_cold_charging_summary">Зарядка на холоде вредит батарее, использование почти нет.</string>
+    <string name="temp_strict_hint">Быстрая зарядка часто достигает 35–40 °C, поэтому этот уровень может срабатывать часто.</string>
+    <string name="notif_title">Уведомление</string>
+    <string name="notif_summary">По умолчанию только уровень заряда и состояние. Добавьте здесь другие значения.</string>
+    <string name="notif_current">Ток (мА)</string>
+    <string name="notif_temp">Температура</string>
+    <string name="notif_voltage">Напряжение</string>
+    <string name="notif_percent_icon">Процент как значок в строке состояния</string>
+    <string name="about_title">О приложении</string>
+    <string name="about_text">Версия %1$s · GPL-3.0 · Работает полностью офлайн</string>
+    <string name="channel_status">Состояние батареи</string>
+    <string name="channel_alarm">Сигналы батареи</string>
+    <string name="notif_alarm_at">Сигнал при %d %%</string>
+    <string name="notif_alarm_off">Сигнал выкл.</string>
+    <string name="alarm_high_title">Батарея заряжена: %d %%</string>
+    <string name="alarm_high_text">Отключите зарядное устройство</string>
+    <string name="alarm_low_title">Батарея разряжена: %d %%</string>
+    <string name="alarm_low_text">Подключите зарядное устройство</string>
+    <string name="alarm_hot_title">Батарея горячая: %s</string>
+    <string name="alarm_hot_text">Дайте телефону остыть</string>
+    <string name="alarm_cold_title">Батарея холодная: %s</string>
+    <string name="alarm_cold_text">Не заряжайте на холоде</string>
+    <string name="tts_charged">Батарея заряжена.</string>
+    <string name="tts_charged_percent">Батарея заряжена, %d процентов.</string>
+    <string name="tts_low">Батарея разряжена.</string>
+    <string name="tts_low_percent">Батарея разряжена, %d процентов.</string>
+    <string name="tts_hot">Батарея горячая.</string>
+    <string name="tts_cold">Батарея холодная.</string>
+    <string name="view_list">Список</string>
+    <string name="view_chart">График</string>
+    <plurals name="entries_count">
+        <item quantity="one">%d запись</item>
+        <item quantity="few">%d записи</item>
+        <item quantity="many">%d записей</item>
+        <item quantity="other">%d записи</item>
+    </plurals>
+    <string name="list_empty">Пока нет записей. Здесь появится каждое изменение уровня заряда.</string>
+    <string name="plug_ac">Зарядное устройство</string>
+    <string name="plug_usb">USB</string>
+    <string name="plug_wireless">Беспроводная</string>
+    <string name="plug_battery">Батарея</string>
+    <string name="chart_title">Последние 24 часа</string>
+    <string name="chart_empty">Пока нет данных. Запись идёт.</string>
+    <string name="chart_now">сейчас</string>
+    <string name="events_title">События</string>
+    <string name="events_empty">Пока нет событий.</string>
+    <string name="event_plugged">Зарядное устройство подключено</string>
+    <string name="event_unplugged">Зарядное устройство отключено</string>
+    <string name="event_alarm_high">Сигнал: батарея заряжена</string>
+    <string name="event_alarm_low">Сигнал: батарея разряжена</string>
+    <string name="event_alarm_hot">Сигнал: батарея горячая</string>
+    <string name="event_alarm_cold">Сигнал: батарея холодная</string>
+    <string name="health_status">Состояние по данным Android</string>
+    <string name="health_good">Хорошее</string>
+    <string name="health_overheat">Перегрев</string>
+    <string name="health_cold">Слишком холодная</string>
+    <string name="health_over_voltage">Перенапряжение</string>
+    <string name="health_dead">Неисправна</string>
+    <string name="health_failure">Неизвестная ошибка</string>
+    <string name="health_unknown">Не сообщается</string>
+    <string name="health_technology">Технология</string>
+    <string name="health_charge_counter">Счётчик заряда</string>
+    <string name="range_day">День</string>
+    <string name="range_week">Неделя</string>
+    <string name="range_month">Месяц</string>
+    <string name="range_all">Всё</string>
+    <string name="chart_temp">Температура</string>
+    <string name="chart_hint">Масштабируйте двумя пальцами, двойное касание — сброс.</string>
+    <string name="eta">%1$d %% примерно через %2$s</string>
+    <string name="duration_min">%d мин</string>
+    <string name="duration_h">%d ч</string>
+    <string name="duration_h_min">%1$d ч %2$d мин</string>
+    <string name="keep_title">История</string>
+    <string name="keep_summary">Сколько хранится история. Более старые записи удаляются.</string>
+    <string name="keep_1d">1 день</string>
+    <string name="keep_7d">1 неделя</string>
+    <string name="keep_30d">1 месяц</string>
+    <string name="keep_365d">1 год</string>
+    <string name="keep_forever">Всегда</string>
+    <string name="log_discharging">Разряжается</string>
+    <string name="tone_listen">Прослушать</string>
+    <string name="health_state">Состояние батареи</string>
+    <string name="health_measuring">Ещё не измерено</string>
+    <string name="health_capacity_of">%1$s из %2$s</string>
+    <plurals name="health_from_sessions">
+        <item quantity="one">по %1$d зарядке (всего %2$d %%)</item>
+        <item quantity="few">по %1$d зарядкам (всего %2$d %%)</item>
+        <item quantity="many">по %1$d зарядкам (всего %2$d %%)</item>
+        <item quantity="other">по %1$d зарядки (всего %2$d %%)</item>
+    </plurals>
+    <string name="health_need_charge" formatted="false">Зарядите хотя бы на 15 % за один раз, тогда ёмкость будет измерена.</string>
+    <string name="health_android_says">Android сообщает: %s</string>
+    <string name="health_estimate_note">± — погрешность измерения. Чем больше и длиннее зарядки, тем она меньше.</string>
+    <string name="design_title">Номинальная ёмкость</string>
+    <string name="design_auto">считана с телефона</string>
+    <string name="design_manual">введена вами</string>
+    <string name="design_unknown">Неизвестна. Введите её, чтобы видеть состояние в процентах.</string>
+    <string name="design_edit">Изменить</string>
+    <string name="design_dialog_hint">В мА·ч, см. технические данные телефона</string>
+    <string name="design_reset">Автоматически</string>
+    <string name="cycles_title">Циклы зарядки</string>
+    <string name="cycles_text">%1$s полных циклов с начала записи</string>
+    <string name="speed_title">Скорость зарядки</string>
+    <string name="speed_row">Ø %1$s · %2$s %%/ч</string>
+    <string name="sessions_title">Последние зарядки</string>
+    <string name="sessions_empty">Зарядки ещё не записаны. Здесь появляется каждая зарядка от подключения до отключения.</string>
+    <string name="session_cycles">%s циклов</string>
+    <string name="capacity_trend">Ёмкость со временем</string>
+    <string name="measures_title">Текущие значения</string>
+    <string name="channel_hints">Подсказки</string>
+    <string name="hint_capacity_title">Ёмкость батареи всего %d %%</string>
+    <string name="hint_capacity_text">Батарея вмещает лишь около %1$s из %2$s. Замена может иметь смысл.</string>
+    <string name="sessions_count">Зарядки</string>
+    <string name="measures_hint">Коснитесь значения в рамке, чтобы увидеть его кривую.</string>
+    <string name="health_counter_from_level">Этот телефон вычисляет счётчик заряда только из процента, поэтому счётчик не может показать износ. Поэтому приложение само измеряет ток зарядки; это менее точно.</string>
+    <string name="session_full">полная</string>
+    <string name="gap_row">Приложение не работало · %s</string>
+    <string name="reliability_title">Надёжность</string>
+    <string name="reliability_ok">Готово</string>
+    <string name="reliability_vendor">Дополнительно для %s:</string>
+    <string name="reliability_general">В целом:</string>
+    <string name="reliability_open">Открыть настройки</string>
+    <string name="reliability_open_failed">Этой страницы нет на вашем телефоне. Открыты сведения о приложении; выполните шаги выше.</string>
+    <string name="reliability_link_label">Больше помощи для вашего телефона (ссылка для копирования):</string>
+    <string name="link_copied">Ссылка скопирована</string>
+    <string name="setup_vendor">Телефонам %s нужны ещё некоторые настройки.</string>
+    <string name="setup_vendor_show">Показать</string>
+    <string name="setup_vendor_done">Готово</string>
+    <string-array name="vendor_steps_xiaomi">
+        <item>Разрешите автозапуск для Akku Health Alarm.</item>
+        <item>Настройки → Приложения → Akku Health Alarm → Экономия заряда: «Нет ограничений».</item>
+        <item>В списке недавних приложений удерживайте приложение и нажмите на замок.</item>
+    </string-array>
+    <string-array name="vendor_steps_huawei">
+        <item>Диспетчер телефона → Запуск приложений: установите для Akku Health Alarm «Управлять вручную» и включите все три переключателя.</item>
+        <item>Старые телефоны: Диспетчер телефона → «Очистка при блокировке экрана» или «Защищённые приложения»: не давайте закрывать Akku Health Alarm.</item>
+        <item>В списке недавних приложений потяните приложение вниз, пока не появится замок.</item>
+    </string-array>
+    <string-array name="vendor_steps_samsung">
+        <item>Настройки → Батарея → Ограничения фонового использования → «Приложения без спящего режима» → добавьте Akku Health Alarm.</item>
+        <item>В списке недавних приложений нажмите на значок приложения и выберите «Заблокировать это приложение».</item>
+    </string-array>
+    <string-array name="vendor_steps_oppo">
+        <item>Настройки → Приложения → Akku Health Alarm → Батарея: разрешите автозапуск и работу в фоне.</item>
+        <item>Отключите «Заморозку в фоне» и «Оптимизацию аномальных приложений».</item>
+        <item>Заблокируйте приложение в списке недавних приложений.</item>
+    </string-array>
+    <string-array name="vendor_steps_vivo">
+        <item>i Manager → Диспетчер приложений → Автозапуск: включите Akku Health Alarm.</item>
+        <item>Настройки → Батарея → Высокое энергопотребление в фоне: разрешите Akku Health Alarm.</item>
+        <item>Заблокируйте приложение в списке недавних приложений.</item>
+    </string-array>
+    <string-array name="vendor_steps_oneplus">
+        <item>Настройки → Батарея → Оптимизация батареи: установите для Akku Health Alarm «Не оптимизировать».</item>
+        <item>Настройки → Батарея → отключите расширенную оптимизацию.</item>
+        <item>Заблокируйте приложение в списке недавних приложений.</item>
+    </string-array>
+    <string-array name="vendor_steps_other">
+        <item>Если есть настройка «Автозапуск»: разрешите её для Akku Health Alarm.</item>
+        <item>По возможности заблокируйте приложение в списке недавних приложений.</item>
+    </string-array>
+    <string name="delivery_sound">со звуком</string>
+    <string name="delivery_quiet">беззвучно · ночной покой</string>
+    <string name="delivery_muted_vibrate">только вибрация · телефон без звука</string>
+    <string name="delivery_muted">беззвучно · телефон без звука</string>
+    <string name="delivery_silent">только уведомление · звук и голос выкл.</string>
+    <string name="language_title">Язык</string>
+    <string name="language_system">Язык телефона</string>
+    <string name="theme_title">Оформление</string>
+    <string name="theme_system">Системное</string>
+    <string name="theme_light">Светлое</string>
+    <string name="theme_dark">Тёмное</string>
+    <string name="reliability_all_done">Всё настроено</string>
+    <string name="reliability_vendor_confirmed">Я выполнил эти шаги</string>
+    <string name="step_less">Меньше</string>
+    <string name="step_more">Больше</string>
+    <string name="preset_standard">Стандарт</string>
+    <string name="quick_slot">Быстрый выбор %d</string>
+    <string name="quick_edit_title">Изменить быстрый выбор %d</string>
+    <string name="quick_take_current">Взять текущий диапазон</string>
+    <string name="quick_reset">Сбросить</string>
+    <string name="quick_hint">Удерживайте кнопку, чтобы изменить</string>
+    <string name="repeat_title">Повторять сигнал</string>
+    <string name="repeat_off">Один раз</string>
+    <string name="duration_sec">%d с</string>
+    <string name="repeat_doze_hint">От батареи при выключенном экране Android разрешает это лишь примерно раз в 9 минут.</string>
+    <string name="repeat_next">Следующий сигнал через %s</string>
+    <string name="repeat_until">до %s</string>
+    <string name="running_title">Идёт зарядка</string>
+    <string name="running_since">с %s</string>
+    <string name="running_mah">пока заряжено около %s</string>
+    <string name="running_need">Ещё %d %% до измерения ёмкости. Оно происходит при отключении.</string>
+    <string name="running_ready">Достаточно для измерения. Ёмкость рассчитается при отключении.</string>
+    <string name="no_capacity_short" formatted="false">без измерения: меньше 15 %</string>
+    <string name="no_capacity_broken">без измерения: запись прервана</string>
+    <string name="no_capacity_implausible">без измерения: неправдоподобные значения</string>
+</resources>

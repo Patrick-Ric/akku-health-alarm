@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="settings">Nastavení</string>
+    <string name="back">Zpět</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Zrušit</string>
+    <string name="close">Zavřít</string>
+    <string name="status_charging">Nabíjí se</string>
+    <string name="status_discharging">Na baterii</string>
+    <string name="status_full">Plná</string>
+    <string name="status_plugged">Připojeno</string>
+    <string name="metric_current">Proud</string>
+    <string name="metric_temp">Teplota</string>
+    <string name="metric_voltage">Napětí</string>
+    <string name="alarm_title">Alarm</string>
+    <string name="alarm_on_summary">Při %1$d %% a %2$d %%</string>
+    <string name="alarm_off_summary">Žádná upozornění</string>
+    <string name="range_title">Rozsah baterie</string>
+    <string name="range_info">Proč tyto rozsahy?</string>
+    <string name="range_info_text" formatted="false">Lithiové baterie stárnou nejpomaleji uprostřed rozsahu nabití. Vysoká úroveň nabití zatěžuje baterii víc než nízká, proto šetrná nastavení přestávají nabíjet dříve.\n\n20–80 %: vyvážené\n25–70 %: šetrné\n30–60 %: velmi šetrné\n\nČím užší rozsah, tím méně baterie denně využiješ. Vyber rozsah, který se hodí k tvému dni.</string>
+    <string name="preset_balanced">Vyvážené</string>
+    <string name="preset_gentle">Šetrné</string>
+    <string name="preset_very_gentle">Velmi šetrné</string>
+    <string name="preset_custom">Vlastní</string>
+    <string name="percent_range">%1$d–%2$d %%</string>
+    <string name="alarm_below">Alarm pod</string>
+    <string name="alarm_above">Alarm nad</string>
+    <string name="recommendation">Doporučeno: %s</string>
+    <string name="allowed_range">Možné: %s</string>
+    <string name="usable">využitelné %d %%</string>
+    <string name="tab_start">Start</string>
+    <string name="history_title">Historie</string>
+    <string name="health_title">Zdraví</string>
+    <string name="setup_title">Pro spolehlivé alarmy</string>
+    <string name="setup_text">Android může zastavovat aplikace na pozadí. Dvě nastavení zajistí, že alarm přijde včas.</string>
+    <string name="setup_notifications">Povolit oznámení</string>
+    <string name="setup_battery_opt">Vypnout optimalizaci baterie</string>
+    <string name="voice_title">Hlasové hlášení</string>
+    <string name="voice_off">Vyp.</string>
+    <string name="voice_builtin">Hlas aplikace</string>
+    <string name="voice_system">Hlas telefonu</string>
+    <string name="voice_builtin_hint">Krátké anglické hlášení: \"Battery charged.\" nebo \"Battery low.\"</string>
+    <string name="voice_system_hint">Používá offline hlas tvého telefonu v jazyce aplikace. Pokud žádný není, přehraje se hlas aplikace.</string>
+    <string name="voice_percent">Říkat procenta</string>
+    <string name="test_charged">Nabitá</string>
+    <string name="test_low">Slabá</string>
+    <string name="test_hint">Vyzkoušet alarm</string>
+    <string name="tone_title">Zvuk</string>
+    <string name="tone_off">Vyp.</string>
+    <string name="tone_builtin">Zvuk aplikace</string>
+    <string name="tone_system">Zvuk telefonu</string>
+    <string name="tone_pick">Vybrat zvuk</string>
+    <string name="tone_none_selected">Není vybrán žádný zvuk</string>
+    <string name="vibration_title">Vibrace</string>
+    <string name="loud_title">I při ztlumení</string>
+    <string name="loud_summary">Používá hlasitost budíku</string>
+    <string name="alarm_notif_title">Zobrazit oznámení</string>
+    <string name="alarm_notif_summary">S odpočtem do dalšího opakování. Vypnuto: jen zvuk, hlášení a vibrace.</string>
+    <string name="quiet_title">Noční klid</string>
+    <string name="quiet_summary">V této době jen tiché oznámení</string>
+    <string name="quiet_from">Od %s</string>
+    <string name="quiet_to">Do %s</string>
+    <string name="temp_title">Teplotní alarm</string>
+    <string name="temp_summary">Varuje, když je baterie příliš horká nebo studená</string>
+    <string name="temp_danger">Jen nebezpečí</string>
+    <string name="temp_normal">Normální</string>
+    <string name="temp_strict">Přísné</string>
+    <string name="temp_custom">Vlastní</string>
+    <string name="temp_range">%1$d–%2$d °C</string>
+    <string name="temp_cold_charging">Chlad hlásit jen při nabíjení</string>
+    <string name="temp_cold_charging_summary">Nabíjení v mrazu baterii škodí, používání téměř ne.</string>
+    <string name="temp_strict_hint">Rychlé nabíjení často dosahuje 35–40 °C, tato úroveň proto může varovat často.</string>
+    <string name="notif_title">Oznámení</string>
+    <string name="notif_summary">Ve výchozím stavu jen úroveň nabití a stav. Další hodnoty přidáš zde.</string>
+    <string name="notif_current">Proud (mA)</string>
+    <string name="notif_temp">Teplota</string>
+    <string name="notif_voltage">Napětí</string>
+    <string name="notif_percent_icon">Procenta jako ikona ve stavovém řádku</string>
+    <string name="about_title">O aplikaci</string>
+    <string name="about_text">Verze %1$s · GPL-3.0 · Funguje zcela offline</string>
+    <string name="channel_status">Stav baterie</string>
+    <string name="channel_alarm">Alarmy baterie</string>
+    <string name="notif_alarm_at">Alarm při %d %%</string>
+    <string name="notif_alarm_off">Alarm vyp.</string>
+    <string name="alarm_high_title">Baterie nabitá: %d %%</string>
+    <string name="alarm_high_text">Odpoj nabíječku</string>
+    <string name="alarm_low_title">Baterie slabá: %d %%</string>
+    <string name="alarm_low_text">Připoj nabíječku</string>
+    <string name="alarm_hot_title">Baterie horká: %s</string>
+    <string name="alarm_hot_text">Nech telefon vychladnout</string>
+    <string name="alarm_cold_title">Baterie studená: %s</string>
+    <string name="alarm_cold_text">V mrazu nenabíjej</string>
+    <string name="tts_charged">Baterie nabitá.</string>
+    <string name="tts_charged_percent">Baterie nabitá, %d procent.</string>
+    <string name="tts_low">Baterie slabá.</string>
+    <string name="tts_low_percent">Baterie slabá, %d procent.</string>
+    <string name="tts_hot">Baterie horká.</string>
+    <string name="tts_cold">Baterie studená.</string>
+    <string name="view_list">Seznam</string>
+    <string name="view_chart">Graf</string>
+    <plurals name="entries_count">
+        <item quantity="one">%d záznam</item>
+        <item quantity="few">%d záznamy</item>
+        <item quantity="many">%d záznamu</item>
+        <item quantity="other">%d záznamů</item>
+    </plurals>
+    <string name="list_empty">Zatím žádné záznamy. Zde se objeví každá změna úrovně nabití.</string>
+    <string name="plug_ac">Nabíječka</string>
+    <string name="plug_usb">USB</string>
+    <string name="plug_wireless">Bezdrátově</string>
+    <string name="plug_battery">Baterie</string>
+    <string name="chart_title">Posledních 24 hodin</string>
+    <string name="chart_empty">Zatím žádná data. Záznam běží.</string>
+    <string name="chart_now">teď</string>
+    <string name="events_title">Události</string>
+    <string name="events_empty">Zatím žádné události.</string>
+    <string name="event_plugged">Nabíječka připojena</string>
+    <string name="event_unplugged">Nabíječka odpojena</string>
+    <string name="event_alarm_high">Alarm: baterie nabitá</string>
+    <string name="event_alarm_low">Alarm: baterie slabá</string>
+    <string name="event_alarm_hot">Alarm: baterie horká</string>
+    <string name="event_alarm_cold">Alarm: baterie studená</string>
+    <string name="health_status">Stav podle Androidu</string>
+    <string name="health_good">Dobrý</string>
+    <string name="health_overheat">Přehřátá</string>
+    <string name="health_cold">Příliš studená</string>
+    <string name="health_over_voltage">Přepětí</string>
+    <string name="health_dead">Vadná</string>
+    <string name="health_failure">Neznámá chyba</string>
+    <string name="health_unknown">Nehlášeno</string>
+    <string name="health_technology">Technologie</string>
+    <string name="health_charge_counter">Počítadlo náboje</string>
+    <string name="range_day">Den</string>
+    <string name="range_week">Týden</string>
+    <string name="range_month">Měsíc</string>
+    <string name="range_all">Vše</string>
+    <string name="chart_temp">Teplota</string>
+    <string name="chart_hint">Přibliž dvěma prsty, dvojitým klepnutím obnovíš.</string>
+    <string name="eta">%1$d %% asi za %2$s</string>
+    <string name="duration_min">%d min</string>
+    <string name="duration_h">%d h</string>
+    <string name="duration_h_min">%1$d h %2$d min</string>
+    <string name="keep_title">Historie</string>
+    <string name="keep_summary">Jak dlouho se historie uchovává. Starší záznamy se mažou.</string>
+    <string name="keep_1d">1 den</string>
+    <string name="keep_7d">1 týden</string>
+    <string name="keep_30d">1 měsíc</string>
+    <string name="keep_365d">1 rok</string>
+    <string name="keep_forever">Navždy</string>
+    <string name="log_discharging">Vybíjí se</string>
+    <string name="tone_listen">Poslechnout</string>
+    <string name="health_state">Stav baterie</string>
+    <string name="health_measuring">Zatím nezměřeno</string>
+    <string name="health_capacity_of">%1$s z %2$s</string>
+    <plurals name="health_from_sessions">
+        <item quantity="one">změřeno z %1$d nabíjení (celkem %2$d %%)</item>
+        <item quantity="few">změřeno z %1$d nabíjení (celkem %2$d %%)</item>
+        <item quantity="many">změřeno z %1$d nabíjení (celkem %2$d %%)</item>
+        <item quantity="other">změřeno z %1$d nabíjení (celkem %2$d %%)</item>
+    </plurals>
+    <string name="health_need_charge" formatted="false">Nabij najednou aspoň 15 % a kapacita se změří.</string>
+    <string name="health_android_says">Android hlásí: %s</string>
+    <string name="health_estimate_note">± je nejistota měření. Čím víc a delších nabíjení, tím je menší.</string>
+    <string name="design_title">Jmenovitá kapacita</string>
+    <string name="design_auto">načtená z telefonu</string>
+    <string name="design_manual">zadaná tebou</string>
+    <string name="design_unknown">Neznámá. Zadej ji, abys viděl stav v procentech.</string>
+    <string name="design_edit">Změnit</string>
+    <string name="design_dialog_hint">V mAh, viz technický list tvého telefonu</string>
+    <string name="design_reset">Automaticky</string>
+    <string name="cycles_title">Nabíjecí cykly</string>
+    <string name="cycles_text">%1$s plných cyklů od začátku záznamu</string>
+    <string name="speed_title">Rychlost nabíjení</string>
+    <string name="speed_row">Ø %1$s · %2$s %%/h</string>
+    <string name="sessions_title">Poslední nabíjení</string>
+    <string name="sessions_empty">Zatím nezaznamenáno žádné nabíjení. Zde se objeví každé nabíjení od připojení po odpojení.</string>
+    <string name="session_cycles">%s cyklů</string>
+    <string name="capacity_trend">Kapacita v čase</string>
+    <string name="measures_title">Aktuální hodnoty</string>
+    <string name="channel_hints">Tipy</string>
+    <string name="hint_capacity_title">Kapacita baterie jen %d %%</string>
+    <string name="hint_capacity_text">Baterie pojme už jen asi %1$s z %2$s. Výměna se může vyplatit.</string>
+    <string name="sessions_count">Nabíjení</string>
+    <string name="measures_hint">Klepni na orámovanou hodnotu a uvidíš její křivku.</string>
+    <string name="health_counter_from_level">Tento telefon počítá čítač nabití jen z procent, takže čítač nemůže ukázat opotřebení. Aplikace proto sama měří nabíjecí proud; to je méně přesné.</string>
+    <string name="session_full">plná</string>
+    <string name="gap_row">Aplikace neaktivní · %s</string>
+    <string name="reliability_title">Spolehlivost</string>
+    <string name="reliability_ok">Hotovo</string>
+    <string name="reliability_vendor">Navíc pro %s:</string>
+    <string name="reliability_general">Obecně:</string>
+    <string name="reliability_open">Otevřít nastavení</string>
+    <string name="reliability_open_failed">Tato stránka ve tvém telefonu neexistuje. Otevřely se informace o aplikaci; postupuj podle kroků výše.</string>
+    <string name="reliability_link_label">Další pomoc pro tvůj telefon (odkaz ke zkopírování):</string>
+    <string name="link_copied">Odkaz zkopírován</string>
+    <string name="setup_vendor">Telefony %s potřebují ještě několik nastavení.</string>
+    <string name="setup_vendor_show">Zobrazit</string>
+    <string name="setup_vendor_done">Hotovo</string>
+    <string-array name="vendor_steps_xiaomi">
+        <item>Povol automatické spouštění pro Akku Health Alarm.</item>
+        <item>Nastavení → Aplikace → Akku Health Alarm → Spořič baterie: „Bez omezení“.</item>
+        <item>V přehledu posledních aplikací podrž aplikaci a klepni na zámek.</item>
+    </string-array>
+    <string-array name="vendor_steps_huawei">
+        <item>Správce telefonu → Spouštění aplikací: nastav Akku Health Alarm na „Spravovat ručně“ a zapni všechny tři přepínače.</item>
+        <item>Starší telefony: Správce telefonu → „Čištění při zamčené obrazovce“ nebo „Chráněné aplikace“: nenech Akku Health Alarm zavírat.</item>
+        <item>V přehledu posledních aplikací stáhni aplikaci dolů, dokud se neobjeví zámek.</item>
+    </string-array>
+    <string-array name="vendor_steps_samsung">
+        <item>Nastavení → Baterie → Limity používání na pozadí → „Nikdy neuspávané aplikace“ → přidej Akku Health Alarm.</item>
+        <item>V přehledu posledních aplikací klepni na ikonu aplikace a zvol „Zamknout tuto aplikaci“.</item>
+    </string-array>
+    <string-array name="vendor_steps_oppo">
+        <item>Nastavení → Aplikace → Akku Health Alarm → Baterie: povol automatické spouštění a činnost na pozadí.</item>
+        <item>Vypni „Zmrazit na pozadí“ a „Optimalizovat neobvyklé aplikace“.</item>
+        <item>Zamkni aplikaci v přehledu posledních aplikací.</item>
+    </string-array>
+    <string-array name="vendor_steps_vivo">
+        <item>i Manager → Správce aplikací → Automatické spouštění: zapni Akku Health Alarm.</item>
+        <item>Nastavení → Baterie → Vysoká spotřeba na pozadí: povol Akku Health Alarm.</item>
+        <item>Zamkni aplikaci v přehledu posledních aplikací.</item>
+    </string-array>
+    <string-array name="vendor_steps_oneplus">
+        <item>Nastavení → Baterie → Optimalizace baterie: nastav Akku Health Alarm na „Neoptimalizovat“.</item>
+        <item>Nastavení → Baterie → vypni pokročilou optimalizaci.</item>
+        <item>Zamkni aplikaci v přehledu posledních aplikací.</item>
+    </string-array>
+    <string-array name="vendor_steps_other">
+        <item>Pokud existuje nastavení „Automatické spouštění“: povol ho pro Akku Health Alarm.</item>
+        <item>Pokud je to možné, zamkni aplikaci v přehledu posledních aplikací.</item>
+    </string-array>
+    <string name="delivery_sound">se zvukem</string>
+    <string name="delivery_quiet">tiše · noční klid</string>
+    <string name="delivery_muted_vibrate">jen vibrace · telefon ztlumen</string>
+    <string name="delivery_muted">tiše · telefon ztlumen</string>
+    <string name="delivery_silent">jen oznámení · zvuk a hlas vyp.</string>
+    <string name="language_title">Jazyk</string>
+    <string name="language_system">Jazyk telefonu</string>
+    <string name="theme_title">Vzhled</string>
+    <string name="theme_system">Systém</string>
+    <string name="theme_light">Světlý</string>
+    <string name="theme_dark">Tmavý</string>
+    <string name="reliability_all_done">Vše nastaveno</string>
+    <string name="reliability_vendor_confirmed">Tyto kroky mám hotové</string>
+    <string name="step_less">Méně</string>
+    <string name="step_more">Více</string>
+    <string name="preset_standard">Standard</string>
+    <string name="quick_slot">Rychlá volba %d</string>
+    <string name="quick_edit_title">Upravit rychlou volbu %d</string>
+    <string name="quick_take_current">Převzít aktuální rozsah</string>
+    <string name="quick_reset">Obnovit</string>
+    <string name="quick_hint">Podrž tlačítko a uprav ho</string>
+    <string name="repeat_title">Opakovat alarm</string>
+    <string name="repeat_off">Jednou</string>
+    <string name="duration_sec">%d s</string>
+    <string name="repeat_doze_hint">Na baterii se zhasnutým displejem to Android povolí jen asi každých 9 minut.</string>
+    <string name="repeat_next">Další alarm za %s</string>
+    <string name="repeat_until">do %s</string>
+    <string name="running_title">Probíhá nabíjení</string>
+    <string name="running_since">od %s</string>
+    <string name="running_mah">zatím nabito asi %s</string>
+    <string name="running_need">Ještě %d %% do měření kapacity. Měří se při odpojení.</string>
+    <string name="running_ready">Dost pro měření. Kapacita se spočítá při odpojení.</string>
+    <string name="no_capacity_short" formatted="false">bez měření: pod 15 %</string>
+    <string name="no_capacity_broken">bez měření: záznam přerušen</string>
+    <string name="no_capacity_implausible">bez měření: nepravděpodobné hodnoty</string>
+</resources>

@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="settings">Ρυθμίσεις</string>
+    <string name="back">Πίσω</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Ακύρωση</string>
+    <string name="close">Κλείσιμο</string>
+    <string name="status_charging">Φορτίζει</string>
+    <string name="status_discharging">Με μπαταρία</string>
+    <string name="status_full">Πλήρης</string>
+    <string name="status_plugged">Συνδεδεμένο</string>
+    <string name="metric_current">Ρεύμα</string>
+    <string name="metric_temp">Θερμοκρασία</string>
+    <string name="metric_voltage">Τάση</string>
+    <string name="alarm_title">Ειδοποίηση</string>
+    <string name="alarm_on_summary">Στο %1$d %% και στο %2$d %%</string>
+    <string name="alarm_off_summary">Χωρίς ειδοποιήσεις</string>
+    <string name="range_title">Εύρος μπαταρίας</string>
+    <string name="range_info">Γιατί αυτά τα εύρη;</string>
+    <string name="range_info_text" formatted="false">Οι μπαταρίες λιθίου γερνούν πιο αργά στη μέση του εύρους φόρτισης. Ένα υψηλό επίπεδο φόρτισης καταπονεί τη μπαταρία περισσότερο από ένα χαμηλό, γι\' αυτό οι ήπιες προεπιλογές σταματούν τη φόρτιση νωρίτερα.\n\n20–80 %: ισορροπημένο\n25–70 %: ήπιο\n30–60 %: πολύ ήπιο\n\nΌσο στενότερο το εύρος, τόσο λιγότερη μπαταρία χρησιμοποιείς κάθε μέρα. Διάλεξε το εύρος που ταιριάζει στη μέρα σου.</string>
+    <string name="preset_balanced">Ισορροπημένο</string>
+    <string name="preset_gentle">Ήπιο</string>
+    <string name="preset_very_gentle">Πολύ ήπιο</string>
+    <string name="preset_custom">Προσαρμοσμένο</string>
+    <string name="percent_range">%1$d–%2$d %%</string>
+    <string name="alarm_below">Ειδοποίηση κάτω από</string>
+    <string name="alarm_above">Ειδοποίηση πάνω από</string>
+    <string name="recommendation">Συνιστάται: %s</string>
+    <string name="allowed_range">Δυνατό: %s</string>
+    <string name="usable">αξιοποιήσιμο %d %%</string>
+    <string name="tab_start">Αρχή</string>
+    <string name="history_title">Ιστορικό</string>
+    <string name="health_title">Υγεία</string>
+    <string name="setup_title">Για αξιόπιστες ειδοποιήσεις</string>
+    <string name="setup_text">Το Android μπορεί να σταματά εφαρμογές στο παρασκήνιο. Δύο ρυθμίσεις εξασφαλίζουν ότι η ειδοποίηση έρχεται στην ώρα της.</string>
+    <string name="setup_notifications">Να επιτρέπονται οι ειδοποιήσεις</string>
+    <string name="setup_battery_opt">Απενεργοποίηση βελτιστοποίησης μπαταρίας</string>
+    <string name="voice_title">Φωνητικό μήνυμα</string>
+    <string name="voice_off">Ανενεργό</string>
+    <string name="voice_builtin">Φωνή εφαρμογής</string>
+    <string name="voice_system">Φωνή τηλεφώνου</string>
+    <string name="voice_builtin_hint">Σύντομο αγγλικό μήνυμα: \"Battery charged.\" ή \"Battery low.\"</string>
+    <string name="voice_system_hint">Χρησιμοποιεί μια φωνή εκτός σύνδεσης του τηλεφώνου στη γλώσσα της εφαρμογής. Αν δεν υπάρχει, ακούγεται η φωνή της εφαρμογής.</string>
+    <string name="voice_percent">Εκφώνηση ποσοστού</string>
+    <string name="test_charged">Φορτισμένη</string>
+    <string name="test_low">Χαμηλή</string>
+    <string name="test_hint">Δοκιμή ειδοποίησης</string>
+    <string name="tone_title">Ήχος</string>
+    <string name="tone_off">Ανενεργός</string>
+    <string name="tone_builtin">Ήχος εφαρμογής</string>
+    <string name="tone_system">Ήχος τηλεφώνου</string>
+    <string name="tone_pick">Επιλογή ήχου</string>
+    <string name="tone_none_selected">Δεν επιλέχθηκε ήχος</string>
+    <string name="vibration_title">Δόνηση</string>
+    <string name="loud_title">Και σε σίγαση</string>
+    <string name="loud_summary">Χρησιμοποιεί την ένταση του ξυπνητηριού</string>
+    <string name="alarm_notif_title">Εμφάνιση ειδοποίησης</string>
+    <string name="alarm_notif_summary">Με αντίστροφη μέτρηση ως την επόμενη επανάληψη. Ανενεργό: μόνο ήχος, φωνητικό μήνυμα και δόνηση.</string>
+    <string name="quiet_title">Νυχτερινή ησυχία</string>
+    <string name="quiet_summary">Σε αυτό το διάστημα μόνο αθόρυβη ειδοποίηση</string>
+    <string name="quiet_from">Από %s</string>
+    <string name="quiet_to">Έως %s</string>
+    <string name="temp_title">Ειδοποίηση θερμοκρασίας</string>
+    <string name="temp_summary">Προειδοποιεί όταν η μπαταρία ζεσταθεί ή κρυώσει πολύ</string>
+    <string name="temp_danger">Μόνο κίνδυνος</string>
+    <string name="temp_normal">Κανονικό</string>
+    <string name="temp_strict">Αυστηρό</string>
+    <string name="temp_custom">Προσαρμοσμένο</string>
+    <string name="temp_range">%1$d–%2$d °C</string>
+    <string name="temp_cold_charging">Αναφορά κρύου μόνο κατά τη φόρτιση</string>
+    <string name="temp_cold_charging_summary">Η φόρτιση στο κρύο βλάπτει τη μπαταρία, η χρήση σχεδόν καθόλου.</string>
+    <string name="temp_strict_hint">Η γρήγορη φόρτιση φτάνει συχνά τους 35–40 °C, οπότε αυτό το επίπεδο μπορεί να ειδοποιεί συχνά.</string>
+    <string name="notif_title">Ειδοποίηση</string>
+    <string name="notif_summary">Προεπιλογή μόνο επίπεδο φόρτισης και κατάσταση. Πρόσθεσε εδώ περισσότερες τιμές.</string>
+    <string name="notif_current">Ρεύμα (mA)</string>
+    <string name="notif_temp">Θερμοκρασία</string>
+    <string name="notif_voltage">Τάση</string>
+    <string name="notif_percent_icon">Ποσοστό ως εικονίδιο στη γραμμή κατάστασης</string>
+    <string name="about_title">Πληροφορίες</string>
+    <string name="about_text">Έκδοση %1$s · GPL-3.0 · Λειτουργεί εντελώς εκτός σύνδεσης</string>
+    <string name="channel_status">Κατάσταση μπαταρίας</string>
+    <string name="channel_alarm">Ειδοποιήσεις μπαταρίας</string>
+    <string name="notif_alarm_at">Ειδοποίηση στο %d %%</string>
+    <string name="notif_alarm_off">Ειδοποίηση ανενεργή</string>
+    <string name="alarm_high_title">Μπαταρία φορτισμένη: %d %%</string>
+    <string name="alarm_high_text">Αποσύνδεσε τον φορτιστή</string>
+    <string name="alarm_low_title">Μπαταρία χαμηλή: %d %%</string>
+    <string name="alarm_low_text">Σύνδεσε τον φορτιστή</string>
+    <string name="alarm_hot_title">Μπαταρία ζεστή: %s</string>
+    <string name="alarm_hot_text">Άφησε το τηλέφωνο να κρυώσει</string>
+    <string name="alarm_cold_title">Μπαταρία κρύα: %s</string>
+    <string name="alarm_cold_text">Μη φορτίζεις στο κρύο</string>
+    <string name="tts_charged">Μπαταρία φορτισμένη.</string>
+    <string name="tts_charged_percent">Μπαταρία φορτισμένη, %d τοις εκατό.</string>
+    <string name="tts_low">Μπαταρία χαμηλή.</string>
+    <string name="tts_low_percent">Μπαταρία χαμηλή, %d τοις εκατό.</string>
+    <string name="tts_hot">Μπαταρία ζεστή.</string>
+    <string name="tts_cold">Μπαταρία κρύα.</string>
+    <string name="view_list">Λίστα</string>
+    <string name="view_chart">Γράφημα</string>
+    <plurals name="entries_count">
+        <item quantity="one">%d εγγραφή</item>
+        <item quantity="other">%d εγγραφές</item>
+    </plurals>
+    <string name="list_empty">Δεν υπάρχουν ακόμη εγγραφές. Εδώ θα εμφανίζεται κάθε αλλαγή του επιπέδου φόρτισης.</string>
+    <string name="plug_ac">Φορτιστής</string>
+    <string name="plug_usb">USB</string>
+    <string name="plug_wireless">Ασύρματα</string>
+    <string name="plug_battery">Μπαταρία</string>
+    <string name="chart_title">Τελευταίες 24 ώρες</string>
+    <string name="chart_empty">Δεν υπάρχουν ακόμη δεδομένα. Η καταγραφή εκτελείται.</string>
+    <string name="chart_now">τώρα</string>
+    <string name="events_title">Συμβάντα</string>
+    <string name="events_empty">Δεν υπάρχουν ακόμη συμβάντα.</string>
+    <string name="event_plugged">Φορτιστής συνδέθηκε</string>
+    <string name="event_unplugged">Φορτιστής αποσυνδέθηκε</string>
+    <string name="event_alarm_high">Ειδοποίηση: μπαταρία φορτισμένη</string>
+    <string name="event_alarm_low">Ειδοποίηση: μπαταρία χαμηλή</string>
+    <string name="event_alarm_hot">Ειδοποίηση: μπαταρία ζεστή</string>
+    <string name="event_alarm_cold">Ειδοποίηση: μπαταρία κρύα</string>
+    <string name="health_status">Κατάσταση κατά το Android</string>
+    <string name="health_good">Καλή</string>
+    <string name="health_overheat">Υπερθερμασμένη</string>
+    <string name="health_cold">Πολύ κρύα</string>
+    <string name="health_over_voltage">Υπέρταση</string>
+    <string name="health_dead">Ελαττωματική</string>
+    <string name="health_failure">Άγνωστο σφάλμα</string>
+    <string name="health_unknown">Δεν αναφέρθηκε</string>
+    <string name="health_technology">Τεχνολογία</string>
+    <string name="health_charge_counter">Μετρητής φορτίου</string>
+    <string name="range_day">Ημέρα</string>
+    <string name="range_week">Εβδομάδα</string>
+    <string name="range_month">Μήνας</string>
+    <string name="range_all">Όλα</string>
+    <string name="chart_temp">Θερμοκρασία</string>
+    <string name="chart_hint">Ζουμ με δύο δάχτυλα, διπλό πάτημα για επαναφορά.</string>
+    <string name="eta">%1$d %% σε περίπου %2$s</string>
+    <string name="duration_min">%d λ.</string>
+    <string name="duration_h">%d ώ.</string>
+    <string name="duration_h_min">%1$d ώ. %2$d λ.</string>
+    <string name="keep_title">Ιστορικό</string>
+    <string name="keep_summary">Πόσο καιρό διατηρείται το ιστορικό. Οι παλαιότερες εγγραφές διαγράφονται.</string>
+    <string name="keep_1d">1 ημέρα</string>
+    <string name="keep_7d">1 εβδομάδα</string>
+    <string name="keep_30d">1 μήνας</string>
+    <string name="keep_365d">1 έτος</string>
+    <string name="keep_forever">Πάντα</string>
+    <string name="log_discharging">Αποφορτίζεται</string>
+    <string name="tone_listen">Ακρόαση</string>
+    <string name="health_state">Κατάσταση μπαταρίας</string>
+    <string name="health_measuring">Δεν μετρήθηκε ακόμη</string>
+    <string name="health_capacity_of">%1$s από %2$s</string>
+    <plurals name="health_from_sessions">
+        <item quantity="one">μετρήθηκε από %1$d φόρτιση (συνολικά %2$d %%)</item>
+        <item quantity="other">μετρήθηκε από %1$d φορτίσεις (συνολικά %2$d %%)</item>
+    </plurals>
+    <string name="health_need_charge" formatted="false">Φόρτισε τουλάχιστον 15 % μονομιάς και η χωρητικότητα θα μετρηθεί.</string>
+    <string name="health_android_says">Το Android αναφέρει: %s</string>
+    <string name="health_estimate_note">Το ± είναι η αβεβαιότητα μέτρησης. Όσο περισσότερες και μεγαλύτερες οι φορτίσεις, τόσο μικραίνει.</string>
+    <string name="design_title">Ονομαστική χωρητικότητα</string>
+    <string name="design_auto">διαβάστηκε από το τηλέφωνο</string>
+    <string name="design_manual">καταχωρίστηκε από σένα</string>
+    <string name="design_unknown">Άγνωστη. Καταχώρισέ την για να δεις την κατάσταση σε ποσοστό.</string>
+    <string name="design_edit">Αλλαγή</string>
+    <string name="design_dialog_hint">Σε mAh, δες το φύλλο προδιαγραφών του τηλεφώνου</string>
+    <string name="design_reset">Αυτόματα</string>
+    <string name="cycles_title">Κύκλοι φόρτισης</string>
+    <string name="cycles_text">%1$s πλήρεις κύκλοι από την αρχή της καταγραφής</string>
+    <string name="speed_title">Ταχύτητα φόρτισης</string>
+    <string name="speed_row">Ø %1$s · %2$s %%/ώ.</string>
+    <string name="sessions_title">Πρόσφατες φορτίσεις</string>
+    <string name="sessions_empty">Δεν έχει καταγραφεί ακόμη φόρτιση. Εδώ εμφανίζεται κάθε φόρτιση από τη σύνδεση ως την αποσύνδεση.</string>
+    <string name="session_cycles">%s κύκλοι</string>
+    <string name="capacity_trend">Χωρητικότητα στον χρόνο</string>
+    <string name="measures_title">Τρέχουσες τιμές</string>
+    <string name="channel_hints">Συμβουλές</string>
+    <string name="hint_capacity_title">Χωρητικότητα μπαταρίας μόνο %d %%</string>
+    <string name="hint_capacity_text">Η μπαταρία χωράει πλέον μόνο περίπου %1$s από %2$s. Μια αντικατάσταση ίσως αξίζει.</string>
+    <string name="sessions_count">Φορτίσεις</string>
+    <string name="measures_hint">Πάτησε μια τιμή με πλαίσιο για να δεις την καμπύλη της.</string>
+    <string name="health_counter_from_level">Αυτό το τηλέφωνο υπολογίζει τον μετρητή φόρτισης μόνο από το ποσοστό, οπότε ο μετρητής δεν μπορεί να δείξει φθορά. Γι’ αυτό η εφαρμογή μετρά μόνη της το ρεύμα φόρτισης· αυτό είναι λιγότερο ακριβές.</string>
+    <string name="session_full">πλήρης</string>
+    <string name="gap_row">Η εφαρμογή δεν ήταν ενεργή · %s</string>
+    <string name="reliability_title">Αξιοπιστία</string>
+    <string name="reliability_ok">Έτοιμο</string>
+    <string name="reliability_vendor">Επιπλέον για %s:</string>
+    <string name="reliability_general">Γενικά:</string>
+    <string name="reliability_open">Άνοιγμα ρυθμίσεων</string>
+    <string name="reliability_open_failed">Αυτή η σελίδα δεν υπάρχει στο τηλέφωνό σου. Άνοιξαν οι πληροφορίες της εφαρμογής· ακολούθησε τα παραπάνω βήματα.</string>
+    <string name="reliability_link_label">Περισσότερη βοήθεια για το τηλέφωνό σου (σύνδεσμος για αντιγραφή):</string>
+    <string name="link_copied">Ο σύνδεσμος αντιγράφηκε</string>
+    <string name="setup_vendor">Τα τηλέφωνα %s χρειάζονται μερικές ακόμη ρυθμίσεις.</string>
+    <string name="setup_vendor_show">Εμφάνιση</string>
+    <string name="setup_vendor_done">Έτοιμο</string>
+    <string-array name="vendor_steps_xiaomi">
+        <item>Επίτρεψε την αυτόματη εκκίνηση για το Akku Health Alarm.</item>
+        <item>Ρυθμίσεις → Εφαρμογές → Akku Health Alarm → Εξοικονόμηση μπαταρίας: «Χωρίς περιορισμούς».</item>
+        <item>Στην προβολή πρόσφατων εφαρμογών κράτησε πατημένη την εφαρμογή και πάτησε την κλειδαριά.</item>
+    </string-array>
+    <string-array name="vendor_steps_huawei">
+        <item>Διαχείριση τηλεφώνου → Εκκίνηση εφαρμογών: όρισε το Akku Health Alarm σε «Μη αυτόματη διαχείριση» και ενεργοποίησε και τους τρεις διακόπτες.</item>
+        <item>Παλαιότερα τηλέφωνα: Διαχείριση τηλεφώνου → «Καθαρισμός με κλειδωμένη οθόνη» ή «Προστατευμένες εφαρμογές»: μην αφήνεις να κλείνει το Akku Health Alarm.</item>
+        <item>Στην προβολή πρόσφατων εφαρμογών σύρε την εφαρμογή προς τα κάτω μέχρι να εμφανιστεί κλειδαριά.</item>
+    </string-array>
+    <string-array name="vendor_steps_samsung">
+        <item>Ρυθμίσεις → Μπαταρία → Όρια χρήσης στο παρασκήνιο → «Εφαρμογές που δεν κοιμούνται ποτέ» → πρόσθεσε το Akku Health Alarm.</item>
+        <item>Στην προβολή πρόσφατων εφαρμογών πάτησε το εικονίδιο της εφαρμογής και επίλεξε «Κλείδωμα αυτής της εφαρμογής».</item>
+    </string-array>
+    <string-array name="vendor_steps_oppo">
+        <item>Ρυθμίσεις → Εφαρμογές → Akku Health Alarm → Μπαταρία: επίτρεψε την αυτόματη εκκίνηση και τη δραστηριότητα στο παρασκήνιο.</item>
+        <item>Απενεργοποίησε το «Πάγωμα στο παρασκήνιο» και τη «Βελτιστοποίηση μη φυσιολογικών εφαρμογών».</item>
+        <item>Κλείδωσε την εφαρμογή στην προβολή πρόσφατων εφαρμογών.</item>
+    </string-array>
+    <string-array name="vendor_steps_vivo">
+        <item>i Manager → Διαχείριση εφαρμογών → Αυτόματη εκκίνηση: ενεργοποίησε το Akku Health Alarm.</item>
+        <item>Ρυθμίσεις → Μπαταρία → Υψηλή κατανάλωση στο παρασκήνιο: επίτρεψε το Akku Health Alarm.</item>
+        <item>Κλείδωσε την εφαρμογή στην προβολή πρόσφατων εφαρμογών.</item>
+    </string-array>
+    <string-array name="vendor_steps_oneplus">
+        <item>Ρυθμίσεις → Μπαταρία → Βελτιστοποίηση μπαταρίας: όρισε το Akku Health Alarm σε «Χωρίς βελτιστοποίηση».</item>
+        <item>Ρυθμίσεις → Μπαταρία → απενεργοποίησε την προηγμένη βελτιστοποίηση.</item>
+        <item>Κλείδωσε την εφαρμογή στην προβολή πρόσφατων εφαρμογών.</item>
+    </string-array>
+    <string-array name="vendor_steps_other">
+        <item>Αν υπάρχει ρύθμιση «Αυτόματη εκκίνηση»: επίτρεψέ την για το Akku Health Alarm.</item>
+        <item>Αν γίνεται, κλείδωσε την εφαρμογή στην προβολή πρόσφατων εφαρμογών.</item>
+    </string-array>
+    <string name="delivery_sound">με ήχο</string>
+    <string name="delivery_quiet">αθόρυβα · νυχτερινή ησυχία</string>
+    <string name="delivery_muted_vibrate">μόνο δόνηση · τηλέφωνο σε σίγαση</string>
+    <string name="delivery_muted">αθόρυβα · τηλέφωνο σε σίγαση</string>
+    <string name="delivery_silent">μόνο ειδοποίηση · ήχος και φωνή ανενεργά</string>
+    <string name="language_title">Γλώσσα</string>
+    <string name="language_system">Γλώσσα τηλεφώνου</string>
+    <string name="theme_title">Εμφάνιση</string>
+    <string name="theme_system">Σύστημα</string>
+    <string name="theme_light">Φωτεινό</string>
+    <string name="theme_dark">Σκοτεινό</string>
+    <string name="reliability_all_done">Όλα ρυθμίστηκαν</string>
+    <string name="reliability_vendor_confirmed">Έκανα αυτά τα βήματα</string>
+    <string name="step_less">Λιγότερο</string>
+    <string name="step_more">Περισσότερο</string>
+    <string name="preset_standard">Τυπικό</string>
+    <string name="quick_slot">Γρήγορη επιλογή %d</string>
+    <string name="quick_edit_title">Αλλαγή γρήγορης επιλογής %d</string>
+    <string name="quick_take_current">Χρήση του τρέχοντος εύρους</string>
+    <string name="quick_reset">Επαναφορά</string>
+    <string name="quick_hint">Κράτησε πατημένο ένα κουμπί για να το αλλάξεις</string>
+    <string name="repeat_title">Επανάληψη ειδοποίησης</string>
+    <string name="repeat_off">Μία φορά</string>
+    <string name="duration_sec">%d δ</string>
+    <string name="repeat_doze_hint">Με μπαταρία και σβηστή οθόνη, το Android το επιτρέπει μόνο περίπου κάθε 9 λεπτά.</string>
+    <string name="repeat_next">Επόμενος συναγερμός σε %s</string>
+    <string name="repeat_until">έως %s</string>
+    <string name="running_title">Φόρτιση σε εξέλιξη</string>
+    <string name="running_since">από %s</string>
+    <string name="running_mah">έως τώρα περίπου %s φορτίστηκαν</string>
+    <string name="running_need">Ακόμη %d %% για μέτρηση χωρητικότητας. Μετριέται κατά την αποσύνδεση.</string>
+    <string name="running_ready">Αρκετό για μέτρηση. Η χωρητικότητα υπολογίζεται κατά την αποσύνδεση.</string>
+    <string name="no_capacity_short" formatted="false">χωρίς μέτρηση: κάτω από 15 %</string>
+    <string name="no_capacity_broken">χωρίς μέτρηση: διακοπή καταγραφής</string>
+    <string name="no_capacity_implausible">χωρίς μέτρηση: απίθανες τιμές</string>
+</resources>

@@ -1,0 +1,242 @@
+0|Asetukset
+1|Takaisin
+2|OK
+3|Peruuta
+4|Sulje
+5|Latautuu
+6|Akulla
+7|Täynnä
+8|Kytketty
+9|Virta
+10|Lämpötila
+11|Jännite
+12|Hälytys
+13|%1$d %%:ssa ja %2$d %%:ssa
+14|Ei hälytyksiä
+15|Akun alue
+16|Miksi nämä alueet?
+17|Litiumakut vanhenevat hitaimmin varausalueen keskellä. Korkea varaustaso rasittaa akkua enemmän kuin matala, siksi hellävaraiset esiasetukset lopettavat latauksen aiemmin.\n\n20–80 %: tasapainoinen\n25–70 %: hellävarainen\n30–60 %: erittäin hellävarainen\n\nMitä kapeampi alue, sitä vähemmän akkua käytät päivässä. Valitse päivääsi sopiva alue.
+18|Tasapainoinen
+19|Hellävarainen
+20|Erittäin hellävarainen
+21|Oma
+22|%1$d–%2$d %%
+23|Hälytys alle
+24|Hälytys yli
+25|Suositus: %s
+26|Mahdollinen: %s
+27|käytettävissä %d %%
+28|Alku
+29|Historia
+30|Kunto
+31|Luotettavia hälytyksiä varten
+32|Android voi pysäyttää taustalla olevia sovelluksia. Kaksi asetusta varmistaa, että hälytys tulee ajallaan.
+33|Salli ilmoitukset
+34|Poista akun optimointi käytöstä
+35|Puheilmoitus
+36|Pois
+37|Sovelluksen puhe
+38|Puhelimen puhe
+39|Lyhyt englanninkielinen ilmoitus: "Battery charged." tai "Battery low."
+40|Käyttää puhelimen offline-ääntä sovelluksen kielellä. Jos sellaista ei ole, käytetään sovelluksen puhetta.
+41|Sano prosentit
+42|Ladattu
+43|Vähissä
+44|Testaa hälytys
+45|Ääni
+46|Pois
+47|Sovelluksen ääni
+48|Puhelimen ääni
+49|Valitse ääni
+50|Ääntä ei ole valittu
+51|Värinä
+52|Myös äänettömällä
+53|Käyttää herätyksen äänenvoimakkuutta
+54|Näytä ilmoitus
+55|Lähtölaskennalla seuraavaan toistoon. Pois: vain ääni, puheilmoitus ja värinä.
+56|Yörauha
+57|Tänä aikana vain äänetön ilmoitus
+58|Alkaen %s
+59|Asti %s
+60|Lämpötilahälytys
+61|Varoittaa, kun akku on liian kuuma tai kylmä
+62|Vain vaara
+63|Normaali
+64|Tiukka
+65|Oma
+66|%1$d–%2$d °C
+67|Ilmoita kylmästä vain latauksen aikana
+68|Lataaminen kylmässä vahingoittaa akkua, käyttö tuskin.
+69|Pikalataus nousee usein 35–40 °C:seen, joten tämä taso voi varoittaa usein.
+70|Ilmoitus
+71|Oletuksena vain varaustaso ja tila. Lisää muita arvoja tästä.
+72|Virta (mA)
+73|Lämpötila
+74|Jännite
+75|Prosentti kuvakkeena tilarivillä
+76|Tietoja
+77|Versio %1$s · GPL-3.0 · Toimii täysin offline-tilassa
+78|Akun tila
+79|Akkuhälytykset
+80|Hälytys %d %%:ssa
+81|Hälytys pois
+82|Akku ladattu: %d %%
+83|Irrota laturi
+84|Akku vähissä: %d %%
+85|Kytke laturi
+86|Akku kuuma: %s
+87|Anna puhelimen jäähtyä
+88|Akku kylmä: %s
+89|Älä lataa kylmässä
+90|Akku ladattu.
+91|Akku ladattu, %d prosenttia.
+92|Akku vähissä.
+93|Akku vähissä, %d prosenttia.
+94|Akku kuuma.
+95|Akku kylmä.
+96|Luettelo
+97|Kaavio
+98|%d merkintä
+99|%d merkintää
+100|Ei vielä merkintöjä. Jokainen varaustason muutos näkyy täällä.
+101|Laturi
+102|USB
+103|Langaton
+104|Akku
+105|Viimeiset 24 tuntia
+106|Ei vielä tietoja. Tallennus on käynnissä.
+107|nyt
+108|Tapahtumat
+109|Ei vielä tapahtumia.
+110|Laturi kytketty
+111|Laturi irrotettu
+112|Hälytys: akku ladattu
+113|Hälytys: akku vähissä
+114|Hälytys: akku kuuma
+115|Hälytys: akku kylmä
+116|Kunto Androidin mukaan
+117|Hyvä
+118|Ylikuumentunut
+119|Liian kylmä
+120|Ylijännite
+121|Viallinen
+122|Tuntematon virhe
+123|Ei ilmoitettu
+124|Tekniikka
+125|Varauslaskuri
+126|Päivä
+127|Viikko
+128|Kuukausi
+129|Kaikki
+130|Lämpötila
+131|Zoomaa kahdella sormella, palauta kaksoisnapautuksella.
+132|%1$d %% noin %2$s kuluttua
+133|%d min
+134|%d h
+135|%1$d h %2$d min
+136|Historia
+137|Kuinka kauan historia säilytetään. Vanhemmat merkinnät poistetaan.
+138|1 päivä
+139|1 viikko
+140|1 kuukausi
+141|1 vuosi
+142|Aina
+143|Purkautuu
+144|Kuuntele
+145|Akun kunto
+146|Ei vielä mitattu
+147|%1$s / %2$s
+148|mitattu %1$d latauksesta (yhteensä %2$d %%)
+149|mitattu %1$d latauksesta (yhteensä %2$d %%)
+150|Lataa vähintään 15 % yhdellä kertaa, niin kapasiteetti mitataan.
+151|Android ilmoittaa: %s
+152|± on mittausepävarmuus. Mitä enemmän ja pidempiä latauksia, sitä pienempi se on.
+153|Nimelliskapasiteetti
+154|luettu puhelimesta
+155|sinun antamasi
+156|Tuntematon. Anna se, niin näet kunnon prosentteina.
+157|Muuta
+158|mAh:na, katso puhelimen tekniset tiedot
+159|Automaattinen
+160|Latausjaksot
+161|%1$s täyttä jaksoa tallennuksen alusta
+162|Latausnopeus
+163|Ø %1$s · %2$s %%/h
+164|Viimeisimmät lataukset
+165|Latauksia ei ole vielä tallennettu. Jokainen lataus kytkemisestä irrottamiseen näkyy täällä.
+166|%s jaksoa
+167|Kapasiteetti ajan mittaan
+168|Nykyiset arvot
+169|Vinkit
+170|Akun kapasiteetti vain %d %%
+171|Akkuun mahtuu enää noin %1$s / %2$s. Vaihto voi kannattaa.
+172|Lataukset
+173|Napauta kehystettyä arvoa nähdäksesi sen käyrän.
+174|Tämä puhelin laskee varauslaskurinsa vain prosenttiluvusta, joten laskuri ei voi näyttää kulumista. Siksi sovellus mittaa latausvirran itse; se on epätarkempaa.
+175|täynnä
+176|Sovellus ei aktiivinen · %s
+177|Luotettavuus
+178|Valmis
+179|Lisäksi laitteelle %s:
+180|Yleisesti:
+181|Avaa asetukset
+182|Tätä sivua ei ole puhelimessasi. Sovelluksen tiedot ovat auki; seuraa yllä olevia vaiheita.
+183|Lisää apua puhelimellesi (kopioitava linkki):
+184|Linkki kopioitu
+185|%s-puhelimet tarvitsevat muutaman lisäasetuksen.
+186|Näytä
+187|Valmis
+188|Salli automaattinen käynnistys sovellukselle Akku Health Alarm.
+189|Asetukset → Sovellukset → Akku Health Alarm → Virransäästö: ”Ei rajoituksia”.
+190|Pidä sovellusta painettuna viimeisimpien sovellusten näkymässä ja napauta lukkoa.
+191|Puhelimen hallinta → Sovellusten käynnistys: aseta Akku Health Alarm tilaan ”Hallitse manuaalisesti” ja ota kaikki kolme kytkintä käyttöön.
+192|Vanhemmat puhelimet: Puhelimen hallinta → ”Siivous lukitusnäytöllä” tai ”Suojatut sovellukset”: älä anna sulkea Akku Health Alarmia.
+193|Vedä sovellusta alas viimeisimpien sovellusten näkymässä, kunnes lukko tulee näkyviin.
+194|Asetukset → Akku → Taustakäytön rajoitukset → ”Ei koskaan nukkuvat sovellukset” → lisää Akku Health Alarm.
+195|Napauta sovelluksen kuvaketta viimeisimpien sovellusten näkymässä ja valitse ”Lukitse tämä sovellus”.
+196|Asetukset → Sovellukset → Akku Health Alarm → Akku: salli automaattinen käynnistys ja taustatoiminta.
+197|Poista käytöstä ”Jäädytä taustalla” ja ”Optimoi poikkeavat sovellukset”.
+198|Lukitse sovellus viimeisimpien sovellusten näkymässä.
+199|i Manager → Sovellusten hallinta → Automaattinen käynnistys: ota Akku Health Alarm käyttöön.
+200|Asetukset → Akku → Suuri virrankulutus taustalla: salli Akku Health Alarm.
+201|Lukitse sovellus viimeisimpien sovellusten näkymässä.
+202|Asetukset → Akku → Akun optimointi: aseta Akku Health Alarm tilaan ”Älä optimoi”.
+203|Asetukset → Akku → poista edistynyt optimointi käytöstä.
+204|Lukitse sovellus viimeisimpien sovellusten näkymässä.
+205|Jos asetus ”Automaattinen käynnistys” on olemassa: salli se Akku Health Alarmille.
+206|Lukitse sovellus mahdollisuuksien mukaan viimeisimpien sovellusten näkymässä.
+207|äänellä
+208|äänetön · yörauha
+209|vain värinä · puhelin äänettömällä
+210|äänetön · puhelin äänettömällä
+211|vain ilmoitus · ääni ja puhe pois
+212|Kieli
+213|Puhelimen kieli
+214|Ulkoasu
+215|Järjestelmä
+216|Vaalea
+217|Tumma
+218|Kaikki asetettu
+219|Olen tehnyt nämä vaiheet
+220|Vähemmän
+221|Enemmän
+222|Vakio
+223|Pikavalinta %d
+224|Muokkaa pikavalintaa %d
+225|Käytä nykyistä aluetta
+226|Palauta
+227|Muokkaa pitämällä painiketta painettuna
+228|Toista hälytys
+229|Kerran
+230|%d s
+231|Akulla näytön ollessa pois Android sallii tämän vain noin 9 minuutin välein.
+232|Seuraava hälytys %s kuluttua
+233|klo %s asti
+234|Lataus käynnissä
+235|klo %s alkaen
+236|tähän mennessä noin %s ladattu
+237|Vielä %d %% kapasiteetin mittaukseen. Se mitataan irrotettaessa.
+238|Riittää mittaukseen. Kapasiteetti lasketaan irrotettaessa.
+239|ei mittausta: alle 15 %
+240|ei mittausta: tallennus keskeytyi
+241|ei mittausta: epäuskottavat arvot

@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="settings">Instellingen</string>
+    <string name="back">Terug</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Annuleren</string>
+    <string name="close">Sluiten</string>
+    <string name="status_charging">Laadt op</string>
+    <string name="status_discharging">Op accu</string>
+    <string name="status_full">Vol</string>
+    <string name="status_plugged">Aangesloten</string>
+    <string name="metric_current">Stroom</string>
+    <string name="metric_temp">Temperatuur</string>
+    <string name="metric_voltage">Spanning</string>
+    <string name="alarm_title">Alarm</string>
+    <string name="alarm_on_summary">Bij %1$d %% en %2$d %%</string>
+    <string name="alarm_off_summary">Geen meldingen</string>
+    <string name="range_title">Accubereik</string>
+    <string name="range_info">Waarom deze bereiken?</string>
+    <string name="range_info_text" formatted="false">Lithiumaccu\'s verouderen het langzaamst in het midden van het laadbereik. Een hoog laadniveau belast de accu meer dan een laag niveau, daarom stoppen de zachte voorinstellingen eerder met laden.\n\n20–80 %: gebalanceerd\n25–70 %: zacht\n30–60 %: heel zacht\n\nHoe smaller het bereik, hoe minder accu je per dag gebruikt. Kies het bereik dat bij je dag past.</string>
+    <string name="preset_balanced">Gebalanceerd</string>
+    <string name="preset_gentle">Zacht</string>
+    <string name="preset_very_gentle">Heel zacht</string>
+    <string name="preset_custom">Eigen</string>
+    <string name="percent_range">%1$d–%2$d %%</string>
+    <string name="alarm_below">Alarm onder</string>
+    <string name="alarm_above">Alarm boven</string>
+    <string name="recommendation">Aanbevolen: %s</string>
+    <string name="allowed_range">Mogelijk: %s</string>
+    <string name="usable">bruikbaar %d %%</string>
+    <string name="tab_start">Start</string>
+    <string name="history_title">Geschiedenis</string>
+    <string name="health_title">Gezondheid</string>
+    <string name="setup_title">Voor betrouwbare meldingen</string>
+    <string name="setup_text">Android kan apps op de achtergrond stoppen. Twee instellingen zorgen dat het alarm op tijd komt.</string>
+    <string name="setup_notifications">Meldingen toestaan</string>
+    <string name="setup_battery_opt">Accuoptimalisatie uitschakelen</string>
+    <string name="voice_title">Gesproken melding</string>
+    <string name="voice_off">Uit</string>
+    <string name="voice_builtin">App-stem</string>
+    <string name="voice_system">Telefoonstem</string>
+    <string name="voice_builtin_hint">Korte Engelse melding: \"Battery charged.\" of \"Battery low.\"</string>
+    <string name="voice_system_hint">Gebruikt een offline stem van je telefoon in de taal van de app. Is die er niet, dan klinkt de app-stem.</string>
+    <string name="voice_percent">Percentage uitspreken</string>
+    <string name="test_charged">Geladen</string>
+    <string name="test_low">Laag</string>
+    <string name="test_hint">Alarm testen</string>
+    <string name="tone_title">Geluid</string>
+    <string name="tone_off">Uit</string>
+    <string name="tone_builtin">App-geluid</string>
+    <string name="tone_system">Telefoongeluid</string>
+    <string name="tone_pick">Geluid kiezen</string>
+    <string name="tone_none_selected">Geen geluid gekozen</string>
+    <string name="vibration_title">Trillen</string>
+    <string name="loud_title">Ook als het geluid uit staat</string>
+    <string name="loud_summary">Gebruikt het wekkervolume</string>
+    <string name="alarm_notif_title">Melding tonen</string>
+    <string name="alarm_notif_summary">Met aftelling tot de volgende herhaling. Uit: alleen geluid, gesproken melding en trillen.</string>
+    <string name="quiet_title">Nachtrust</string>
+    <string name="quiet_summary">In deze tijd alleen een stille melding</string>
+    <string name="quiet_from">Van %s</string>
+    <string name="quiet_to">Tot %s</string>
+    <string name="temp_title">Temperatuuralarm</string>
+    <string name="temp_summary">Waarschuwt als de accu te warm of te koud wordt</string>
+    <string name="temp_danger">Alleen gevaar</string>
+    <string name="temp_normal">Normaal</string>
+    <string name="temp_strict">Streng</string>
+    <string name="temp_custom">Eigen</string>
+    <string name="temp_range">%1$d–%2$d °C</string>
+    <string name="temp_cold_charging">Kou alleen tijdens het laden melden</string>
+    <string name="temp_cold_charging_summary">Laden in de kou beschadigt de accu, gebruiken nauwelijks.</string>
+    <string name="temp_strict_hint">Snelladen bereikt vaak 35–40 °C, dus dit niveau kan vaak waarschuwen.</string>
+    <string name="notif_title">Melding</string>
+    <string name="notif_summary">Standaard alleen laadniveau en status. Voeg hier meer waarden toe.</string>
+    <string name="notif_current">Stroom (mA)</string>
+    <string name="notif_temp">Temperatuur</string>
+    <string name="notif_voltage">Spanning</string>
+    <string name="notif_percent_icon">Percentage als pictogram in de statusbalk</string>
+    <string name="about_title">Over</string>
+    <string name="about_text">Versie %1$s · GPL-3.0 · Werkt volledig offline</string>
+    <string name="channel_status">Accustatus</string>
+    <string name="channel_alarm">Accualarmen</string>
+    <string name="notif_alarm_at">Alarm bij %d %%</string>
+    <string name="notif_alarm_off">Alarm uit</string>
+    <string name="alarm_high_title">Accu geladen: %d %%</string>
+    <string name="alarm_high_text">Koppel de lader los</string>
+    <string name="alarm_low_title">Accu laag: %d %%</string>
+    <string name="alarm_low_text">Sluit de lader aan</string>
+    <string name="alarm_hot_title">Accu warm: %s</string>
+    <string name="alarm_hot_text">Laat de telefoon afkoelen</string>
+    <string name="alarm_cold_title">Accu koud: %s</string>
+    <string name="alarm_cold_text">Niet laden in de kou</string>
+    <string name="tts_charged">Accu geladen.</string>
+    <string name="tts_charged_percent">Accu geladen, %d procent.</string>
+    <string name="tts_low">Accu laag.</string>
+    <string name="tts_low_percent">Accu laag, %d procent.</string>
+    <string name="tts_hot">Accu warm.</string>
+    <string name="tts_cold">Accu koud.</string>
+    <string name="view_list">Lijst</string>
+    <string name="view_chart">Grafiek</string>
+    <plurals name="entries_count">
+        <item quantity="one">%d item</item>
+        <item quantity="other">%d items</item>
+    </plurals>
+    <string name="list_empty">Nog geen items. Hier verschijnt elke verandering van het laadniveau.</string>
+    <string name="plug_ac">Lader</string>
+    <string name="plug_usb">USB</string>
+    <string name="plug_wireless">Draadloos</string>
+    <string name="plug_battery">Accu</string>
+    <string name="chart_title">Laatste 24 uur</string>
+    <string name="chart_empty">Nog geen gegevens. De opname loopt.</string>
+    <string name="chart_now">nu</string>
+    <string name="events_title">Gebeurtenissen</string>
+    <string name="events_empty">Nog geen gebeurtenissen.</string>
+    <string name="event_plugged">Lader aangesloten</string>
+    <string name="event_unplugged">Lader losgekoppeld</string>
+    <string name="event_alarm_high">Alarm: accu geladen</string>
+    <string name="event_alarm_low">Alarm: accu laag</string>
+    <string name="event_alarm_hot">Alarm: accu warm</string>
+    <string name="event_alarm_cold">Alarm: accu koud</string>
+    <string name="health_status">Toestand volgens Android</string>
+    <string name="health_good">Goed</string>
+    <string name="health_overheat">Oververhit</string>
+    <string name="health_cold">Te koud</string>
+    <string name="health_over_voltage">Overspanning</string>
+    <string name="health_dead">Defect</string>
+    <string name="health_failure">Onbekende fout</string>
+    <string name="health_unknown">Niet gemeld</string>
+    <string name="health_technology">Technologie</string>
+    <string name="health_charge_counter">Ladingteller</string>
+    <string name="range_day">Dag</string>
+    <string name="range_week">Week</string>
+    <string name="range_month">Maand</string>
+    <string name="range_all">Alles</string>
+    <string name="chart_temp">Temperatuur</string>
+    <string name="chart_hint">Zoom met twee vingers, dubbeltik om te herstellen.</string>
+    <string name="eta">%1$d %% over ongeveer %2$s</string>
+    <string name="duration_min">%d min</string>
+    <string name="duration_h">%d u</string>
+    <string name="duration_h_min">%1$d u %2$d min</string>
+    <string name="keep_title">Geschiedenis</string>
+    <string name="keep_summary">Hoe lang de geschiedenis bewaard wordt. Oudere items worden verwijderd.</string>
+    <string name="keep_1d">1 dag</string>
+    <string name="keep_7d">1 week</string>
+    <string name="keep_30d">1 maand</string>
+    <string name="keep_365d">1 jaar</string>
+    <string name="keep_forever">Altijd</string>
+    <string name="log_discharging">Ontlaadt</string>
+    <string name="tone_listen">Beluisteren</string>
+    <string name="health_state">Accutoestand</string>
+    <string name="health_measuring">Nog niet gemeten</string>
+    <string name="health_capacity_of">%1$s van %2$s</string>
+    <plurals name="health_from_sessions">
+        <item quantity="one">gemeten uit %1$d laadbeurt (%2$d %% in totaal)</item>
+        <item quantity="other">gemeten uit %1$d laadbeurten (%2$d %% in totaal)</item>
+    </plurals>
+    <string name="health_need_charge" formatted="false">Laad minstens 15 % in één keer, dan wordt de capaciteit gemeten.</string>
+    <string name="health_android_says">Android meldt: %s</string>
+    <string name="health_estimate_note">± is de meetonzekerheid. Hoe meer en hoe langere laadbeurten, hoe kleiner ze wordt.</string>
+    <string name="design_title">Nominale capaciteit</string>
+    <string name="design_auto">van de telefoon gelezen</string>
+    <string name="design_manual">door jou ingevoerd</string>
+    <string name="design_unknown">Onbekend. Voer ze in om de toestand in procent te zien.</string>
+    <string name="design_edit">Wijzigen</string>
+    <string name="design_dialog_hint">In mAh, zie het gegevensblad van je telefoon</string>
+    <string name="design_reset">Automatisch</string>
+    <string name="cycles_title">Laadcycli</string>
+    <string name="cycles_text">%1$s volledige cycli sinds het begin van de opname</string>
+    <string name="speed_title">Laadsnelheid</string>
+    <string name="speed_row">Ø %1$s · %2$s %%/u</string>
+    <string name="sessions_title">Recente laadbeurten</string>
+    <string name="sessions_empty">Nog geen laadbeurt opgenomen. Hier verschijnt elke laadbeurt van aansluiten tot loskoppelen.</string>
+    <string name="session_cycles">%s cycli</string>
+    <string name="capacity_trend">Capaciteit in de loop van de tijd</string>
+    <string name="measures_title">Actuele waarden</string>
+    <string name="channel_hints">Tips</string>
+    <string name="hint_capacity_title">Accucapaciteit nog maar %d %%</string>
+    <string name="hint_capacity_text">De accu bevat nog maar ongeveer %1$s van %2$s. Vervangen kan de moeite waard zijn.</string>
+    <string name="sessions_count">Laadbeurten</string>
+    <string name="measures_hint">Tik op een omkaderde waarde om de curve te zien.</string>
+    <string name="health_counter_from_level">Deze telefoon berekent zijn ladingsteller alleen uit het percentage, dus de teller kan geen slijtage tonen. De app meet daarom zelf de laadstroom; dat is minder nauwkeurig.</string>
+    <string name="session_full">vol</string>
+    <string name="gap_row">App niet actief · %s</string>
+    <string name="reliability_title">Betrouwbaarheid</string>
+    <string name="reliability_ok">Klaar</string>
+    <string name="reliability_vendor">Extra voor %s:</string>
+    <string name="reliability_general">Algemeen:</string>
+    <string name="reliability_open">Instellingen openen</string>
+    <string name="reliability_open_failed">Deze pagina bestaat niet op je telefoon. De app-info is geopend; volg de stappen hierboven.</string>
+    <string name="reliability_link_label">Meer hulp voor je telefoon (link om te kopiëren):</string>
+    <string name="link_copied">Link gekopieerd</string>
+    <string name="setup_vendor">Telefoons van %s hebben nog wat instellingen nodig.</string>
+    <string name="setup_vendor_show">Bekijken</string>
+    <string name="setup_vendor_done">Klaar</string>
+    <string-array name="vendor_steps_xiaomi">
+        <item>Sta automatisch starten toe voor Akku Health Alarm.</item>
+        <item>Instellingen → Apps → Akku Health Alarm → Batterijbesparing: \"Geen beperkingen\".</item>
+        <item>Houd in het overzicht van recente apps de app ingedrukt en tik op het slot.</item>
+    </string-array>
+    <string-array name="vendor_steps_huawei">
+        <item>Telefoonbeheer → App starten: zet Akku Health Alarm op \"Handmatig beheren\" en schakel alle drie de schakelaars in.</item>
+        <item>Oudere telefoons: Telefoonbeheer → \"Opschonen bij vergrendeld scherm\" of \"Beschermde apps\": laat Akku Health Alarm niet sluiten.</item>
+        <item>Trek in het overzicht van recente apps de app omlaag tot er een slot verschijnt.</item>
+    </string-array>
+    <string-array name="vendor_steps_samsung">
+        <item>Instellingen → Batterij → Limieten voor achtergrondgebruik → \"Apps die nooit slapen\" → voeg Akku Health Alarm toe.</item>
+        <item>Tik in het overzicht van recente apps op het app-pictogram en kies \"Deze app vergrendelen\".</item>
+    </string-array>
+    <string-array name="vendor_steps_oppo">
+        <item>Instellingen → Apps → Akku Health Alarm → Batterij: sta automatisch starten en achtergrondactiviteit toe.</item>
+        <item>Schakel \"Bevriezen op de achtergrond\" en \"Abnormale apps optimaliseren\" uit.</item>
+        <item>Vergrendel de app in het overzicht van recente apps.</item>
+    </string-array>
+    <string-array name="vendor_steps_vivo">
+        <item>i Manager → App-beheer → Automatisch starten: schakel Akku Health Alarm in.</item>
+        <item>Instellingen → Batterij → Hoog stroomverbruik op de achtergrond: sta Akku Health Alarm toe.</item>
+        <item>Vergrendel de app in het overzicht van recente apps.</item>
+    </string-array>
+    <string-array name="vendor_steps_oneplus">
+        <item>Instellingen → Batterij → Batterijoptimalisatie: zet Akku Health Alarm op \"Niet optimaliseren\".</item>
+        <item>Instellingen → Batterij → schakel geavanceerde optimalisatie uit.</item>
+        <item>Vergrendel de app in het overzicht van recente apps.</item>
+    </string-array>
+    <string-array name="vendor_steps_other">
+        <item>Als er een instelling \"Automatisch starten\" is: sta die toe voor Akku Health Alarm.</item>
+        <item>Vergrendel indien mogelijk de app in het overzicht van recente apps.</item>
+    </string-array>
+    <string name="delivery_sound">met geluid</string>
+    <string name="delivery_quiet">stil · nachtrust</string>
+    <string name="delivery_muted_vibrate">alleen trillen · telefoon op stil</string>
+    <string name="delivery_muted">stil · telefoon op stil</string>
+    <string name="delivery_silent">alleen melding · geluid en stem uit</string>
+    <string name="language_title">Taal</string>
+    <string name="language_system">Taal van de telefoon</string>
+    <string name="theme_title">Weergave</string>
+    <string name="theme_system">Systeem</string>
+    <string name="theme_light">Licht</string>
+    <string name="theme_dark">Donker</string>
+    <string name="reliability_all_done">Alles ingesteld</string>
+    <string name="reliability_vendor_confirmed">Ik heb deze stappen gedaan</string>
+    <string name="step_less">Minder</string>
+    <string name="step_more">Meer</string>
+    <string name="preset_standard">Standaard</string>
+    <string name="quick_slot">Snelkeuze %d</string>
+    <string name="quick_edit_title">Snelkeuze %d aanpassen</string>
+    <string name="quick_take_current">Huidig bereik overnemen</string>
+    <string name="quick_reset">Herstellen</string>
+    <string name="quick_hint">Houd een knop ingedrukt om hem aan te passen</string>
+    <string name="repeat_title">Alarm herhalen</string>
+    <string name="repeat_off">Eén keer</string>
+    <string name="duration_sec">%d s</string>
+    <string name="repeat_doze_hint">Op accu met scherm uit staat Android dit maar ongeveer elke 9 minuten toe.</string>
+    <string name="repeat_next">Volgend alarm over %s</string>
+    <string name="repeat_until">tot %s</string>
+    <string name="running_title">Laden bezig</string>
+    <string name="running_since">sinds %s</string>
+    <string name="running_mah">tot nu toe ongeveer %s geladen</string>
+    <string name="running_need">Nog %d %% tot een capaciteitsmeting. Gemeten wordt bij het loskoppelen.</string>
+    <string name="running_ready">Genoeg voor een meting. De capaciteit wordt berekend bij het loskoppelen.</string>
+    <string name="no_capacity_short" formatted="false">geen meting: onder 15 %</string>
+    <string name="no_capacity_broken">geen meting: opname onderbroken</string>
+    <string name="no_capacity_implausible">geen meting: waarden onwaarschijnlijk</string>
+</resources>

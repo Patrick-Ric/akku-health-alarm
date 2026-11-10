@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="settings">Asetukset</string>
+    <string name="back">Takaisin</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Peruuta</string>
+    <string name="close">Sulje</string>
+    <string name="status_charging">Latautuu</string>
+    <string name="status_discharging">Akulla</string>
+    <string name="status_full">Täynnä</string>
+    <string name="status_plugged">Kytketty</string>
+    <string name="metric_current">Virta</string>
+    <string name="metric_temp">Lämpötila</string>
+    <string name="metric_voltage">Jännite</string>
+    <string name="alarm_title">Hälytys</string>
+    <string name="alarm_on_summary">%1$d %%:ssa ja %2$d %%:ssa</string>
+    <string name="alarm_off_summary">Ei hälytyksiä</string>
+    <string name="range_title">Akun alue</string>
+    <string name="range_info">Miksi nämä alueet?</string>
+    <string name="range_info_text" formatted="false">Litiumakut vanhenevat hitaimmin varausalueen keskellä. Korkea varaustaso rasittaa akkua enemmän kuin matala, siksi hellävaraiset esiasetukset lopettavat latauksen aiemmin.\n\n20–80 %: tasapainoinen\n25–70 %: hellävarainen\n30–60 %: erittäin hellävarainen\n\nMitä kapeampi alue, sitä vähemmän akkua käytät päivässä. Valitse päivääsi sopiva alue.</string>
+    <string name="preset_balanced">Tasapainoinen</string>
+    <string name="preset_gentle">Hellävarainen</string>
+    <string name="preset_very_gentle">Erittäin hellävarainen</string>
+    <string name="preset_custom">Oma</string>
+    <string name="percent_range">%1$d–%2$d %%</string>
+    <string name="alarm_below">Hälytys alle</string>
+    <string name="alarm_above">Hälytys yli</string>
+    <string name="recommendation">Suositus: %s</string>
+    <string name="allowed_range">Mahdollinen: %s</string>
+    <string name="usable">käytettävissä %d %%</string>
+    <string name="tab_start">Alku</string>
+    <string name="history_title">Historia</string>
+    <string name="health_title">Kunto</string>
+    <string name="setup_title">Luotettavia hälytyksiä varten</string>
+    <string name="setup_text">Android voi pysäyttää taustalla olevia sovelluksia. Kaksi asetusta varmistaa, että hälytys tulee ajallaan.</string>
+    <string name="setup_notifications">Salli ilmoitukset</string>
+    <string name="setup_battery_opt">Poista akun optimointi käytöstä</string>
+    <string name="voice_title">Puheilmoitus</string>
+    <string name="voice_off">Pois</string>
+    <string name="voice_builtin">Sovelluksen puhe</string>
+    <string name="voice_system">Puhelimen puhe</string>
+    <string name="voice_builtin_hint">Lyhyt englanninkielinen ilmoitus: \"Battery charged.\" tai \"Battery low.\"</string>
+    <string name="voice_system_hint">Käyttää puhelimen offline-ääntä sovelluksen kielellä. Jos sellaista ei ole, käytetään sovelluksen puhetta.</string>
+    <string name="voice_percent">Sano prosentit</string>
+    <string name="test_charged">Ladattu</string>
+    <string name="test_low">Vähissä</string>
+    <string name="test_hint">Testaa hälytys</string>
+    <string name="tone_title">Ääni</string>
+    <string name="tone_off">Pois</string>
+    <string name="tone_builtin">Sovelluksen ääni</string>
+    <string name="tone_system">Puhelimen ääni</string>
+    <string name="tone_pick">Valitse ääni</string>
+    <string name="tone_none_selected">Ääntä ei ole valittu</string>
+    <string name="vibration_title">Värinä</string>
+    <string name="loud_title">Myös äänettömällä</string>
+    <string name="loud_summary">Käyttää herätyksen äänenvoimakkuutta</string>
+    <string name="alarm_notif_title">Näytä ilmoitus</string>
+    <string name="alarm_notif_summary">Lähtölaskennalla seuraavaan toistoon. Pois: vain ääni, puheilmoitus ja värinä.</string>
+    <string name="quiet_title">Yörauha</string>
+    <string name="quiet_summary">Tänä aikana vain äänetön ilmoitus</string>
+    <string name="quiet_from">Alkaen %s</string>
+    <string name="quiet_to">Asti %s</string>
+    <string name="temp_title">Lämpötilahälytys</string>
+    <string name="temp_summary">Varoittaa, kun akku on liian kuuma tai kylmä</string>
+    <string name="temp_danger">Vain vaara</string>
+    <string name="temp_normal">Normaali</string>
+    <string name="temp_strict">Tiukka</string>
+    <string name="temp_custom">Oma</string>
+    <string name="temp_range">%1$d–%2$d °C</string>
+    <string name="temp_cold_charging">Ilmoita kylmästä vain latauksen aikana</string>
+    <string name="temp_cold_charging_summary">Lataaminen kylmässä vahingoittaa akkua, käyttö tuskin.</string>
+    <string name="temp_strict_hint">Pikalataus nousee usein 35–40 °C:seen, joten tämä taso voi varoittaa usein.</string>
+    <string name="notif_title">Ilmoitus</string>
+    <string name="notif_summary">Oletuksena vain varaustaso ja tila. Lisää muita arvoja tästä.</string>
+    <string name="notif_current">Virta (mA)</string>
+    <string name="notif_temp">Lämpötila</string>
+    <string name="notif_voltage">Jännite</string>
+    <string name="notif_percent_icon">Prosentti kuvakkeena tilarivillä</string>
+    <string name="about_title">Tietoja</string>
+    <string name="about_text">Versio %1$s · GPL-3.0 · Toimii täysin offline-tilassa</string>
+    <string name="channel_status">Akun tila</string>
+    <string name="channel_alarm">Akkuhälytykset</string>
+    <string name="notif_alarm_at">Hälytys %d %%:ssa</string>
+    <string name="notif_alarm_off">Hälytys pois</string>
+    <string name="alarm_high_title">Akku ladattu: %d %%</string>
+    <string name="alarm_high_text">Irrota laturi</string>
+    <string name="alarm_low_title">Akku vähissä: %d %%</string>
+    <string name="alarm_low_text">Kytke laturi</string>
+    <string name="alarm_hot_title">Akku kuuma: %s</string>
+    <string name="alarm_hot_text">Anna puhelimen jäähtyä</string>
+    <string name="alarm_cold_title">Akku kylmä: %s</string>
+    <string name="alarm_cold_text">Älä lataa kylmässä</string>
+    <string name="tts_charged">Akku ladattu.</string>
+    <string name="tts_charged_percent">Akku ladattu, %d prosenttia.</string>
+    <string name="tts_low">Akku vähissä.</string>
+    <string name="tts_low_percent">Akku vähissä, %d prosenttia.</string>
+    <string name="tts_hot">Akku kuuma.</string>
+    <string name="tts_cold">Akku kylmä.</string>
+    <string name="view_list">Luettelo</string>
+    <string name="view_chart">Kaavio</string>
+    <plurals name="entries_count">
+        <item quantity="one">%d merkintä</item>
+        <item quantity="other">%d merkintää</item>
+    </plurals>
+    <string name="list_empty">Ei vielä merkintöjä. Jokainen varaustason muutos näkyy täällä.</string>
+    <string name="plug_ac">Laturi</string>
+    <string name="plug_usb">USB</string>
+    <string name="plug_wireless">Langaton</string>
+    <string name="plug_battery">Akku</string>
+    <string name="chart_title">Viimeiset 24 tuntia</string>
+    <string name="chart_empty">Ei vielä tietoja. Tallennus on käynnissä.</string>
+    <string name="chart_now">nyt</string>
+    <string name="events_title">Tapahtumat</string>
+    <string name="events_empty">Ei vielä tapahtumia.</string>
+    <string name="event_plugged">Laturi kytketty</string>
+    <string name="event_unplugged">Laturi irrotettu</string>
+    <string name="event_alarm_high">Hälytys: akku ladattu</string>
+    <string name="event_alarm_low">Hälytys: akku vähissä</string>
+    <string name="event_alarm_hot">Hälytys: akku kuuma</string>
+    <string name="event_alarm_cold">Hälytys: akku kylmä</string>
+    <string name="health_status">Kunto Androidin mukaan</string>
+    <string name="health_good">Hyvä</string>
+    <string name="health_overheat">Ylikuumentunut</string>
+    <string name="health_cold">Liian kylmä</string>
+    <string name="health_over_voltage">Ylijännite</string>
+    <string name="health_dead">Viallinen</string>
+    <string name="health_failure">Tuntematon virhe</string>
+    <string name="health_unknown">Ei ilmoitettu</string>
+    <string name="health_technology">Tekniikka</string>
+    <string name="health_charge_counter">Varauslaskuri</string>
+    <string name="range_day">Päivä</string>
+    <string name="range_week">Viikko</string>
+    <string name="range_month">Kuukausi</string>
+    <string name="range_all">Kaikki</string>
+    <string name="chart_temp">Lämpötila</string>
+    <string name="chart_hint">Zoomaa kahdella sormella, palauta kaksoisnapautuksella.</string>
+    <string name="eta">%1$d %% noin %2$s kuluttua</string>
+    <string name="duration_min">%d min</string>
+    <string name="duration_h">%d h</string>
+    <string name="duration_h_min">%1$d h %2$d min</string>
+    <string name="keep_title">Historia</string>
+    <string name="keep_summary">Kuinka kauan historia säilytetään. Vanhemmat merkinnät poistetaan.</string>
+    <string name="keep_1d">1 päivä</string>
+    <string name="keep_7d">1 viikko</string>
+    <string name="keep_30d">1 kuukausi</string>
+    <string name="keep_365d">1 vuosi</string>
+    <string name="keep_forever">Aina</string>
+    <string name="log_discharging">Purkautuu</string>
+    <string name="tone_listen">Kuuntele</string>
+    <string name="health_state">Akun kunto</string>
+    <string name="health_measuring">Ei vielä mitattu</string>
+    <string name="health_capacity_of">%1$s / %2$s</string>
+    <plurals name="health_from_sessions">
+        <item quantity="one">mitattu %1$d latauksesta (yhteensä %2$d %%)</item>
+        <item quantity="other">mitattu %1$d latauksesta (yhteensä %2$d %%)</item>
+    </plurals>
+    <string name="health_need_charge" formatted="false">Lataa vähintään 15 % yhdellä kertaa, niin kapasiteetti mitataan.</string>
+    <string name="health_android_says">Android ilmoittaa: %s</string>
+    <string name="health_estimate_note">± on mittausepävarmuus. Mitä enemmän ja pidempiä latauksia, sitä pienempi se on.</string>
+    <string name="design_title">Nimelliskapasiteetti</string>
+    <string name="design_auto">luettu puhelimesta</string>
+    <string name="design_manual">sinun antamasi</string>
+    <string name="design_unknown">Tuntematon. Anna se, niin näet kunnon prosentteina.</string>
+    <string name="design_edit">Muuta</string>
+    <string name="design_dialog_hint">mAh:na, katso puhelimen tekniset tiedot</string>
+    <string name="design_reset">Automaattinen</string>
+    <string name="cycles_title">Latausjaksot</string>
+    <string name="cycles_text">%1$s täyttä jaksoa tallennuksen alusta</string>
+    <string name="speed_title">Latausnopeus</string>
+    <string name="speed_row">Ø %1$s · %2$s %%/h</string>
+    <string name="sessions_title">Viimeisimmät lataukset</string>
+    <string name="sessions_empty">Latauksia ei ole vielä tallennettu. Jokainen lataus kytkemisestä irrottamiseen näkyy täällä.</string>
+    <string name="session_cycles">%s jaksoa</string>
+    <string name="capacity_trend">Kapasiteetti ajan mittaan</string>
+    <string name="measures_title">Nykyiset arvot</string>
+    <string name="channel_hints">Vinkit</string>
+    <string name="hint_capacity_title">Akun kapasiteetti vain %d %%</string>
+    <string name="hint_capacity_text">Akkuun mahtuu enää noin %1$s / %2$s. Vaihto voi kannattaa.</string>
+    <string name="sessions_count">Lataukset</string>
+    <string name="measures_hint">Napauta kehystettyä arvoa nähdäksesi sen käyrän.</string>
+    <string name="health_counter_from_level">Tämä puhelin laskee varauslaskurinsa vain prosenttiluvusta, joten laskuri ei voi näyttää kulumista. Siksi sovellus mittaa latausvirran itse; se on epätarkempaa.</string>
+    <string name="session_full">täynnä</string>
+    <string name="gap_row">Sovellus ei aktiivinen · %s</string>
+    <string name="reliability_title">Luotettavuus</string>
+    <string name="reliability_ok">Valmis</string>
+    <string name="reliability_vendor">Lisäksi laitteelle %s:</string>
+    <string name="reliability_general">Yleisesti:</string>
+    <string name="reliability_open">Avaa asetukset</string>
+    <string name="reliability_open_failed">Tätä sivua ei ole puhelimessasi. Sovelluksen tiedot ovat auki; seuraa yllä olevia vaiheita.</string>
+    <string name="reliability_link_label">Lisää apua puhelimellesi (kopioitava linkki):</string>
+    <string name="link_copied">Linkki kopioitu</string>
+    <string name="setup_vendor">%s-puhelimet tarvitsevat muutaman lisäasetuksen.</string>
+    <string name="setup_vendor_show">Näytä</string>
+    <string name="setup_vendor_done">Valmis</string>
+    <string-array name="vendor_steps_xiaomi">
+        <item>Salli automaattinen käynnistys sovellukselle Akku Health Alarm.</item>
+        <item>Asetukset → Sovellukset → Akku Health Alarm → Virransäästö: ”Ei rajoituksia”.</item>
+        <item>Pidä sovellusta painettuna viimeisimpien sovellusten näkymässä ja napauta lukkoa.</item>
+    </string-array>
+    <string-array name="vendor_steps_huawei">
+        <item>Puhelimen hallinta → Sovellusten käynnistys: aseta Akku Health Alarm tilaan ”Hallitse manuaalisesti” ja ota kaikki kolme kytkintä käyttöön.</item>
+        <item>Vanhemmat puhelimet: Puhelimen hallinta → ”Siivous lukitusnäytöllä” tai ”Suojatut sovellukset”: älä anna sulkea Akku Health Alarmia.</item>
+        <item>Vedä sovellusta alas viimeisimpien sovellusten näkymässä, kunnes lukko tulee näkyviin.</item>
+    </string-array>
+    <string-array name="vendor_steps_samsung">
+        <item>Asetukset → Akku → Taustakäytön rajoitukset → ”Ei koskaan nukkuvat sovellukset” → lisää Akku Health Alarm.</item>
+        <item>Napauta sovelluksen kuvaketta viimeisimpien sovellusten näkymässä ja valitse ”Lukitse tämä sovellus”.</item>
+    </string-array>
+    <string-array name="vendor_steps_oppo">
+        <item>Asetukset → Sovellukset → Akku Health Alarm → Akku: salli automaattinen käynnistys ja taustatoiminta.</item>
+        <item>Poista käytöstä ”Jäädytä taustalla” ja ”Optimoi poikkeavat sovellukset”.</item>
+        <item>Lukitse sovellus viimeisimpien sovellusten näkymässä.</item>
+    </string-array>
+    <string-array name="vendor_steps_vivo">
+        <item>i Manager → Sovellusten hallinta → Automaattinen käynnistys: ota Akku Health Alarm käyttöön.</item>
+        <item>Asetukset → Akku → Suuri virrankulutus taustalla: salli Akku Health Alarm.</item>
+        <item>Lukitse sovellus viimeisimpien sovellusten näkymässä.</item>
+    </string-array>
+    <string-array name="vendor_steps_oneplus">
+        <item>Asetukset → Akku → Akun optimointi: aseta Akku Health Alarm tilaan ”Älä optimoi”.</item>
+        <item>Asetukset → Akku → poista edistynyt optimointi käytöstä.</item>
+        <item>Lukitse sovellus viimeisimpien sovellusten näkymässä.</item>
+    </string-array>
+    <string-array name="vendor_steps_other">
+        <item>Jos asetus ”Automaattinen käynnistys” on olemassa: salli se Akku Health Alarmille.</item>
+        <item>Lukitse sovellus mahdollisuuksien mukaan viimeisimpien sovellusten näkymässä.</item>
+    </string-array>
+    <string name="delivery_sound">äänellä</string>
+    <string name="delivery_quiet">äänetön · yörauha</string>
+    <string name="delivery_muted_vibrate">vain värinä · puhelin äänettömällä</string>
+    <string name="delivery_muted">äänetön · puhelin äänettömällä</string>
+    <string name="delivery_silent">vain ilmoitus · ääni ja puhe pois</string>
+    <string name="language_title">Kieli</string>
+    <string name="language_system">Puhelimen kieli</string>
+    <string name="theme_title">Ulkoasu</string>
+    <string name="theme_system">Järjestelmä</string>
+    <string name="theme_light">Vaalea</string>
+    <string name="theme_dark">Tumma</string>
+    <string name="reliability_all_done">Kaikki asetettu</string>
+    <string name="reliability_vendor_confirmed">Olen tehnyt nämä vaiheet</string>
+    <string name="step_less">Vähemmän</string>
+    <string name="step_more">Enemmän</string>
+    <string name="preset_standard">Vakio</string>
+    <string name="quick_slot">Pikavalinta %d</string>
+    <string name="quick_edit_title">Muokkaa pikavalintaa %d</string>
+    <string name="quick_take_current">Käytä nykyistä aluetta</string>
+    <string name="quick_reset">Palauta</string>
+    <string name="quick_hint">Muokkaa pitämällä painiketta painettuna</string>
+    <string name="repeat_title">Toista hälytys</string>
+    <string name="repeat_off">Kerran</string>
+    <string name="duration_sec">%d s</string>
+    <string name="repeat_doze_hint">Akulla näytön ollessa pois Android sallii tämän vain noin 9 minuutin välein.</string>
+    <string name="repeat_next">Seuraava hälytys %s kuluttua</string>
+    <string name="repeat_until">klo %s asti</string>
+    <string name="running_title">Lataus käynnissä</string>
+    <string name="running_since">klo %s alkaen</string>
+    <string name="running_mah">tähän mennessä noin %s ladattu</string>
+    <string name="running_need">Vielä %d %% kapasiteetin mittaukseen. Se mitataan irrotettaessa.</string>
+    <string name="running_ready">Riittää mittaukseen. Kapasiteetti lasketaan irrotettaessa.</string>
+    <string name="no_capacity_short" formatted="false">ei mittausta: alle 15 %</string>
+    <string name="no_capacity_broken">ei mittausta: tallennus keskeytyi</string>
+    <string name="no_capacity_implausible">ei mittausta: epäuskottavat arvot</string>
+</resources>

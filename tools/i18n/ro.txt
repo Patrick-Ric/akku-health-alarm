@@ -1,0 +1,244 @@
+0|Setări
+1|Înapoi
+2|OK
+3|Anulează
+4|Închide
+5|Se încarcă
+6|Pe baterie
+7|Plină
+8|Conectat
+9|Curent
+10|Temperatură
+11|Tensiune
+12|Alarmă
+13|La %1$d %% și %2$d %%
+14|Fără alerte
+15|Intervalul bateriei
+16|De ce aceste intervale?
+17|Bateriile cu litiu îmbătrânesc cel mai încet la mijlocul intervalului de încărcare. Un nivel de încărcare ridicat solicită bateria mai mult decât unul scăzut, de aceea presetările blânde opresc încărcarea mai devreme.\n\n20–80 %: echilibrat\n25–70 %: blând\n30–60 %: foarte blând\n\nCu cât intervalul e mai îngust, cu atât folosești mai puțină baterie pe zi. Alege intervalul potrivit zilei tale.
+18|Echilibrat
+19|Blând
+20|Foarte blând
+21|Personalizat
+22|%1$d–%2$d %%
+23|Alarmă sub
+24|Alarmă peste
+25|Recomandat: %s
+26|Posibil: %s
+27|utilizabil %d %%
+28|Start
+29|Istoric
+30|Sănătate
+31|Pentru alerte de încredere
+32|Android poate opri aplicațiile din fundal. Două setări asigură că alarma vine la timp.
+33|Permite notificările
+34|Dezactivează optimizarea bateriei
+35|Anunț vocal
+36|Oprit
+37|Vocea aplicației
+38|Vocea telefonului
+39|Anunț scurt în engleză: "Battery charged." sau "Battery low."
+40|Folosește o voce offline a telefonului în limba aplicației. Dacă nu există, se redă vocea aplicației.
+41|Spune procentul
+42|Încărcată
+43|Descărcată
+44|Testează alarma
+45|Sunet
+46|Oprit
+47|Sunetul aplicației
+48|Sunetul telefonului
+49|Alege sunetul
+50|Niciun sunet ales
+51|Vibrații
+52|Și în modul silențios
+53|Folosește volumul alarmei
+54|Afișează notificarea
+55|Cu numărătoare inversă până la următoarea repetare. Oprit: doar sunet, anunț și vibrație.
+56|Liniște de noapte
+57|În acest interval doar o notificare silențioasă
+58|De la %s
+59|Până la %s
+60|Alarmă de temperatură
+61|Avertizează când bateria e prea caldă sau prea rece
+62|Doar pericol
+63|Normal
+64|Strict
+65|Personalizat
+66|%1$d–%2$d °C
+67|Raportează frigul doar la încărcare
+68|Încărcarea pe frig strică bateria, folosirea aproape deloc.
+69|Încărcarea rapidă ajunge des la 35–40 °C, așa că acest nivel poate avertiza des.
+70|Notificare
+71|Implicit doar nivelul de încărcare și starea. Adaugă aici mai multe valori.
+72|Curent (mA)
+73|Temperatură
+74|Tensiune
+75|Procent ca pictogramă în bara de stare
+76|Despre
+77|Versiunea %1$s · GPL-3.0 · Funcționează complet offline
+78|Starea bateriei
+79|Alarme baterie
+80|Alarmă la %d %%
+81|Alarmă oprită
+82|Baterie încărcată: %d %%
+83|Deconectează încărcătorul
+84|Baterie descărcată: %d %%
+85|Conectează încărcătorul
+86|Baterie caldă: %s
+87|Lasă telefonul să se răcească
+88|Baterie rece: %s
+89|Nu încărca pe frig
+90|Baterie încărcată.
+91|Baterie încărcată, %d la sută.
+92|Baterie descărcată.
+93|Baterie descărcată, %d la sută.
+94|Baterie caldă.
+95|Baterie rece.
+96|Listă
+97|Grafic
+98|%d intrare
+99|%d de intrări
+98:few|%d intrări
+100|Încă nicio intrare. Aici va apărea fiecare schimbare a nivelului de încărcare.
+101|Încărcător
+102|USB
+103|Wireless
+104|Baterie
+105|Ultimele 24 de ore
+106|Încă nu există date. Înregistrarea rulează.
+107|acum
+108|Evenimente
+109|Încă niciun eveniment.
+110|Încărcător conectat
+111|Încărcător deconectat
+112|Alarmă: baterie încărcată
+113|Alarmă: baterie descărcată
+114|Alarmă: baterie caldă
+115|Alarmă: baterie rece
+116|Stare raportată de Android
+117|Bună
+118|Supraîncălzită
+119|Prea rece
+120|Supratensiune
+121|Defectă
+122|Eroare necunoscută
+123|Neraportată
+124|Tehnologie
+125|Contor de sarcină
+126|Zi
+127|Săptămână
+128|Lună
+129|Tot
+130|Temperatură
+131|Mărește cu două degete, atinge de două ori pentru resetare.
+132|%1$d %% în aproximativ %2$s
+133|%d min
+134|%d h
+135|%1$d h %2$d min
+136|Istoric
+137|Cât timp se păstrează istoricul. Intrările mai vechi se șterg.
+138|1 zi
+139|1 săptămână
+140|1 lună
+141|1 an
+142|Mereu
+143|Se descarcă
+144|Ascultă
+145|Starea bateriei
+146|Încă nemăsurată
+147|%1$s din %2$s
+148|măsurat din %1$d încărcare (în total %2$d %%)
+149|măsurat din %1$d de încărcări (în total %2$d %%)
+148:few|măsurat din %1$d încărcări (în total %2$d %%)
+150|Încarcă cel puțin 15 % dintr-o dată, apoi capacitatea va fi măsurată.
+151|Android raportează: %s
+152|± este incertitudinea măsurării. Cu cât sunt mai multe și mai lungi încărcările, cu atât e mai mică.
+153|Capacitate nominală
+154|citită din telefon
+155|introdusă de tine
+156|Necunoscută. Introdu-o pentru a vedea starea în procente.
+157|Modifică
+158|În mAh, vezi fișa tehnică a telefonului
+159|Automat
+160|Cicluri de încărcare
+161|%1$s cicluri complete de la începutul înregistrării
+162|Viteza de încărcare
+163|Ø %1$s · %2$s %%/h
+164|Încărcări recente
+165|Nicio încărcare înregistrată încă. Aici apare fiecare încărcare, de la conectare la deconectare.
+166|%s cicluri
+167|Capacitatea în timp
+168|Valori actuale
+169|Sfaturi
+170|Capacitatea bateriei doar %d %%
+171|Bateria mai stochează doar aproximativ %1$s din %2$s. O înlocuire ar putea merita.
+172|Încărcări
+173|Atinge o valoare încadrată pentru a vedea curba ei.
+174|Acest telefon calculează contorul de încărcare doar din procent, deci contorul nu poate arăta uzura. De aceea aplicația măsoară singură curentul de încărcare; este mai puțin precis.
+175|plină
+176|Aplicația nu a fost activă · %s
+177|Fiabilitate
+178|Gata
+179|În plus pentru %s:
+180|În general:
+181|Deschide setările
+182|Această pagină nu există pe telefonul tău. Informațiile aplicației sunt deschise; urmează pașii de mai sus.
+183|Mai mult ajutor pentru telefonul tău (link de copiat):
+184|Link copiat
+185|Telefoanele %s au nevoie de câteva setări în plus.
+186|Arată
+187|Gata
+188|Permite pornirea automată pentru Akku Health Alarm.
+189|Setări → Aplicații → Akku Health Alarm → Economisire baterie: „Fără restricții”.
+190|În vizualizarea aplicațiilor recente, ține apăsat pe aplicație și atinge lacătul.
+191|Manager telefon → Lansare aplicații: setează Akku Health Alarm pe „Gestionare manuală” și activează toate cele trei comutatoare.
+192|Telefoane mai vechi: Manager telefon → „Curățare la ecran blocat” sau „Aplicații protejate”: nu lăsa Akku Health Alarm să fie închisă.
+193|În vizualizarea aplicațiilor recente, trage aplicația în jos până apare un lacăt.
+194|Setări → Baterie → Limite de utilizare în fundal → „Aplicații care nu intră niciodată în repaus” → adaugă Akku Health Alarm.
+195|În vizualizarea aplicațiilor recente, atinge pictograma aplicației și alege „Blochează aplicația”.
+196|Setări → Aplicații → Akku Health Alarm → Baterie: permite pornirea automată și activitatea în fundal.
+197|Dezactivează „Înghețare în fundal” și „Optimizare aplicații anormale”.
+198|Blochează aplicația în vizualizarea aplicațiilor recente.
+199|i Manager → Manager aplicații → Pornire automată: activează Akku Health Alarm.
+200|Setări → Baterie → Consum mare în fundal: permite Akku Health Alarm.
+201|Blochează aplicația în vizualizarea aplicațiilor recente.
+202|Setări → Baterie → Optimizarea bateriei: setează Akku Health Alarm pe „Nu optimiza”.
+203|Setări → Baterie → dezactivează optimizarea avansată.
+204|Blochează aplicația în vizualizarea aplicațiilor recente.
+205|Dacă există setarea „Pornire automată”: permite-o pentru Akku Health Alarm.
+206|Dacă se poate, blochează aplicația în vizualizarea aplicațiilor recente.
+207|cu sunet
+208|silențios · liniște de noapte
+209|doar vibrații · telefon pe silențios
+210|silențios · telefon pe silențios
+211|doar notificare · sunet și voce oprite
+212|Limbă
+213|Limba telefonului
+214|Aspect
+215|Sistem
+216|Luminos
+217|Întunecat
+218|Totul este configurat
+219|Am făcut acești pași
+220|Mai puțin
+221|Mai mult
+222|Standard
+223|Alegere rapidă %d
+224|Modifică alegerea rapidă %d
+225|Preia intervalul actual
+226|Resetează
+227|Ține apăsat un buton pentru a-l modifica
+228|Repetă alarma
+229|O dată
+230|%d s
+231|Pe baterie, cu ecranul stins, Android permite asta doar cam la 9 minute.
+232|Următoarea alarmă în %s
+233|până la %s
+234|Încărcare în curs
+235|de la %s
+236|circa %s încărcați până acum
+237|Încă %d %% până la măsurarea capacității. Se măsoară la deconectare.
+238|Suficient pentru o măsurare. Capacitatea se calculează la deconectare.
+239|fără măsurare: sub 15 %
+240|fără măsurare: înregistrare întreruptă
+241|fără măsurare: valori neplauzibile

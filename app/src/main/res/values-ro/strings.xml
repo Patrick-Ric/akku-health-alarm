@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="settings">Setări</string>
+    <string name="back">Înapoi</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Anulează</string>
+    <string name="close">Închide</string>
+    <string name="status_charging">Se încarcă</string>
+    <string name="status_discharging">Pe baterie</string>
+    <string name="status_full">Plină</string>
+    <string name="status_plugged">Conectat</string>
+    <string name="metric_current">Curent</string>
+    <string name="metric_temp">Temperatură</string>
+    <string name="metric_voltage">Tensiune</string>
+    <string name="alarm_title">Alarmă</string>
+    <string name="alarm_on_summary">La %1$d %% și %2$d %%</string>
+    <string name="alarm_off_summary">Fără alerte</string>
+    <string name="range_title">Intervalul bateriei</string>
+    <string name="range_info">De ce aceste intervale?</string>
+    <string name="range_info_text" formatted="false">Bateriile cu litiu îmbătrânesc cel mai încet la mijlocul intervalului de încărcare. Un nivel de încărcare ridicat solicită bateria mai mult decât unul scăzut, de aceea presetările blânde opresc încărcarea mai devreme.\n\n20–80 %: echilibrat\n25–70 %: blând\n30–60 %: foarte blând\n\nCu cât intervalul e mai îngust, cu atât folosești mai puțină baterie pe zi. Alege intervalul potrivit zilei tale.</string>
+    <string name="preset_balanced">Echilibrat</string>
+    <string name="preset_gentle">Blând</string>
+    <string name="preset_very_gentle">Foarte blând</string>
+    <string name="preset_custom">Personalizat</string>
+    <string name="percent_range">%1$d–%2$d %%</string>
+    <string name="alarm_below">Alarmă sub</string>
+    <string name="alarm_above">Alarmă peste</string>
+    <string name="recommendation">Recomandat: %s</string>
+    <string name="allowed_range">Posibil: %s</string>
+    <string name="usable">utilizabil %d %%</string>
+    <string name="tab_start">Start</string>
+    <string name="history_title">Istoric</string>
+    <string name="health_title">Sănătate</string>
+    <string name="setup_title">Pentru alerte de încredere</string>
+    <string name="setup_text">Android poate opri aplicațiile din fundal. Două setări asigură că alarma vine la timp.</string>
+    <string name="setup_notifications">Permite notificările</string>
+    <string name="setup_battery_opt">Dezactivează optimizarea bateriei</string>
+    <string name="voice_title">Anunț vocal</string>
+    <string name="voice_off">Oprit</string>
+    <string name="voice_builtin">Vocea aplicației</string>
+    <string name="voice_system">Vocea telefonului</string>
+    <string name="voice_builtin_hint">Anunț scurt în engleză: \"Battery charged.\" sau \"Battery low.\"</string>
+    <string name="voice_system_hint">Folosește o voce offline a telefonului în limba aplicației. Dacă nu există, se redă vocea aplicației.</string>
+    <string name="voice_percent">Spune procentul</string>
+    <string name="test_charged">Încărcată</string>
+    <string name="test_low">Descărcată</string>
+    <string name="test_hint">Testează alarma</string>
+    <string name="tone_title">Sunet</string>
+    <string name="tone_off">Oprit</string>
+    <string name="tone_builtin">Sunetul aplicației</string>
+    <string name="tone_system">Sunetul telefonului</string>
+    <string name="tone_pick">Alege sunetul</string>
+    <string name="tone_none_selected">Niciun sunet ales</string>
+    <string name="vibration_title">Vibrații</string>
+    <string name="loud_title">Și în modul silențios</string>
+    <string name="loud_summary">Folosește volumul alarmei</string>
+    <string name="alarm_notif_title">Afișează notificarea</string>
+    <string name="alarm_notif_summary">Cu numărătoare inversă până la următoarea repetare. Oprit: doar sunet, anunț și vibrație.</string>
+    <string name="quiet_title">Liniște de noapte</string>
+    <string name="quiet_summary">În acest interval doar o notificare silențioasă</string>
+    <string name="quiet_from">De la %s</string>
+    <string name="quiet_to">Până la %s</string>
+    <string name="temp_title">Alarmă de temperatură</string>
+    <string name="temp_summary">Avertizează când bateria e prea caldă sau prea rece</string>
+    <string name="temp_danger">Doar pericol</string>
+    <string name="temp_normal">Normal</string>
+    <string name="temp_strict">Strict</string>
+    <string name="temp_custom">Personalizat</string>
+    <string name="temp_range">%1$d–%2$d °C</string>
+    <string name="temp_cold_charging">Raportează frigul doar la încărcare</string>
+    <string name="temp_cold_charging_summary">Încărcarea pe frig strică bateria, folosirea aproape deloc.</string>
+    <string name="temp_strict_hint">Încărcarea rapidă ajunge des la 35–40 °C, așa că acest nivel poate avertiza des.</string>
+    <string name="notif_title">Notificare</string>
+    <string name="notif_summary">Implicit doar nivelul de încărcare și starea. Adaugă aici mai multe valori.</string>
+    <string name="notif_current">Curent (mA)</string>
+    <string name="notif_temp">Temperatură</string>
+    <string name="notif_voltage">Tensiune</string>
+    <string name="notif_percent_icon">Procent ca pictogramă în bara de stare</string>
+    <string name="about_title">Despre</string>
+    <string name="about_text">Versiunea %1$s · GPL-3.0 · Funcționează complet offline</string>
+    <string name="channel_status">Starea bateriei</string>
+    <string name="channel_alarm">Alarme baterie</string>
+    <string name="notif_alarm_at">Alarmă la %d %%</string>
+    <string name="notif_alarm_off">Alarmă oprită</string>
+    <string name="alarm_high_title">Baterie încărcată: %d %%</string>
+    <string name="alarm_high_text">Deconectează încărcătorul</string>
+    <string name="alarm_low_title">Baterie descărcată: %d %%</string>
+    <string name="alarm_low_text">Conectează încărcătorul</string>
+    <string name="alarm_hot_title">Baterie caldă: %s</string>
+    <string name="alarm_hot_text">Lasă telefonul să se răcească</string>
+    <string name="alarm_cold_title">Baterie rece: %s</string>
+    <string name="alarm_cold_text">Nu încărca pe frig</string>
+    <string name="tts_charged">Baterie încărcată.</string>
+    <string name="tts_charged_percent">Baterie încărcată, %d la sută.</string>
+    <string name="tts_low">Baterie descărcată.</string>
+    <string name="tts_low_percent">Baterie descărcată, %d la sută.</string>
+    <string name="tts_hot">Baterie caldă.</string>
+    <string name="tts_cold">Baterie rece.</string>
+    <string name="view_list">Listă</string>
+    <string name="view_chart">Grafic</string>
+    <plurals name="entries_count">
+        <item quantity="one">%d intrare</item>
+        <item quantity="few">%d intrări</item>
+        <item quantity="other">%d de intrări</item>
+    </plurals>
+    <string name="list_empty">Încă nicio intrare. Aici va apărea fiecare schimbare a nivelului de încărcare.</string>
+    <string name="plug_ac">Încărcător</string>
+    <string name="plug_usb">USB</string>
+    <string name="plug_wireless">Wireless</string>
+    <string name="plug_battery">Baterie</string>
+    <string name="chart_title">Ultimele 24 de ore</string>
+    <string name="chart_empty">Încă nu există date. Înregistrarea rulează.</string>
+    <string name="chart_now">acum</string>
+    <string name="events_title">Evenimente</string>
+    <string name="events_empty">Încă niciun eveniment.</string>
+    <string name="event_plugged">Încărcător conectat</string>
+    <string name="event_unplugged">Încărcător deconectat</string>
+    <string name="event_alarm_high">Alarmă: baterie încărcată</string>
+    <string name="event_alarm_low">Alarmă: baterie descărcată</string>
+    <string name="event_alarm_hot">Alarmă: baterie caldă</string>
+    <string name="event_alarm_cold">Alarmă: baterie rece</string>
+    <string name="health_status">Stare raportată de Android</string>
+    <string name="health_good">Bună</string>
+    <string name="health_overheat">Supraîncălzită</string>
+    <string name="health_cold">Prea rece</string>
+    <string name="health_over_voltage">Supratensiune</string>
+    <string name="health_dead">Defectă</string>
+    <string name="health_failure">Eroare necunoscută</string>
+    <string name="health_unknown">Neraportată</string>
+    <string name="health_technology">Tehnologie</string>
+    <string name="health_charge_counter">Contor de sarcină</string>
+    <string name="range_day">Zi</string>
+    <string name="range_week">Săptămână</string>
+    <string name="range_month">Lună</string>
+    <string name="range_all">Tot</string>
+    <string name="chart_temp">Temperatură</string>
+    <string name="chart_hint">Mărește cu două degete, atinge de două ori pentru resetare.</string>
+    <string name="eta">%1$d %% în aproximativ %2$s</string>
+    <string name="duration_min">%d min</string>
+    <string name="duration_h">%d h</string>
+    <string name="duration_h_min">%1$d h %2$d min</string>
+    <string name="keep_title">Istoric</string>
+    <string name="keep_summary">Cât timp se păstrează istoricul. Intrările mai vechi se șterg.</string>
+    <string name="keep_1d">1 zi</string>
+    <string name="keep_7d">1 săptămână</string>
+    <string name="keep_30d">1 lună</string>
+    <string name="keep_365d">1 an</string>
+    <string name="keep_forever">Mereu</string>
+    <string name="log_discharging">Se descarcă</string>
+    <string name="tone_listen">Ascultă</string>
+    <string name="health_state">Starea bateriei</string>
+    <string name="health_measuring">Încă nemăsurată</string>
+    <string name="health_capacity_of">%1$s din %2$s</string>
+    <plurals name="health_from_sessions">
+        <item quantity="one">măsurat din %1$d încărcare (în total %2$d %%)</item>
+        <item quantity="few">măsurat din %1$d încărcări (în total %2$d %%)</item>
+        <item quantity="other">măsurat din %1$d de încărcări (în total %2$d %%)</item>
+    </plurals>
+    <string name="health_need_charge" formatted="false">Încarcă cel puțin 15 % dintr-o dată, apoi capacitatea va fi măsurată.</string>
+    <string name="health_android_says">Android raportează: %s</string>
+    <string name="health_estimate_note">± este incertitudinea măsurării. Cu cât sunt mai multe și mai lungi încărcările, cu atât e mai mică.</string>
+    <string name="design_title">Capacitate nominală</string>
+    <string name="design_auto">citită din telefon</string>
+    <string name="design_manual">introdusă de tine</string>
+    <string name="design_unknown">Necunoscută. Introdu-o pentru a vedea starea în procente.</string>
+    <string name="design_edit">Modifică</string>
+    <string name="design_dialog_hint">În mAh, vezi fișa tehnică a telefonului</string>
+    <string name="design_reset">Automat</string>
+    <string name="cycles_title">Cicluri de încărcare</string>
+    <string name="cycles_text">%1$s cicluri complete de la începutul înregistrării</string>
+    <string name="speed_title">Viteza de încărcare</string>
+    <string name="speed_row">Ø %1$s · %2$s %%/h</string>
+    <string name="sessions_title">Încărcări recente</string>
+    <string name="sessions_empty">Nicio încărcare înregistrată încă. Aici apare fiecare încărcare, de la conectare la deconectare.</string>
+    <string name="session_cycles">%s cicluri</string>
+    <string name="capacity_trend">Capacitatea în timp</string>
+    <string name="measures_title">Valori actuale</string>
+    <string name="channel_hints">Sfaturi</string>
+    <string name="hint_capacity_title">Capacitatea bateriei doar %d %%</string>
+    <string name="hint_capacity_text">Bateria mai stochează doar aproximativ %1$s din %2$s. O înlocuire ar putea merita.</string>
+    <string name="sessions_count">Încărcări</string>
+    <string name="measures_hint">Atinge o valoare încadrată pentru a vedea curba ei.</string>
+    <string name="health_counter_from_level">Acest telefon calculează contorul de încărcare doar din procent, deci contorul nu poate arăta uzura. De aceea aplicația măsoară singură curentul de încărcare; este mai puțin precis.</string>
+    <string name="session_full">plină</string>
+    <string name="gap_row">Aplicația nu a fost activă · %s</string>
+    <string name="reliability_title">Fiabilitate</string>
+    <string name="reliability_ok">Gata</string>
+    <string name="reliability_vendor">În plus pentru %s:</string>
+    <string name="reliability_general">În general:</string>
+    <string name="reliability_open">Deschide setările</string>
+    <string name="reliability_open_failed">Această pagină nu există pe telefonul tău. Informațiile aplicației sunt deschise; urmează pașii de mai sus.</string>
+    <string name="reliability_link_label">Mai mult ajutor pentru telefonul tău (link de copiat):</string>
+    <string name="link_copied">Link copiat</string>
+    <string name="setup_vendor">Telefoanele %s au nevoie de câteva setări în plus.</string>
+    <string name="setup_vendor_show">Arată</string>
+    <string name="setup_vendor_done">Gata</string>
+    <string-array name="vendor_steps_xiaomi">
+        <item>Permite pornirea automată pentru Akku Health Alarm.</item>
+        <item>Setări → Aplicații → Akku Health Alarm → Economisire baterie: „Fără restricții”.</item>
+        <item>În vizualizarea aplicațiilor recente, ține apăsat pe aplicație și atinge lacătul.</item>
+    </string-array>
+    <string-array name="vendor_steps_huawei">
+        <item>Manager telefon → Lansare aplicații: setează Akku Health Alarm pe „Gestionare manuală” și activează toate cele trei comutatoare.</item>
+        <item>Telefoane mai vechi: Manager telefon → „Curățare la ecran blocat” sau „Aplicații protejate”: nu lăsa Akku Health Alarm să fie închisă.</item>
+        <item>În vizualizarea aplicațiilor recente, trage aplicația în jos până apare un lacăt.</item>
+    </string-array>
+    <string-array name="vendor_steps_samsung">
+        <item>Setări → Baterie → Limite de utilizare în fundal → „Aplicații care nu intră niciodată în repaus” → adaugă Akku Health Alarm.</item>
+        <item>În vizualizarea aplicațiilor recente, atinge pictograma aplicației și alege „Blochează aplicația”.</item>
+    </string-array>
+    <string-array name="vendor_steps_oppo">
+        <item>Setări → Aplicații → Akku Health Alarm → Baterie: permite pornirea automată și activitatea în fundal.</item>
+        <item>Dezactivează „Înghețare în fundal” și „Optimizare aplicații anormale”.</item>
+        <item>Blochează aplicația în vizualizarea aplicațiilor recente.</item>
+    </string-array>
+    <string-array name="vendor_steps_vivo">
+        <item>i Manager → Manager aplicații → Pornire automată: activează Akku Health Alarm.</item>
+        <item>Setări → Baterie → Consum mare în fundal: permite Akku Health Alarm.</item>
+        <item>Blochează aplicația în vizualizarea aplicațiilor recente.</item>
+    </string-array>
+    <string-array name="vendor_steps_oneplus">
+        <item>Setări → Baterie → Optimizarea bateriei: setează Akku Health Alarm pe „Nu optimiza”.</item>
+        <item>Setări → Baterie → dezactivează optimizarea avansată.</item>
+        <item>Blochează aplicația în vizualizarea aplicațiilor recente.</item>
+    </string-array>
+    <string-array name="vendor_steps_other">
+        <item>Dacă există setarea „Pornire automată”: permite-o pentru Akku Health Alarm.</item>
+        <item>Dacă se poate, blochează aplicația în vizualizarea aplicațiilor recente.</item>
+    </string-array>
+    <string name="delivery_sound">cu sunet</string>
+    <string name="delivery_quiet">silențios · liniște de noapte</string>
+    <string name="delivery_muted_vibrate">doar vibrații · telefon pe silențios</string>
+    <string name="delivery_muted">silențios · telefon pe silențios</string>
+    <string name="delivery_silent">doar notificare · sunet și voce oprite</string>
+    <string name="language_title">Limbă</string>
+    <string name="language_system">Limba telefonului</string>
+    <string name="theme_title">Aspect</string>
+    <string name="theme_system">Sistem</string>
+    <string name="theme_light">Luminos</string>
+    <string name="theme_dark">Întunecat</string>
+    <string name="reliability_all_done">Totul este configurat</string>
+    <string name="reliability_vendor_confirmed">Am făcut acești pași</string>
+    <string name="step_less">Mai puțin</string>
+    <string name="step_more">Mai mult</string>
+    <string name="preset_standard">Standard</string>
+    <string name="quick_slot">Alegere rapidă %d</string>
+    <string name="quick_edit_title">Modifică alegerea rapidă %d</string>
+    <string name="quick_take_current">Preia intervalul actual</string>
+    <string name="quick_reset">Resetează</string>
+    <string name="quick_hint">Ține apăsat un buton pentru a-l modifica</string>
+    <string name="repeat_title">Repetă alarma</string>
+    <string name="repeat_off">O dată</string>
+    <string name="duration_sec">%d s</string>
+    <string name="repeat_doze_hint">Pe baterie, cu ecranul stins, Android permite asta doar cam la 9 minute.</string>
+    <string name="repeat_next">Următoarea alarmă în %s</string>
+    <string name="repeat_until">până la %s</string>
+    <string name="running_title">Încărcare în curs</string>
+    <string name="running_since">de la %s</string>
+    <string name="running_mah">circa %s încărcați până acum</string>
+    <string name="running_need">Încă %d %% până la măsurarea capacității. Se măsoară la deconectare.</string>
+    <string name="running_ready">Suficient pentru o măsurare. Capacitatea se calculează la deconectare.</string>
+    <string name="no_capacity_short" formatted="false">fără măsurare: sub 15 %</string>
+    <string name="no_capacity_broken">fără măsurare: înregistrare întreruptă</string>
+    <string name="no_capacity_implausible">fără măsurare: valori neplauzibile</string>
+</resources>

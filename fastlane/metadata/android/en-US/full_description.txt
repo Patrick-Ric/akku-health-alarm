@@ -1,0 +1,31 @@
+<p>Lithium batteries age slowest in the middle of their range. <b>Akku Health Alarm</b> reminds you to unplug the charger at 80 % and to plug it in at 20 % – or at the limits you choose.</p>
+
+<p><b>Alarm</b></p>
+<ul>
+<li>Limits 20–80 % by default, quick choices 25–70 and 30–60 (hold a button to change it), exact input</li>
+<li>Repeat until you react (every 10 s to 12 h), with a countdown</li>
+<li>App sound or phone sound, short spoken announcement, vibration</li>
+<li>Night rest, "also when muted", notification can be switched off</li>
+<li>Optional alarm when the battery gets too hot or too cold</li>
+</ul>
+
+<p><b>History</b></p>
+<ul>
+<li>Log with one line per change: level, temperature, current, charger type, alarms</li>
+<li>Chart for day, week, month or everything, with temperature, voltage or charge/discharge current</li>
+</ul>
+
+<p><b>Battery health</b></p>
+<ul>
+<li>Capacity measured from your own charges, with an honest ± uncertainty</li>
+<li>Detects phones whose charge counter only follows the percentage and measures the current instead</li>
+<li>Charging speed per charger, charge cycles, recent charges</li>
+</ul>
+
+<p><b>Privacy</b></p>
+<ul>
+<li>No internet permission, no ads, no tracking – all data stays on the phone</li>
+<li>The watcher runs in its own small process; help for maker battery savers (Huawei, Xiaomi, Samsung …)</li>
+</ul>
+
+<p>20 languages, language can be chosen in the app. Android 7 and newer. Free software under GPL-3.0.</p>

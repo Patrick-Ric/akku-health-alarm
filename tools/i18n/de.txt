@@ -1,0 +1,242 @@
+0|Einstellungen
+1|Zurück
+2|OK
+3|Abbrechen
+4|Schließen
+5|Lädt
+6|Akkubetrieb
+7|Voll
+8|Angesteckt
+9|Strom
+10|Temperatur
+11|Spannung
+12|Alarm
+13|bei %1$d %% und %2$d %%
+14|Keine Alarme
+15|Akku-Bereich
+16|Warum diese Bereiche?
+17|Lithium-Akkus altern am langsamsten im mittleren Ladebereich. Ein hoher Ladestand belastet den Akku mehr als ein niedriger, darum hören die schonenden Stufen früher mit dem Laden auf.\n\n20–80 %: ausgewogen\n25–70 %: schonend\n30–60 %: sehr schonend\n\nJe enger der Bereich, desto weniger vom Akku nutzt du am Tag. Wähle den Bereich, der zu deinem Alltag passt.
+18|Ausgewogen
+19|Schonend
+20|Sehr schonend
+21|Eigene
+22|%1$d–%2$d %%
+23|Alarm unter
+24|Alarm über
+25|Empfehlung: %s
+26|Möglich: %s
+27|nutzbar %d %%
+28|Start
+29|Verlauf
+30|Gesundheit
+31|Für zuverlässige Alarme
+32|Android beendet Apps im Hintergrund manchmal. Zwei Einstellungen sorgen dafür, dass der Alarm pünktlich kommt.
+33|Benachrichtigungen erlauben
+34|Akku-Optimierung ausschalten
+35|Ansage
+36|Aus
+37|App-Stimme
+38|Handy-Stimme
+39|Kurze englische Ansage: „Battery charged.“ oder „Battery low.“
+40|Nutzt eine Offline-Stimme deines Handys in der App-Sprache. Fehlt sie, kommt die App-Stimme.
+41|Prozentzahl ansagen
+42|Geladen
+43|Schwach
+44|Alarm testen
+45|Ton
+46|Aus
+47|App-Ton
+48|Handy-Ton
+49|Ton auswählen
+50|Kein Ton gewählt
+51|Vibration
+52|Auch wenn stumm
+53|Nutzt die Wecker-Lautstärke
+54|Benachrichtigung anzeigen
+55|Mit Countdown bis zur nächsten Wiederholung. Aus: nur Ton, Ansage und Vibration.
+56|Nachtruhe
+57|In dieser Zeit nur eine stille Benachrichtigung
+58|Von %s
+59|Bis %s
+60|Temperaturalarm
+61|Warnt, wenn der Akku zu heiß oder zu kalt wird
+62|Nur Gefahr
+63|Normal
+64|Streng
+65|Eigene
+66|%1$d–%2$d °C
+67|Kälte nur beim Laden melden
+68|Laden bei Kälte schadet dem Akku, Benutzen kaum.
+69|Beim Schnellladen sind 35–40 °C üblich, diese Stufe meldet sich dann oft.
+70|Benachrichtigung
+71|Standardmäßig nur Ladestand und Status. Hier kannst du weitere Werte zuschalten.
+72|Strom (mA)
+73|Temperatur
+74|Spannung
+75|Prozent als Symbol in der Statusleiste
+76|Über
+77|Version %1$s · GPL-3.0 · Funktioniert komplett offline
+78|Akku-Status
+79|Akku-Alarme
+80|Alarm bei %d %%
+81|Alarm aus
+82|Akku geladen: %d %%
+83|Ladegerät trennen
+84|Akku schwach: %d %%
+85|Ladegerät anschließen
+86|Akku heiß: %s
+87|Handy abkühlen lassen
+88|Akku kalt: %s
+89|Bei Kälte nicht laden
+90|Akku geladen.
+91|Akku geladen, %d Prozent.
+92|Akku schwach.
+93|Akku schwach, %d Prozent.
+94|Akku heiß.
+95|Akku kalt.
+96|Liste
+97|Grafik
+98|%d Eintrag
+99|%d Einträge
+100|Noch keine Einträge. Hier erscheint jede Änderung des Ladestands.
+101|Netzteil
+102|USB
+103|Kabellos
+104|Akku
+105|Letzte 24 Stunden
+106|Noch keine Daten. Die Aufzeichnung läuft.
+107|jetzt
+108|Ereignisse
+109|Noch keine Ereignisse.
+110|Ladegerät angeschlossen
+111|Ladegerät getrennt
+112|Alarm: Akku geladen
+113|Alarm: Akku schwach
+114|Alarm: Akku heiß
+115|Alarm: Akku kalt
+116|Zustand laut Android
+117|Gut
+118|Überhitzt
+119|Zu kalt
+120|Überspannung
+121|Defekt
+122|Unbekannter Fehler
+123|Nicht gemeldet
+124|Technologie
+125|Ladezähler
+126|Tag
+127|Woche
+128|Monat
+129|Alles
+130|Temperatur
+131|Mit zwei Fingern zoomen, doppelt tippen setzt zurück.
+132|%1$d %% in ca. %2$s
+133|%d Min.
+134|%d Std.
+135|%1$d Std. %2$d Min.
+136|Verlauf
+137|Wie lange der Verlauf gespeichert wird. Ältere Einträge werden gelöscht.
+138|1 Tag
+139|1 Woche
+140|1 Monat
+141|1 Jahr
+142|Immer
+143|Entlädt
+144|Anhören
+145|Akku-Zustand
+146|Noch nicht gemessen
+147|%1$s von %2$s
+148|gemessen aus %1$d Ladung (zusammen %2$d %%)
+149|gemessen aus %1$d Ladungen (zusammen %2$d %%)
+150|Lade einmal mindestens 15 % am Stück, dann wird die Kapazität gemessen.
+151|Android meldet: %s
+152|± ist die Messunsicherheit. Je mehr und je größer die Ladungen, desto kleiner wird sie.
+153|Nennkapazität
+154|vom Handy gelesen
+155|von dir eingetragen
+156|Unbekannt. Trag sie ein, dann siehst du den Zustand in Prozent.
+157|Ändern
+158|In mAh, siehe Datenblatt deines Handys
+159|Automatisch
+160|Ladezyklen
+161|%1$s volle Zyklen seit Beginn der Aufzeichnung
+162|Ladegeschwindigkeit
+163|Ø %1$s · %2$s %%/Std.
+164|Letzte Ladungen
+165|Noch keine Ladung aufgezeichnet. Hier erscheint jede Ladung vom Anstecken bis zum Abstecken.
+166|%s Zyklen
+167|Kapazität im Lauf der Zeit
+168|Aktuelle Messwerte
+169|Hinweise
+170|Akku-Kapazität nur noch %d %%
+171|Der Akku fasst nur noch etwa %1$s von %2$s. Ein Tausch kann sich lohnen.
+172|Ladungen
+173|Tippe auf einen umrandeten Wert, um seine Kurve zu sehen.
+174|Der Ladezähler dieses Handys wird nur aus dem Prozentstand berechnet und kann deshalb keine Alterung zeigen. Die App misst darum selbst den Ladestrom – das ist ungenauer.
+175|voll
+176|App nicht aktiv · %s
+177|Zuverlässigkeit
+178|Erledigt
+179|Zusätzlich für %s:
+180|Allgemein:
+181|Einstellungen öffnen
+182|Diese Seite gibt es auf deinem Handy nicht. Die App-Info ist offen; folge den Schritten oben.
+183|Mehr Hilfe für dein Handy (Link zum Kopieren):
+184|Link kopiert
+185|Für %s-Handys sind weitere Einstellungen nötig.
+186|Ansehen
+187|Erledigt
+188|Autostart für Akku Health Alarm erlauben.
+189|Einstellungen → Apps → Akku Health Alarm → Energiesparen: „Keine Einschränkungen“.
+190|In der Übersicht der letzten Apps die App gedrückt halten und das Schloss antippen.
+191|Telefonmanager → App-Start: Akku Health Alarm auf „Manuell verwalten“ stellen und alle drei Schalter einschalten.
+192|Ältere Geräte: Telefonmanager → „Bereinigen im Sperrzustand“ bzw. „Geschützte Apps“: Akku Health Alarm nicht schließen lassen.
+193|In der Übersicht der letzten Apps die App nach unten ziehen, bis ein Schloss erscheint.
+194|Einstellungen → Akku → Hintergrund-Nutzungslimits → „Nie schlafende Apps“ → Akku Health Alarm hinzufügen.
+195|In der Übersicht der letzten Apps auf das App-Symbol tippen und „Diese App sperren“ wählen.
+196|Einstellungen → Apps → Akku Health Alarm → Akku: Autostart und Hintergrundaktivität erlauben.
+197|„Einfrieren im Hintergrund“ und „Optimierung abnormaler Apps“ ausschalten.
+198|In der Übersicht der letzten Apps die App sperren (Schloss).
+199|i Manager → App-Manager → Autostart: Akku Health Alarm einschalten.
+200|Einstellungen → Akku → Hoher Hintergrund-Stromverbrauch: Akku Health Alarm erlauben.
+201|In der Übersicht der letzten Apps die App sperren (Schloss).
+202|Einstellungen → Akku → Akku-Optimierung: Akku Health Alarm auf „Nicht optimieren“.
+203|Einstellungen → Akku → Erweiterte Optimierung ausschalten.
+204|In der Übersicht der letzten Apps die App sperren (Schloss).
+205|Falls es die Einstellung „Autostart“ gibt: für Akku Health Alarm erlauben.
+206|Wenn möglich, die App in der Übersicht der letzten Apps sperren.
+207|mit Ton
+208|still · Nachtruhe
+209|nur Vibration · Handy stumm
+210|still · Handy stumm
+211|nur Benachrichtigung · Ton und Ansage aus
+212|Sprache
+213|Wie Handy
+214|Design
+215|System
+216|Hell
+217|Dunkel
+218|Alles eingerichtet
+219|Diese Schritte habe ich erledigt
+220|Weniger
+221|Mehr
+222|Standard
+223|Schnellwahl %d
+224|Schnellwahl %d anpassen
+225|Aktuellen Bereich übernehmen
+226|Zurücksetzen
+227|Taste gedrückt halten zum Anpassen
+228|Alarm wiederholen
+229|Einmal
+230|%d s
+231|Im Akkubetrieb bei ausgeschaltetem Bildschirm erlaubt Android das nur etwa alle 9 Minuten.
+232|Nächster Alarm in %s
+233|bis %s
+234|Laufende Ladung
+235|seit %s
+236|bisher etwa %s geladen
+237|Noch %d %% bis zur Kapazitätsmessung. Gemessen wird beim Abstecken.
+238|Genug für eine Messung. Die Kapazität wird beim Abstecken berechnet.
+239|keine Messung: unter 15 %
+240|keine Messung: Aufzeichnung unterbrochen
+241|keine Messung: Werte unplausibel

@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="settings">Paramètres</string>
+    <string name="back">Retour</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Annuler</string>
+    <string name="close">Fermer</string>
+    <string name="status_charging">En charge</string>
+    <string name="status_discharging">Sur batterie</string>
+    <string name="status_full">Pleine</string>
+    <string name="status_plugged">Branché</string>
+    <string name="metric_current">Courant</string>
+    <string name="metric_temp">Température</string>
+    <string name="metric_voltage">Tension</string>
+    <string name="alarm_title">Alarme</string>
+    <string name="alarm_on_summary">À %1$d %% et %2$d %%</string>
+    <string name="alarm_off_summary">Aucune alerte</string>
+    <string name="range_title">Plage de la batterie</string>
+    <string name="range_info">Pourquoi ces plages ?</string>
+    <string name="range_info_text" formatted="false">Les batteries au lithium vieillissent le plus lentement au milieu de la plage de charge. Un niveau de charge élevé sollicite davantage la batterie qu\'un niveau bas, c\'est pourquoi les préréglages doux arrêtent la charge plus tôt.\n\n20–80 % : équilibré\n25–70 % : doux\n30–60 % : très doux\n\nPlus la plage est étroite, moins vous utilisez la batterie chaque jour. Choisissez la plage qui convient à votre quotidien.</string>
+    <string name="preset_balanced">Équilibré</string>
+    <string name="preset_gentle">Doux</string>
+    <string name="preset_very_gentle">Très doux</string>
+    <string name="preset_custom">Personnalisé</string>
+    <string name="percent_range">%1$d–%2$d %%</string>
+    <string name="alarm_below">Alarme sous</string>
+    <string name="alarm_above">Alarme au-dessus de</string>
+    <string name="recommendation">Recommandé : %s</string>
+    <string name="allowed_range">Possible : %s</string>
+    <string name="usable">utilisable %d %%</string>
+    <string name="tab_start">Accueil</string>
+    <string name="history_title">Historique</string>
+    <string name="health_title">Santé</string>
+    <string name="setup_title">Pour des alertes fiables</string>
+    <string name="setup_text">Android peut arrêter les applications en arrière-plan. Deux réglages garantissent que l\'alarme arrive à temps.</string>
+    <string name="setup_notifications">Autoriser les notifications</string>
+    <string name="setup_battery_opt">Désactiver l\'optimisation de la batterie</string>
+    <string name="voice_title">Annonce</string>
+    <string name="voice_off">Désactivée</string>
+    <string name="voice_builtin">Voix de l\'app</string>
+    <string name="voice_system">Voix du téléphone</string>
+    <string name="voice_builtin_hint">Courte annonce en anglais : \"Battery charged.\" ou \"Battery low.\"</string>
+    <string name="voice_system_hint">Utilise une voix hors ligne de votre téléphone dans la langue de l\'application. S\'il n\'y en a pas, la voix de l\'app est jouée.</string>
+    <string name="voice_percent">Annoncer le pourcentage</string>
+    <string name="test_charged">Chargée</string>
+    <string name="test_low">Faible</string>
+    <string name="test_hint">Tester l\'alarme</string>
+    <string name="tone_title">Son</string>
+    <string name="tone_off">Désactivé</string>
+    <string name="tone_builtin">Son de l\'app</string>
+    <string name="tone_system">Son du téléphone</string>
+    <string name="tone_pick">Choisir un son</string>
+    <string name="tone_none_selected">Aucun son choisi</string>
+    <string name="vibration_title">Vibrer</string>
+    <string name="loud_title">Même en mode silencieux</string>
+    <string name="loud_summary">Utilise le volume de l\'alarme</string>
+    <string name="alarm_notif_title">Afficher une notification</string>
+    <string name="alarm_notif_summary">Avec un compte à rebours jusqu\'à la prochaine répétition. Désactivé : uniquement son, annonce et vibration.</string>
+    <string name="quiet_title">Repos nocturne</string>
+    <string name="quiet_summary">Seulement une notification silencieuse pendant cette période</string>
+    <string name="quiet_from">De %s</string>
+    <string name="quiet_to">À %s</string>
+    <string name="temp_title">Alarme de température</string>
+    <string name="temp_summary">Avertit quand la batterie devient trop chaude ou trop froide</string>
+    <string name="temp_danger">Danger seulement</string>
+    <string name="temp_normal">Normal</string>
+    <string name="temp_strict">Strict</string>
+    <string name="temp_custom">Personnalisé</string>
+    <string name="temp_range">%1$d–%2$d °C</string>
+    <string name="temp_cold_charging">Signaler le froid seulement pendant la charge</string>
+    <string name="temp_cold_charging_summary">Charger au froid abîme la batterie, l\'utiliser presque pas.</string>
+    <string name="temp_strict_hint">La charge rapide atteint souvent 35–40 °C, ce niveau peut donc alerter souvent.</string>
+    <string name="notif_title">Notification</string>
+    <string name="notif_summary">Par défaut, seulement le niveau de charge et l\'état. Ajoutez d\'autres valeurs ici.</string>
+    <string name="notif_current">Courant (mA)</string>
+    <string name="notif_temp">Température</string>
+    <string name="notif_voltage">Tension</string>
+    <string name="notif_percent_icon">Pourcentage comme icône dans la barre d\'état</string>
+    <string name="about_title">À propos</string>
+    <string name="about_text">Version %1$s · GPL-3.0 · Fonctionne entièrement hors ligne</string>
+    <string name="channel_status">État de la batterie</string>
+    <string name="channel_alarm">Alarmes de batterie</string>
+    <string name="notif_alarm_at">Alarme à %d %%</string>
+    <string name="notif_alarm_off">Alarme désactivée</string>
+    <string name="alarm_high_title">Batterie chargée : %d %%</string>
+    <string name="alarm_high_text">Débranchez le chargeur</string>
+    <string name="alarm_low_title">Batterie faible : %d %%</string>
+    <string name="alarm_low_text">Branchez le chargeur</string>
+    <string name="alarm_hot_title">Batterie chaude : %s</string>
+    <string name="alarm_hot_text">Laissez le téléphone refroidir</string>
+    <string name="alarm_cold_title">Batterie froide : %s</string>
+    <string name="alarm_cold_text">Ne pas charger dans le froid</string>
+    <string name="tts_charged">Batterie chargée.</string>
+    <string name="tts_charged_percent">Batterie chargée, %d pour cent.</string>
+    <string name="tts_low">Batterie faible.</string>
+    <string name="tts_low_percent">Batterie faible, %d pour cent.</string>
+    <string name="tts_hot">Batterie chaude.</string>
+    <string name="tts_cold">Batterie froide.</string>
+    <string name="view_list">Liste</string>
+    <string name="view_chart">Graphique</string>
+    <plurals name="entries_count">
+        <item quantity="one">%d entrée</item>
+        <item quantity="many">%d entrées</item>
+        <item quantity="other">%d entrées</item>
+    </plurals>
+    <string name="list_empty">Aucune entrée pour l\'instant. Chaque changement du niveau de charge apparaîtra ici.</string>
+    <string name="plug_ac">Chargeur</string>
+    <string name="plug_usb">USB</string>
+    <string name="plug_wireless">Sans fil</string>
+    <string name="plug_battery">Batterie</string>
+    <string name="chart_title">Dernières 24 heures</string>
+    <string name="chart_empty">Pas encore de données. L\'enregistrement est en cours.</string>
+    <string name="chart_now">maintenant</string>
+    <string name="events_title">Événements</string>
+    <string name="events_empty">Aucun événement pour l\'instant.</string>
+    <string name="event_plugged">Chargeur branché</string>
+    <string name="event_unplugged">Chargeur débranché</string>
+    <string name="event_alarm_high">Alarme : batterie chargée</string>
+    <string name="event_alarm_low">Alarme : batterie faible</string>
+    <string name="event_alarm_hot">Alarme : batterie chaude</string>
+    <string name="event_alarm_cold">Alarme : batterie froide</string>
+    <string name="health_status">État signalé par Android</string>
+    <string name="health_good">Bon</string>
+    <string name="health_overheat">Surchauffe</string>
+    <string name="health_cold">Trop froide</string>
+    <string name="health_over_voltage">Surtension</string>
+    <string name="health_dead">Défectueuse</string>
+    <string name="health_failure">Erreur inconnue</string>
+    <string name="health_unknown">Non signalé</string>
+    <string name="health_technology">Technologie</string>
+    <string name="health_charge_counter">Compteur de charge</string>
+    <string name="range_day">Jour</string>
+    <string name="range_week">Semaine</string>
+    <string name="range_month">Mois</string>
+    <string name="range_all">Tout</string>
+    <string name="chart_temp">Température</string>
+    <string name="chart_hint">Zoomez avec deux doigts, touchez deux fois pour réinitialiser.</string>
+    <string name="eta">%1$d %% dans environ %2$s</string>
+    <string name="duration_min">%d min</string>
+    <string name="duration_h">%d h</string>
+    <string name="duration_h_min">%1$d h %2$d min</string>
+    <string name="keep_title">Historique</string>
+    <string name="keep_summary">Durée de conservation de l\'historique. Les entrées plus anciennes sont supprimées.</string>
+    <string name="keep_1d">1 jour</string>
+    <string name="keep_7d">1 semaine</string>
+    <string name="keep_30d">1 mois</string>
+    <string name="keep_365d">1 an</string>
+    <string name="keep_forever">Toujours</string>
+    <string name="log_discharging">Se décharge</string>
+    <string name="tone_listen">Écouter</string>
+    <string name="health_state">État de la batterie</string>
+    <string name="health_measuring">Pas encore mesuré</string>
+    <string name="health_capacity_of">%1$s sur %2$s</string>
+    <plurals name="health_from_sessions">
+        <item quantity="one">mesuré sur %1$d charge (%2$d %% au total)</item>
+        <item quantity="many">mesuré sur %1$d charges (%2$d %% au total)</item>
+        <item quantity="other">mesuré sur %1$d charges (%2$d %% au total)</item>
+    </plurals>
+    <string name="health_need_charge" formatted="false">Chargez au moins 15 % d\'un coup, la capacité sera alors mesurée.</string>
+    <string name="health_android_says">Android signale : %s</string>
+    <string name="health_estimate_note">± est l\'incertitude de mesure. Plus les charges sont nombreuses et longues, plus elle diminue.</string>
+    <string name="design_title">Capacité nominale</string>
+    <string name="design_auto">lue sur le téléphone</string>
+    <string name="design_manual">saisie par vous</string>
+    <string name="design_unknown">Inconnue. Saisissez-la pour voir l\'état en pourcentage.</string>
+    <string name="design_edit">Modifier</string>
+    <string name="design_dialog_hint">En mAh, voir la fiche technique de votre téléphone</string>
+    <string name="design_reset">Automatique</string>
+    <string name="cycles_title">Cycles de charge</string>
+    <string name="cycles_text">%1$s cycles complets depuis le début de l\'enregistrement</string>
+    <string name="speed_title">Vitesse de charge</string>
+    <string name="speed_row">Ø %1$s · %2$s %%/h</string>
+    <string name="sessions_title">Charges récentes</string>
+    <string name="sessions_empty">Aucune charge enregistrée pour l\'instant. Chaque charge, du branchement au débranchement, apparaît ici.</string>
+    <string name="session_cycles">%s cycles</string>
+    <string name="capacity_trend">Capacité au fil du temps</string>
+    <string name="measures_title">Valeurs actuelles</string>
+    <string name="channel_hints">Conseils</string>
+    <string name="hint_capacity_title">Capacité de la batterie seulement %d %%</string>
+    <string name="hint_capacity_text">La batterie ne contient plus qu\'environ %1$s sur %2$s. Un remplacement peut valoir la peine.</string>
+    <string name="sessions_count">Charges</string>
+    <string name="measures_hint">Touchez une valeur encadrée pour voir sa courbe.</string>
+    <string name="health_counter_from_level">Ce téléphone calcule son compteur de charge uniquement à partir du pourcentage ; il ne peut donc pas montrer l’usure. L’application mesure donc elle-même le courant de charge, ce qui est moins précis.</string>
+    <string name="session_full">pleine</string>
+    <string name="gap_row">Application inactive · %s</string>
+    <string name="reliability_title">Fiabilité</string>
+    <string name="reliability_ok">Fait</string>
+    <string name="reliability_vendor">En plus pour %s :</string>
+    <string name="reliability_general">En général :</string>
+    <string name="reliability_open">Ouvrir les réglages</string>
+    <string name="reliability_open_failed">Cette page n\'existe pas sur votre téléphone. Les infos de l\'application sont ouvertes ; suivez les étapes ci-dessus.</string>
+    <string name="reliability_link_label">Plus d\'aide pour votre téléphone (lien à copier) :</string>
+    <string name="link_copied">Lien copié</string>
+    <string name="setup_vendor">Les téléphones %s ont besoin de quelques réglages supplémentaires.</string>
+    <string name="setup_vendor_show">Afficher</string>
+    <string name="setup_vendor_done">Fait</string>
+    <string-array name="vendor_steps_xiaomi">
+        <item>Autorisez le démarrage automatique pour Akku Health Alarm.</item>
+        <item>Paramètres → Applications → Akku Health Alarm → Économiseur de batterie : « Aucune restriction ».</item>
+        <item>Dans la vue des applications récentes, maintenez l\'application et touchez le cadenas.</item>
+    </string-array>
+    <string-array name="vendor_steps_huawei">
+        <item>Gestionnaire du téléphone → Lancement d\'applications : réglez Akku Health Alarm sur « Gérer manuellement » et activez les trois interrupteurs.</item>
+        <item>Anciens téléphones : Gestionnaire du téléphone → « Nettoyage à l\'écran verrouillé » ou « Applications protégées » : ne laissez pas fermer Akku Health Alarm.</item>
+        <item>Dans la vue des applications récentes, tirez l\'application vers le bas jusqu\'à ce qu\'un cadenas apparaisse.</item>
+    </string-array>
+    <string-array name="vendor_steps_samsung">
+        <item>Paramètres → Batterie → Limites d\'utilisation en arrière-plan → « Applications jamais en veille » → ajoutez Akku Health Alarm.</item>
+        <item>Dans la vue des applications récentes, touchez l\'icône de l\'application et choisissez « Verrouiller cette application ».</item>
+    </string-array>
+    <string-array name="vendor_steps_oppo">
+        <item>Paramètres → Applications → Akku Health Alarm → Batterie : autorisez le démarrage automatique et l\'activité en arrière-plan.</item>
+        <item>Désactivez « Geler en arrière-plan » et « Optimiser les applications anormales ».</item>
+        <item>Verrouillez l\'application dans la vue des applications récentes.</item>
+    </string-array>
+    <string-array name="vendor_steps_vivo">
+        <item>i Manager → Gestionnaire d\'applications → Démarrage automatique : activez Akku Health Alarm.</item>
+        <item>Paramètres → Batterie → Consommation élevée en arrière-plan : autorisez Akku Health Alarm.</item>
+        <item>Verrouillez l\'application dans la vue des applications récentes.</item>
+    </string-array>
+    <string-array name="vendor_steps_oneplus">
+        <item>Paramètres → Batterie → Optimisation de la batterie : réglez Akku Health Alarm sur « Ne pas optimiser ».</item>
+        <item>Paramètres → Batterie → désactivez l\'optimisation avancée.</item>
+        <item>Verrouillez l\'application dans la vue des applications récentes.</item>
+    </string-array>
+    <string-array name="vendor_steps_other">
+        <item>S\'il existe un réglage « Démarrage automatique » : autorisez-le pour Akku Health Alarm.</item>
+        <item>Si possible, verrouillez l\'application dans la vue des applications récentes.</item>
+    </string-array>
+    <string name="delivery_sound">avec son</string>
+    <string name="delivery_quiet">silencieux · repos nocturne</string>
+    <string name="delivery_muted_vibrate">vibration seulement · téléphone en silencieux</string>
+    <string name="delivery_muted">silencieux · téléphone en silencieux</string>
+    <string name="delivery_silent">notification seulement · son et annonce désactivés</string>
+    <string name="language_title">Langue</string>
+    <string name="language_system">Langue du téléphone</string>
+    <string name="theme_title">Apparence</string>
+    <string name="theme_system">Système</string>
+    <string name="theme_light">Clair</string>
+    <string name="theme_dark">Sombre</string>
+    <string name="reliability_all_done">Tout est configuré</string>
+    <string name="reliability_vendor_confirmed">J\'ai effectué ces étapes</string>
+    <string name="step_less">Moins</string>
+    <string name="step_more">Plus</string>
+    <string name="preset_standard">Standard</string>
+    <string name="quick_slot">Choix rapide %d</string>
+    <string name="quick_edit_title">Modifier le choix rapide %d</string>
+    <string name="quick_take_current">Reprendre la plage actuelle</string>
+    <string name="quick_reset">Réinitialiser</string>
+    <string name="quick_hint">Maintenez un bouton pour le modifier</string>
+    <string name="repeat_title">Répéter l\'alarme</string>
+    <string name="repeat_off">Une fois</string>
+    <string name="duration_sec">%d s</string>
+    <string name="repeat_doze_hint">Sur batterie, écran éteint, Android ne le permet qu\'environ toutes les 9 minutes.</string>
+    <string name="repeat_next">Prochaine alarme dans %s</string>
+    <string name="repeat_until">jusqu\'à %s</string>
+    <string name="running_title">Charge en cours</string>
+    <string name="running_since">depuis %s</string>
+    <string name="running_mah">environ %s chargés jusqu\'ici</string>
+    <string name="running_need">Encore %d %% pour une mesure de capacité. Elle a lieu au débranchement.</string>
+    <string name="running_ready">Assez pour une mesure. La capacité est calculée au débranchement.</string>
+    <string name="no_capacity_short" formatted="false">pas de mesure : moins de 15 %</string>
+    <string name="no_capacity_broken">pas de mesure : enregistrement interrompu</string>
+    <string name="no_capacity_implausible">pas de mesure : valeurs peu plausibles</string>
+</resources>

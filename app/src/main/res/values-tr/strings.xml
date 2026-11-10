@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="settings">Ayarlar</string>
+    <string name="back">Geri</string>
+    <string name="ok">Tamam</string>
+    <string name="cancel">İptal</string>
+    <string name="close">Kapat</string>
+    <string name="status_charging">Şarj oluyor</string>
+    <string name="status_discharging">Pilde</string>
+    <string name="status_full">Dolu</string>
+    <string name="status_plugged">Takılı</string>
+    <string name="metric_current">Akım</string>
+    <string name="metric_temp">Sıcaklık</string>
+    <string name="metric_voltage">Gerilim</string>
+    <string name="alarm_title">Alarm</string>
+    <string name="alarm_on_summary">%%%1$d ve %%%2$d olduğunda</string>
+    <string name="alarm_off_summary">Uyarı yok</string>
+    <string name="range_title">Pil aralığı</string>
+    <string name="range_info">Neden bu aralıklar?</string>
+    <string name="range_info_text" formatted="false">Lityum piller şarj aralığının ortasında en yavaş yaşlanır. Yüksek şarj seviyesi pili düşük seviyeden daha çok yorar, bu yüzden nazik ön ayarlar şarjı daha erken durdurur.\n\n%20–80: dengeli\n%25–70: nazik\n%30–60: çok nazik\n\nAralık ne kadar darsa, günde pilin o kadar azını kullanırsın. Gününe uyan aralığı seç.</string>
+    <string name="preset_balanced">Dengeli</string>
+    <string name="preset_gentle">Nazik</string>
+    <string name="preset_very_gentle">Çok nazik</string>
+    <string name="preset_custom">Özel</string>
+    <string name="percent_range">%%%1$d–%2$d</string>
+    <string name="alarm_below">Alarm altında</string>
+    <string name="alarm_above">Alarm üstünde</string>
+    <string name="recommendation">Önerilen: %s</string>
+    <string name="allowed_range">Olası: %s</string>
+    <string name="usable">kullanılabilir %%%d</string>
+    <string name="tab_start">Başlangıç</string>
+    <string name="history_title">Geçmiş</string>
+    <string name="health_title">Sağlık</string>
+    <string name="setup_title">Güvenilir uyarılar için</string>
+    <string name="setup_text">Android arka plandaki uygulamaları durdurabilir. İki ayar alarmın zamanında gelmesini sağlar.</string>
+    <string name="setup_notifications">Bildirimlere izin ver</string>
+    <string name="setup_battery_opt">Pil optimizasyonunu kapat</string>
+    <string name="voice_title">Sesli bildirim</string>
+    <string name="voice_off">Kapalı</string>
+    <string name="voice_builtin">Uygulama anonsu</string>
+    <string name="voice_system">Telefon anonsu</string>
+    <string name="voice_builtin_hint">Kısa İngilizce bildirim: \"Battery charged.\" veya \"Battery low.\"</string>
+    <string name="voice_system_hint">Telefonunun çevrimdışı bir sesini uygulama dilinde kullanır. Yoksa uygulama anonsu çalar.</string>
+    <string name="voice_percent">Yüzdeyi söyle</string>
+    <string name="test_charged">Dolu</string>
+    <string name="test_low">Düşük</string>
+    <string name="test_hint">Alarmı dene</string>
+    <string name="tone_title">Ses</string>
+    <string name="tone_off">Kapalı</string>
+    <string name="tone_builtin">Uygulama sesi</string>
+    <string name="tone_system">Telefon sesi</string>
+    <string name="tone_pick">Ses seç</string>
+    <string name="tone_none_selected">Ses seçilmedi</string>
+    <string name="vibration_title">Titreşim</string>
+    <string name="loud_title">Sessizdeyken de</string>
+    <string name="loud_summary">Alarm ses düzeyini kullanır</string>
+    <string name="alarm_notif_title">Bildirim göster</string>
+    <string name="alarm_notif_summary">Sonraki tekrara geri sayımla. Kapalı: yalnızca ses, sesli bildirim ve titreşim.</string>
+    <string name="quiet_title">Gece sessizliği</string>
+    <string name="quiet_summary">Bu sürede yalnızca sessiz bir bildirim</string>
+    <string name="quiet_from">%s itibarıyla</string>
+    <string name="quiet_to">%s saatine kadar</string>
+    <string name="temp_title">Sıcaklık alarmı</string>
+    <string name="temp_summary">Pil çok ısınınca veya çok soğuyunca uyarır</string>
+    <string name="temp_danger">Yalnızca tehlike</string>
+    <string name="temp_normal">Normal</string>
+    <string name="temp_strict">Sıkı</string>
+    <string name="temp_custom">Özel</string>
+    <string name="temp_range">%1$d–%2$d °C</string>
+    <string name="temp_cold_charging">Soğuğu yalnızca şarj sırasında bildir</string>
+    <string name="temp_cold_charging_summary">Soğukta şarj etmek pile zarar verir, kullanmak pek vermez.</string>
+    <string name="temp_strict_hint">Hızlı şarj sık sık 35–40 °C\'ye ulaşır, bu yüzden bu seviye sık uyarabilir.</string>
+    <string name="notif_title">Bildirim</string>
+    <string name="notif_summary">Varsayılan olarak yalnızca şarj seviyesi ve durum. Buradan başka değerler ekle.</string>
+    <string name="notif_current">Akım (mA)</string>
+    <string name="notif_temp">Sıcaklık</string>
+    <string name="notif_voltage">Gerilim</string>
+    <string name="notif_percent_icon">Durum çubuğunda simge olarak yüzde</string>
+    <string name="about_title">Hakkında</string>
+    <string name="about_text">Sürüm %1$s · GPL-3.0 · Tamamen çevrimdışı çalışır</string>
+    <string name="channel_status">Pil durumu</string>
+    <string name="channel_alarm">Pil alarmları</string>
+    <string name="notif_alarm_at">Alarm %%%d</string>
+    <string name="notif_alarm_off">Alarm kapalı</string>
+    <string name="alarm_high_title">Pil dolu: %%%d</string>
+    <string name="alarm_high_text">Şarj aletini çıkar</string>
+    <string name="alarm_low_title">Pil düşük: %%%d</string>
+    <string name="alarm_low_text">Şarj aletini tak</string>
+    <string name="alarm_hot_title">Pil sıcak: %s</string>
+    <string name="alarm_hot_text">Telefonun soğumasını bekle</string>
+    <string name="alarm_cold_title">Pil soğuk: %s</string>
+    <string name="alarm_cold_text">Soğukta şarj etme</string>
+    <string name="tts_charged">Pil dolu.</string>
+    <string name="tts_charged_percent">Pil dolu, yüzde %d.</string>
+    <string name="tts_low">Pil düşük.</string>
+    <string name="tts_low_percent">Pil düşük, yüzde %d.</string>
+    <string name="tts_hot">Pil sıcak.</string>
+    <string name="tts_cold">Pil soğuk.</string>
+    <string name="view_list">Liste</string>
+    <string name="view_chart">Grafik</string>
+    <plurals name="entries_count">
+        <item quantity="one">%d kayıt</item>
+        <item quantity="other">%d kayıt</item>
+    </plurals>
+    <string name="list_empty">Henüz kayıt yok. Şarj seviyesindeki her değişiklik burada görünecek.</string>
+    <string name="plug_ac">Şarj aleti</string>
+    <string name="plug_usb">USB</string>
+    <string name="plug_wireless">Kablosuz</string>
+    <string name="plug_battery">Pil</string>
+    <string name="chart_title">Son 24 saat</string>
+    <string name="chart_empty">Henüz veri yok. Kayıt sürüyor.</string>
+    <string name="chart_now">şimdi</string>
+    <string name="events_title">Olaylar</string>
+    <string name="events_empty">Henüz olay yok.</string>
+    <string name="event_plugged">Şarj aleti takıldı</string>
+    <string name="event_unplugged">Şarj aleti çıkarıldı</string>
+    <string name="event_alarm_high">Alarm: pil dolu</string>
+    <string name="event_alarm_low">Alarm: pil düşük</string>
+    <string name="event_alarm_hot">Alarm: pil sıcak</string>
+    <string name="event_alarm_cold">Alarm: pil soğuk</string>
+    <string name="health_status">Android\'e göre durum</string>
+    <string name="health_good">İyi</string>
+    <string name="health_overheat">Aşırı ısınmış</string>
+    <string name="health_cold">Çok soğuk</string>
+    <string name="health_over_voltage">Aşırı gerilim</string>
+    <string name="health_dead">Arızalı</string>
+    <string name="health_failure">Bilinmeyen hata</string>
+    <string name="health_unknown">Bildirilmedi</string>
+    <string name="health_technology">Teknoloji</string>
+    <string name="health_charge_counter">Şarj sayacı</string>
+    <string name="range_day">Gün</string>
+    <string name="range_week">Hafta</string>
+    <string name="range_month">Ay</string>
+    <string name="range_all">Tümü</string>
+    <string name="chart_temp">Sıcaklık</string>
+    <string name="chart_hint">İki parmakla yakınlaştır, sıfırlamak için iki kez dokun.</string>
+    <string name="eta">Yaklaşık %2$s sonra %%%1$d</string>
+    <string name="duration_min">%d dk</string>
+    <string name="duration_h">%d sa</string>
+    <string name="duration_h_min">%1$d sa %2$d dk</string>
+    <string name="keep_title">Geçmiş</string>
+    <string name="keep_summary">Geçmişin ne kadar süre tutulacağı. Daha eski kayıtlar silinir.</string>
+    <string name="keep_1d">1 gün</string>
+    <string name="keep_7d">1 hafta</string>
+    <string name="keep_30d">1 ay</string>
+    <string name="keep_365d">1 yıl</string>
+    <string name="keep_forever">Her zaman</string>
+    <string name="log_discharging">Boşalıyor</string>
+    <string name="tone_listen">Dinle</string>
+    <string name="health_state">Pil sağlığı</string>
+    <string name="health_measuring">Henüz ölçülmedi</string>
+    <string name="health_capacity_of">%1$s / %2$s</string>
+    <plurals name="health_from_sessions">
+        <item quantity="one">%1$d şarjdan ölçüldü (toplam %%%2$d)</item>
+        <item quantity="other">%1$d şarjdan ölçüldü (toplam %%%2$d)</item>
+    </plurals>
+    <string name="health_need_charge" formatted="false">Tek seferde en az yüzde 15 şarj et, ardından kapasite ölçülür.</string>
+    <string name="health_android_says">Android bildiriyor: %s</string>
+    <string name="health_estimate_note">± ölçüm belirsizliğidir. Şarj sayısı ve süresi arttıkça küçülür.</string>
+    <string name="design_title">Nominal kapasite</string>
+    <string name="design_auto">telefondan okundu</string>
+    <string name="design_manual">senin girdiğin</string>
+    <string name="design_unknown">Bilinmiyor. Durumu yüzde olarak görmek için gir.</string>
+    <string name="design_edit">Değiştir</string>
+    <string name="design_dialog_hint">mAh cinsinden, telefonunun teknik özelliklerine bak</string>
+    <string name="design_reset">Otomatik</string>
+    <string name="cycles_title">Şarj döngüleri</string>
+    <string name="cycles_text">Kayıt başladığından beri %1$s tam döngü</string>
+    <string name="speed_title">Şarj hızı</string>
+    <string name="speed_row">Ø %1$s · %%%2$s/sa</string>
+    <string name="sessions_title">Son şarjlar</string>
+    <string name="sessions_empty">Henüz kaydedilmiş şarj yok. Takmadan çıkarmaya kadar her şarj burada görünür.</string>
+    <string name="session_cycles">%s döngü</string>
+    <string name="capacity_trend">Zaman içinde kapasite</string>
+    <string name="measures_title">Güncel değerler</string>
+    <string name="channel_hints">İpuçları</string>
+    <string name="hint_capacity_title">Pil kapasitesi yalnızca %%%d</string>
+    <string name="hint_capacity_text">Pil artık yalnızca yaklaşık %1$s / %2$s tutuyor. Değiştirmek değebilir.</string>
+    <string name="sessions_count">Şarjlar</string>
+    <string name="measures_hint">Eğrisini görmek için çerçeveli bir değere dokun.</string>
+    <string name="health_counter_from_level">Bu telefon şarj sayacını yalnızca yüzdeden hesaplıyor, bu yüzden sayaç yıpranmayı gösteremez. Uygulama bu nedenle şarj akımını kendisi ölçer; bu daha az kesindir.</string>
+    <string name="session_full">dolu</string>
+    <string name="gap_row">Uygulama etkin değildi · %s</string>
+    <string name="reliability_title">Güvenilirlik</string>
+    <string name="reliability_ok">Tamam</string>
+    <string name="reliability_vendor">Ayrıca %s için:</string>
+    <string name="reliability_general">Genel olarak:</string>
+    <string name="reliability_open">Ayarları aç</string>
+    <string name="reliability_open_failed">Bu sayfa telefonunda yok. Uygulama bilgileri açıldı; yukarıdaki adımları izle.</string>
+    <string name="reliability_link_label">Telefonun için daha fazla yardım (kopyalanacak bağlantı):</string>
+    <string name="link_copied">Bağlantı kopyalandı</string>
+    <string name="setup_vendor">%s telefonları için birkaç ayar daha gerekiyor.</string>
+    <string name="setup_vendor_show">Göster</string>
+    <string name="setup_vendor_done">Tamam</string>
+    <string-array name="vendor_steps_xiaomi">
+        <item>Akku Health Alarm için otomatik başlatmaya izin ver.</item>
+        <item>Ayarlar → Uygulamalar → Akku Health Alarm → Pil tasarrufu: \"Kısıtlama yok\".</item>
+        <item>Son uygulamalar görünümünde uygulamaya basılı tut ve kilide dokun.</item>
+    </string-array>
+    <string-array name="vendor_steps_huawei">
+        <item>Telefon Yöneticisi → Uygulama başlatma: Akku Health Alarm\'ı \"Manuel olarak yönet\" yap ve üç anahtarı da aç.</item>
+        <item>Eski telefonlar: Telefon Yöneticisi → \"Kilit ekranında temizleme\" veya \"Korunan uygulamalar\": Akku Health Alarm\'ın kapatılmasına izin verme.</item>
+        <item>Son uygulamalar görünümünde kilit görünene kadar uygulamayı aşağı çek.</item>
+    </string-array>
+    <string-array name="vendor_steps_samsung">
+        <item>Ayarlar → Pil → Arka plan kullanım sınırları → \"Hiç uyumayan uygulamalar\" → Akku Health Alarm\'ı ekle.</item>
+        <item>Son uygulamalar görünümünde uygulama simgesine dokun ve \"Bu uygulamayı kilitle\"yi seç.</item>
+    </string-array>
+    <string-array name="vendor_steps_oppo">
+        <item>Ayarlar → Uygulamalar → Akku Health Alarm → Pil: otomatik başlatmaya ve arka plan etkinliğine izin ver.</item>
+        <item>\"Arka planda dondur\" ve \"Anormal uygulamaları optimize et\" seçeneklerini kapat.</item>
+        <item>Uygulamayı son uygulamalar görünümünde kilitle.</item>
+    </string-array>
+    <string-array name="vendor_steps_vivo">
+        <item>i Manager → Uygulama yöneticisi → Otomatik başlatma: Akku Health Alarm\'ı aç.</item>
+        <item>Ayarlar → Pil → Yüksek arka plan güç kullanımı: Akku Health Alarm\'a izin ver.</item>
+        <item>Uygulamayı son uygulamalar görünümünde kilitle.</item>
+    </string-array>
+    <string-array name="vendor_steps_oneplus">
+        <item>Ayarlar → Pil → Pil optimizasyonu: Akku Health Alarm\'ı \"Optimize etme\" yap.</item>
+        <item>Ayarlar → Pil → gelişmiş optimizasyonu kapat.</item>
+        <item>Uygulamayı son uygulamalar görünümünde kilitle.</item>
+    </string-array>
+    <string-array name="vendor_steps_other">
+        <item>\"Otomatik başlatma\" ayarı varsa: Akku Health Alarm için izin ver.</item>
+        <item>Mümkünse uygulamayı son uygulamalar görünümünde kilitle.</item>
+    </string-array>
+    <string name="delivery_sound">sesli</string>
+    <string name="delivery_quiet">sessiz · gece sessizliği</string>
+    <string name="delivery_muted_vibrate">yalnızca titreşim · telefon sessizde</string>
+    <string name="delivery_muted">sessiz · telefon sessizde</string>
+    <string name="delivery_silent">yalnızca bildirim · ses ve konuşma kapalı</string>
+    <string name="language_title">Dil</string>
+    <string name="language_system">Telefon dili</string>
+    <string name="theme_title">Görünüm</string>
+    <string name="theme_system">Sistem</string>
+    <string name="theme_light">Açık</string>
+    <string name="theme_dark">Koyu</string>
+    <string name="reliability_all_done">Her şey ayarlandı</string>
+    <string name="reliability_vendor_confirmed">Bu adımları tamamladım</string>
+    <string name="step_less">Daha az</string>
+    <string name="step_more">Daha fazla</string>
+    <string name="preset_standard">Standart</string>
+    <string name="quick_slot">Hızlı seçim %d</string>
+    <string name="quick_edit_title">Hızlı seçim %d\'yi değiştir</string>
+    <string name="quick_take_current">Geçerli aralığı kullan</string>
+    <string name="quick_reset">Sıfırla</string>
+    <string name="quick_hint">Değiştirmek için bir düğmeyi basılı tut</string>
+    <string name="repeat_title">Alarmı tekrarla</string>
+    <string name="repeat_off">Bir kez</string>
+    <string name="duration_sec">%d sn</string>
+    <string name="repeat_doze_hint">Pilde ve ekran kapalıyken Android buna yalnızca yaklaşık 9 dakikada bir izin verir.</string>
+    <string name="repeat_next">Sonraki alarm: %s sonra</string>
+    <string name="repeat_until">%s saatine kadar</string>
+    <string name="running_title">Şarj sürüyor</string>
+    <string name="running_since">%s itibarıyla</string>
+    <string name="running_mah">şu ana kadar yaklaşık %s şarj edildi</string>
+    <string name="running_need">Kapasite ölçümü için %%%d daha. Ölçüm, çıkarıldığında yapılır.</string>
+    <string name="running_ready">Ölçüm için yeterli. Kapasite, çıkarıldığında hesaplanır.</string>
+    <string name="no_capacity_short" formatted="false">ölçüm yok: yüzde 15\'in altında</string>
+    <string name="no_capacity_broken">ölçüm yok: kayıt kesildi</string>
+    <string name="no_capacity_implausible">ölçüm yok: değerler mantıksız</string>
+</resources>

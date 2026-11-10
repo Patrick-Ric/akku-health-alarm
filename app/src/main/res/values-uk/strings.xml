@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="settings">Налаштування</string>
+    <string name="back">Назад</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Скасувати</string>
+    <string name="close">Закрити</string>
+    <string name="status_charging">Заряджається</string>
+    <string name="status_discharging">Від батареї</string>
+    <string name="status_full">Повна</string>
+    <string name="status_plugged">Під\'єднано</string>
+    <string name="metric_current">Струм</string>
+    <string name="metric_temp">Температура</string>
+    <string name="metric_voltage">Напруга</string>
+    <string name="alarm_title">Сигнал</string>
+    <string name="alarm_on_summary">При %1$d %% і %2$d %%</string>
+    <string name="alarm_off_summary">Без сигналів</string>
+    <string name="range_title">Діапазон батареї</string>
+    <string name="range_info">Чому такі діапазони?</string>
+    <string name="range_info_text" formatted="false">Літієві батареї старіють найповільніше в середині діапазону заряду. Високий рівень заряду навантажує батарею більше, ніж низький, тому щадні налаштування припиняють заряджання раніше.\n\n20–80 %: збалансований\n25–70 %: щадний\n30–60 %: дуже щадний\n\nЧим вужчий діапазон, тим менше батареї ви використовуєте за день. Виберіть діапазон, що пасує вашому дню.</string>
+    <string name="preset_balanced">Збалансований</string>
+    <string name="preset_gentle">Щадний</string>
+    <string name="preset_very_gentle">Дуже щадний</string>
+    <string name="preset_custom">Власний</string>
+    <string name="percent_range">%1$d–%2$d %%</string>
+    <string name="alarm_below">Сигнал нижче</string>
+    <string name="alarm_above">Сигнал вище</string>
+    <string name="recommendation">Рекомендовано: %s</string>
+    <string name="allowed_range">Можливо: %s</string>
+    <string name="usable">доступно %d %%</string>
+    <string name="tab_start">Головна</string>
+    <string name="history_title">Історія</string>
+    <string name="health_title">Здоров\'я</string>
+    <string name="setup_title">Для надійних сигналів</string>
+    <string name="setup_text">Android може зупиняти застосунки у фоні. Два налаштування гарантують, що сигнал прийде вчасно.</string>
+    <string name="setup_notifications">Дозволити сповіщення</string>
+    <string name="setup_battery_opt">Вимкнути оптимізацію батареї</string>
+    <string name="voice_title">Голосове повідомлення</string>
+    <string name="voice_off">Вимк.</string>
+    <string name="voice_builtin">Голос застосунку</string>
+    <string name="voice_system">Голос телефону</string>
+    <string name="voice_builtin_hint">Коротке повідомлення англійською: \"Battery charged.\" або \"Battery low.\"</string>
+    <string name="voice_system_hint">Використовує офлайн-голос телефону мовою застосунку. Якщо його немає, звучить голос застосунку.</string>
+    <string name="voice_percent">Називати відсоток</string>
+    <string name="test_charged">Заряджена</string>
+    <string name="test_low">Розряджена</string>
+    <string name="test_hint">Перевірити сигнал</string>
+    <string name="tone_title">Звук</string>
+    <string name="tone_off">Вимк.</string>
+    <string name="tone_builtin">Звук застосунку</string>
+    <string name="tone_system">Звук телефону</string>
+    <string name="tone_pick">Вибрати звук</string>
+    <string name="tone_none_selected">Звук не вибрано</string>
+    <string name="vibration_title">Вібрація</string>
+    <string name="loud_title">Навіть у беззвучному режимі</string>
+    <string name="loud_summary">Використовує гучність будильника</string>
+    <string name="alarm_notif_title">Показувати сповіщення</string>
+    <string name="alarm_notif_summary">Зі зворотним відліком до наступного повтору. Вимк.: лише звук, голосове повідомлення та вібрація.</string>
+    <string name="quiet_title">Нічний спокій</string>
+    <string name="quiet_summary">У цей час лише беззвучне сповіщення</string>
+    <string name="quiet_from">З %s</string>
+    <string name="quiet_to">До %s</string>
+    <string name="temp_title">Сигнал температури</string>
+    <string name="temp_summary">Попереджає, коли батарея надто гаряча або холодна</string>
+    <string name="temp_danger">Лише небезпека</string>
+    <string name="temp_normal">Звичайний</string>
+    <string name="temp_strict">Суворий</string>
+    <string name="temp_custom">Власний</string>
+    <string name="temp_range">%1$d–%2$d °C</string>
+    <string name="temp_cold_charging">Повідомляти про холод лише під час заряджання</string>
+    <string name="temp_cold_charging_summary">Заряджання на холоді шкодить батареї, використання майже ні.</string>
+    <string name="temp_strict_hint">Швидке заряджання часто сягає 35–40 °C, тож цей рівень може спрацьовувати часто.</string>
+    <string name="notif_title">Сповіщення</string>
+    <string name="notif_summary">Типово лише рівень заряду й стан. Додайте тут інші значення.</string>
+    <string name="notif_current">Струм (мА)</string>
+    <string name="notif_temp">Температура</string>
+    <string name="notif_voltage">Напруга</string>
+    <string name="notif_percent_icon">Відсоток як значок у рядку стану</string>
+    <string name="about_title">Про застосунок</string>
+    <string name="about_text">Версія %1$s · GPL-3.0 · Працює повністю офлайн</string>
+    <string name="channel_status">Стан батареї</string>
+    <string name="channel_alarm">Сигнали батареї</string>
+    <string name="notif_alarm_at">Сигнал при %d %%</string>
+    <string name="notif_alarm_off">Сигнал вимк.</string>
+    <string name="alarm_high_title">Батарею заряджено: %d %%</string>
+    <string name="alarm_high_text">Від\'єднайте зарядний пристрій</string>
+    <string name="alarm_low_title">Батарея розряджена: %d %%</string>
+    <string name="alarm_low_text">Під\'єднайте зарядний пристрій</string>
+    <string name="alarm_hot_title">Батарея гаряча: %s</string>
+    <string name="alarm_hot_text">Дайте телефону охолонути</string>
+    <string name="alarm_cold_title">Батарея холодна: %s</string>
+    <string name="alarm_cold_text">Не заряджайте на холоді</string>
+    <string name="tts_charged">Батарею заряджено.</string>
+    <string name="tts_charged_percent">Батарею заряджено, %d відсотків.</string>
+    <string name="tts_low">Батарея розряджена.</string>
+    <string name="tts_low_percent">Батарея розряджена, %d відсотків.</string>
+    <string name="tts_hot">Батарея гаряча.</string>
+    <string name="tts_cold">Батарея холодна.</string>
+    <string name="view_list">Список</string>
+    <string name="view_chart">Графік</string>
+    <plurals name="entries_count">
+        <item quantity="one">%d запис</item>
+        <item quantity="few">%d записи</item>
+        <item quantity="many">%d записів</item>
+        <item quantity="other">%d запису</item>
+    </plurals>
+    <string name="list_empty">Записів поки немає. Тут з\'явиться кожна зміна рівня заряду.</string>
+    <string name="plug_ac">Зарядний пристрій</string>
+    <string name="plug_usb">USB</string>
+    <string name="plug_wireless">Бездротово</string>
+    <string name="plug_battery">Батарея</string>
+    <string name="chart_title">Останні 24 години</string>
+    <string name="chart_empty">Даних поки немає. Запис триває.</string>
+    <string name="chart_now">зараз</string>
+    <string name="events_title">Події</string>
+    <string name="events_empty">Подій поки немає.</string>
+    <string name="event_plugged">Зарядний пристрій під\'єднано</string>
+    <string name="event_unplugged">Зарядний пристрій від\'єднано</string>
+    <string name="event_alarm_high">Сигнал: батарею заряджено</string>
+    <string name="event_alarm_low">Сигнал: батарея розряджена</string>
+    <string name="event_alarm_hot">Сигнал: батарея гаряча</string>
+    <string name="event_alarm_cold">Сигнал: батарея холодна</string>
+    <string name="health_status">Стан за даними Android</string>
+    <string name="health_good">Добрий</string>
+    <string name="health_overheat">Перегрів</string>
+    <string name="health_cold">Надто холодна</string>
+    <string name="health_over_voltage">Перенапруга</string>
+    <string name="health_dead">Несправна</string>
+    <string name="health_failure">Невідома помилка</string>
+    <string name="health_unknown">Не повідомляється</string>
+    <string name="health_technology">Технологія</string>
+    <string name="health_charge_counter">Лічильник заряду</string>
+    <string name="range_day">День</string>
+    <string name="range_week">Тиждень</string>
+    <string name="range_month">Місяць</string>
+    <string name="range_all">Усе</string>
+    <string name="chart_temp">Температура</string>
+    <string name="chart_hint">Масштабуйте двома пальцями, подвійний дотик — скидання.</string>
+    <string name="eta">%1$d %% приблизно через %2$s</string>
+    <string name="duration_min">%d хв</string>
+    <string name="duration_h">%d год</string>
+    <string name="duration_h_min">%1$d год %2$d хв</string>
+    <string name="keep_title">Історія</string>
+    <string name="keep_summary">Скільки зберігається історія. Старіші записи видаляються.</string>
+    <string name="keep_1d">1 день</string>
+    <string name="keep_7d">1 тиждень</string>
+    <string name="keep_30d">1 місяць</string>
+    <string name="keep_365d">1 рік</string>
+    <string name="keep_forever">Завжди</string>
+    <string name="log_discharging">Розряджається</string>
+    <string name="tone_listen">Прослухати</string>
+    <string name="health_state">Стан батареї</string>
+    <string name="health_measuring">Ще не виміряно</string>
+    <string name="health_capacity_of">%1$s з %2$s</string>
+    <plurals name="health_from_sessions">
+        <item quantity="one">за %1$d заряджанням (усього %2$d %%)</item>
+        <item quantity="few">за %1$d заряджаннями (усього %2$d %%)</item>
+        <item quantity="many">за %1$d заряджаннями (усього %2$d %%)</item>
+        <item quantity="other">за %1$d заряджання (усього %2$d %%)</item>
+    </plurals>
+    <string name="health_need_charge" formatted="false">Зарядіть щонайменше на 15 % за один раз, тоді ємність буде виміряно.</string>
+    <string name="health_android_says">Android повідомляє: %s</string>
+    <string name="health_estimate_note">± — похибка вимірювання. Що більше й довших заряджань, то вона менша.</string>
+    <string name="design_title">Номінальна ємність</string>
+    <string name="design_auto">зчитана з телефону</string>
+    <string name="design_manual">введена вами</string>
+    <string name="design_unknown">Невідома. Введіть її, щоб бачити стан у відсотках.</string>
+    <string name="design_edit">Змінити</string>
+    <string name="design_dialog_hint">У мА·год, див. технічні дані телефону</string>
+    <string name="design_reset">Автоматично</string>
+    <string name="cycles_title">Цикли заряджання</string>
+    <string name="cycles_text">%1$s повних циклів від початку запису</string>
+    <string name="speed_title">Швидкість заряджання</string>
+    <string name="speed_row">Ø %1$s · %2$s %%/год</string>
+    <string name="sessions_title">Останні заряджання</string>
+    <string name="sessions_empty">Заряджань ще не записано. Тут з\'являється кожне заряджання від під\'єднання до від\'єднання.</string>
+    <string name="session_cycles">%s циклів</string>
+    <string name="capacity_trend">Ємність з часом</string>
+    <string name="measures_title">Поточні значення</string>
+    <string name="channel_hints">Підказки</string>
+    <string name="hint_capacity_title">Ємність батареї лише %d %%</string>
+    <string name="hint_capacity_text">Батарея вміщує лише близько %1$s з %2$s. Заміна може бути доцільною.</string>
+    <string name="sessions_count">Заряджання</string>
+    <string name="measures_hint">Торкніться значення в рамці, щоб побачити його криву.</string>
+    <string name="health_counter_from_level">Цей телефон обчислює лічильник заряду лише з відсотка, тому лічильник не може показати зношення. Тому застосунок сам вимірює струм заряджання; це менш точно.</string>
+    <string name="session_full">повна</string>
+    <string name="gap_row">Застосунок не працював · %s</string>
+    <string name="reliability_title">Надійність</string>
+    <string name="reliability_ok">Готово</string>
+    <string name="reliability_vendor">Додатково для %s:</string>
+    <string name="reliability_general">Загалом:</string>
+    <string name="reliability_open">Відкрити налаштування</string>
+    <string name="reliability_open_failed">Цієї сторінки немає на вашому телефоні. Відкрито відомості про застосунок; виконайте кроки вище.</string>
+    <string name="reliability_link_label">Більше допомоги для вашого телефону (посилання для копіювання):</string>
+    <string name="link_copied">Посилання скопійовано</string>
+    <string name="setup_vendor">Телефонам %s потрібні ще деякі налаштування.</string>
+    <string name="setup_vendor_show">Показати</string>
+    <string name="setup_vendor_done">Готово</string>
+    <string-array name="vendor_steps_xiaomi">
+        <item>Дозвольте автозапуск для Akku Health Alarm.</item>
+        <item>Налаштування → Застосунки → Akku Health Alarm → Економія заряду: «Без обмежень».</item>
+        <item>У списку недавніх застосунків утримуйте застосунок і торкніться замка.</item>
+    </string-array>
+    <string-array name="vendor_steps_huawei">
+        <item>Диспетчер телефону → Запуск застосунків: встановіть для Akku Health Alarm «Керувати вручну» й увімкніть усі три перемикачі.</item>
+        <item>Старі телефони: Диспетчер телефону → «Очищення при заблокованому екрані» або «Захищені застосунки»: не дозволяйте закривати Akku Health Alarm.</item>
+        <item>У списку недавніх застосунків потягніть застосунок униз, доки не з\'явиться замок.</item>
+    </string-array>
+    <string-array name="vendor_steps_samsung">
+        <item>Налаштування → Батарея → Обмеження фонового використання → «Застосунки без режиму сну» → додайте Akku Health Alarm.</item>
+        <item>У списку недавніх застосунків торкніться значка застосунку й виберіть «Заблокувати цей застосунок».</item>
+    </string-array>
+    <string-array name="vendor_steps_oppo">
+        <item>Налаштування → Застосунки → Akku Health Alarm → Батарея: дозвольте автозапуск і роботу у фоні.</item>
+        <item>Вимкніть «Заморожування у фоні» й «Оптимізацію аномальних застосунків».</item>
+        <item>Заблокуйте застосунок у списку недавніх застосунків.</item>
+    </string-array>
+    <string-array name="vendor_steps_vivo">
+        <item>i Manager → Диспетчер застосунків → Автозапуск: увімкніть Akku Health Alarm.</item>
+        <item>Налаштування → Батарея → Високе енергоспоживання у фоні: дозвольте Akku Health Alarm.</item>
+        <item>Заблокуйте застосунок у списку недавніх застосунків.</item>
+    </string-array>
+    <string-array name="vendor_steps_oneplus">
+        <item>Налаштування → Батарея → Оптимізація батареї: встановіть для Akku Health Alarm «Не оптимізувати».</item>
+        <item>Налаштування → Батарея → вимкніть розширену оптимізацію.</item>
+        <item>Заблокуйте застосунок у списку недавніх застосунків.</item>
+    </string-array>
+    <string-array name="vendor_steps_other">
+        <item>Якщо є налаштування «Автозапуск»: дозвольте його для Akku Health Alarm.</item>
+        <item>За можливості заблокуйте застосунок у списку недавніх застосунків.</item>
+    </string-array>
+    <string name="delivery_sound">зі звуком</string>
+    <string name="delivery_quiet">беззвучно · нічний спокій</string>
+    <string name="delivery_muted_vibrate">лише вібрація · телефон без звуку</string>
+    <string name="delivery_muted">беззвучно · телефон без звуку</string>
+    <string name="delivery_silent">лише сповіщення · звук і голос вимк.</string>
+    <string name="language_title">Мова</string>
+    <string name="language_system">Мова телефону</string>
+    <string name="theme_title">Оформлення</string>
+    <string name="theme_system">Системне</string>
+    <string name="theme_light">Світле</string>
+    <string name="theme_dark">Темне</string>
+    <string name="reliability_all_done">Усе налаштовано</string>
+    <string name="reliability_vendor_confirmed">Я виконав ці кроки</string>
+    <string name="step_less">Менше</string>
+    <string name="step_more">Більше</string>
+    <string name="preset_standard">Стандарт</string>
+    <string name="quick_slot">Швидкий вибір %d</string>
+    <string name="quick_edit_title">Змінити швидкий вибір %d</string>
+    <string name="quick_take_current">Взяти поточний діапазон</string>
+    <string name="quick_reset">Скинути</string>
+    <string name="quick_hint">Утримуйте кнопку, щоб змінити</string>
+    <string name="repeat_title">Повторювати сигнал</string>
+    <string name="repeat_off">Один раз</string>
+    <string name="duration_sec">%d с</string>
+    <string name="repeat_doze_hint">Від батареї з вимкненим екраном Android дозволяє це лише приблизно раз на 9 хвилин.</string>
+    <string name="repeat_next">Наступний сигнал через %s</string>
+    <string name="repeat_until">до %s</string>
+    <string name="running_title">Триває заряджання</string>
+    <string name="running_since">з %s</string>
+    <string name="running_mah">поки заряджено близько %s</string>
+    <string name="running_need">Ще %d %% до вимірювання ємності. Воно відбувається під час від\'єднання.</string>
+    <string name="running_ready">Достатньо для вимірювання. Ємність розрахується під час від\'єднання.</string>
+    <string name="no_capacity_short" formatted="false">без вимірювання: менше 15 %</string>
+    <string name="no_capacity_broken">без вимірювання: запис перервано</string>
+    <string name="no_capacity_implausible">без вимірювання: неправдоподібні значення</string>
+</resources>

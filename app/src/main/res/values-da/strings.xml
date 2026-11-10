@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="settings">Indstillinger</string>
+    <string name="back">Tilbage</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Annuller</string>
+    <string name="close">Luk</string>
+    <string name="status_charging">Oplader</string>
+    <string name="status_discharging">På batteri</string>
+    <string name="status_full">Fuldt</string>
+    <string name="status_plugged">Tilsluttet</string>
+    <string name="metric_current">Strøm</string>
+    <string name="metric_temp">Temperatur</string>
+    <string name="metric_voltage">Spænding</string>
+    <string name="alarm_title">Alarm</string>
+    <string name="alarm_on_summary">Ved %1$d %% og %2$d %%</string>
+    <string name="alarm_off_summary">Ingen alarmer</string>
+    <string name="range_title">Batteriområde</string>
+    <string name="range_info">Hvorfor disse områder?</string>
+    <string name="range_info_text" formatted="false">Lithiumbatterier ældes langsomst midt i opladningsområdet. Et højt opladningsniveau slider mere på batteriet end et lavt, derfor stopper de skånsomme forvalg opladningen tidligere.\n\n20–80 %: afbalanceret\n25–70 %: skånsom\n30–60 %: meget skånsom\n\nJo smallere område, jo mindre af batteriet bruger du hver dag. Vælg det område, der passer til din dag.</string>
+    <string name="preset_balanced">Afbalanceret</string>
+    <string name="preset_gentle">Skånsom</string>
+    <string name="preset_very_gentle">Meget skånsom</string>
+    <string name="preset_custom">Egen</string>
+    <string name="percent_range">%1$d–%2$d %%</string>
+    <string name="alarm_below">Alarm under</string>
+    <string name="alarm_above">Alarm over</string>
+    <string name="recommendation">Anbefalet: %s</string>
+    <string name="allowed_range">Muligt: %s</string>
+    <string name="usable">brugbart %d %%</string>
+    <string name="tab_start">Start</string>
+    <string name="history_title">Historik</string>
+    <string name="health_title">Sundhed</string>
+    <string name="setup_title">For pålidelige alarmer</string>
+    <string name="setup_text">Android kan stoppe apps i baggrunden. To indstillinger sørger for, at alarmen kommer til tiden.</string>
+    <string name="setup_notifications">Tillad notifikationer</string>
+    <string name="setup_battery_opt">Slå batterioptimering fra</string>
+    <string name="voice_title">Talebesked</string>
+    <string name="voice_off">Fra</string>
+    <string name="voice_builtin">App-stemme</string>
+    <string name="voice_system">Telefonstemme</string>
+    <string name="voice_builtin_hint">Kort engelsk besked: \"Battery charged.\" eller \"Battery low.\"</string>
+    <string name="voice_system_hint">Bruger en offlinestemme på din telefon på appens sprog. Findes der ingen, bruges app-stemmen.</string>
+    <string name="voice_percent">Sig procenten</string>
+    <string name="test_charged">Opladet</string>
+    <string name="test_low">Lavt</string>
+    <string name="test_hint">Test alarmen</string>
+    <string name="tone_title">Lyd</string>
+    <string name="tone_off">Fra</string>
+    <string name="tone_builtin">App-lyd</string>
+    <string name="tone_system">Telefonlyd</string>
+    <string name="tone_pick">Vælg lyd</string>
+    <string name="tone_none_selected">Ingen lyd valgt</string>
+    <string name="vibration_title">Vibrer</string>
+    <string name="loud_title">Også ved lydløs</string>
+    <string name="loud_summary">Bruger alarmlydstyrken</string>
+    <string name="alarm_notif_title">Vis notifikation</string>
+    <string name="alarm_notif_summary">Med nedtælling til næste gentagelse. Fra: kun lyd, talebesked og vibration.</string>
+    <string name="quiet_title">Nattero</string>
+    <string name="quiet_summary">I dette tidsrum kun en lydløs notifikation</string>
+    <string name="quiet_from">Fra %s</string>
+    <string name="quiet_to">Til %s</string>
+    <string name="temp_title">Temperaturalarm</string>
+    <string name="temp_summary">Advarer, når batteriet bliver for varmt eller for koldt</string>
+    <string name="temp_danger">Kun fare</string>
+    <string name="temp_normal">Normal</string>
+    <string name="temp_strict">Streng</string>
+    <string name="temp_custom">Egen</string>
+    <string name="temp_range">%1$d–%2$d °C</string>
+    <string name="temp_cold_charging">Meld kulde kun under opladning</string>
+    <string name="temp_cold_charging_summary">Opladning i kulde skader batteriet, brug næsten ikke.</string>
+    <string name="temp_strict_hint">Hurtigopladning når ofte 35–40 °C, så dette niveau kan advare ofte.</string>
+    <string name="notif_title">Notifikation</string>
+    <string name="notif_summary">Som standard kun opladningsniveau og status. Tilføj flere værdier her.</string>
+    <string name="notif_current">Strøm (mA)</string>
+    <string name="notif_temp">Temperatur</string>
+    <string name="notif_voltage">Spænding</string>
+    <string name="notif_percent_icon">Procent som ikon i statuslinjen</string>
+    <string name="about_title">Om</string>
+    <string name="about_text">Version %1$s · GPL-3.0 · Fungerer helt offline</string>
+    <string name="channel_status">Batteristatus</string>
+    <string name="channel_alarm">Batterialarmer</string>
+    <string name="notif_alarm_at">Alarm ved %d %%</string>
+    <string name="notif_alarm_off">Alarm fra</string>
+    <string name="alarm_high_title">Batteriet opladet: %d %%</string>
+    <string name="alarm_high_text">Tag opladeren ud</string>
+    <string name="alarm_low_title">Batteriet lavt: %d %%</string>
+    <string name="alarm_low_text">Tilslut opladeren</string>
+    <string name="alarm_hot_title">Batteriet varmt: %s</string>
+    <string name="alarm_hot_text">Lad telefonen køle af</string>
+    <string name="alarm_cold_title">Batteriet koldt: %s</string>
+    <string name="alarm_cold_text">Oplad ikke i kulde</string>
+    <string name="tts_charged">Batteriet opladet.</string>
+    <string name="tts_charged_percent">Batteriet opladet, %d procent.</string>
+    <string name="tts_low">Batteriet lavt.</string>
+    <string name="tts_low_percent">Batteriet lavt, %d procent.</string>
+    <string name="tts_hot">Batteriet varmt.</string>
+    <string name="tts_cold">Batteriet koldt.</string>
+    <string name="view_list">Liste</string>
+    <string name="view_chart">Diagram</string>
+    <plurals name="entries_count">
+        <item quantity="one">%d post</item>
+        <item quantity="other">%d poster</item>
+    </plurals>
+    <string name="list_empty">Ingen poster endnu. Hver ændring af opladningsniveauet vises her.</string>
+    <string name="plug_ac">Oplader</string>
+    <string name="plug_usb">USB</string>
+    <string name="plug_wireless">Trådløs</string>
+    <string name="plug_battery">Batteri</string>
+    <string name="chart_title">Seneste 24 timer</string>
+    <string name="chart_empty">Ingen data endnu. Optagelsen kører.</string>
+    <string name="chart_now">nu</string>
+    <string name="events_title">Hændelser</string>
+    <string name="events_empty">Ingen hændelser endnu.</string>
+    <string name="event_plugged">Oplader tilsluttet</string>
+    <string name="event_unplugged">Oplader frakoblet</string>
+    <string name="event_alarm_high">Alarm: batteriet opladet</string>
+    <string name="event_alarm_low">Alarm: batteriet lavt</string>
+    <string name="event_alarm_hot">Alarm: batteriet varmt</string>
+    <string name="event_alarm_cold">Alarm: batteriet koldt</string>
+    <string name="health_status">Tilstand ifølge Android</string>
+    <string name="health_good">God</string>
+    <string name="health_overheat">Overophedet</string>
+    <string name="health_cold">For koldt</string>
+    <string name="health_over_voltage">Overspænding</string>
+    <string name="health_dead">Defekt</string>
+    <string name="health_failure">Ukendt fejl</string>
+    <string name="health_unknown">Ikke rapporteret</string>
+    <string name="health_technology">Teknologi</string>
+    <string name="health_charge_counter">Ladningstæller</string>
+    <string name="range_day">Dag</string>
+    <string name="range_week">Uge</string>
+    <string name="range_month">Måned</string>
+    <string name="range_all">Alt</string>
+    <string name="chart_temp">Temperatur</string>
+    <string name="chart_hint">Zoom med to fingre, dobbelttryk for at nulstille.</string>
+    <string name="eta">%1$d %% om ca. %2$s</string>
+    <string name="duration_min">%d min</string>
+    <string name="duration_h">%d t</string>
+    <string name="duration_h_min">%1$d t %2$d min</string>
+    <string name="keep_title">Historik</string>
+    <string name="keep_summary">Hvor længe historikken gemmes. Ældre poster slettes.</string>
+    <string name="keep_1d">1 dag</string>
+    <string name="keep_7d">1 uge</string>
+    <string name="keep_30d">1 måned</string>
+    <string name="keep_365d">1 år</string>
+    <string name="keep_forever">Altid</string>
+    <string name="log_discharging">Aflader</string>
+    <string name="tone_listen">Lyt</string>
+    <string name="health_state">Batteriets tilstand</string>
+    <string name="health_measuring">Ikke målt endnu</string>
+    <string name="health_capacity_of">%1$s af %2$s</string>
+    <plurals name="health_from_sessions">
+        <item quantity="one">målt ud fra %1$d opladning (i alt %2$d %%)</item>
+        <item quantity="other">målt ud fra %1$d opladninger (i alt %2$d %%)</item>
+    </plurals>
+    <string name="health_need_charge" formatted="false">Oplad mindst 15 % i ét stræk, så måles kapaciteten.</string>
+    <string name="health_android_says">Android rapporterer: %s</string>
+    <string name="health_estimate_note">± er måleusikkerheden. Jo flere og længere opladninger, desto mindre bliver den.</string>
+    <string name="design_title">Nominel kapacitet</string>
+    <string name="design_auto">læst fra telefonen</string>
+    <string name="design_manual">angivet af dig</string>
+    <string name="design_unknown">Ukendt. Indtast den for at se tilstanden i procent.</string>
+    <string name="design_edit">Skift</string>
+    <string name="design_dialog_hint">I mAh, se telefonens datablad</string>
+    <string name="design_reset">Automatisk</string>
+    <string name="cycles_title">Opladningscyklusser</string>
+    <string name="cycles_text">%1$s fulde cyklusser siden optagelsens start</string>
+    <string name="speed_title">Opladningshastighed</string>
+    <string name="speed_row">Ø %1$s · %2$s %%/t</string>
+    <string name="sessions_title">Seneste opladninger</string>
+    <string name="sessions_empty">Ingen opladning registreret endnu. Hver opladning fra tilslutning til frakobling vises her.</string>
+    <string name="session_cycles">%s cyklusser</string>
+    <string name="capacity_trend">Kapacitet over tid</string>
+    <string name="measures_title">Aktuelle værdier</string>
+    <string name="channel_hints">Tips</string>
+    <string name="hint_capacity_title">Batterikapacitet kun %d %%</string>
+    <string name="hint_capacity_text">Batteriet rummer kun ca. %1$s af %2$s. En udskiftning kan betale sig.</string>
+    <string name="sessions_count">Opladninger</string>
+    <string name="measures_hint">Tryk på en indrammet værdi for at se dens kurve.</string>
+    <string name="health_counter_from_level">Denne telefon beregner sin ladetæller kun ud fra procenten, så tælleren kan ikke vise slid. Appen måler derfor selv ladestrømmen; det er mindre præcist.</string>
+    <string name="session_full">fuldt</string>
+    <string name="gap_row">Appen ikke aktiv · %s</string>
+    <string name="reliability_title">Pålidelighed</string>
+    <string name="reliability_ok">Færdig</string>
+    <string name="reliability_vendor">Desuden for %s:</string>
+    <string name="reliability_general">Generelt:</string>
+    <string name="reliability_open">Åbn indstillinger</string>
+    <string name="reliability_open_failed">Denne side findes ikke på din telefon. Appinfo er åben; følg trinene ovenfor.</string>
+    <string name="reliability_link_label">Mere hjælp til din telefon (link til kopiering):</string>
+    <string name="link_copied">Link kopieret</string>
+    <string name="setup_vendor">%s-telefoner skal have nogle flere indstillinger.</string>
+    <string name="setup_vendor_show">Vis</string>
+    <string name="setup_vendor_done">Færdig</string>
+    <string-array name="vendor_steps_xiaomi">
+        <item>Tillad autostart for Akku Health Alarm.</item>
+        <item>Indstillinger → Apps → Akku Health Alarm → Batterisparer: \"Ingen begrænsninger\".</item>
+        <item>Hold appen nede i oversigten over seneste apps, og tryk på låsen.</item>
+    </string-array>
+    <string-array name="vendor_steps_huawei">
+        <item>Telefonadministrator → Appstart: sæt Akku Health Alarm til \"Administrer manuelt\", og slå alle tre kontakter til.</item>
+        <item>Ældre telefoner: Telefonadministrator → \"Oprydning ved låst skærm\" eller \"Beskyttede apps\": lad ikke Akku Health Alarm blive lukket.</item>
+        <item>Træk appen ned i oversigten over seneste apps, indtil der vises en lås.</item>
+    </string-array>
+    <string-array name="vendor_steps_samsung">
+        <item>Indstillinger → Batteri → Grænser for baggrundsbrug → \"Apps, der aldrig sover\" → tilføj Akku Health Alarm.</item>
+        <item>Tryk på appikonet i oversigten over seneste apps, og vælg \"Lås denne app\".</item>
+    </string-array>
+    <string-array name="vendor_steps_oppo">
+        <item>Indstillinger → Apps → Akku Health Alarm → Batteri: tillad autostart og baggrundsaktivitet.</item>
+        <item>Slå \"Frys i baggrunden\" og \"Optimer unormale apps\" fra.</item>
+        <item>Lås appen i oversigten over seneste apps.</item>
+    </string-array>
+    <string-array name="vendor_steps_vivo">
+        <item>i Manager → Appadministrator → Autostart: slå Akku Health Alarm til.</item>
+        <item>Indstillinger → Batteri → Højt strømforbrug i baggrunden: tillad Akku Health Alarm.</item>
+        <item>Lås appen i oversigten over seneste apps.</item>
+    </string-array>
+    <string-array name="vendor_steps_oneplus">
+        <item>Indstillinger → Batteri → Batterioptimering: sæt Akku Health Alarm til \"Optimer ikke\".</item>
+        <item>Indstillinger → Batteri → slå avanceret optimering fra.</item>
+        <item>Lås appen i oversigten over seneste apps.</item>
+    </string-array>
+    <string-array name="vendor_steps_other">
+        <item>Hvis der findes en indstilling \"Autostart\": tillad den for Akku Health Alarm.</item>
+        <item>Lås om muligt appen i oversigten over seneste apps.</item>
+    </string-array>
+    <string name="delivery_sound">med lyd</string>
+    <string name="delivery_quiet">lydløst · nattero</string>
+    <string name="delivery_muted_vibrate">kun vibration · telefonen lydløs</string>
+    <string name="delivery_muted">lydløst · telefonen lydløs</string>
+    <string name="delivery_silent">kun notifikation · lyd og stemme fra</string>
+    <string name="language_title">Sprog</string>
+    <string name="language_system">Telefonens sprog</string>
+    <string name="theme_title">Udseende</string>
+    <string name="theme_system">System</string>
+    <string name="theme_light">Lyst</string>
+    <string name="theme_dark">Mørkt</string>
+    <string name="reliability_all_done">Alt er sat op</string>
+    <string name="reliability_vendor_confirmed">Jeg har udført disse trin</string>
+    <string name="step_less">Mindre</string>
+    <string name="step_more">Mere</string>
+    <string name="preset_standard">Standard</string>
+    <string name="quick_slot">Hurtigvalg %d</string>
+    <string name="quick_edit_title">Rediger hurtigvalg %d</string>
+    <string name="quick_take_current">Brug det aktuelle område</string>
+    <string name="quick_reset">Nulstil</string>
+    <string name="quick_hint">Hold en knap nede for at ændre den</string>
+    <string name="repeat_title">Gentag alarm</string>
+    <string name="repeat_off">Én gang</string>
+    <string name="duration_sec">%d s</string>
+    <string name="repeat_doze_hint">På batteri med slukket skærm tillader Android det kun ca. hvert 9. minut.</string>
+    <string name="repeat_next">Næste alarm om %s</string>
+    <string name="repeat_until">til %s</string>
+    <string name="running_title">Opladning i gang</string>
+    <string name="running_since">siden %s</string>
+    <string name="running_mah">hidtil ca. %s opladet</string>
+    <string name="running_need">%d %% mere til en kapacitetsmåling. Den måles, når du tager stikket ud.</string>
+    <string name="running_ready">Nok til en måling. Kapaciteten beregnes, når du tager stikket ud.</string>
+    <string name="no_capacity_short" formatted="false">ingen måling: under 15 %</string>
+    <string name="no_capacity_broken">ingen måling: optagelse afbrudt</string>
+    <string name="no_capacity_implausible">ingen måling: usandsynlige værdier</string>
+</resources>
