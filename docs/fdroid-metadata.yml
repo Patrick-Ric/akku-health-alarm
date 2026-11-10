@@ -1,0 +1,28 @@
+Categories:
+  - System
+License: GPL-3.0-or-later
+AuthorName: Patrick Götz
+SourceCode: https://github.com/Patrick-Ric/akku-health-alarm
+IssueTracker: https://github.com/Patrick-Ric/akku-health-alarm/issues
+Changelog: https://github.com/Patrick-Ric/akku-health-alarm/releases
+
+AutoName: Akku Health Alarm
+
+RepoType: git
+Repo: https://github.com/Patrick-Ric/akku-health-alarm.git
+Binaries: https://github.com/Patrick-Ric/akku-health-alarm/releases/download/v%v/AkkuHealthAlarm-%v.apk
+
+Builds:
+  - versionName: '1.01'
+    versionCode: 3
+    commit: b4f75f7b65fffe231e1dcfe869b3cd58eba70e7e
+    subdir: app
+    gradle:
+      - yes
+
+AllowedAPKSigningKeys: 0290aabc0607b5ba98d1fbf67e8f03b166d04f2d6545634f99030278c60546a1
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: '1.01'
+CurrentVersionCode: 3
