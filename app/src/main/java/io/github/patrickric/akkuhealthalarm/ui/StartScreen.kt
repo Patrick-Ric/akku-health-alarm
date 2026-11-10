@@ -461,14 +461,17 @@ private fun QuickEditDialog(slot: Int, settings: AlarmSettings, current: Pair<In
         title = { Text(stringResource(R.string.quick_edit_title, slot + 1)) },
         text = {
             Column {
-                Row {
+                // One below the other: side by side the two steppers do not fit the dialog width.
+                Box(Modifier.fillMaxWidth(), contentAlignment = Alignment.Center) {
                     ValueStepper(
-                        stringResource(R.string.alarm_below), lo, "%", scheme.error, 1, hi - 1, { lo = it }, Modifier.weight(1f),
+                        stringResource(R.string.alarm_below), lo, "%", scheme.error, 1, hi - 1, { lo = it },
                         hint = stringResource(R.string.recommendation, "10–40 %"),
                     )
+                }
+                Box(Modifier.fillMaxWidth().padding(top = 8.dp), contentAlignment = Alignment.Center) {
                     ValueStepper(
-                        stringResource(R.string.alarm_above), hi, "%", LocalExtraColors.current.caution, lo + 1, 100,
-                        { hi = it }, Modifier.weight(1f), alignEnd = true, hint = stringResource(R.string.recommendation, "50–80 %"),
+                        stringResource(R.string.alarm_above), hi, "%", LocalExtraColors.current.caution, lo + 1, 100, { hi = it },
+                        hint = stringResource(R.string.recommendation, "50–80 %"),
                     )
                 }
                 OutlinedButton(
