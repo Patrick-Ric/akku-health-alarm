@@ -4,6 +4,8 @@ Android app that helps your battery live longer: it tells you when to unplug the
 to plug it in – at limits you set yourself, or with one tap on a gentle preset (25–70 %, 30–60 %).
 It keeps a history of every charge and measures the real battery capacity.
 
+**[⬇ Download the APK (latest release)](https://github.com/Patrick-Ric/akku-health-alarm/releases/latest)** – Android 7.0 and newer
+
 <p>
 <img src="fastlane/metadata/android/en-US/images/phoneScreenshots/1.png" width="180" alt="Start page">
 <img src="fastlane/metadata/android/en-US/images/phoneScreenshots/2.png" width="180" alt="History list">
