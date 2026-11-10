@@ -42,6 +42,7 @@ import io.github.patrickric.akkuhealthalarm.data.RecordingGap
 import androidx.compose.material.icons.rounded.PauseCircleOutline
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.FlowRow
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -174,7 +175,8 @@ private fun ChartView(settings: AlarmSettings, dao: LogDao, overlay: Overlay?, o
     var window by remember(range, fullStart) { mutableStateOf(fullStart.toDouble() to fullEnd.toDouble()) }
 
     Column(Modifier.fillMaxSize().padding(horizontal = 16.dp, vertical = 8.dp)) {
-        Row(horizontalArrangement = Arrangement.spacedBy(6.dp)) {
+        // Wraps to a second line on narrow screens or with a large font instead of cutting a chip off.
+        FlowRow(horizontalArrangement = Arrangement.spacedBy(6.dp)) {
             ChartRange.entries.forEach { r ->
                 FilterChip(
                     selected = range == r,
@@ -183,7 +185,8 @@ private fun ChartView(settings: AlarmSettings, dao: LogDao, overlay: Overlay?, o
                 )
             }
         }
-        Row(horizontalArrangement = Arrangement.spacedBy(6.dp)) {
+        // Wraps to a second line on narrow screens or with a large font instead of cutting a chip off.
+        FlowRow(horizontalArrangement = Arrangement.spacedBy(6.dp)) {
             listOf(
                 Triple(Overlay.TEMP, Icons.Rounded.Thermostat, R.string.chart_temp),
                 Triple(Overlay.VOLTAGE, Icons.Rounded.ElectricalServices, R.string.metric_voltage),

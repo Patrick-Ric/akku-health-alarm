@@ -1,9 +1,17 @@
+import java.util.Properties
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.plugin.compose")
     id("com.google.devtools.ksp")
+}
+
+// Release signing only when a local keystore.properties exists (never in the repository).
+// Without it the release APK stays unsigned, as F-Droid expects.
+val keystoreProps = Properties().apply {
+    val f = rootProject.file("keystore.properties")
+    if (f.exists()) f.inputStream().use { load(it) }
 }
 
 android {
@@ -19,13 +27,24 @@ android {
         versionName = "1.01"
     }
 
+    signingConfigs {
+        if (keystoreProps.isNotEmpty()) {
+            create("release") {
+                storeFile = rootProject.file(keystoreProps.getProperty("storeFile"))
+                storePassword = keystoreProps.getProperty("storePassword")
+                keyAlias = keystoreProps.getProperty("keyAlias")
+                keyPassword = keystoreProps.getProperty("keyPassword")
+            }
+        }
+    }
+
     buildTypes {
         release {
             isMinifyEnabled = true
             isShrinkResources = true
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
-            // Unsigned on purpose: F-Droid signs (or verifies) the APK itself.
-            signingConfig = null
+            // Unsigned unless keystore.properties exists: F-Droid signs (or verifies) the APK itself.
+            signingConfig = signingConfigs.findByName("release")
             // No META-INF/version-control-info.textproto (reproducible builds).
             vcsInfo.include = false
         }
