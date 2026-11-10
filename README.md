@@ -5,10 +5,22 @@ to plug it in – at limits you set yourself, or with one tap on a gentle preset
 It keeps a history of every charge and measures the real battery capacity.
 
 <p>
-<img src="fastlane/metadata/android/en-US/images/phoneScreenshots/1.png" width="200" alt="Start page">
-<img src="fastlane/metadata/android/en-US/images/phoneScreenshots/2.png" width="200" alt="History list">
-<img src="fastlane/metadata/android/en-US/images/phoneScreenshots/3.png" width="200" alt="Chart of a week">
-<img src="fastlane/metadata/android/en-US/images/phoneScreenshots/5.png" width="200" alt="Battery health">
+<img src="fastlane/metadata/android/en-US/images/phoneScreenshots/1.png" width="180" alt="Start page">
+<img src="fastlane/metadata/android/en-US/images/phoneScreenshots/2.png" width="180" alt="History list">
+<img src="fastlane/metadata/android/en-US/images/phoneScreenshots/3.png" width="180" alt="Chart of a week">
+<img src="fastlane/metadata/android/en-US/images/phoneScreenshots/4.png" width="180" alt="Chart of a day with charge and discharge current">
+</p>
+<p>
+<img src="fastlane/metadata/android/en-US/images/phoneScreenshots/5.png" width="180" alt="Battery health">
+<img src="fastlane/metadata/android/en-US/images/phoneScreenshots/6.png" width="180" alt="Charging speed and recent charges">
+<img src="fastlane/metadata/android/en-US/images/phoneScreenshots/7.png" width="180" alt="Settings: announcement and sound">
+<img src="fastlane/metadata/android/en-US/images/phoneScreenshots/8.png" width="180" alt="Settings: notification, night rest, temperature">
+</p>
+<p>
+<img src="fastlane/metadata/android/en-US/images/phoneScreenshots/9.png" width="180" alt="Changing a quick choice">
+<img src="fastlane/metadata/android/en-US/images/phoneScreenshots/10.png" width="180" alt="Settings: language and design">
+<img src="fastlane/metadata/android/en-US/images/phoneScreenshots/11.png" width="180" alt="Start page, light design">
+<img src="fastlane/metadata/android/en-US/images/phoneScreenshots/12.png" width="180" alt="Battery health, light design">
 </p>
 
 ## Features
