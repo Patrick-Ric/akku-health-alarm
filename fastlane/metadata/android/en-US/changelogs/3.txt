@@ -1,0 +1,1 @@
+1.01: history list always one line per entry, fits narrow screens and large fonts.

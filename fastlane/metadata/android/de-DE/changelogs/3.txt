@@ -1,0 +1,1 @@
+1.01: Verlauf-Liste immer einzeilig, passt auch auf schmale Bildschirme und große Schrift.
