@@ -10,7 +10,8 @@ AutoName: Akku Health Alarm
 
 RepoType: git
 Repo: https://github.com/Patrick-Ric/akku-health-alarm.git
-Binaries: https://github.com/Patrick-Ric/akku-health-alarm/releases/download/v%v/AkkuHealthAlarm-%v.apk
+Binaries: 
+  https://github.com/Patrick-Ric/akku-health-alarm/releases/download/v%v/AkkuHealthAlarm-%v.apk
 
 Builds:
   - versionName: '1.01'
