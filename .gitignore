@@ -30,3 +30,4 @@ __pycache__/
 
 # Signed release APKs are attached to GitHub releases, not committed
 /*.apk
+/*.apk.idsig
