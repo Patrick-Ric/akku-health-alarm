@@ -6,6 +6,22 @@ It keeps a history of every charge and measures the real battery capacity.
 
 **[⬇ Download the APK (latest release)](https://github.com/Patrick-Ric/akku-health-alarm/releases/latest)** – Android 7.0 and newer
 
+## No anti-features
+
+F-Droid warns about "anti-features" – things in an app that work against its users. This app has none
+of them, and each one it does not have is a plus:
+
+- **No ads** – no advertising of any kind.
+- **No tracking** – no analytics, no crash reports, nothing about you or your phone is collected.
+- **No internet** – the app does not even have the internet permission, so it cannot send anything.
+  All data stays on your phone.
+- **No non-free parts** – only free libraries (AndroidX, Kotlin, Okio), no Google Play Services;
+  it also works on phones without Google.
+- **No non-free media** – the sounds and voice clips were made for this app and are part of the free source.
+- **No account, no sign-in, no in-app purchases.**
+- **Open and checkable** – free software under GPL-3.0, and the release APK is a reproducible build:
+  it can be rebuilt from the source bit by bit.
+
 <p>
 <img src="fastlane/metadata/android/en-US/images/phoneScreenshots/1.png" width="180" alt="Start page">
 <img src="fastlane/metadata/android/en-US/images/phoneScreenshots/2.png" width="180" alt="History list">
@@ -44,10 +60,9 @@ It keeps a history of every charge and measures the real battery capacity.
 - Phones whose "charge counter" is only percentage × rated capacity are detected; the app then measures the current itself
 - Charging speed per charger, equivalent charge cycles, recent charges
 
-**Reliability and privacy**
+**Reliability**
 - The watcher runs as a foreground service in its own small process; the user interface can be closed
 - Help for the battery savers of Huawei, Xiaomi, Samsung, Oppo, Vivo, OnePlus
-- No internet permission, no ads, no tracking, no analytics
 
 20 languages (en, de, fr, es, it, nl, pt-BR, pl, cs, sk, hu, ro, sv, da, nb, fi, el, tr, ru, uk);
 the language can be chosen in the app. Android 7.0 (API 24) and newer.
