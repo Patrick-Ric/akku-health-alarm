@@ -1,0 +1,4 @@
+1.03:
+• Strom mit Richtung: Laden plus, Entladen minus – auch mit Kabel. Braucht das Handy mehr, als das Ladegerät liefert (z. B. schwacher USB-Anschluss und viel Last), steht jetzt ein negativer Wert da statt eines falschen Ladestroms.
+• Verlauf: solche Zeilen heißen „Angesteckt“, die Grafik zeigt den Strom über und unter der Nulllinie.
+• Geladene mAh einer Ladung werden netto gezählt (Entladung am Kabel wird abgezogen).

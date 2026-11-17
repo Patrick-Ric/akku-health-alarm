@@ -1,0 +1,4 @@
+1.03:
+• Current with its direction: charging plus, discharging minus – also on the charger. When the phone uses more than the charger gives (for example a weak USB port and heavy use), it now shows a negative value instead of a wrong charging current.
+• History: such rows read "Plugged in", the chart shows the current above and below the zero line.
+• Charged mAh of a session are counted net (drain on the charger is subtracted).
