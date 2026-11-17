@@ -39,6 +39,18 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
+import io.github.patrickric.akkuhealthalarm.ui.COMPACT_HEIGHT_DP
+import androidx.compose.ui.platform.LocalConfiguration
+import androidx.compose.material3.NavigationRailItem
+import androidx.compose.material3.NavigationRail
+import androidx.compose.foundation.layout.windowInsetsPadding
+import androidx.compose.foundation.layout.safeDrawing
+import androidx.compose.foundation.layout.only
+import androidx.compose.foundation.layout.WindowInsetsSides
+import androidx.compose.foundation.layout.WindowInsets
+import androidx.compose.foundation.layout.fillMaxHeight
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.Row
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
@@ -122,7 +134,35 @@ private fun AppRoot() {
     Box(Modifier.fillMaxSize().background(MaterialTheme.colorScheme.background)) {
         val s = settings ?: return@Box
         val update: ((AlarmSettings) -> AlarmSettings) -> Unit = { transform -> scope.launch { repo.update(transform) } }
-        Column(Modifier.fillMaxSize()) {
+        // Landscape on a phone: little height. The tabs move to a rail on the left, so the lists keep their rows.
+        val rail = LocalConfiguration.current.screenHeightDp < COMPACT_HEIGHT_DP && screen != Screen.SETTINGS
+        val selectTab = { tab: Screen ->
+            screen = tab
+            lastTab = tab
+        }
+        Row(Modifier.fillMaxSize()) {
+            if (rail) {
+                NavigationRail(
+                    containerColor = MaterialTheme.colorScheme.surfaceContainer,
+                    windowInsets = WindowInsets.safeDrawing.only(WindowInsetsSides.Vertical + WindowInsetsSides.Start),
+                ) {
+                    Spacer(Modifier.weight(1f))
+                    tabs.forEach { (tab, icon, label) ->
+                        NavigationRailItem(
+                            selected = screen == tab,
+                            onClick = { selectTab(tab) },
+                            icon = { Icon(icon, contentDescription = null) },
+                            label = { Text(stringResource(label)) },
+                        )
+                    }
+                    Spacer(Modifier.weight(1f))
+                }
+            }
+        Column(
+            Modifier.weight(1f).fillMaxHeight().windowInsetsPadding(
+                WindowInsets.safeDrawing.only(if (rail) WindowInsetsSides.End else WindowInsetsSides.Horizontal),
+            ),
+        ) {
             AnimatedContent(
                 targetState = screen,
                 transitionSpec = {
@@ -138,7 +178,7 @@ private fun AppRoot() {
                 when (target) {
                     Screen.START -> StartScreen(s, reading, update) { screen = Screen.SETTINGS }
                     Screen.SETTINGS -> SettingsScreen(s, update) { screen = lastTab }
-                    Screen.HISTORY -> HistoryScreen(s, chartRequest) { chartRequest = null }
+                    Screen.HISTORY -> HistoryScreen(s, update, chartRequest) { chartRequest = null }
                     Screen.HEALTH -> HealthScreen(reading, s, update) { overlay ->
                         chartRequest = overlay
                         screen = Screen.HISTORY
@@ -146,21 +186,19 @@ private fun AppRoot() {
                     }
                 }
             }
-            if (screen != Screen.SETTINGS) {
+            if (screen != Screen.SETTINGS && !rail) {
                 NavigationBar(containerColor = MaterialTheme.colorScheme.surfaceContainer) {
                     tabs.forEach { (tab, icon, label) ->
                         NavigationBarItem(
                             selected = screen == tab,
-                            onClick = {
-                                screen = tab
-                                lastTab = tab
-                            },
+                            onClick = { selectTab(tab) },
                             icon = { Icon(icon, contentDescription = null) },
                             label = { Text(stringResource(label)) },
                         )
                     }
                 }
             }
+        }
         }
     }
 }

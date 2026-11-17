@@ -71,7 +71,7 @@
     <string name="temp_cold_charging_summary">Laden in de kou beschadigt de accu, gebruiken nauwelijks.</string>
     <string name="temp_strict_hint">Snelladen bereikt vaak 35–40 °C, dus dit niveau kan vaak waarschuwen.</string>
     <string name="notif_title">Melding</string>
-    <string name="notif_summary">Standaard alleen laadniveau en status. Voeg hier meer waarden toe.</string>
+    <string name="notif_summary">Toont altijd laadniveau, status en de tijd tot het alarm. Ook tonen:</string>
     <string name="notif_current">Stroom (mA)</string>
     <string name="notif_temp">Temperatuur</string>
     <string name="notif_voltage">Spanning</string>
@@ -82,6 +82,9 @@
     <string name="channel_alarm">Accualarmen</string>
     <string name="notif_alarm_at">Alarm bij %d %%</string>
     <string name="notif_alarm_off">Alarm uit</string>
+    <string name="notif_eta_in">over ca. %s</string>
+    <string name="notif_repeat_every">elke %s</string>
+    <string name="notif_repeat_once">eenmalig</string>
     <string name="alarm_high_title">Accu geladen: %d %%</string>
     <string name="alarm_high_text">Koppel de lader los</string>
     <string name="alarm_low_title">Accu laag: %d %%</string>
@@ -146,6 +149,7 @@
     <string name="keep_365d">1 jaar</string>
     <string name="keep_forever">Altijd</string>
     <string name="log_discharging">Ontlaadt</string>
+    <string name="log_electrical">Spanning en stroom tonen</string>
     <string name="tone_listen">Beluisteren</string>
     <string name="health_state">Accutoestand</string>
     <string name="health_measuring">Nog niet gemeten</string>
@@ -157,6 +161,8 @@
     <string name="health_need_charge" formatted="false">Laad minstens 15 % in één keer, dan wordt de capaciteit gemeten.</string>
     <string name="health_android_says">Android meldt: %s</string>
     <string name="health_estimate_note">± is de meetonzekerheid. Hoe meer en hoe langere laadbeurten, hoe kleiner ze wordt.</string>
+    <string name="health_trimmed">Van %d metingen tellen de hoogste en laagste 20 %% niet mee.</string>
+    <string name="session_not_counted">telt niet mee</string>
     <string name="design_title">Nominale capaciteit</string>
     <string name="design_auto">van de telefoon gelezen</string>
     <string name="design_manual">door jou ingevoerd</string>
@@ -230,6 +236,21 @@
     <string name="delivery_muted_vibrate">alleen trillen · telefoon op stil</string>
     <string name="delivery_muted">stil · telefoon op stil</string>
     <string name="delivery_silent">alleen melding · geluid en stem uit</string>
+    <string name="delivery_sound_failed">geluid mislukt</string>
+    <string name="diag_first">Eerste alarm: %1$s</string>
+    <string name="diag_last">Laatste herhaling %1$s: %2$s</string>
+    <string name="diag_screen_on">scherm aan</string>
+    <string name="diag_screen_off">scherm uit</string>
+    <string name="diag_volume_notification">meldingsvolume %1$d/%2$d</string>
+    <string name="diag_volume_alarm">alarmvolume %1$d/%2$d</string>
+    <string name="diag_dnd">Niet storen aan</string>
+    <string name="diag_no_focus">audiofocus geweigerd</string>
+    <string name="diag_played">afgespeeld %1$s s</string>
+    <string name="diag_short">te vroeg gestopt: %1$s van %2$s s</string>
+    <string name="diag_stopped">onderbroken na %1$s s</string>
+    <string name="diag_error">afspeelfout %1$s</string>
+    <string name="diag_timeout">afspelen eindigde niet</string>
+    <string name="diag_nothing">niets afgespeeld</string>
     <string name="language_title">Taal</string>
     <string name="language_system">Taal van de telefoon</string>
     <string name="theme_title">Weergave</string>

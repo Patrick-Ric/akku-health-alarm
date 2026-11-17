@@ -132,4 +132,30 @@ class CapacityTest {
         // Counter says 2 mAh for 40 % (reported in mAh, divided again): use the measured current instead.
         assertEquals(5000, Capacity.fromSession(30, 70, 2000.0, 2))
     }
+
+    @Test
+    fun extremeValuesAreLeftOutFromFiveCharges() {
+        // Real G30 values 17.11.: one short charge gave 3061 mAh, the others about 3900–4400.
+        val list = listOf(session(39, 63, 4379), session(49, 80, 3877), session(30, 55, 4004), session(26, 46, 4005), session(37, 55, 3061))
+        val left = Capacity.extremes(list)
+        assertEquals(listOf(3061, 4379), left.map { it.capacityMah })
+        val e = Capacity.estimate(list)!!
+        assertEquals(3, e.sessions)
+        assertEquals(5, e.measured)
+        assert(e.mah in 3877..4005) { e.mah }
+    }
+
+    @Test
+    fun fewerThanFiveChargesAllCount() {
+        val list = listOf(session(30, 55, 4000), session(30, 55, 3000), session(30, 55, 5000), session(30, 55, 4000))
+        assert(Capacity.extremes(list).isEmpty())
+        assertEquals(4, Capacity.estimate(list)!!.sessions)
+    }
+
+    @Test
+    fun tenChargesLeaveOutTwoEach() {
+        val list = (1..10).map { session(30, 60, 3000 + it * 100) }
+        assertEquals(listOf(3100, 3200, 3900, 4000), Capacity.extremes(list).mapNotNull { it.capacityMah }.sorted())
+        assertEquals(6, Capacity.estimate(list)!!.sessions)
+    }
 }

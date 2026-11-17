@@ -40,6 +40,9 @@ data class EventEntry(
     /** How often the alarm was repeated after the first time, and when last. */
     @ColumnInfo(defaultValue = "0") val repeats: Int = 0,
     @ColumnInfo(defaultValue = "NULL") val lastRepeat: Long? = null,
+    /** How the sound of the first alarm really went (AlarmDiag text), and of the latest repeat. */
+    @ColumnInfo(defaultValue = "NULL") val diag: String? = null,
+    @ColumnInfo(defaultValue = "NULL") val lastDiag: String? = null,
 )
 
 /**
@@ -95,6 +98,12 @@ interface LogDao {
     )
     suspend fun countRepeat(type: String, time: Long)
 
+    @Query("UPDATE events SET diag = :diag WHERE id = (SELECT id FROM events WHERE type = :type ORDER BY time DESC LIMIT 1)")
+    suspend fun setDiag(type: String, diag: String)
+
+    @Query("UPDATE events SET lastDiag = :diag WHERE id = (SELECT id FROM events WHERE type = :type ORDER BY time DESC LIMIT 1)")
+    suspend fun setLastDiag(type: String, diag: String)
+
     @Query("SELECT * FROM readings WHERE time >= :since ORDER BY time")
     fun readingsSince(since: Long): Flow<List<ReadingEntry>>
 
@@ -137,9 +146,9 @@ interface LogDao {
 
 @Database(
     entities = [ReadingEntry::class, EventEntry::class, ChargeSession::class],
-    version = 6,
+    version = 7,
     exportSchema = true,
-    autoMigrations = [AutoMigration(from = 1, to = 2), AutoMigration(from = 2, to = 3), AutoMigration(from = 3, to = 4), AutoMigration(from = 4, to = 5), AutoMigration(from = 5, to = 6)],
+    autoMigrations = [AutoMigration(from = 1, to = 2), AutoMigration(from = 2, to = 3), AutoMigration(from = 3, to = 4), AutoMigration(from = 4, to = 5), AutoMigration(from = 5, to = 6), AutoMigration(from = 6, to = 7)],
 )
 abstract class LogDatabase : RoomDatabase() {
     abstract fun dao(): LogDao

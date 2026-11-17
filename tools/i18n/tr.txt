@@ -69,7 +69,7 @@
 68|Soğukta şarj etmek pile zarar verir, kullanmak pek vermez.
 69|Hızlı şarj sık sık 35–40 °C'ye ulaşır, bu yüzden bu seviye sık uyarabilir.
 70|Bildirim
-71|Varsayılan olarak yalnızca şarj seviyesi ve durum. Buradan başka değerler ekle.
+71|Her zaman şarj seviyesini, durumu ve alarma kalan süreyi gösterir. Ayrıca göster:
 72|Akım (mA)
 73|Sıcaklık
 74|Gerilim
@@ -80,163 +80,184 @@
 79|Pil alarmları
 80|Alarm %%%d
 81|Alarm kapalı
-82|Pil dolu: %%%d
-83|Şarj aletini çıkar
-84|Pil düşük: %%%d
-85|Şarj aletini tak
-86|Pil sıcak: %s
-87|Telefonun soğumasını bekle
-88|Pil soğuk: %s
-89|Soğukta şarj etme
-90|Pil dolu.
-91|Pil dolu, yüzde %d.
-92|Pil düşük.
-93|Pil düşük, yüzde %d.
-94|Pil sıcak.
-95|Pil soğuk.
-96|Liste
-97|Grafik
-98|%d kayıt
-99|%d kayıt
-100|Henüz kayıt yok. Şarj seviyesindeki her değişiklik burada görünecek.
-101|Şarj aleti
-102|USB
-103|Kablosuz
-104|Pil
-105|Son 24 saat
-106|Henüz veri yok. Kayıt sürüyor.
-107|şimdi
-108|Olaylar
-109|Henüz olay yok.
-110|Şarj aleti takıldı
-111|Şarj aleti çıkarıldı
-112|Alarm: pil dolu
-113|Alarm: pil düşük
-114|Alarm: pil sıcak
-115|Alarm: pil soğuk
-116|Android'e göre durum
-117|İyi
-118|Aşırı ısınmış
-119|Çok soğuk
-120|Aşırı gerilim
-121|Arızalı
-122|Bilinmeyen hata
-123|Bildirilmedi
-124|Teknoloji
-125|Şarj sayacı
-126|Gün
-127|Hafta
-128|Ay
-129|Tümü
-130|Sıcaklık
-131|İki parmakla yakınlaştır, sıfırlamak için iki kez dokun.
-132|Yaklaşık %2$s sonra %%%1$d
-133|%d dk
-134|%d sa
-135|%1$d sa %2$d dk
-136|Geçmiş
-137|Geçmişin ne kadar süre tutulacağı. Daha eski kayıtlar silinir.
-138|1 gün
-139|1 hafta
-140|1 ay
-141|1 yıl
-142|Her zaman
-143|Boşalıyor
-144|Dinle
-145|Pil sağlığı
-146|Henüz ölçülmedi
-147|%1$s / %2$s
-148|%1$d şarjdan ölçüldü (toplam %%%2$d)
-149|%1$d şarjdan ölçüldü (toplam %%%2$d)
-150|Tek seferde en az yüzde 15 şarj et, ardından kapasite ölçülür.
-151|Android bildiriyor: %s
-152|± ölçüm belirsizliğidir. Şarj sayısı ve süresi arttıkça küçülür.
-153|Nominal kapasite
-154|telefondan okundu
-155|senin girdiğin
-156|Bilinmiyor. Durumu yüzde olarak görmek için gir.
-157|Değiştir
-158|mAh cinsinden, telefonunun teknik özelliklerine bak
-159|Otomatik
-160|Şarj döngüleri
-161|Kayıt başladığından beri %1$s tam döngü
-162|Şarj hızı
-163|Ø %1$s · %%%2$s/sa
-164|Son şarjlar
-165|Henüz kaydedilmiş şarj yok. Takmadan çıkarmaya kadar her şarj burada görünür.
-166|%s döngü
-167|Zaman içinde kapasite
-168|Güncel değerler
-169|İpuçları
-170|Pil kapasitesi yalnızca %%%d
-171|Pil artık yalnızca yaklaşık %1$s / %2$s tutuyor. Değiştirmek değebilir.
-172|Şarjlar
-173|Eğrisini görmek için çerçeveli bir değere dokun.
-174|Bu telefon şarj sayacını yalnızca yüzdeden hesaplıyor, bu yüzden sayaç yıpranmayı gösteremez. Uygulama bu nedenle şarj akımını kendisi ölçer; bu daha az kesindir.
-175|dolu
-176|Uygulama etkin değildi · %s
-177|Güvenilirlik
-178|Tamam
-179|Ayrıca %s için:
-180|Genel olarak:
-181|Ayarları aç
-182|Bu sayfa telefonunda yok. Uygulama bilgileri açıldı; yukarıdaki adımları izle.
-183|Telefonun için daha fazla yardım (kopyalanacak bağlantı):
-184|Bağlantı kopyalandı
-185|%s telefonları için birkaç ayar daha gerekiyor.
-186|Göster
-187|Tamam
-188|Akku Health Alarm için otomatik başlatmaya izin ver.
-189|Ayarlar → Uygulamalar → Akku Health Alarm → Pil tasarrufu: "Kısıtlama yok".
-190|Son uygulamalar görünümünde uygulamaya basılı tut ve kilide dokun.
-191|Telefon Yöneticisi → Uygulama başlatma: Akku Health Alarm'ı "Manuel olarak yönet" yap ve üç anahtarı da aç.
-192|Eski telefonlar: Telefon Yöneticisi → "Kilit ekranında temizleme" veya "Korunan uygulamalar": Akku Health Alarm'ın kapatılmasına izin verme.
-193|Son uygulamalar görünümünde kilit görünene kadar uygulamayı aşağı çek.
-194|Ayarlar → Pil → Arka plan kullanım sınırları → "Hiç uyumayan uygulamalar" → Akku Health Alarm'ı ekle.
-195|Son uygulamalar görünümünde uygulama simgesine dokun ve "Bu uygulamayı kilitle"yi seç.
-196|Ayarlar → Uygulamalar → Akku Health Alarm → Pil: otomatik başlatmaya ve arka plan etkinliğine izin ver.
-197|"Arka planda dondur" ve "Anormal uygulamaları optimize et" seçeneklerini kapat.
-198|Uygulamayı son uygulamalar görünümünde kilitle.
-199|i Manager → Uygulama yöneticisi → Otomatik başlatma: Akku Health Alarm'ı aç.
-200|Ayarlar → Pil → Yüksek arka plan güç kullanımı: Akku Health Alarm'a izin ver.
-201|Uygulamayı son uygulamalar görünümünde kilitle.
-202|Ayarlar → Pil → Pil optimizasyonu: Akku Health Alarm'ı "Optimize etme" yap.
-203|Ayarlar → Pil → gelişmiş optimizasyonu kapat.
+82|yaklaşık %s sonra
+83|her %s
+84|bir kez
+85|Pil dolu: %%%d
+86|Şarj aletini çıkar
+87|Pil düşük: %%%d
+88|Şarj aletini tak
+89|Pil sıcak: %s
+90|Telefonun soğumasını bekle
+91|Pil soğuk: %s
+92|Soğukta şarj etme
+93|Pil dolu.
+94|Pil dolu, yüzde %d.
+95|Pil düşük.
+96|Pil düşük, yüzde %d.
+97|Pil sıcak.
+98|Pil soğuk.
+99|Liste
+100|Grafik
+101|%d kayıt
+102|%d kayıt
+103|Henüz kayıt yok. Şarj seviyesindeki her değişiklik burada görünecek.
+104|Şarj aleti
+105|USB
+106|Kablosuz
+107|Pil
+108|Son 24 saat
+109|Henüz veri yok. Kayıt sürüyor.
+110|şimdi
+111|Olaylar
+112|Henüz olay yok.
+113|Şarj aleti takıldı
+114|Şarj aleti çıkarıldı
+115|Alarm: pil dolu
+116|Alarm: pil düşük
+117|Alarm: pil sıcak
+118|Alarm: pil soğuk
+119|Android'e göre durum
+120|İyi
+121|Aşırı ısınmış
+122|Çok soğuk
+123|Aşırı gerilim
+124|Arızalı
+125|Bilinmeyen hata
+126|Bildirilmedi
+127|Teknoloji
+128|Şarj sayacı
+129|Gün
+130|Hafta
+131|Ay
+132|Tümü
+133|Sıcaklık
+134|İki parmakla yakınlaştır, sıfırlamak için iki kez dokun.
+135|Yaklaşık %2$s sonra %%%1$d
+136|%d dk
+137|%d sa
+138|%1$d sa %2$d dk
+139|Geçmiş
+140|Geçmişin ne kadar süre tutulacağı. Daha eski kayıtlar silinir.
+141|1 gün
+142|1 hafta
+143|1 ay
+144|1 yıl
+145|Her zaman
+146|Boşalıyor
+147|Gerilim ve akımı göster
+148|Dinle
+149|Pil sağlığı
+150|Henüz ölçülmedi
+151|%1$s / %2$s
+152|%1$d şarjdan ölçüldü (toplam %%%2$d)
+153|%1$d şarjdan ölçüldü (toplam %%%2$d)
+154|Tek seferde en az yüzde 15 şarj et, ardından kapasite ölçülür.
+155|Android bildiriyor: %s
+156|± ölçüm belirsizliğidir. Şarj sayısı ve süresi arttıkça küçülür.
+157|%d ölçümden en yüksek ve en düşük %%20 sayılmaz.
+158|sayılmaz
+159|Nominal kapasite
+160|telefondan okundu
+161|senin girdiğin
+162|Bilinmiyor. Durumu yüzde olarak görmek için gir.
+163|Değiştir
+164|mAh cinsinden, telefonunun teknik özelliklerine bak
+165|Otomatik
+166|Şarj döngüleri
+167|Kayıt başladığından beri %1$s tam döngü
+168|Şarj hızı
+169|Ø %1$s · %%%2$s/sa
+170|Son şarjlar
+171|Henüz kaydedilmiş şarj yok. Takmadan çıkarmaya kadar her şarj burada görünür.
+172|%s döngü
+173|Zaman içinde kapasite
+174|Güncel değerler
+175|İpuçları
+176|Pil kapasitesi yalnızca %%%d
+177|Pil artık yalnızca yaklaşık %1$s / %2$s tutuyor. Değiştirmek değebilir.
+178|Şarjlar
+179|Eğrisini görmek için çerçeveli bir değere dokun.
+180|Bu telefon şarj sayacını yalnızca yüzdeden hesaplıyor, bu yüzden sayaç yıpranmayı gösteremez. Uygulama bu nedenle şarj akımını kendisi ölçer; bu daha az kesindir.
+181|dolu
+182|Uygulama etkin değildi · %s
+183|Güvenilirlik
+184|Tamam
+185|Ayrıca %s için:
+186|Genel olarak:
+187|Ayarları aç
+188|Bu sayfa telefonunda yok. Uygulama bilgileri açıldı; yukarıdaki adımları izle.
+189|Telefonun için daha fazla yardım (kopyalanacak bağlantı):
+190|Bağlantı kopyalandı
+191|%s telefonları için birkaç ayar daha gerekiyor.
+192|Göster
+193|Tamam
+194|Akku Health Alarm için otomatik başlatmaya izin ver.
+195|Ayarlar → Uygulamalar → Akku Health Alarm → Pil tasarrufu: "Kısıtlama yok".
+196|Son uygulamalar görünümünde uygulamaya basılı tut ve kilide dokun.
+197|Telefon Yöneticisi → Uygulama başlatma: Akku Health Alarm'ı "Manuel olarak yönet" yap ve üç anahtarı da aç.
+198|Eski telefonlar: Telefon Yöneticisi → "Kilit ekranında temizleme" veya "Korunan uygulamalar": Akku Health Alarm'ın kapatılmasına izin verme.
+199|Son uygulamalar görünümünde kilit görünene kadar uygulamayı aşağı çek.
+200|Ayarlar → Pil → Arka plan kullanım sınırları → "Hiç uyumayan uygulamalar" → Akku Health Alarm'ı ekle.
+201|Son uygulamalar görünümünde uygulama simgesine dokun ve "Bu uygulamayı kilitle"yi seç.
+202|Ayarlar → Uygulamalar → Akku Health Alarm → Pil: otomatik başlatmaya ve arka plan etkinliğine izin ver.
+203|"Arka planda dondur" ve "Anormal uygulamaları optimize et" seçeneklerini kapat.
 204|Uygulamayı son uygulamalar görünümünde kilitle.
-205|"Otomatik başlatma" ayarı varsa: Akku Health Alarm için izin ver.
-206|Mümkünse uygulamayı son uygulamalar görünümünde kilitle.
-207|sesli
-208|sessiz · gece sessizliği
-209|yalnızca titreşim · telefon sessizde
-210|sessiz · telefon sessizde
-211|yalnızca bildirim · ses ve konuşma kapalı
-212|Dil
-213|Telefon dili
-214|Görünüm
-215|Sistem
-216|Açık
-217|Koyu
-218|Her şey ayarlandı
-219|Bu adımları tamamladım
-220|Daha az
-221|Daha fazla
-222|Standart
-223|Hızlı seçim %d
-224|Hızlı seçim %d'yi değiştir
-225|Geçerli aralığı kullan
-226|Sıfırla
-227|Değiştirmek için bir düğmeyi basılı tut
-228|Alarmı tekrarla
-229|Bir kez
-230|%d sn
-231|Pilde ve ekran kapalıyken Android buna yalnızca yaklaşık 9 dakikada bir izin verir.
-232|Sonraki alarm: %s sonra
-233|%s saatine kadar
-234|Şarj sürüyor
-235|%s itibarıyla
-236|şu ana kadar yaklaşık %s şarj edildi
-237|Kapasite ölçümü için %%%d daha. Ölçüm, çıkarıldığında yapılır.
-238|Ölçüm için yeterli. Kapasite, çıkarıldığında hesaplanır.
-239|ölçüm yok: yüzde 15'in altında
-240|ölçüm yok: kayıt kesildi
-241|ölçüm yok: değerler mantıksız
+205|i Manager → Uygulama yöneticisi → Otomatik başlatma: Akku Health Alarm'ı aç.
+206|Ayarlar → Pil → Yüksek arka plan güç kullanımı: Akku Health Alarm'a izin ver.
+207|Uygulamayı son uygulamalar görünümünde kilitle.
+208|Ayarlar → Pil → Pil optimizasyonu: Akku Health Alarm'ı "Optimize etme" yap.
+209|Ayarlar → Pil → gelişmiş optimizasyonu kapat.
+210|Uygulamayı son uygulamalar görünümünde kilitle.
+211|"Otomatik başlatma" ayarı varsa: Akku Health Alarm için izin ver.
+212|Mümkünse uygulamayı son uygulamalar görünümünde kilitle.
+213|sesli
+214|sessiz · gece sessizliği
+215|yalnızca titreşim · telefon sessizde
+216|sessiz · telefon sessizde
+217|yalnızca bildirim · ses ve konuşma kapalı
+218|ses başarısız
+219|İlk alarm: %1$s
+220|Son tekrar %1$s: %2$s
+221|ekran açık
+222|ekran kapalı
+223|bildirim ses düzeyi %1$d/%2$d
+224|alarm ses düzeyi %1$d/%2$d
+225|Rahatsız etmeyin açık
+226|ses odağı reddedildi
+227|%1$s sn çalındı
+228|erken durdu: %1$s / %2$s sn
+229|%1$s sn sonra kesildi
+230|oynatma hatası %1$s
+231|oynatma bitmedi
+232|hiçbir şey çalınmadı
+233|Dil
+234|Telefon dili
+235|Görünüm
+236|Sistem
+237|Açık
+238|Koyu
+239|Her şey ayarlandı
+240|Bu adımları tamamladım
+241|Daha az
+242|Daha fazla
+243|Standart
+244|Hızlı seçim %d
+245|Hızlı seçim %d'yi değiştir
+246|Geçerli aralığı kullan
+247|Sıfırla
+248|Değiştirmek için bir düğmeyi basılı tut
+249|Alarmı tekrarla
+250|Bir kez
+251|%d sn
+252|Pilde ve ekran kapalıyken Android buna yalnızca yaklaşık 9 dakikada bir izin verir.
+253|Sonraki alarm: %s sonra
+254|%s saatine kadar
+255|Şarj sürüyor
+256|%s itibarıyla
+257|şu ana kadar yaklaşık %s şarj edildi
+258|Kapasite ölçümü için %%%d daha. Ölçüm, çıkarıldığında yapılır.
+259|Ölçüm için yeterli. Kapasite, çıkarıldığında hesaplanır.
+260|ölçüm yok: yüzde 15'in altında
+261|ölçüm yok: kayıt kesildi
+262|ölçüm yok: değerler mantıksız

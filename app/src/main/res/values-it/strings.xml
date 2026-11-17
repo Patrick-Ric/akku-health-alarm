@@ -71,7 +71,7 @@
     <string name="temp_cold_charging_summary">Caricare al freddo danneggia la batteria, usarla quasi per niente.</string>
     <string name="temp_strict_hint">La ricarica rapida raggiunge spesso 35–40 °C, quindi questo livello può avvisare spesso.</string>
     <string name="notif_title">Notifica</string>
-    <string name="notif_summary">Per impostazione predefinita solo livello di carica e stato. Aggiungi altri valori qui.</string>
+    <string name="notif_summary">Mostra sempre livello di carica, stato e tempo fino all\'allarme. Mostra anche:</string>
     <string name="notif_current">Corrente (mA)</string>
     <string name="notif_temp">Temperatura</string>
     <string name="notif_voltage">Tensione</string>
@@ -82,6 +82,9 @@
     <string name="channel_alarm">Allarmi della batteria</string>
     <string name="notif_alarm_at">Allarme al %d %%</string>
     <string name="notif_alarm_off">Allarme disattivato</string>
+    <string name="notif_eta_in">tra circa %s</string>
+    <string name="notif_repeat_every">ogni %s</string>
+    <string name="notif_repeat_once">una volta</string>
     <string name="alarm_high_title">Batteria carica: %d %%</string>
     <string name="alarm_high_text">Scollega il caricabatterie</string>
     <string name="alarm_low_title">Batteria scarica: %d %%</string>
@@ -147,6 +150,7 @@
     <string name="keep_365d">1 anno</string>
     <string name="keep_forever">Sempre</string>
     <string name="log_discharging">In scarica</string>
+    <string name="log_electrical">Mostra tensione e corrente</string>
     <string name="tone_listen">Ascolta</string>
     <string name="health_state">Stato della batteria</string>
     <string name="health_measuring">Non ancora misurato</string>
@@ -159,6 +163,8 @@
     <string name="health_need_charge" formatted="false">Carica almeno il 15 % in una volta, poi la capacità viene misurata.</string>
     <string name="health_android_says">Android segnala: %s</string>
     <string name="health_estimate_note">± è l\'incertezza di misura. Più cariche e più lunghe, più diventa piccola.</string>
+    <string name="health_trimmed">Su %d misurazioni, il 20 %% più alto e il 20 %% più basso non sono contati.</string>
+    <string name="session_not_counted">non contato</string>
     <string name="design_title">Capacità nominale</string>
     <string name="design_auto">letta dal telefono</string>
     <string name="design_manual">inserita da te</string>
@@ -232,6 +238,21 @@
     <string name="delivery_muted_vibrate">solo vibrazione · telefono silenzioso</string>
     <string name="delivery_muted">silenzioso · telefono silenzioso</string>
     <string name="delivery_silent">solo notifica · suono e voce disattivati</string>
+    <string name="delivery_sound_failed">suono non riuscito</string>
+    <string name="diag_first">Primo allarme: %1$s</string>
+    <string name="diag_last">Ultima ripetizione %1$s: %2$s</string>
+    <string name="diag_screen_on">schermo acceso</string>
+    <string name="diag_screen_off">schermo spento</string>
+    <string name="diag_volume_notification">volume notifiche %1$d/%2$d</string>
+    <string name="diag_volume_alarm">volume sveglia %1$d/%2$d</string>
+    <string name="diag_dnd">Non disturbare attivo</string>
+    <string name="diag_no_focus">focus audio negato</string>
+    <string name="diag_played">riprodotto %1$s s</string>
+    <string name="diag_short">interrotto prima: %1$s di %2$s s</string>
+    <string name="diag_stopped">interrotto dopo %1$s s</string>
+    <string name="diag_error">errore di riproduzione %1$s</string>
+    <string name="diag_timeout">la riproduzione non è terminata</string>
+    <string name="diag_nothing">nessuna riproduzione</string>
     <string name="language_title">Lingua</string>
     <string name="language_system">Lingua del telefono</string>
     <string name="theme_title">Aspetto</string>

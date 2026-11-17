@@ -429,7 +429,7 @@ null,
 "s",
 "notif_summary",
 null,
-"By default only charge level and status. Add more values here."
+"Always shows charge level, status and the time until the alarm. Also show:"
 ],
 [
 "s",
@@ -490,6 +490,24 @@ null,
 "notif_alarm_off",
 null,
 "Alarm off"
+],
+[
+"s",
+"notif_eta_in",
+null,
+"in about %s"
+],
+[
+"s",
+"notif_repeat_every",
+null,
+"every %s"
+],
+[
+"s",
+"notif_repeat_once",
+null,
+"once"
 ],
 [
 "s",
@@ -865,6 +883,12 @@ null,
 ],
 [
 "s",
+"log_electrical",
+null,
+"Show voltage and current"
+],
+[
+"s",
 "tone_listen",
 null,
 "Listen"
@@ -916,6 +940,18 @@ null,
 "health_estimate_note",
 null,
 "± is the measurement uncertainty. The more and the longer the charges, the smaller it gets."
+],
+[
+"s",
+"health_trimmed",
+null,
+"Of %d measurements, the highest and lowest 20 %% are not counted."
+],
+[
+"s",
+"session_not_counted",
+null,
+"not counted"
 ],
 [
 "s",
@@ -1270,6 +1306,96 @@ null,
 "delivery_silent",
 null,
 "only notification · sound and voice off"
+],
+[
+"s",
+"delivery_sound_failed",
+null,
+"sound failed"
+],
+[
+"s",
+"diag_first",
+null,
+"First alarm: %1$s"
+],
+[
+"s",
+"diag_last",
+null,
+"Last repeat %1$s: %2$s"
+],
+[
+"s",
+"diag_screen_on",
+null,
+"screen on"
+],
+[
+"s",
+"diag_screen_off",
+null,
+"screen off"
+],
+[
+"s",
+"diag_volume_notification",
+null,
+"notification volume %1$d/%2$d"
+],
+[
+"s",
+"diag_volume_alarm",
+null,
+"alarm volume %1$d/%2$d"
+],
+[
+"s",
+"diag_dnd",
+null,
+"Do not disturb on"
+],
+[
+"s",
+"diag_no_focus",
+null,
+"audio focus refused"
+],
+[
+"s",
+"diag_played",
+null,
+"played %1$s s"
+],
+[
+"s",
+"diag_short",
+null,
+"stopped early: %1$s of %2$s s"
+],
+[
+"s",
+"diag_stopped",
+null,
+"interrupted after %1$s s"
+],
+[
+"s",
+"diag_error",
+null,
+"playback error %1$s"
+],
+[
+"s",
+"diag_timeout",
+null,
+"playback did not end"
+],
+[
+"s",
+"diag_nothing",
+null,
+"nothing played"
 ],
 [
 "s",

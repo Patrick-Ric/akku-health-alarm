@@ -71,7 +71,7 @@
     <string name="temp_cold_charging_summary">Laddning i kyla skadar batteriet, användning knappt.</string>
     <string name="temp_strict_hint">Snabbladdning når ofta 35–40 °C, så den här nivån kan larma ofta.</string>
     <string name="notif_title">Avisering</string>
-    <string name="notif_summary">Som standard bara laddnivå och status. Lägg till fler värden här.</string>
+    <string name="notif_summary">Visar alltid laddnivå, status och tiden till larmet. Visa även:</string>
     <string name="notif_current">Ström (mA)</string>
     <string name="notif_temp">Temperatur</string>
     <string name="notif_voltage">Spänning</string>
@@ -82,6 +82,9 @@
     <string name="channel_alarm">Batterilarm</string>
     <string name="notif_alarm_at">Larm vid %d %%</string>
     <string name="notif_alarm_off">Larm av</string>
+    <string name="notif_eta_in">om cirka %s</string>
+    <string name="notif_repeat_every">upprepas var %s</string>
+    <string name="notif_repeat_once">en gång</string>
     <string name="alarm_high_title">Batteriet laddat: %d %%</string>
     <string name="alarm_high_text">Koppla bort laddaren</string>
     <string name="alarm_low_title">Batteriet lågt: %d %%</string>
@@ -146,6 +149,7 @@
     <string name="keep_365d">1 år</string>
     <string name="keep_forever">Alltid</string>
     <string name="log_discharging">Laddas ur</string>
+    <string name="log_electrical">Visa spänning och ström</string>
     <string name="tone_listen">Lyssna</string>
     <string name="health_state">Batteriets skick</string>
     <string name="health_measuring">Inte mätt ännu</string>
@@ -157,6 +161,8 @@
     <string name="health_need_charge" formatted="false">Ladda minst 15 % i ett svep, så mäts kapaciteten.</string>
     <string name="health_android_says">Android rapporterar: %s</string>
     <string name="health_estimate_note">± är mätosäkerheten. Ju fler och längre laddningar, desto mindre blir den.</string>
+    <string name="health_trimmed">Av %d mätningar räknas de högsta och lägsta 20 %% inte med.</string>
+    <string name="session_not_counted">räknas inte</string>
     <string name="design_title">Märkkapacitet</string>
     <string name="design_auto">läst från telefonen</string>
     <string name="design_manual">angiven av dig</string>
@@ -230,6 +236,21 @@
     <string name="delivery_muted_vibrate">bara vibration · telefonen ljudlös</string>
     <string name="delivery_muted">tyst · telefonen ljudlös</string>
     <string name="delivery_silent">bara avisering · ljud och röst av</string>
+    <string name="delivery_sound_failed">ljudet misslyckades</string>
+    <string name="diag_first">Första larm: %1$s</string>
+    <string name="diag_last">Senaste upprepning %1$s: %2$s</string>
+    <string name="diag_screen_on">skärm på</string>
+    <string name="diag_screen_off">skärm av</string>
+    <string name="diag_volume_notification">aviseringsvolym %1$d/%2$d</string>
+    <string name="diag_volume_alarm">alarmvolym %1$d/%2$d</string>
+    <string name="diag_dnd">Stör ej på</string>
+    <string name="diag_no_focus">ljudfokus nekades</string>
+    <string name="diag_played">spelades %1$s s</string>
+    <string name="diag_short">stoppades tidigt: %1$s av %2$s s</string>
+    <string name="diag_stopped">avbröts efter %1$s s</string>
+    <string name="diag_error">uppspelningsfel %1$s</string>
+    <string name="diag_timeout">uppspelningen tog inte slut</string>
+    <string name="diag_nothing">inget spelades</string>
     <string name="language_title">Språk</string>
     <string name="language_system">Telefonens språk</string>
     <string name="theme_title">Utseende</string>

@@ -71,7 +71,7 @@
     <string name="temp_cold_charging_summary">Lataaminen kylmässä vahingoittaa akkua, käyttö tuskin.</string>
     <string name="temp_strict_hint">Pikalataus nousee usein 35–40 °C:seen, joten tämä taso voi varoittaa usein.</string>
     <string name="notif_title">Ilmoitus</string>
-    <string name="notif_summary">Oletuksena vain varaustaso ja tila. Lisää muita arvoja tästä.</string>
+    <string name="notif_summary">Näyttää aina varaustason, tilan ja ajan hälytykseen. Näytä myös:</string>
     <string name="notif_current">Virta (mA)</string>
     <string name="notif_temp">Lämpötila</string>
     <string name="notif_voltage">Jännite</string>
@@ -82,6 +82,9 @@
     <string name="channel_alarm">Akkuhälytykset</string>
     <string name="notif_alarm_at">Hälytys %d %%:ssa</string>
     <string name="notif_alarm_off">Hälytys pois</string>
+    <string name="notif_eta_in">noin %s kuluttua</string>
+    <string name="notif_repeat_every">%s välein</string>
+    <string name="notif_repeat_once">kerran</string>
     <string name="alarm_high_title">Akku ladattu: %d %%</string>
     <string name="alarm_high_text">Irrota laturi</string>
     <string name="alarm_low_title">Akku vähissä: %d %%</string>
@@ -146,6 +149,7 @@
     <string name="keep_365d">1 vuosi</string>
     <string name="keep_forever">Aina</string>
     <string name="log_discharging">Purkautuu</string>
+    <string name="log_electrical">Näytä jännite ja virta</string>
     <string name="tone_listen">Kuuntele</string>
     <string name="health_state">Akun kunto</string>
     <string name="health_measuring">Ei vielä mitattu</string>
@@ -157,6 +161,8 @@
     <string name="health_need_charge" formatted="false">Lataa vähintään 15 % yhdellä kertaa, niin kapasiteetti mitataan.</string>
     <string name="health_android_says">Android ilmoittaa: %s</string>
     <string name="health_estimate_note">± on mittausepävarmuus. Mitä enemmän ja pidempiä latauksia, sitä pienempi se on.</string>
+    <string name="health_trimmed">%d mittauksesta suurimpia ja pienimpiä 20 %% ei lasketa mukaan.</string>
+    <string name="session_not_counted">ei lasketa</string>
     <string name="design_title">Nimelliskapasiteetti</string>
     <string name="design_auto">luettu puhelimesta</string>
     <string name="design_manual">sinun antamasi</string>
@@ -230,6 +236,21 @@
     <string name="delivery_muted_vibrate">vain värinä · puhelin äänettömällä</string>
     <string name="delivery_muted">äänetön · puhelin äänettömällä</string>
     <string name="delivery_silent">vain ilmoitus · ääni ja puhe pois</string>
+    <string name="delivery_sound_failed">ääni epäonnistui</string>
+    <string name="diag_first">Ensimmäinen hälytys: %1$s</string>
+    <string name="diag_last">Viimeisin toisto %1$s: %2$s</string>
+    <string name="diag_screen_on">näyttö päällä</string>
+    <string name="diag_screen_off">näyttö pois</string>
+    <string name="diag_volume_notification">ilmoitusten äänenvoimakkuus %1$d/%2$d</string>
+    <string name="diag_volume_alarm">hälytyksen äänenvoimakkuus %1$d/%2$d</string>
+    <string name="diag_dnd">Älä häiritse päällä</string>
+    <string name="diag_no_focus">äänifokus evätty</string>
+    <string name="diag_played">toistettu %1$s s</string>
+    <string name="diag_short">loppui liian aikaisin: %1$s / %2$s s</string>
+    <string name="diag_stopped">keskeytyi %1$s s jälkeen</string>
+    <string name="diag_error">toistovirhe %1$s</string>
+    <string name="diag_timeout">toisto ei päättynyt</string>
+    <string name="diag_nothing">mitään ei toistettu</string>
     <string name="language_title">Kieli</string>
     <string name="language_system">Puhelimen kieli</string>
     <string name="theme_title">Ulkoasu</string>

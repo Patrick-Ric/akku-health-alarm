@@ -1,5 +1,14 @@
 package io.github.patrickric.akkuhealthalarm.ui
 
+import androidx.compose.ui.graphics.SolidColor
+import androidx.compose.ui.graphics.vector.VectorPath
+import androidx.compose.ui.graphics.vector.PathData
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.semantics.contentDescription
+import androidx.compose.ui.semantics.semantics
+import androidx.compose.foundation.layout.heightIn
+import androidx.compose.material.icons.rounded.ViewColumn
+import androidx.compose.material.icons.rounded.Check
 import android.os.BatteryManager
 import androidx.compose.foundation.gestures.detectTapGestures
 import androidx.compose.foundation.gestures.detectTransformGestures
@@ -10,6 +19,23 @@ import androidx.compose.material3.FilterChipDefaults
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.material.icons.rounded.ElectricalServices
 import androidx.compose.ui.graphics.Color
+import kotlinx.coroutines.delay
+import androidx.compose.animation.core.Animatable
+import kotlinx.coroutines.launch
+import androidx.compose.ui.geometry.CornerRadius
+import androidx.compose.ui.draw.drawWithContent
+import androidx.compose.foundation.gestures.awaitFirstDown
+import androidx.compose.foundation.gestures.awaitEachGesture
+import androidx.compose.ui.input.pointer.PointerEventPass
+import androidx.compose.runtime.rememberCoroutineScope
+import androidx.compose.runtime.rememberUpdatedState
+import androidx.compose.animation.core.tween
+import androidx.compose.foundation.lazy.LazyListState
+import androidx.compose.foundation.lazy.rememberLazyListState
+import androidx.compose.ui.draw.drawBehind
+import androidx.compose.ui.unit.TextUnit
+import androidx.compose.foundation.layout.statusBars
+import androidx.compose.foundation.layout.windowInsetsTopHeight
 import androidx.compose.ui.graphics.drawscope.DrawScope
 import androidx.compose.ui.graphics.drawscope.clipRect
 import androidx.compose.ui.input.pointer.pointerInput
@@ -73,6 +99,11 @@ import androidx.compose.material3.CenterAlignedTopAppBar
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
+import androidx.compose.foundation.clickable
+import androidx.compose.material.icons.rounded.ExpandLess
+import androidx.compose.material.icons.rounded.ExpandMore
+import io.github.patrickric.akkuhealthalarm.BuildConfig
+import io.github.patrickric.akkuhealthalarm.data.AlarmDiag
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -113,7 +144,7 @@ private const val DAY_MS = 24 * 60 * 60 * 1000L
 enum class Overlay { TEMP, VOLTAGE, CURRENT }
 
 @Composable
-fun HistoryScreen(settings: AlarmSettings, request: Overlay? = null, onRequestHandled: () -> Unit = {}) {
+fun HistoryScreen(settings: AlarmSettings, update: Update, request: Overlay? = null, onRequestHandled: () -> Unit = {}) {
     val dao = LocalContext.current.app.db.dao()
     var showChart by rememberSaveable { mutableStateOf(false) }
     var overlay by rememberSaveable { mutableStateOf<Overlay?>(null) }
@@ -131,24 +162,39 @@ fun HistoryScreen(settings: AlarmSettings, request: Overlay? = null, onRequestHa
         containerColor = MaterialTheme.colorScheme.background,
         contentWindowInsets = WindowInsets(0, 0, 0, 0),
     ) { padding ->
-        Column(Modifier.fillMaxSize().padding(padding)) {
-            SingleChoiceSegmentedButtonRow(Modifier.fillMaxWidth().padding(horizontal = 16.dp, vertical = 4.dp)) {
-                SegmentedButton(
-                    selected = !showChart,
-                    onClick = { showChart = false },
-                    shape = SegmentedButtonDefaults.itemShape(0, 2),
-                    icon = { Icon(Icons.AutoMirrored.Rounded.List, contentDescription = null, modifier = Modifier.size(18.dp)) },
-                    label = { Text(stringResource(R.string.view_list)) },
-                )
-                SegmentedButton(
-                    selected = showChart,
-                    onClick = { showChart = true },
-                    shape = SegmentedButtonDefaults.itemShape(1, 2),
-                    icon = { Icon(Icons.Rounded.Timeline, contentDescription = null, modifier = Modifier.size(18.dp)) },
-                    label = { Text(stringResource(R.string.view_chart)) },
-                )
+        // Landscape on a phone: less height, so the rows of the list are a little flatter.
+        val compact = LocalConfiguration.current.screenHeightDp < COMPACT_HEIGHT_DP
+        val twelveHour = !Format.is24Hour(LocalContext.current)
+        BoxWithConstraints(Modifier.fillMaxSize().padding(padding)) {
+            val layout = rememberRowLayout(maxWidth, twelveHour, electrical = settings.logElectrical, dense = compact)
+            Column(Modifier.fillMaxSize()) {
+                // One line for the switch list / chart and, in the list, the switch "V · mA".
+                Row(Modifier.fillMaxWidth().padding(horizontal = 16.dp, vertical = 4.dp), verticalAlignment = Alignment.CenterVertically) {
+                    val label = MaterialTheme.typography.labelLarge
+                    SingleChoiceSegmentedButtonRow(if (compact) Modifier.width(320.dp) else Modifier.weight(1f)) {
+                        SegmentedButton(
+                            selected = !showChart,
+                            onClick = { showChart = false },
+                            shape = SegmentedButtonDefaults.itemShape(0, 2),
+                            icon = { Icon(Icons.AutoMirrored.Rounded.List, contentDescription = null, modifier = Modifier.size(18.dp)) },
+                            label = { Text(stringResource(R.string.view_list), maxLines = 1, softWrap = false, autoSize = fit(label, 10.sp)) },
+                        )
+                        SegmentedButton(
+                            selected = showChart,
+                            onClick = { showChart = true },
+                            shape = SegmentedButtonDefaults.itemShape(1, 2),
+                            icon = { Icon(Icons.Rounded.Timeline, contentDescription = null, modifier = Modifier.size(18.dp)) },
+                            label = { Text(stringResource(R.string.view_chart), maxLines = 1, softWrap = false, autoSize = fit(label, 10.sp)) },
+                        )
+                    }
+                    // Only when the screen is too narrow for all columns: voltage and current on request.
+                    if (!showChart && layout.toggle) {
+                        Spacer(Modifier.width(12.dp))
+                        ElectricalChip(settings, update)
+                    }
+                }
+                if (showChart) ChartView(settings, dao, overlay) { overlay = it } else LogList(dao, layout)
             }
-            if (showChart) ChartView(settings, dao, overlay) { overlay = it } else LogList(dao)
         }
     }
 }
@@ -275,7 +321,7 @@ private sealed interface LogItem {
 }
 
 @Composable
-private fun LogList(dao: LogDao) {
+private fun LogList(dao: LogDao, layout: RowLayout) {
     val context = LocalContext.current
     val readings by remember { dao.recentReadings(5_000) }.collectAsStateWithLifecycle(emptyList())
     val alarms by remember { dao.recentAlarms(500) }.collectAsStateWithLifecycle(emptyList())
@@ -310,64 +356,224 @@ private fun LogList(dao: LogDao) {
         return
     }
     val timeFormat = Format.timeFormat(context)
-    Text(
-        pluralStringResource(R.plurals.entries_count, changeCount, changeCount),
-        style = MaterialTheme.typography.labelMedium,
-        color = MaterialTheme.colorScheme.onSurfaceVariant,
-        modifier = Modifier.padding(horizontal = 20.dp, vertical = 4.dp),
-    )
-    BoxWithConstraints(Modifier.fillMaxSize()) {
-        val layout = rememberRowLayout(maxWidth, twelveHour = !Format.is24Hour(context))
-        LazyColumn(Modifier.fillMaxSize(), contentPadding = PaddingValues(bottom = 8.dp)) {
-            items.forEach { item ->
-                when (item) {
-                    is LogItem.Day -> stickyHeader { DayHeader(item.label) }
-                    is LogItem.Reading -> item { ReadingRow(item.entry, timeFormat, layout) }
-                    is LogItem.Alarm -> item { AlarmRow(item.entry, timeFormat, layout) }
-                    is LogItem.Gap -> item { GapRow(item) }
-                }
+    val listState = rememberLazyListState()
+    LazyColumn(Modifier.fillMaxSize().fastScroller(listState), state = listState, contentPadding = PaddingValues(bottom = 8.dp)) {
+        items.forEach { item ->
+            when (item) {
+                // Keys and content types let the list reuse rows of the same kind while scrolling.
+                is LogItem.Day -> stickyHeader(key = "d" + item.label, contentType = "day") { DayHeader(item.label) }
+                is LogItem.Reading -> item(key = "r" + item.entry.id, contentType = "reading") { ReadingRow(item.entry, timeFormat, layout) }
+                is LogItem.Alarm -> item(key = "a" + item.entry.id, contentType = "alarm") { AlarmRow(item.entry, timeFormat, layout) }
+                is LogItem.Gap -> item(key = "g" + item.from, contentType = "gap") { GapRow(item) }
             }
+        }
+        // The number of entries is only a side note: at the end of the list, not above it.
+        item {
+            Text(
+                pluralStringResource(R.plurals.entries_count, changeCount, changeCount),
+                style = MaterialTheme.typography.labelMedium,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
+                textAlign = TextAlign.Center,
+                modifier = Modifier.fillMaxWidth().padding(vertical = 12.dp),
+            )
         }
     }
 }
 
-/** Column widths and fonts of the log rows, measured for the screen width and the phone's font size. */
-private class RowLayout(val style: TextStyle, val label: TextStyle, val time: Dp, val level: Dp, val temp: Dp, val status: Dp)
+/**
+ * Position bar at the right edge, like in many log apps: appears while the list moves, fades out after a
+ * moment. While it is visible, the bar can be dragged to jump through a long history.
+ */
+@Composable
+private fun Modifier.fastScroller(state: LazyListState): Modifier {
+    val scope = rememberCoroutineScope()
+    var dragging by remember { mutableStateOf(false) }
+    val active = state.isScrollInProgress || dragging
+    // Fades in at once, stays 1.5 s after the list stopped (time to grab it), then fades out.
+    val fade = remember { Animatable(0f) }
+    LaunchedEffect(active) {
+        if (active) {
+            fade.animateTo(1f, tween(150))
+        } else {
+            delay(1500)
+            fade.animateTo(0f, tween(400))
+        }
+    }
+    val alpha by fade.asState()
+    val shown = rememberUpdatedState(alpha > 0.05f)
+    val color = MaterialTheme.colorScheme.primary
 
-/** Space of a row outside the text columns: outer padding, colour bar, inner padding, gaps, a little air. */
-private val ROW_FIXED = 24.dp + 5.dp + 16.dp + 6.dp * 2 + 16.dp
+    /** Top and height of the bar in pixels, or null if everything fits on the screen. */
+    fun bar(height: Float, minHeight: Float): Pair<Float, Float>? {
+        val info = state.layoutInfo
+        val total = info.totalItemsCount
+        val visible = info.visibleItemsInfo
+        if (total == 0 || visible.isEmpty() || visible.size >= total) return null
+        val first = visible.first()
+        val position = state.firstVisibleItemIndex + state.firstVisibleItemScrollOffset / first.size.coerceAtLeast(1).toFloat()
+        val barHeight = (height * visible.size / total).coerceIn(minHeight, height)
+        val fraction = (position / (total - visible.size).coerceAtLeast(1)).coerceIn(0f, 1f)
+        return (height - barHeight) * fraction to barHeight
+    }
+
+    return this
+        .pointerInput(state) {
+            awaitEachGesture {
+                // Looked at before the list, so a drag on the bar does not scroll the list as well.
+                val down = awaitFirstDown(requireUnconsumed = false, pass = PointerEventPass.Initial)
+                val minHeight = 48.dp.toPx()
+                val start = bar(size.height.toFloat(), minHeight) ?: return@awaitEachGesture
+                val slop = 16.dp.toPx()
+                val onBar = shown.value && down.position.x >= size.width - 40.dp.toPx() &&
+                    down.position.y in (start.first - slop)..(start.first + start.second + slop)
+                if (!onBar) return@awaitEachGesture
+                down.consume()
+                dragging = true
+                val grab = down.position.y - start.first
+                try {
+                    while (true) {
+                        val change = awaitPointerEvent(PointerEventPass.Initial).changes.firstOrNull { it.id == down.id } ?: break
+                        if (!change.pressed) break
+                        change.consume()
+                        val (_, barHeight) = bar(size.height.toFloat(), minHeight) ?: break
+                        val fraction = ((change.position.y - grab) / (size.height - barHeight)).coerceIn(0f, 1f)
+                        val info = state.layoutInfo
+                        val target = (fraction * (info.totalItemsCount - info.visibleItemsInfo.size).coerceAtLeast(0)).toInt()
+                        scope.launch { state.scrollToItem(target) }
+                    }
+                } finally {
+                    dragging = false
+                }
+            }
+        }
+        .drawWithContent {
+            drawContent()
+            val a = alpha
+            if (a <= 0f) return@drawWithContent
+            val (top, height) = bar(size.height, 48.dp.toPx()) ?: return@drawWithContent
+            val width = (if (dragging) 8.dp else 6.dp).toPx()
+            drawRoundRect(
+                color.copy(alpha = (if (dragging) 0.9f else 0.6f) * a),
+                topLeft = Offset(size.width - width - 3.dp.toPx(), top),
+                size = androidx.compose.ui.geometry.Size(width, height),
+                cornerRadius = CornerRadius(width / 2),
+            )
+        }
+}
+
+/** Switch "V · mA": extra columns voltage and current in the list, saved in the settings. */
+@Composable
+private fun ElectricalChip(settings: AlarmSettings, update: Update) {
+    val description = stringResource(R.string.log_electrical)
+    FilterChip(
+        selected = settings.logElectrical,
+        onClick = { update { it.copy(logElectrical = !it.logElectrical) } },
+        label = { Text("V\u00a0·\u00a0mA", style = MaterialTheme.typography.labelMedium, maxLines = 1, softWrap = false) },
+        leadingIcon = {
+            Icon(
+                if (settings.logElectrical) Icons.Rounded.Check else Icons.Rounded.ViewColumn,
+                contentDescription = null,
+                modifier = Modifier.size(16.dp),
+            )
+        },
+        modifier = Modifier.semantics { contentDescription = description },
+    )
+}
+
+/**
+ * Column widths and fonts of the log rows, measured for the screen width and the phone's font size.
+ * A width of 0 means the column is not shown; [statusText] false = the status only as a symbol.
+ */
+private class RowLayout(
+    val style: TextStyle,
+    val label: TextStyle,
+    val time: Dp,
+    val level: Dp,
+    val temp: Dp,
+    val volt: Dp,
+    val amp: Dp,
+    val status: Dp,
+    val statusText: Boolean,
+    /** Gap between the columns: they spread over the row, but stay together on wide screens. */
+    val gap: Dp,
+    /** The screen is too narrow for all columns: offer the switch "V · mA". */
+    val toggle: Boolean,
+    /** Space above and below the text of a row; less in landscape, so more rows fit. */
+    val rowPadding: Dp = 7.dp,
+    /** The phone uses a 12-hour clock: AM/PM in small letters. */
+    val twelveHour: Boolean = false,
+)
+
+/** Space of a row outside the text columns: outer padding, colour bar, inner padding, a little air. */
+private val ROW_FIXED = 24.dp + 5.dp + 16.dp + 4.dp
+
+/** Smallest gap between two columns. */
+private val COLUMN_GAP = 8.dp
+
+/** Largest gap between two columns (landscape: values stay close together instead of far apart). */
+private val COLUMN_GAP_MAX = 40.dp
+
+/** Width of the status column when it shows only the symbol. */
+private val STATUS_ICON = 18.dp
 
 /**
  * Measures the widest content of each column once. If a row does not fit the screen (narrow phone,
  * large font), all texts of the row get the same smaller font, so every row stays one line.
  */
 @Composable
-private fun rememberRowLayout(maxWidth: Dp, twelveHour: Boolean): RowLayout {
+private fun rememberRowLayout(maxWidth: Dp, twelveHour: Boolean, electrical: Boolean, dense: Boolean): RowLayout {
     val measurer = rememberTextMeasurer()
     val density = LocalDensity.current
     val base = MaterialTheme.typography.bodyMedium.merge(Tabular)
     val baseLabel = MaterialTheme.typography.labelMedium.copy(fontWeight = FontWeight.SemiBold)
     val statuses = listOf(
         stringResource(R.string.status_charging) + " · USB",
+        stringResource(R.string.status_charging) + " · AC",
         stringResource(R.string.log_discharging),
         stringResource(R.string.status_plugged),
     )
-    return remember(maxWidth, twelveHour, base, statuses, density) {
+    return remember(maxWidth, twelveHour, electrical, dense, base, statuses, density) {
         fun width(text: String, style: TextStyle) =
-            with(density) { measurer.measure(text, style, softWrap = false, maxLines = 1).size.width.toDp() }
+            with(density) { measurer.measure(text, style, softWrap = false, maxLines = 1).size.width.toDp() } + 2.dp
         val time = width(if (twelveHour) "12:59 PM" else "23:59", base.copy(fontWeight = FontWeight.SemiBold))
         val level = width("100\u00a0%", base.copy(fontWeight = FontWeight.Bold))
         val temp = width(Format.celsius(38.8f), base)
+        val volt = width(Format.volts(8888), base)
+        val amp = width(Format.milliAmps(8888), base)
         val status = 20.dp + statuses.maxOf { width(it, baseLabel) }
-        val texts = time + level + temp + status
-        val f = ((maxWidth - ROW_FIXED) / texts).coerceAtMost(1f)
+        val space = maxWidth - ROW_FIXED
+
+        /** Room the columns need, gaps included. */
+        fun need(columns: List<Dp>) = columns.fold(0.dp) { sum, w -> sum + w } + COLUMN_GAP * (columns.size - 1)
+
+        // Wide screen (landscape, tablet): everything with its full text, no switch needed.
+        val all = listOf(time, level, temp, volt, amp, status)
+        val fitsAll = need(all) <= space
+        // Narrow screen with "V · mA": voltage and current always; the temperature and the status text
+        // only if they still fit. Without the switch: the four columns as before.
+        val withTemp = need(listOf(time, level, temp, volt, amp, STATUS_ICON)) <= space
+        val withText = withTemp && need(all) <= space
+        val showTemp = fitsAll || !electrical || withTemp
+        val showElectrical = fitsAll || electrical
+        val statusText = fitsAll || !electrical || withText
+        val statusWidth = if (statusText) status else STATUS_ICON
+        val columns = listOfNotNull(time, level, temp.takeIf { showTemp }, volt.takeIf { showElectrical }, amp.takeIf { showElectrical }, statusWidth)
+        // Still too wide (narrow phone, large font): the whole row gets a smaller font.
+        val f = ((space - COLUMN_GAP * (columns.size - 1)) / (need(columns) - COLUMN_GAP * (columns.size - 1))).coerceAtMost(1f)
         RowLayout(
-            base.copy(fontSize = base.fontSize * f),
-            baseLabel.copy(fontSize = baseLabel.fontSize * f),
-            time * f + 2.dp,
-            level * f + 2.dp,
-            temp * f + 2.dp,
-            status * f + 2.dp,
+            style = base.copy(fontSize = base.fontSize * f),
+            label = baseLabel.copy(fontSize = baseLabel.fontSize * f),
+            time = time * f,
+            level = level * f,
+            temp = if (showTemp) temp * f else 0.dp,
+            volt = if (showElectrical) volt * f else 0.dp,
+            amp = if (showElectrical) amp * f else 0.dp,
+            status = if (statusText) status * f else STATUS_ICON,
+            statusText = statusText,
+            gap = if (f < 1f) COLUMN_GAP else ((space - need(columns)) / (columns.size - 1) + COLUMN_GAP).coerceAtMost(COLUMN_GAP_MAX),
+            toggle = !fitsAll,
+            rowPadding = if (dense) 4.dp else 7.dp,
+            twelveHour = twelveHour,
         )
     }
 }
@@ -421,7 +627,7 @@ private fun ReadingRow(r: ReadingEntry, timeFormat: java.text.DateFormat, layout
             BatteryManager.BATTERY_PLUGGED_WIRELESS -> Icons.Rounded.WifiTethering to R.string.status_charging
             else -> Icons.Rounded.Power to R.string.status_charging
         }
-        plugged -> Icons.Rounded.Power to R.string.status_plugged
+        plugged -> PLUGGED_ICON to R.string.status_plugged
         else -> Icons.AutoMirrored.Rounded.TrendingDown to R.string.log_discharging
     }
     // Kind of charger in words: "Charging · USB" / "Charging · AC"; wireless only by its symbol.
@@ -432,22 +638,25 @@ private fun ReadingRow(r: ReadingEntry, timeFormat: java.text.DateFormat, layout
         else -> ""
     }
     val row = layout.style
-    Row(
-        Modifier.fillMaxWidth().height(IntrinsicSize.Min).padding(horizontal = 12.dp, vertical = 1.dp)
+    // Speed matters here: hundreds of rows pass by while scrolling. So no automatic font size (it lays out
+    // each text several times) and no intrinsic measuring; the colour bar is drawn, not measured.
+    Box(
+        Modifier.fillMaxWidth().padding(horizontal = 12.dp, vertical = 1.dp)
             .clip(RoundedCornerShape(8.dp))
-            .background(accent.copy(alpha = 0.10f)),
-        verticalAlignment = Alignment.CenterVertically,
+            .drawBehind {
+                drawRect(accent.copy(alpha = 0.10f))
+                drawRect(accent, size = androidx.compose.ui.geometry.Size(5.dp.toPx(), size.height))
+            },
     ) {
-        Box(Modifier.width(5.dp).fillMaxHeight().background(accent))
-        // The four columns spread over the whole width with equal gaps.
+        // The columns spread over the width with equal gaps (at most COLUMN_GAP_MAX).
         Row(
-            Modifier.weight(1f).padding(start = 8.dp, end = 8.dp, top = 7.dp, bottom = 7.dp),
-            horizontalArrangement = Arrangement.SpaceBetween,
+            Modifier.padding(start = 13.dp, end = 8.dp, top = layout.rowPadding, bottom = layout.rowPadding),
+            horizontalArrangement = Arrangement.spacedBy(layout.gap),
             verticalAlignment = Alignment.CenterVertically,
         ) {
             // 12-hour clocks ("11:01 PM", e.g. English): a small AM/PM.
             val time = timeFormat.format(java.util.Date(r.time))
-            val twelveHour = !Format.is24Hour(LocalContext.current)
+            val twelveHour = layout.twelveHour
             Text(
                 buildAnnotatedString {
                     val split = time.indexOfFirst { !it.isDigit() && it != ':' && it != '.' }.takeIf { twelveHour && it > 0 }
@@ -462,7 +671,6 @@ private fun ReadingRow(r: ReadingEntry, timeFormat: java.text.DateFormat, layout
                 fontWeight = FontWeight.SemiBold,
                 maxLines = 1,
                 softWrap = false,
-                autoSize = fit(row),
                 modifier = Modifier.width(layout.time),
             )
             Text(
@@ -473,31 +681,38 @@ private fun ReadingRow(r: ReadingEntry, timeFormat: java.text.DateFormat, layout
                 textAlign = TextAlign.End,
                 maxLines = 1,
                 softWrap = false,
-                autoSize = fit(row),
                 modifier = Modifier.width(layout.level),
             )
-            Text(
-                Format.celsius(r.tempDeciC / 10f),
+            @Composable
+            fun value(text: String, width: Dp) = Text(
+                text,
                 style = row,
                 color = scheme.onSurfaceVariant,
                 textAlign = TextAlign.End,
                 maxLines = 1,
                 softWrap = false,
-                autoSize = fit(row),
-                modifier = Modifier.width(layout.temp),
+                modifier = Modifier.width(width),
             )
-            Row(Modifier.width(layout.status), verticalAlignment = Alignment.CenterVertically) {
-                Icon(icon, contentDescription = null, tint = accent, modifier = Modifier.size(16.dp))
-                Spacer(Modifier.width(4.dp))
-                // "Charging · USB" and the like are longer in some languages: smaller font, not cut off.
-                Text(
-                    stringResource(label) + chargerSuffix,
-                    style = layout.label,
-                    color = accent,
-                    maxLines = 1,
-                    softWrap = false,
-                    autoSize = fit(layout.label),
-                )
+            if (layout.temp > 0.dp) value(Format.celsius(r.tempDeciC / 10f), layout.temp)
+            if (layout.volt > 0.dp) value(r.voltageMv.takeIf { it > 0 }?.let(Format::volts) ?: "–", layout.volt)
+            if (layout.amp > 0.dp) value(r.currentMa?.let(Format::milliAmps) ?: "–", layout.amp)
+            val statusLabel = stringResource(label) + chargerSuffix
+            if (layout.statusText) {
+                Row(Modifier.width(layout.status), verticalAlignment = Alignment.CenterVertically) {
+                    Icon(icon, contentDescription = null, tint = accent, modifier = Modifier.size(16.dp))
+                    Spacer(Modifier.width(4.dp))
+                    // The column is measured for the longest status of this language, so the text fits.
+                    Text(
+                        statusLabel,
+                        style = layout.label,
+                        color = accent,
+                        maxLines = 1,
+                        softWrap = false,
+                    )
+                }
+            } else {
+                // Only the symbol (switch "V · mA" on a narrow screen); screen readers still get the words.
+                Icon(icon, contentDescription = statusLabel, tint = accent, modifier = Modifier.size(STATUS_ICON))
             }
         }
     }
@@ -507,7 +722,7 @@ private fun ReadingRow(r: ReadingEntry, timeFormat: java.text.DateFormat, layout
  * Rows of the log always stay one line, whatever the screen width and the phone's font size:
  * a text that does not fit gets a smaller font instead of a second line.
  */
-private fun fit(style: TextStyle) = TextAutoSize.StepBased(minFontSize = 7.sp, maxFontSize = style.fontSize)
+private fun fit(style: TextStyle, min: TextUnit = 7.sp) = TextAutoSize.StepBased(minFontSize = min, maxFontSize = style.fontSize)
 
 /** Quiet grey line: the app recorded nothing in this time. */
 @Composable
@@ -551,11 +766,17 @@ private fun AlarmRow(e: EventEntry, timeFormat: java.text.DateFormat, layout: Ro
         EventType.ALARM_HOT -> Triple(Icons.Rounded.Thermostat, R.string.event_alarm_hot, scheme.errorContainer to scheme.onErrorContainer)
         else -> Triple(Icons.Rounded.AcUnit, R.string.event_alarm_cold, scheme.tertiaryContainer to scheme.onTertiaryContainer)
     }
+    val first = AlarmDiag.parse(e.diag)
+    val last = AlarmDiag.parse(e.lastDiag)
+    // Test builds only: a tap shows how the sound really went (alarms from older versions have no details).
+    val hasDetails = BuildConfig.DEBUG && (first != null || last != null)
+    var expanded by rememberSaveable(e.id) { mutableStateOf(false) }
     Surface(
         color = colors.first,
         contentColor = colors.second,
         shape = RoundedCornerShape(12.dp),
-        modifier = Modifier.fillMaxWidth().padding(horizontal = 12.dp, vertical = 3.dp),
+        modifier = Modifier.fillMaxWidth().padding(horizontal = 12.dp, vertical = 3.dp)
+            .then(if (hasDetails) Modifier.clickable { expanded = !expanded } else Modifier),
     ) {
         Row(Modifier.padding(horizontal = 8.dp, vertical = 6.dp), verticalAlignment = Alignment.CenterVertically) {
             Text(
@@ -564,7 +785,6 @@ private fun AlarmRow(e: EventEntry, timeFormat: java.text.DateFormat, layout: Ro
                 fontWeight = FontWeight.SemiBold,
                 maxLines = 1,
                 softWrap = false,
-                autoSize = fit(layout.style),
                 modifier = Modifier.width(layout.time + 8.dp),
             )
             Icon(icon, contentDescription = null, modifier = Modifier.size(18.dp))
@@ -579,7 +799,9 @@ private fun AlarmRow(e: EventEntry, timeFormat: java.text.DateFormat, layout: Ro
                     autoSize = fit(MaterialTheme.typography.bodyMedium),
                 )
                 val until = e.lastRepeat?.let { stringResource(R.string.repeat_until, timeFormat.format(java.util.Date(it))) }
-                listOfNotNull(deliveryText(e.delivery), until).joinToString(" · ").takeIf { it.isNotEmpty() }?.let {
+                val failed = first?.failed == true || last?.failed == true
+                val delivery = if (failed && e.delivery == "SOUND") stringResource(R.string.delivery_sound_failed) else deliveryText(e.delivery)
+                listOfNotNull(delivery, until).joinToString(" · ").takeIf { it.isNotEmpty() }?.let {
                     Text(
                         it,
                         style = MaterialTheme.typography.labelSmall,
@@ -589,14 +811,47 @@ private fun AlarmRow(e: EventEntry, timeFormat: java.text.DateFormat, layout: Ro
                         autoSize = fit(MaterialTheme.typography.labelSmall),
                     )
                 }
+                if (expanded) {
+                    val lines = listOfNotNull(
+                        first?.let { stringResource(R.string.diag_first, diagText(it)) },
+                        last?.let { d ->
+                            val time = e.lastRepeat?.let { timeFormat.format(java.util.Date(it)) }.orEmpty()
+                            stringResource(R.string.diag_last, time, diagText(d))
+                        },
+                    )
+                    lines.forEach {
+                        Text(
+                            it,
+                            style = MaterialTheme.typography.labelSmall,
+                            color = colors.second.copy(alpha = 0.8f),
+                            modifier = Modifier.padding(top = 2.dp),
+                        )
+                    }
+                }
+            }
+            if (hasDetails) {
+                Icon(
+                    if (expanded) Icons.Rounded.ExpandLess else Icons.Rounded.ExpandMore,
+                    contentDescription = null,
+                    modifier = Modifier.size(18.dp),
+                )
+                Spacer(Modifier.width(4.dp))
             }
             Text("${e.level}\u00a0%", style = MaterialTheme.typography.bodyMedium, fontWeight = FontWeight.Bold, maxLines = 1, softWrap = false)
         }
     }
 }
 
+/** Screens lower than this (phones in landscape) get the tabs as a rail on the left and no big title. */
+const val COMPACT_HEIGHT_DP = 480
+
 @Composable
 fun TabTopBar(title: String) {
+    // Landscape on a phone: the title would take a sixth of the height; the rail already shows the tab.
+    if (LocalConfiguration.current.screenHeightDp < COMPACT_HEIGHT_DP) {
+        Spacer(Modifier.windowInsetsTopHeight(WindowInsets.statusBars))
+        return
+    }
     CenterAlignedTopAppBar(
         title = { Text(title, fontWeight = FontWeight.SemiBold) },
         colors = TopAppBarDefaults.topAppBarColors(containerColor = MaterialTheme.colorScheme.background),
@@ -802,6 +1057,28 @@ fun overlayColor(o: Overlay): Color = when (o) {
     Overlay.CURRENT -> LocalExtraColors.current.charge
 }
 
+/** "screen off · notification volume 2/7 · played 2.6 s": what happened when the alarm sound played. */
+@Composable
+private fun diagText(d: AlarmDiag): String {
+    fun sec(ms: Long) = String.format(java.util.Locale.getDefault(), "%.1f", ms / 1000.0)
+    val p = d.problem
+    val result = when {
+        d.clips.isEmpty() -> stringResource(R.string.diag_nothing)
+        p == null -> stringResource(R.string.diag_played, sec(d.playedMs))
+        p.end == AlarmDiag.End.ERROR || p.end == AlarmDiag.End.EXCEPTION -> stringResource(R.string.diag_error, p.code)
+        p.end == AlarmDiag.End.TIMEOUT -> stringResource(R.string.diag_timeout)
+        p.end == AlarmDiag.End.STOPPED -> stringResource(R.string.diag_stopped, sec(d.playedMs))
+        else -> stringResource(R.string.diag_short, sec(p.playedMs), sec(p.lengthMs.toLong()))
+    }
+    return listOfNotNull(
+        stringResource(if (d.screenOn) R.string.diag_screen_on else R.string.diag_screen_off),
+        stringResource(if (d.alarmStream) R.string.diag_volume_alarm else R.string.diag_volume_notification, d.volume, d.volumeMax),
+        if (d.doNotDisturb) stringResource(R.string.diag_dnd) else null,
+        if (!d.focusGranted) stringResource(R.string.diag_no_focus) else null,
+        result,
+    ).joinToString(" · ")
+}
+
 /** How the alarm was given out: with sound, silent in the night rest, or muted phone. */
 @Composable
 private fun deliveryText(delivery: String?): String? = when (delivery) {
@@ -811,4 +1088,25 @@ private fun deliveryText(delivery: String?): String? = when (delivery) {
     "MUTED" -> stringResource(R.string.delivery_muted)
     "SILENT_BY_SETTINGS" -> stringResource(R.string.delivery_silent)
     else -> null
+}
+
+/**
+ * Plugged in, but not charging (full, or held by the phone): the plug with a small pause sign.
+ * Its own symbol, so it differs from "charging · AC" also where only the symbol is shown.
+ */
+private val PLUGGED_ICON: ImageVector by lazy {
+    ImageVector.Builder("PluggedPaused", 24.dp, 24.dp, 24f, 24f).apply {
+        addGroup(scaleX = 0.8f, scaleY = 0.8f, translationX = -0.5f)
+        Icons.Rounded.Power.root.forEach { node ->
+            if (node is VectorPath) addPath(node.pathData, fill = SolidColor(Color.Black))
+        }
+        clearGroup()
+        addPath(
+            PathData {
+                moveTo(15.5f, 14f); lineTo(18f, 14f); lineTo(18f, 23f); lineTo(15.5f, 23f); close()
+                moveTo(20.5f, 14f); lineTo(23f, 14f); lineTo(23f, 23f); lineTo(20.5f, 23f); close()
+            },
+            fill = SolidColor(Color.Black),
+        )
+    }.build()
 }

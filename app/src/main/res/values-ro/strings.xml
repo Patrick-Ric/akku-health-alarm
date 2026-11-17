@@ -71,7 +71,7 @@
     <string name="temp_cold_charging_summary">Încărcarea pe frig strică bateria, folosirea aproape deloc.</string>
     <string name="temp_strict_hint">Încărcarea rapidă ajunge des la 35–40 °C, așa că acest nivel poate avertiza des.</string>
     <string name="notif_title">Notificare</string>
-    <string name="notif_summary">Implicit doar nivelul de încărcare și starea. Adaugă aici mai multe valori.</string>
+    <string name="notif_summary">Afișează mereu nivelul de încărcare, starea și timpul până la alarmă. Afișează și:</string>
     <string name="notif_current">Curent (mA)</string>
     <string name="notif_temp">Temperatură</string>
     <string name="notif_voltage">Tensiune</string>
@@ -82,6 +82,9 @@
     <string name="channel_alarm">Alarme baterie</string>
     <string name="notif_alarm_at">Alarmă la %d %%</string>
     <string name="notif_alarm_off">Alarmă oprită</string>
+    <string name="notif_eta_in">în aprox. %s</string>
+    <string name="notif_repeat_every">la fiecare %s</string>
+    <string name="notif_repeat_once">o dată</string>
     <string name="alarm_high_title">Baterie încărcată: %d %%</string>
     <string name="alarm_high_text">Deconectează încărcătorul</string>
     <string name="alarm_low_title">Baterie descărcată: %d %%</string>
@@ -147,6 +150,7 @@
     <string name="keep_365d">1 an</string>
     <string name="keep_forever">Mereu</string>
     <string name="log_discharging">Se descarcă</string>
+    <string name="log_electrical">Afișează tensiunea și curentul</string>
     <string name="tone_listen">Ascultă</string>
     <string name="health_state">Starea bateriei</string>
     <string name="health_measuring">Încă nemăsurată</string>
@@ -159,6 +163,8 @@
     <string name="health_need_charge" formatted="false">Încarcă cel puțin 15 % dintr-o dată, apoi capacitatea va fi măsurată.</string>
     <string name="health_android_says">Android raportează: %s</string>
     <string name="health_estimate_note">± este incertitudinea măsurării. Cu cât sunt mai multe și mai lungi încărcările, cu atât e mai mică.</string>
+    <string name="health_trimmed">Din %d măsurători, cele mai mari și cele mai mici 20 %% nu sunt luate în calcul.</string>
+    <string name="session_not_counted">nu se ia în calcul</string>
     <string name="design_title">Capacitate nominală</string>
     <string name="design_auto">citită din telefon</string>
     <string name="design_manual">introdusă de tine</string>
@@ -232,6 +238,21 @@
     <string name="delivery_muted_vibrate">doar vibrații · telefon pe silențios</string>
     <string name="delivery_muted">silențios · telefon pe silențios</string>
     <string name="delivery_silent">doar notificare · sunet și voce oprite</string>
+    <string name="delivery_sound_failed">sunetul a eșuat</string>
+    <string name="diag_first">Prima alarmă: %1$s</string>
+    <string name="diag_last">Ultima repetare %1$s: %2$s</string>
+    <string name="diag_screen_on">ecran pornit</string>
+    <string name="diag_screen_off">ecran oprit</string>
+    <string name="diag_volume_notification">volum notificări %1$d/%2$d</string>
+    <string name="diag_volume_alarm">volum alarmă %1$d/%2$d</string>
+    <string name="diag_dnd">Nu deranja activat</string>
+    <string name="diag_no_focus">focus audio refuzat</string>
+    <string name="diag_played">redat %1$s s</string>
+    <string name="diag_short">oprit prea devreme: %1$s din %2$s s</string>
+    <string name="diag_stopped">întrerupt după %1$s s</string>
+    <string name="diag_error">eroare de redare %1$s</string>
+    <string name="diag_timeout">redarea nu s-a terminat</string>
+    <string name="diag_nothing">nu s-a redat nimic</string>
     <string name="language_title">Limbă</string>
     <string name="language_system">Limba telefonului</string>
     <string name="theme_title">Aspect</string>

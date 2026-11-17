@@ -71,7 +71,7 @@
     <string name="temp_cold_charging_summary">Зарядка на холоде вредит батарее, использование почти нет.</string>
     <string name="temp_strict_hint">Быстрая зарядка часто достигает 35–40 °C, поэтому этот уровень может срабатывать часто.</string>
     <string name="notif_title">Уведомление</string>
-    <string name="notif_summary">По умолчанию только уровень заряда и состояние. Добавьте здесь другие значения.</string>
+    <string name="notif_summary">Всегда показывает уровень заряда, состояние и время до сигнала. Также показывать:</string>
     <string name="notif_current">Ток (мА)</string>
     <string name="notif_temp">Температура</string>
     <string name="notif_voltage">Напряжение</string>
@@ -82,6 +82,9 @@
     <string name="channel_alarm">Сигналы батареи</string>
     <string name="notif_alarm_at">Сигнал при %d %%</string>
     <string name="notif_alarm_off">Сигнал выкл.</string>
+    <string name="notif_eta_in">примерно через %s</string>
+    <string name="notif_repeat_every">каждые %s</string>
+    <string name="notif_repeat_once">один раз</string>
     <string name="alarm_high_title">Батарея заряжена: %d %%</string>
     <string name="alarm_high_text">Отключите зарядное устройство</string>
     <string name="alarm_low_title">Батарея разряжена: %d %%</string>
@@ -148,6 +151,7 @@
     <string name="keep_365d">1 год</string>
     <string name="keep_forever">Всегда</string>
     <string name="log_discharging">Разряжается</string>
+    <string name="log_electrical">Показать напряжение и ток</string>
     <string name="tone_listen">Прослушать</string>
     <string name="health_state">Состояние батареи</string>
     <string name="health_measuring">Ещё не измерено</string>
@@ -161,6 +165,8 @@
     <string name="health_need_charge" formatted="false">Зарядите хотя бы на 15 % за один раз, тогда ёмкость будет измерена.</string>
     <string name="health_android_says">Android сообщает: %s</string>
     <string name="health_estimate_note">± — погрешность измерения. Чем больше и длиннее зарядки, тем она меньше.</string>
+    <string name="health_trimmed">Из %d измерений самые высокие и самые низкие 20 %% не учитываются.</string>
+    <string name="session_not_counted">не учитывается</string>
     <string name="design_title">Номинальная ёмкость</string>
     <string name="design_auto">считана с телефона</string>
     <string name="design_manual">введена вами</string>
@@ -234,6 +240,21 @@
     <string name="delivery_muted_vibrate">только вибрация · телефон без звука</string>
     <string name="delivery_muted">беззвучно · телефон без звука</string>
     <string name="delivery_silent">только уведомление · звук и голос выкл.</string>
+    <string name="delivery_sound_failed">звук не сработал</string>
+    <string name="diag_first">Первый сигнал: %1$s</string>
+    <string name="diag_last">Последний повтор %1$s: %2$s</string>
+    <string name="diag_screen_on">экран включён</string>
+    <string name="diag_screen_off">экран выключен</string>
+    <string name="diag_volume_notification">громкость уведомлений %1$d/%2$d</string>
+    <string name="diag_volume_alarm">громкость будильника %1$d/%2$d</string>
+    <string name="diag_dnd">Не беспокоить включено</string>
+    <string name="diag_no_focus">аудиофокус отклонён</string>
+    <string name="diag_played">воспроизведено %1$s с</string>
+    <string name="diag_short">остановлено раньше: %1$s из %2$s с</string>
+    <string name="diag_stopped">прервано через %1$s с</string>
+    <string name="diag_error">ошибка воспроизведения %1$s</string>
+    <string name="diag_timeout">воспроизведение не завершилось</string>
+    <string name="diag_nothing">ничего не воспроизведено</string>
     <string name="language_title">Язык</string>
     <string name="language_system">Язык телефона</string>
     <string name="theme_title">Оформление</string>

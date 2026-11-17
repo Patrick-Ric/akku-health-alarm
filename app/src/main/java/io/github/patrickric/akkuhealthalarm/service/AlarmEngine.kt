@@ -5,12 +5,19 @@ import io.github.patrickric.akkuhealthalarm.data.AlarmSettings
 
 enum class AlarmType { HIGH, LOW, HOT, COLD }
 
-/** Which alarms may fire again. An alarm fires once and is re-armed only after the situation is over. */
+/**
+ * Which alarms may fire again. An alarm fires once and is re-armed only after the situation is over.
+ * The *At values are the limits an active alarm fired at (null: none, or saved by an older version).
+ */
 data class EngineState(
     val highArmed: Boolean = true,
     val lowArmed: Boolean = true,
     val hotArmed: Boolean = true,
     val coldArmed: Boolean = true,
+    val highAt: Int? = null,
+    val lowAt: Int? = null,
+    val hotAt: Int? = null,
+    val coldAt: Int? = null,
 )
 
 data class EngineResult(
@@ -22,7 +29,10 @@ data class EngineResult(
 
 /** Pure decision logic, without Android dependencies, so it can be unit-tested. */
 object AlarmEngine {
-    /** Percent the level must move back before the same alarm can fire again while still plugged/unplugged. */
+    /**
+     * Percent the level must move back before the same alarm can fire again while still plugged/unplugged.
+     * Only against a wobbling level: when the user moves the limit past the current value, the alarm ends at once.
+     */
     const val LEVEL_HYSTERESIS = 3
     const val TEMP_HYSTERESIS = 2
 
@@ -33,6 +43,12 @@ object AlarmEngine {
         var low = st.lowArmed
         var hot = st.hotArmed
         var cold = st.coldArmed
+        var highAt = st.highAt
+        var lowAt = st.lowAt
+        var hotAt = st.hotAt
+        var coldAt = st.coldAt
+        // The user changed the limit since the alarm fired.
+        fun moved(at: Int?, limit: Int) = at != null && at != limit
 
         if (!s.enabled) {
             if (!high) clear += AlarmType.HIGH
@@ -40,11 +56,11 @@ object AlarmEngine {
             high = true
             low = true
         } else {
-            if (!high && (!plugged || level <= s.high - LEVEL_HYSTERESIS)) {
+            if (!high && (!plugged || level <= s.high - LEVEL_HYSTERESIS || (moved(highAt, s.high) && level < s.high))) {
                 high = true
                 clear += AlarmType.HIGH
             }
-            if (!low && (plugged || level >= s.low + LEVEL_HYSTERESIS)) {
+            if (!low && (plugged || level >= s.low + LEVEL_HYSTERESIS || (moved(lowAt, s.low) && level > s.low))) {
                 low = true
                 clear += AlarmType.LOW
             }
@@ -65,11 +81,11 @@ object AlarmEngine {
             cold = true
         } else {
             val coldMatters = plugged || !s.coldOnlyCharging
-            if (!hot && tempC <= s.tempHigh - TEMP_HYSTERESIS) {
+            if (!hot && (tempC <= s.tempHigh - TEMP_HYSTERESIS || (moved(hotAt, s.tempHigh) && tempC < s.tempHigh))) {
                 hot = true
                 clear += AlarmType.HOT
             }
-            if (!cold && (!coldMatters || tempC >= s.tempLow + TEMP_HYSTERESIS)) {
+            if (!cold && (!coldMatters || tempC >= s.tempLow + TEMP_HYSTERESIS || (moved(coldAt, s.tempLow) && tempC > s.tempLow))) {
                 cold = true
                 clear += AlarmType.COLD
             }
@@ -82,7 +98,11 @@ object AlarmEngine {
                 fire += AlarmType.COLD
             }
         }
-        return EngineResult(EngineState(high, low, hot, cold), fire, clear)
+        highAt = if (high) null else highAt ?: s.high
+        lowAt = if (low) null else lowAt ?: s.low
+        hotAt = if (hot) null else hotAt ?: s.tempHigh
+        coldAt = if (cold) null else coldAt ?: s.tempLow
+        return EngineResult(EngineState(high, low, hot, cold, highAt, lowAt, hotAt, coldAt), fire, clear)
     }
 }
 
@@ -106,6 +126,10 @@ object EngineStore {
             lowArmed = p.getBoolean("low", true),
             hotArmed = p.getBoolean("hot", true),
             coldArmed = p.getBoolean("cold", true),
+            highAt = p.intOrNull("highAt"),
+            lowAt = p.intOrNull("lowAt"),
+            hotAt = p.intOrNull("hotAt"),
+            coldAt = p.intOrNull("coldAt"),
         )
     }
 
@@ -115,6 +139,15 @@ object EngineStore {
             .putBoolean("low", st.lowArmed)
             .putBoolean("hot", st.hotArmed)
             .putBoolean("cold", st.coldArmed)
+            .putIntOrRemove("highAt", st.highAt)
+            .putIntOrRemove("lowAt", st.lowAt)
+            .putIntOrRemove("hotAt", st.hotAt)
+            .putIntOrRemove("coldAt", st.coldAt)
             .apply()
     }
+
+    private fun android.content.SharedPreferences.intOrNull(key: String) = if (contains(key)) getInt(key, 0) else null
+
+    private fun android.content.SharedPreferences.Editor.putIntOrRemove(key: String, value: Int?) =
+        if (value == null) remove(key) else putInt(key, value)
 }

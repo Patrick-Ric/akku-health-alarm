@@ -1,5 +1,6 @@
 package io.github.patrickric.akkuhealthalarm.service
 
+import android.app.NotificationManager
 import android.content.Context
 import android.media.AudioAttributes
 import android.media.AudioFocusRequest
@@ -11,12 +12,14 @@ import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import android.os.PowerManager
+import android.os.SystemClock
 import android.os.VibrationEffect
 import android.os.Vibrator
 import android.os.VibratorManager
 import android.speech.tts.TextToSpeech
 import android.speech.tts.UtteranceProgressListener
 import io.github.patrickric.akkuhealthalarm.R
+import io.github.patrickric.akkuhealthalarm.data.AlarmDiag
 import io.github.patrickric.akkuhealthalarm.data.AlarmSettings
 import io.github.patrickric.akkuhealthalarm.data.ToneMode
 import io.github.patrickric.akkuhealthalarm.data.VoiceMode
@@ -36,6 +39,15 @@ class AlarmPlayer(context: Context) {
     private var focusRequest: AudioFocusRequest? = null
     private var wakeLock: PowerManager.WakeLock? = null
     private var session = 0
+    private var diag: DiagRun? = null
+
+    /** Collects what happens while one alarm plays; reported when it ends or is stopped. */
+    private class DiagRun(val base: AlarmDiag, val report: (AlarmDiag) -> Unit) {
+        val clips = mutableListOf<AlarmDiag.Clip>()
+        var clipStart = 0L
+        var clipLength = 0
+        var inClip = false
+    }
 
     private sealed interface Step {
         data class Clip(val uri: Uri) : Step
@@ -45,8 +57,17 @@ class AlarmPlayer(context: Context) {
     /** How an alarm reached the user; stored with the alarm in the log. */
     enum class Delivery { SOUND, QUIET_HOURS, MUTED_VIBRATE, MUTED, SILENT_BY_SETTINGS }
 
-    /** [force] = test button: ignores night rest and the muted phone. */
-    fun play(type: AlarmType, level: Int, s: AlarmSettings, force: Boolean = false): Delivery {
+    /**
+     * [force] = test button: ignores night rest and the muted phone. [onDiag] gets what really happened
+     * once the sound has ended (only when there is sound).
+     */
+    fun play(
+        type: AlarmType,
+        level: Int,
+        s: AlarmSettings,
+        force: Boolean = false,
+        onDiag: ((AlarmDiag) -> Unit)? = null,
+    ): Delivery {
         stop()
         if (!force && s.quietEnabled) {
             val now = Calendar.getInstance()
@@ -79,7 +100,8 @@ class AlarmPlayer(context: Context) {
         val id = ++session
         if (steps.any { it is Step.Speak }) prepareTts()
         acquireWakeLock()
-        requestFocus(attrs, s.loudWhenSilent)
+        val focus = requestFocus(attrs, s.loudWhenSilent)
+        if (onDiag != null) diag = DiagRun(snapshot(s.loudWhenSilent, focus), onDiag)
         runSteps(id, steps, attrs)
         return Delivery.SOUND
     }
@@ -90,6 +112,7 @@ class AlarmPlayer(context: Context) {
     }
 
     fun stop() {
+        finishDiag()
         session++
         player?.release()
         player = null
@@ -108,6 +131,7 @@ class AlarmPlayer(context: Context) {
     private fun runSteps(id: Int, steps: List<Step>, attrs: AudioAttributes) {
         if (id != session) return
         if (steps.isEmpty()) {
+            finishDiag()
             abandonFocus()
             releaseWakeLock()
             return
@@ -121,24 +145,33 @@ class AlarmPlayer(context: Context) {
 
     private fun playUri(id: Int, uri: Uri, attrs: AudioAttributes, onDone: () -> Unit) {
         val mp = MediaPlayer()
+        var ended = false
+        // Ends the clip once, however it ends: completion, error, or no end reported in time.
+        fun end(result: AlarmDiag.End, code: String = "") {
+            if (ended) return
+            ended = true
+            if (id == session) recordClip(result, code)
+            mp.release()
+            if (player === mp) player = null
+            if (id == session) onDone()
+        }
         try {
             mp.setAudioAttributes(attrs)
             mp.setDataSource(context, uri)
-            mp.setOnCompletionListener {
-                it.release()
-                if (player === it) player = null
-                if (id == session) onDone()
-            }
-            mp.setOnErrorListener { p, _, _ ->
-                p.release()
-                if (player === p) player = null
-                if (id == session) onDone()
+            mp.setOnCompletionListener { end(AlarmDiag.End.OK) }
+            mp.setOnErrorListener { _, what, extra ->
+                end(AlarmDiag.End.ERROR, "$what/$extra")
                 true
             }
             mp.prepare()
             player = mp
+            val length = mp.duration
             mp.start()
+            startClip(length)
+            main.postDelayed({ end(AlarmDiag.End.TIMEOUT) }, (if (length > 0) length else 20_000) + 5_000L)
         } catch (e: Exception) {
+            if (id == session) recordClip(AlarmDiag.End.EXCEPTION, e.javaClass.simpleName)
+            ended = true
             mp.release()
             onDone()
         }
@@ -173,6 +206,7 @@ class AlarmPlayer(context: Context) {
                 override fun onStart(utteranceId: String?) {
                     main.post {
                         started = true
+                        if (id == session) startClip(0)
                         main.removeCallbacks(fallback)
                         main.postDelayed(fallback, 10_000)
                     }
@@ -186,6 +220,7 @@ class AlarmPlayer(context: Context) {
                             fallback.run()
                         } else if (!finished && id == session) {
                             finished = true
+                            recordClip(AlarmDiag.End.OK)
                             onDone()
                         }
                     }
@@ -219,6 +254,44 @@ class AlarmPlayer(context: Context) {
             }
         }
         waitForEngine(45)
+    }
+
+    private fun startClip(lengthMs: Int) {
+        val d = diag ?: return
+        d.inClip = true
+        d.clipStart = SystemClock.elapsedRealtime()
+        d.clipLength = lengthMs
+    }
+
+    private fun recordClip(end: AlarmDiag.End, code: String = "") {
+        val d = diag ?: return
+        val played = if (d.inClip) SystemClock.elapsedRealtime() - d.clipStart else 0L
+        d.clips += AlarmDiag.Clip(end, played, if (d.inClip) d.clipLength else 0, code)
+        d.inClip = false
+    }
+
+    /** Reports the collected run; a clip still playing was cut off by a newer alarm or the stop. */
+    private fun finishDiag() {
+        val d = diag ?: return
+        if (d.inClip) recordClip(AlarmDiag.End.STOPPED)
+        diag = null
+        d.report(d.base.copy(clips = d.clips.toList()))
+    }
+
+    private fun snapshot(alarmStream: Boolean, focusGranted: Boolean): AlarmDiag {
+        val stream = if (alarmStream) AudioManager.STREAM_ALARM else AudioManager.STREAM_NOTIFICATION
+        val nm = context.getSystemService(NotificationManager::class.java)
+        val filter = nm?.currentInterruptionFilter ?: NotificationManager.INTERRUPTION_FILTER_UNKNOWN
+        return AlarmDiag(
+            screenOn = (context.getSystemService(Context.POWER_SERVICE) as PowerManager).isInteractive,
+            volume = audio.getStreamVolume(stream),
+            volumeMax = audio.getStreamMaxVolume(stream),
+            alarmStream = alarmStream,
+            focusGranted = focusGranted,
+            doNotDisturb = filter != NotificationManager.INTERRUPTION_FILTER_ALL &&
+                filter != NotificationManager.INTERRUPTION_FILTER_UNKNOWN,
+            clips = emptyList(),
+        )
     }
 
     /** Picks an installed voice for the app language that needs no network. */
@@ -287,8 +360,9 @@ class AlarmPlayer(context: Context) {
         }
     }
 
-    private fun requestFocus(attrs: AudioAttributes, alarmStream: Boolean) {
-        if (Build.VERSION.SDK_INT >= 26) {
+    /** true when granted; the sound plays either way. */
+    private fun requestFocus(attrs: AudioAttributes, alarmStream: Boolean): Boolean {
+        val result = if (Build.VERSION.SDK_INT >= 26) {
             val request = AudioFocusRequest.Builder(AudioManager.AUDIOFOCUS_GAIN_TRANSIENT_MAY_DUCK)
                 .setAudioAttributes(attrs)
                 .build()
@@ -299,6 +373,7 @@ class AlarmPlayer(context: Context) {
             @Suppress("DEPRECATION")
             audio.requestAudioFocus(null, stream, AudioManager.AUDIOFOCUS_GAIN_TRANSIENT_MAY_DUCK)
         }
+        return result == AudioManager.AUDIOFOCUS_REQUEST_GRANTED
     }
 
     private fun abandonFocus() {

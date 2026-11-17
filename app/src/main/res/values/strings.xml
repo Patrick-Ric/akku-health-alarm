@@ -78,7 +78,7 @@
     <string name="temp_cold_charging_summary">Charging in the cold harms the battery, using it hardly does.</string>
     <string name="temp_strict_hint">Fast charging often reaches 35–40 °C, so this level may alert often.</string>
     <string name="notif_title">Notification</string>
-    <string name="notif_summary">By default only charge level and status. Add more values here.</string>
+    <string name="notif_summary">Always shows charge level, status and the time until the alarm. Also show:</string>
     <string name="notif_current">Current (mA)</string>
     <string name="notif_temp">Temperature</string>
     <string name="notif_voltage">Voltage</string>
@@ -91,6 +91,9 @@
     <string name="channel_alarm">Battery alarms</string>
     <string name="notif_alarm_at">Alarm at %d %%</string>
     <string name="notif_alarm_off">Alarm off</string>
+    <string name="notif_eta_in">in about %s</string>
+    <string name="notif_repeat_every">every %s</string>
+    <string name="notif_repeat_once">once</string>
     <string name="alarm_high_title">Battery charged: %d %%</string>
     <string name="alarm_high_text">Unplug the charger</string>
     <string name="alarm_low_title">Battery low: %d %%</string>
@@ -161,6 +164,7 @@
     <string name="keep_365d">1 year</string>
     <string name="keep_forever">Forever</string>
     <string name="log_discharging">Discharging</string>
+    <string name="log_electrical">Show voltage and current</string>
     <string name="tone_listen">Listen</string>
     <string name="health_state">Battery condition</string>
     <string name="health_measuring">Not measured yet</string>
@@ -172,6 +176,8 @@
     <string name="health_need_charge" formatted="false">Charge at least 15 % in one go, then the capacity is measured.</string>
     <string name="health_android_says">Android reports: %s</string>
     <string name="health_estimate_note">± is the measurement uncertainty. The more and the longer the charges, the smaller it gets.</string>
+    <string name="health_trimmed">Of %d measurements, the highest and lowest 20 %% are not counted.</string>
+    <string name="session_not_counted">not counted</string>
     <string name="design_title">Rated capacity</string>
     <string name="design_auto">read from the phone</string>
     <string name="design_manual">entered by you</string>
@@ -245,6 +251,21 @@
     <string name="delivery_muted_vibrate">vibration only · phone muted</string>
     <string name="delivery_muted">silent · phone muted</string>
     <string name="delivery_silent">only notification · sound and voice off</string>
+    <string name="delivery_sound_failed">sound failed</string>
+    <string name="diag_first">First alarm: %1$s</string>
+    <string name="diag_last">Last repeat %1$s: %2$s</string>
+    <string name="diag_screen_on">screen on</string>
+    <string name="diag_screen_off">screen off</string>
+    <string name="diag_volume_notification">notification volume %1$d/%2$d</string>
+    <string name="diag_volume_alarm">alarm volume %1$d/%2$d</string>
+    <string name="diag_dnd">Do not disturb on</string>
+    <string name="diag_no_focus">audio focus refused</string>
+    <string name="diag_played">played %1$s s</string>
+    <string name="diag_short">stopped early: %1$s of %2$s s</string>
+    <string name="diag_stopped">interrupted after %1$s s</string>
+    <string name="diag_error">playback error %1$s</string>
+    <string name="diag_timeout">playback did not end</string>
+    <string name="diag_nothing">nothing played</string>
     <string name="language_title">Language</string>
     <string name="language_system">Phone language</string>
     <string name="theme_title">Design</string>

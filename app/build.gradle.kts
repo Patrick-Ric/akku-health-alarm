@@ -48,6 +48,13 @@ android {
             // No META-INF/version-control-info.textproto (reproducible builds).
             vcsInfo.include = false
         }
+        // Like release (optimised, not debuggable), but signed with the debug key: installs over a debug build
+        // without losing data. For checking speed on a test phone (debug builds run much slower).
+        create("profile") {
+            initWith(getByName("release"))
+            signingConfig = signingConfigs.getByName("debug")
+            matchingFallbacks += listOf("release")
+        }
     }
 
     compileOptions {

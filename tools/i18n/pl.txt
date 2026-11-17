@@ -69,7 +69,7 @@
 68|Ładowanie na mrozie szkodzi baterii, używanie prawie wcale.
 69|Szybkie ładowanie często osiąga 35–40 °C, więc ten poziom może często ostrzegać.
 70|Powiadomienie
-71|Domyślnie tylko poziom naładowania i stan. Tu możesz dodać więcej wartości.
+71|Zawsze pokazuje poziom naładowania, stan i czas do alarmu. Pokaż także:
 72|Prąd (mA)
 73|Temperatura
 74|Napięcie
@@ -80,167 +80,188 @@
 79|Alarmy baterii
 80|Alarm przy %d %%
 81|Alarm wył.
-82|Bateria naładowana: %d %%
-83|Odłącz ładowarkę
-84|Niski poziom baterii: %d %%
-85|Podłącz ładowarkę
-86|Bateria gorąca: %s
-87|Pozwól telefonowi ostygnąć
-88|Bateria zimna: %s
-89|Nie ładuj na mrozie
-90|Bateria naładowana.
-91|Bateria naładowana, %d procent.
-92|Niski poziom baterii.
-93|Niski poziom baterii, %d procent.
-94|Bateria gorąca.
-95|Bateria zimna.
-96|Lista
-97|Wykres
-98|%d wpis
-99|%d wpisu
-98:few|%d wpisy
-98:many|%d wpisów
-100|Brak wpisów. Tutaj pojawi się każda zmiana poziomu naładowania.
-101|Ładowarka
-102|USB
-103|Bezprzewodowo
-104|Bateria
-105|Ostatnie 24 godziny
-106|Brak danych. Zapis trwa.
-107|teraz
-108|Zdarzenia
-109|Brak zdarzeń.
-110|Ładowarka podłączona
-111|Ładowarka odłączona
-112|Alarm: bateria naładowana
-113|Alarm: niski poziom baterii
-114|Alarm: bateria gorąca
-115|Alarm: bateria zimna
-116|Stan według Androida
-117|Dobry
-118|Przegrzana
-119|Za zimna
-120|Przepięcie
-121|Uszkodzona
-122|Nieznany błąd
-123|Nie zgłoszono
-124|Technologia
-125|Licznik ładunku
-126|Dzień
-127|Tydzień
-128|Miesiąc
-129|Wszystko
-130|Temperatura
-131|Powiększaj dwoma palcami, stuknij dwukrotnie, aby zresetować.
-132|%1$d %% za około %2$s
-133|%d min
-134|%d godz.
-135|%1$d godz. %2$d min
-136|Historia
-137|Jak długo przechowywana jest historia. Starsze wpisy są usuwane.
-138|1 dzień
-139|1 tydzień
-140|1 miesiąc
-141|1 rok
-142|Zawsze
-143|Rozładowuje się
-144|Odsłuchaj
-145|Kondycja baterii
-146|Jeszcze nie zmierzono
-147|%1$s z %2$s
-148|zmierzono z %1$d ładowania (łącznie %2$d %%)
-149|zmierzono z %1$d ładowania (łącznie %2$d %%)
-148:few|zmierzono z %1$d ładowań (łącznie %2$d %%)
-148:many|zmierzono z %1$d ładowań (łącznie %2$d %%)
-150|Naładuj co najmniej 15 % za jednym razem, wtedy pojemność zostanie zmierzona.
-151|Android zgłasza: %s
-152|± to niepewność pomiaru. Im więcej i dłuższych ładowań, tym jest mniejsza.
-153|Pojemność znamionowa
-154|odczytana z telefonu
-155|wpisana przez Ciebie
-156|Nieznana. Wpisz ją, aby zobaczyć stan w procentach.
-157|Zmień
-158|W mAh, patrz karta danych Twojego telefonu
-159|Automatycznie
-160|Cykle ładowania
-161|%1$s pełnych cykli od początku zapisu
-162|Szybkość ładowania
-163|Ø %1$s · %2$s %%/godz.
-164|Ostatnie ładowania
-165|Nie zapisano jeszcze żadnego ładowania. Tu pojawia się każde ładowanie od podłączenia do odłączenia.
-166|%s cykli
-167|Pojemność w czasie
-168|Bieżące wartości
-169|Wskazówki
-170|Pojemność baterii tylko %d %%
-171|Bateria mieści już tylko około %1$s z %2$s. Wymiana może się opłacić.
-172|Ładowania
-173|Stuknij wartość w ramce, aby zobaczyć jej krzywą.
-174|Ten telefon oblicza licznik ładunku tylko z procentu, więc licznik nie pokaże zużycia. Dlatego aplikacja sama mierzy prąd ładowania; jest to mniej dokładne.
-175|pełna
-176|Aplikacja nieaktywna · %s
-177|Niezawodność
-178|Gotowe
-179|Dodatkowo dla %s:
-180|Ogólnie:
-181|Otwórz ustawienia
-182|Ta strona nie istnieje w Twoim telefonie. Otwarto informacje o aplikacji; wykonaj powyższe kroki.
-183|Więcej pomocy dla Twojego telefonu (link do skopiowania):
-184|Link skopiowany
-185|Telefony %s wymagają kilku dodatkowych ustawień.
-186|Pokaż
-187|Gotowe
-188|Zezwól na autostart dla Akku Health Alarm.
-189|Ustawienia → Aplikacje → Akku Health Alarm → Oszczędzanie baterii: „Bez ograniczeń”.
-190|W widoku ostatnich aplikacji przytrzymaj aplikację i stuknij kłódkę.
-191|Menedżer telefonu → Uruchamianie aplikacji: ustaw Akku Health Alarm na „Zarządzaj ręcznie” i włącz wszystkie trzy przełączniki.
-192|Starsze telefony: Menedżer telefonu → „Czyszczenie przy zablokowanym ekranie” lub „Chronione aplikacje”: nie pozwól zamykać Akku Health Alarm.
-193|W widoku ostatnich aplikacji przeciągnij aplikację w dół, aż pojawi się kłódka.
-194|Ustawienia → Bateria → Limity użycia w tle → „Aplikacje, które nigdy nie usypiają” → dodaj Akku Health Alarm.
-195|W widoku ostatnich aplikacji stuknij ikonę aplikacji i wybierz „Zablokuj tę aplikację”.
-196|Ustawienia → Aplikacje → Akku Health Alarm → Bateria: zezwól na autostart i działanie w tle.
-197|Wyłącz „Zamrażanie w tle” i „Optymalizację nietypowych aplikacji”.
-198|Zablokuj aplikację w widoku ostatnich aplikacji.
-199|i Manager → Menedżer aplikacji → Autostart: włącz Akku Health Alarm.
-200|Ustawienia → Bateria → Wysokie zużycie energii w tle: zezwól na Akku Health Alarm.
-201|Zablokuj aplikację w widoku ostatnich aplikacji.
-202|Ustawienia → Bateria → Optymalizacja baterii: ustaw Akku Health Alarm na „Nie optymalizuj”.
-203|Ustawienia → Bateria → wyłącz zaawansowaną optymalizację.
+82|za ok. %s
+83|co %s
+84|raz
+85|Bateria naładowana: %d %%
+86|Odłącz ładowarkę
+87|Niski poziom baterii: %d %%
+88|Podłącz ładowarkę
+89|Bateria gorąca: %s
+90|Pozwól telefonowi ostygnąć
+91|Bateria zimna: %s
+92|Nie ładuj na mrozie
+93|Bateria naładowana.
+94|Bateria naładowana, %d procent.
+95|Niski poziom baterii.
+96|Niski poziom baterii, %d procent.
+97|Bateria gorąca.
+98|Bateria zimna.
+99|Lista
+100|Wykres
+101|%d wpis
+102|%d wpisu
+101:few|%d wpisy
+101:many|%d wpisów
+103|Brak wpisów. Tutaj pojawi się każda zmiana poziomu naładowania.
+104|Ładowarka
+105|USB
+106|Bezprzewodowo
+107|Bateria
+108|Ostatnie 24 godziny
+109|Brak danych. Zapis trwa.
+110|teraz
+111|Zdarzenia
+112|Brak zdarzeń.
+113|Ładowarka podłączona
+114|Ładowarka odłączona
+115|Alarm: bateria naładowana
+116|Alarm: niski poziom baterii
+117|Alarm: bateria gorąca
+118|Alarm: bateria zimna
+119|Stan według Androida
+120|Dobry
+121|Przegrzana
+122|Za zimna
+123|Przepięcie
+124|Uszkodzona
+125|Nieznany błąd
+126|Nie zgłoszono
+127|Technologia
+128|Licznik ładunku
+129|Dzień
+130|Tydzień
+131|Miesiąc
+132|Wszystko
+133|Temperatura
+134|Powiększaj dwoma palcami, stuknij dwukrotnie, aby zresetować.
+135|%1$d %% za około %2$s
+136|%d min
+137|%d godz.
+138|%1$d godz. %2$d min
+139|Historia
+140|Jak długo przechowywana jest historia. Starsze wpisy są usuwane.
+141|1 dzień
+142|1 tydzień
+143|1 miesiąc
+144|1 rok
+145|Zawsze
+146|Rozładowuje się
+147|Pokaż napięcie i prąd
+148|Odsłuchaj
+149|Kondycja baterii
+150|Jeszcze nie zmierzono
+151|%1$s z %2$s
+152|zmierzono z %1$d ładowania (łącznie %2$d %%)
+153|zmierzono z %1$d ładowania (łącznie %2$d %%)
+152:few|zmierzono z %1$d ładowań (łącznie %2$d %%)
+152:many|zmierzono z %1$d ładowań (łącznie %2$d %%)
+154|Naładuj co najmniej 15 % za jednym razem, wtedy pojemność zostanie zmierzona.
+155|Android zgłasza: %s
+156|± to niepewność pomiaru. Im więcej i dłuższych ładowań, tym jest mniejsza.
+157|Z %d pomiarów najwyższe i najniższe 20 %% nie są liczone.
+158|nie liczone
+159|Pojemność znamionowa
+160|odczytana z telefonu
+161|wpisana przez Ciebie
+162|Nieznana. Wpisz ją, aby zobaczyć stan w procentach.
+163|Zmień
+164|W mAh, patrz karta danych Twojego telefonu
+165|Automatycznie
+166|Cykle ładowania
+167|%1$s pełnych cykli od początku zapisu
+168|Szybkość ładowania
+169|Ø %1$s · %2$s %%/godz.
+170|Ostatnie ładowania
+171|Nie zapisano jeszcze żadnego ładowania. Tu pojawia się każde ładowanie od podłączenia do odłączenia.
+172|%s cykli
+173|Pojemność w czasie
+174|Bieżące wartości
+175|Wskazówki
+176|Pojemność baterii tylko %d %%
+177|Bateria mieści już tylko około %1$s z %2$s. Wymiana może się opłacić.
+178|Ładowania
+179|Stuknij wartość w ramce, aby zobaczyć jej krzywą.
+180|Ten telefon oblicza licznik ładunku tylko z procentu, więc licznik nie pokaże zużycia. Dlatego aplikacja sama mierzy prąd ładowania; jest to mniej dokładne.
+181|pełna
+182|Aplikacja nieaktywna · %s
+183|Niezawodność
+184|Gotowe
+185|Dodatkowo dla %s:
+186|Ogólnie:
+187|Otwórz ustawienia
+188|Ta strona nie istnieje w Twoim telefonie. Otwarto informacje o aplikacji; wykonaj powyższe kroki.
+189|Więcej pomocy dla Twojego telefonu (link do skopiowania):
+190|Link skopiowany
+191|Telefony %s wymagają kilku dodatkowych ustawień.
+192|Pokaż
+193|Gotowe
+194|Zezwól na autostart dla Akku Health Alarm.
+195|Ustawienia → Aplikacje → Akku Health Alarm → Oszczędzanie baterii: „Bez ograniczeń”.
+196|W widoku ostatnich aplikacji przytrzymaj aplikację i stuknij kłódkę.
+197|Menedżer telefonu → Uruchamianie aplikacji: ustaw Akku Health Alarm na „Zarządzaj ręcznie” i włącz wszystkie trzy przełączniki.
+198|Starsze telefony: Menedżer telefonu → „Czyszczenie przy zablokowanym ekranie” lub „Chronione aplikacje”: nie pozwól zamykać Akku Health Alarm.
+199|W widoku ostatnich aplikacji przeciągnij aplikację w dół, aż pojawi się kłódka.
+200|Ustawienia → Bateria → Limity użycia w tle → „Aplikacje, które nigdy nie usypiają” → dodaj Akku Health Alarm.
+201|W widoku ostatnich aplikacji stuknij ikonę aplikacji i wybierz „Zablokuj tę aplikację”.
+202|Ustawienia → Aplikacje → Akku Health Alarm → Bateria: zezwól na autostart i działanie w tle.
+203|Wyłącz „Zamrażanie w tle” i „Optymalizację nietypowych aplikacji”.
 204|Zablokuj aplikację w widoku ostatnich aplikacji.
-205|Jeśli jest ustawienie „Autostart”: zezwól na nie dla Akku Health Alarm.
-206|Jeśli to możliwe, zablokuj aplikację w widoku ostatnich aplikacji.
-207|z dźwiękiem
-208|cicho · cisza nocna
-209|tylko wibracje · telefon wyciszony
-210|cicho · telefon wyciszony
-211|tylko powiadomienie · dźwięk i głos wył.
-212|Język
-213|Język telefonu
-214|Wygląd
-215|Systemowy
-216|Jasny
-217|Ciemny
-218|Wszystko ustawione
-219|Wykonałem te kroki
-220|Mniej
-221|Więcej
-222|Standard
-223|Szybki wybór %d
-224|Zmień szybki wybór %d
-225|Użyj bieżącego zakresu
-226|Przywróć
-227|Przytrzymaj przycisk, aby go zmienić
-228|Powtarzaj alarm
-229|Raz
-230|%d s
-231|Na baterii przy wyłączonym ekranie Android pozwala na to tylko co ok. 9 minut.
-232|Następny alarm za %s
-233|do %s
-234|Trwa ładowanie
-235|od %s
-236|dotąd naładowano ok. %s
-237|Jeszcze %d %% do pomiaru pojemności. Pomiar następuje po odłączeniu.
-238|Wystarczy do pomiaru. Pojemność zostanie obliczona po odłączeniu.
-239|brak pomiaru: poniżej 15 %
-240|brak pomiaru: zapis przerwany
-241|brak pomiaru: nieprawdopodobne wartości
+205|i Manager → Menedżer aplikacji → Autostart: włącz Akku Health Alarm.
+206|Ustawienia → Bateria → Wysokie zużycie energii w tle: zezwól na Akku Health Alarm.
+207|Zablokuj aplikację w widoku ostatnich aplikacji.
+208|Ustawienia → Bateria → Optymalizacja baterii: ustaw Akku Health Alarm na „Nie optymalizuj”.
+209|Ustawienia → Bateria → wyłącz zaawansowaną optymalizację.
+210|Zablokuj aplikację w widoku ostatnich aplikacji.
+211|Jeśli jest ustawienie „Autostart”: zezwól na nie dla Akku Health Alarm.
+212|Jeśli to możliwe, zablokuj aplikację w widoku ostatnich aplikacji.
+213|z dźwiękiem
+214|cicho · cisza nocna
+215|tylko wibracje · telefon wyciszony
+216|cicho · telefon wyciszony
+217|tylko powiadomienie · dźwięk i głos wył.
+218|dźwięk nie zadziałał
+219|Pierwszy alarm: %1$s
+220|Ostatnie powtórzenie %1$s: %2$s
+221|ekran włączony
+222|ekran wyłączony
+223|głośność powiadomień %1$d/%2$d
+224|głośność alarmu %1$d/%2$d
+225|Nie przeszkadzać włączone
+226|odmowa fokusu audio
+227|odtworzono %1$s s
+228|zatrzymano wcześniej: %1$s z %2$s s
+229|przerwano po %1$s s
+230|błąd odtwarzania %1$s
+231|odtwarzanie się nie zakończyło
+232|nic nie odtworzono
+233|Język
+234|Język telefonu
+235|Wygląd
+236|Systemowy
+237|Jasny
+238|Ciemny
+239|Wszystko ustawione
+240|Wykonałem te kroki
+241|Mniej
+242|Więcej
+243|Standard
+244|Szybki wybór %d
+245|Zmień szybki wybór %d
+246|Użyj bieżącego zakresu
+247|Przywróć
+248|Przytrzymaj przycisk, aby go zmienić
+249|Powtarzaj alarm
+250|Raz
+251|%d s
+252|Na baterii przy wyłączonym ekranie Android pozwala na to tylko co ok. 9 minut.
+253|Następny alarm za %s
+254|do %s
+255|Trwa ładowanie
+256|od %s
+257|dotąd naładowano ok. %s
+258|Jeszcze %d %% do pomiaru pojemności. Pomiar następuje po odłączeniu.
+259|Wystarczy do pomiaru. Pojemność zostanie obliczona po odłączeniu.
+260|brak pomiaru: poniżej 15 %
+261|brak pomiaru: zapis przerwany
+262|brak pomiaru: nieprawdopodobne wartości

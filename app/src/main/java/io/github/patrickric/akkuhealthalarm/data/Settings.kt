@@ -61,10 +61,13 @@ data class AlarmSettings(
     val tempLow: Int = 10,
     val tempHigh: Int = 40,
     val coldOnlyCharging: Boolean = true,
-    val showCurrent: Boolean = false,
-    val showTemp: Boolean = false,
-    val showVoltage: Boolean = false,
+    /** Extra values in the status notification; on for new installs (saved settings keep their value). */
+    val showCurrent: Boolean = true,
+    val showTemp: Boolean = true,
+    val showVoltage: Boolean = true,
     val percentIcon: Boolean = false,
+    /** History list on narrow screens: extra columns voltage and current (status then only as a symbol). */
+    val logElectrical: Boolean = false,
     /** How long the history is kept, in days; 0 = forever. */
     val keepDays: Int = 365,
     /** Rated capacity entered by the user in mAh; 0 = read it from the phone. */
@@ -153,6 +156,7 @@ class SettingsRepository(private val context: Context) {
         val SHOW_TEMP = booleanPreferencesKey("show_temp")
         val SHOW_VOLTAGE = booleanPreferencesKey("show_voltage")
         val PERCENT_ICON = booleanPreferencesKey("percent_icon")
+        val LOG_ELECTRICAL = booleanPreferencesKey("log_electrical")
         val KEEP_DAYS = intPreferencesKey("keep_days")
         val DESIGN_CAPACITY = intPreferencesKey("design_capacity")
         val VENDOR_HINT_DONE = booleanPreferencesKey("vendor_hint_done")
@@ -195,6 +199,7 @@ class SettingsRepository(private val context: Context) {
             showTemp = p[Keys.SHOW_TEMP] ?: d.showTemp,
             showVoltage = p[Keys.SHOW_VOLTAGE] ?: d.showVoltage,
             percentIcon = p[Keys.PERCENT_ICON] ?: d.percentIcon,
+            logElectrical = p[Keys.LOG_ELECTRICAL] ?: d.logElectrical,
             keepDays = p[Keys.KEEP_DAYS] ?: d.keepDays,
             designCapacityMah = p[Keys.DESIGN_CAPACITY] ?: d.designCapacityMah,
             vendorHintDone = p[Keys.VENDOR_HINT_DONE] ?: d.vendorHintDone,
@@ -230,6 +235,7 @@ class SettingsRepository(private val context: Context) {
         p[Keys.SHOW_TEMP] = s.showTemp
         p[Keys.SHOW_VOLTAGE] = s.showVoltage
         p[Keys.PERCENT_ICON] = s.percentIcon
+        p[Keys.LOG_ELECTRICAL] = s.logElectrical
         p[Keys.KEEP_DAYS] = s.keepDays
         p[Keys.DESIGN_CAPACITY] = s.designCapacityMah
         p[Keys.VENDOR_HINT_DONE] = s.vendorHintDone

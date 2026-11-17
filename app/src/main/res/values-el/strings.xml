@@ -71,7 +71,7 @@
     <string name="temp_cold_charging_summary">Η φόρτιση στο κρύο βλάπτει τη μπαταρία, η χρήση σχεδόν καθόλου.</string>
     <string name="temp_strict_hint">Η γρήγορη φόρτιση φτάνει συχνά τους 35–40 °C, οπότε αυτό το επίπεδο μπορεί να ειδοποιεί συχνά.</string>
     <string name="notif_title">Ειδοποίηση</string>
-    <string name="notif_summary">Προεπιλογή μόνο επίπεδο φόρτισης και κατάσταση. Πρόσθεσε εδώ περισσότερες τιμές.</string>
+    <string name="notif_summary">Δείχνει πάντα επίπεδο φόρτισης, κατάσταση και χρόνο μέχρι την ειδοποίηση. Εμφάνισε επίσης:</string>
     <string name="notif_current">Ρεύμα (mA)</string>
     <string name="notif_temp">Θερμοκρασία</string>
     <string name="notif_voltage">Τάση</string>
@@ -82,6 +82,9 @@
     <string name="channel_alarm">Ειδοποιήσεις μπαταρίας</string>
     <string name="notif_alarm_at">Ειδοποίηση στο %d %%</string>
     <string name="notif_alarm_off">Ειδοποίηση ανενεργή</string>
+    <string name="notif_eta_in">σε περίπου %s</string>
+    <string name="notif_repeat_every">κάθε %s</string>
+    <string name="notif_repeat_once">μία φορά</string>
     <string name="alarm_high_title">Μπαταρία φορτισμένη: %d %%</string>
     <string name="alarm_high_text">Αποσύνδεσε τον φορτιστή</string>
     <string name="alarm_low_title">Μπαταρία χαμηλή: %d %%</string>
@@ -146,6 +149,7 @@
     <string name="keep_365d">1 έτος</string>
     <string name="keep_forever">Πάντα</string>
     <string name="log_discharging">Αποφορτίζεται</string>
+    <string name="log_electrical">Εμφάνιση τάσης και ρεύματος</string>
     <string name="tone_listen">Ακρόαση</string>
     <string name="health_state">Κατάσταση μπαταρίας</string>
     <string name="health_measuring">Δεν μετρήθηκε ακόμη</string>
@@ -157,6 +161,8 @@
     <string name="health_need_charge" formatted="false">Φόρτισε τουλάχιστον 15 % μονομιάς και η χωρητικότητα θα μετρηθεί.</string>
     <string name="health_android_says">Το Android αναφέρει: %s</string>
     <string name="health_estimate_note">Το ± είναι η αβεβαιότητα μέτρησης. Όσο περισσότερες και μεγαλύτερες οι φορτίσεις, τόσο μικραίνει.</string>
+    <string name="health_trimmed">Από %d μετρήσεις, το υψηλότερο και το χαμηλότερο 20 %% δεν μετράνε.</string>
+    <string name="session_not_counted">δεν μετράει</string>
     <string name="design_title">Ονομαστική χωρητικότητα</string>
     <string name="design_auto">διαβάστηκε από το τηλέφωνο</string>
     <string name="design_manual">καταχωρίστηκε από σένα</string>
@@ -230,6 +236,21 @@
     <string name="delivery_muted_vibrate">μόνο δόνηση · τηλέφωνο σε σίγαση</string>
     <string name="delivery_muted">αθόρυβα · τηλέφωνο σε σίγαση</string>
     <string name="delivery_silent">μόνο ειδοποίηση · ήχος και φωνή ανενεργά</string>
+    <string name="delivery_sound_failed">ο ήχος απέτυχε</string>
+    <string name="diag_first">Πρώτος συναγερμός: %1$s</string>
+    <string name="diag_last">Τελευταία επανάληψη %1$s: %2$s</string>
+    <string name="diag_screen_on">οθόνη ανοιχτή</string>
+    <string name="diag_screen_off">οθόνη κλειστή</string>
+    <string name="diag_volume_notification">ένταση ειδοποιήσεων %1$d/%2$d</string>
+    <string name="diag_volume_alarm">ένταση ξυπνητηριού %1$d/%2$d</string>
+    <string name="diag_dnd">Μην ενοχλείτε ενεργό</string>
+    <string name="diag_no_focus">άρνηση εστίασης ήχου</string>
+    <string name="diag_played">αναπαράχθηκε %1$s δ</string>
+    <string name="diag_short">σταμάτησε νωρίς: %1$s από %2$s δ</string>
+    <string name="diag_stopped">διακόπηκε μετά από %1$s δ</string>
+    <string name="diag_error">σφάλμα αναπαραγωγής %1$s</string>
+    <string name="diag_timeout">η αναπαραγωγή δεν ολοκληρώθηκε</string>
+    <string name="diag_nothing">δεν αναπαράχθηκε τίποτα</string>
     <string name="language_title">Γλώσσα</string>
     <string name="language_system">Γλώσσα τηλεφώνου</string>
     <string name="theme_title">Εμφάνιση</string>

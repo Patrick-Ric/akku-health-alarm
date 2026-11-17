@@ -71,7 +71,7 @@
     <string name="temp_cold_charging_summary">Opladning i kulde skader batteriet, brug næsten ikke.</string>
     <string name="temp_strict_hint">Hurtigopladning når ofte 35–40 °C, så dette niveau kan advare ofte.</string>
     <string name="notif_title">Notifikation</string>
-    <string name="notif_summary">Som standard kun opladningsniveau og status. Tilføj flere værdier her.</string>
+    <string name="notif_summary">Viser altid opladningsniveau, status og tiden til alarmen. Vis også:</string>
     <string name="notif_current">Strøm (mA)</string>
     <string name="notif_temp">Temperatur</string>
     <string name="notif_voltage">Spænding</string>
@@ -82,6 +82,9 @@
     <string name="channel_alarm">Batterialarmer</string>
     <string name="notif_alarm_at">Alarm ved %d %%</string>
     <string name="notif_alarm_off">Alarm fra</string>
+    <string name="notif_eta_in">om ca. %s</string>
+    <string name="notif_repeat_every">hver %s</string>
+    <string name="notif_repeat_once">én gang</string>
     <string name="alarm_high_title">Batteriet opladet: %d %%</string>
     <string name="alarm_high_text">Tag opladeren ud</string>
     <string name="alarm_low_title">Batteriet lavt: %d %%</string>
@@ -146,6 +149,7 @@
     <string name="keep_365d">1 år</string>
     <string name="keep_forever">Altid</string>
     <string name="log_discharging">Aflader</string>
+    <string name="log_electrical">Vis spænding og strøm</string>
     <string name="tone_listen">Lyt</string>
     <string name="health_state">Batteriets tilstand</string>
     <string name="health_measuring">Ikke målt endnu</string>
@@ -157,6 +161,8 @@
     <string name="health_need_charge" formatted="false">Oplad mindst 15 % i ét stræk, så måles kapaciteten.</string>
     <string name="health_android_says">Android rapporterer: %s</string>
     <string name="health_estimate_note">± er måleusikkerheden. Jo flere og længere opladninger, desto mindre bliver den.</string>
+    <string name="health_trimmed">Af %d målinger tælles de højeste og laveste 20 %% ikke med.</string>
+    <string name="session_not_counted">tælles ikke</string>
     <string name="design_title">Nominel kapacitet</string>
     <string name="design_auto">læst fra telefonen</string>
     <string name="design_manual">angivet af dig</string>
@@ -230,6 +236,21 @@
     <string name="delivery_muted_vibrate">kun vibration · telefonen lydløs</string>
     <string name="delivery_muted">lydløst · telefonen lydløs</string>
     <string name="delivery_silent">kun notifikation · lyd og stemme fra</string>
+    <string name="delivery_sound_failed">lyden mislykkedes</string>
+    <string name="diag_first">Første alarm: %1$s</string>
+    <string name="diag_last">Seneste gentagelse %1$s: %2$s</string>
+    <string name="diag_screen_on">skærm tændt</string>
+    <string name="diag_screen_off">skærm slukket</string>
+    <string name="diag_volume_notification">notifikationslydstyrke %1$d/%2$d</string>
+    <string name="diag_volume_alarm">alarmlydstyrke %1$d/%2$d</string>
+    <string name="diag_dnd">Forstyr ikke til</string>
+    <string name="diag_no_focus">lydfokus afvist</string>
+    <string name="diag_played">afspillet %1$s s</string>
+    <string name="diag_short">stoppet for tidligt: %1$s af %2$s s</string>
+    <string name="diag_stopped">afbrudt efter %1$s s</string>
+    <string name="diag_error">afspilningsfejl %1$s</string>
+    <string name="diag_timeout">afspilningen sluttede ikke</string>
+    <string name="diag_nothing">intet afspillet</string>
     <string name="language_title">Sprog</string>
     <string name="language_system">Telefonens sprog</string>
     <string name="theme_title">Udseende</string>

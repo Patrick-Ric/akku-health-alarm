@@ -1,6 +1,7 @@
 package io.github.patrickric.akkuhealthalarm.data
 
 import kotlin.math.abs
+import kotlin.math.max
 import kotlin.math.roundToLong
 
 /**
@@ -13,9 +14,22 @@ object RemainingTime {
 
     private const val MIN_CHANGE = 2
     private const val MIN_SPAN_MS = 4 * 60 * 1000L
-    private const val CHARGE_WINDOW_MS = 30 * 60 * 1000L
-    private const val DISCHARGE_WINDOW_MS = 3 * 60 * 60 * 1000L
+    private const val SHORT_WINDOW_MS = 30 * 60 * 1000L
+    private const val LONG_WINDOW_MS = 3 * 60 * 60 * 1000L
     private const val MAX_RESULT_MS = 48 * 60 * 60 * 1000L
+
+    /**
+     * On battery while the app is open (screen on): time from the current drain, [currentMa] averaged over
+     * the last minute, and the battery capacity. Follows the present use at once, unlike the level history.
+     */
+    fun fromCurrent(level: Int, target: Int, currentMa: Double, capacityMah: Int): Long? {
+        if (target >= level || currentMa < MIN_CURRENT_MA || capacityMah <= 0) return null
+        val hours = (level - target) / 100.0 * capacityMah / currentMa
+        return (hours * 60 * 60 * 1000).roundToLong().coerceAtLeast(60_000L).takeIf { it <= MAX_RESULT_MS }
+    }
+
+    /** Below this the reading is not a real drain (or the phone reports nonsense); use the level history. */
+    private const val MIN_CURRENT_MA = 20.0
 
     /**
      * [points] sorted by time (oldest first); the last one is the current state.
@@ -30,9 +44,9 @@ object RemainingTime {
 
         // Only the current session counts: stop at the last plug change.
         val session = points.takeLastWhile { it.plugged == charging }
-        // Charging: prefer the last 30 minutes; if that shows too little change (slow charger), look further back.
-        val windows = if (charging) listOf(CHARGE_WINDOW_MS, DISCHARGE_WINDOW_MS) else listOf(DISCHARGE_WINDOW_MS)
-        val recent = windows.map { w -> session.filter { it.time >= now.time - w } }
+        // Prefer the last 30 minutes (follows a change of use, e.g. the screen turned on); if that shows
+        // too little change (slow charger, phone resting), look back up to 3 hours.
+        val recent = listOf(SHORT_WINDOW_MS, LONG_WINDOW_MS).map { w -> session.filter { it.time >= now.time - w } }
             .firstOrNull { pts -> pts.size >= 2 && abs(pts.last().level - pts.first().level) >= MIN_CHANGE }
             ?: return null
 
@@ -45,9 +59,14 @@ object RemainingTime {
         if (abs(change) < MIN_CHANGE || span < MIN_SPAN_MS) return null
         if (charging && change < 0 || !charging && change > 0) return null
 
-        val msPerPercent = span.toDouble() / abs(change)
-        val fromLastChange = (abs(target - lastChange.level) * msPerPercent).roundToLong()
-        val result = fromLastChange - (now.time - lastChange.time)
+        // Waiting at the current level longer than the measured speed allows means the battery is slower
+        // now (e.g. screen off after heavy use). Then the waiting time counts as well, as if the next
+        // percent were just about to come. Before, the waiting time was only subtracted: after 2 hours
+        // at 51 % this gave "35 % in about 1 min".
+        val waited = now.time - lastChange.time
+        val msPerPercent = max(span.toDouble() / abs(change), (now.time - first.time).toDouble() / (abs(change) + 1))
+        val steps = abs(target - now.level)
+        val result = ((msPerPercent - waited).coerceAtLeast(0.0) + (steps - 1) * msPerPercent).roundToLong()
         return result.coerceAtLeast(60_000L).takeIf { it <= MAX_RESULT_MS }
     }
 }

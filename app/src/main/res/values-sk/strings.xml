@@ -71,7 +71,7 @@
     <string name="temp_cold_charging_summary">Nabíjanie v mraze batérii škodí, používanie takmer nie.</string>
     <string name="temp_strict_hint">Rýchle nabíjanie často dosahuje 35–40 °C, táto úroveň preto môže varovať často.</string>
     <string name="notif_title">Upozornenie</string>
-    <string name="notif_summary">Predvolene len úroveň nabitia a stav. Ďalšie hodnoty pridáš tu.</string>
+    <string name="notif_summary">Vždy zobrazuje úroveň nabitia, stav a čas do alarmu. Zobraziť aj:</string>
     <string name="notif_current">Prúd (mA)</string>
     <string name="notif_temp">Teplota</string>
     <string name="notif_voltage">Napätie</string>
@@ -82,6 +82,9 @@
     <string name="channel_alarm">Alarmy batérie</string>
     <string name="notif_alarm_at">Alarm pri %d %%</string>
     <string name="notif_alarm_off">Alarm vyp.</string>
+    <string name="notif_eta_in">asi o %s</string>
+    <string name="notif_repeat_every">každých %s</string>
+    <string name="notif_repeat_once">raz</string>
     <string name="alarm_high_title">Batéria nabitá: %d %%</string>
     <string name="alarm_high_text">Odpoj nabíjačku</string>
     <string name="alarm_low_title">Batéria slabá: %d %%</string>
@@ -148,6 +151,7 @@
     <string name="keep_365d">1 rok</string>
     <string name="keep_forever">Navždy</string>
     <string name="log_discharging">Vybíja sa</string>
+    <string name="log_electrical">Zobraziť napätie a prúd</string>
     <string name="tone_listen">Vypočuť</string>
     <string name="health_state">Stav batérie</string>
     <string name="health_measuring">Zatiaľ nezmerané</string>
@@ -161,6 +165,8 @@
     <string name="health_need_charge" formatted="false">Nabi naraz aspoň 15 % a kapacita sa zmeria.</string>
     <string name="health_android_says">Android hlási: %s</string>
     <string name="health_estimate_note">± je neistota merania. Čím viac a dlhších nabíjaní, tým je menšia.</string>
+    <string name="health_trimmed">Z %d meraní sa nepočíta najvyšších a najnižších 20 %%.</string>
+    <string name="session_not_counted">nepočíta sa</string>
     <string name="design_title">Menovitá kapacita</string>
     <string name="design_auto">načítaná z telefónu</string>
     <string name="design_manual">zadaná tebou</string>
@@ -234,6 +240,21 @@
     <string name="delivery_muted_vibrate">len vibrácie · telefón stlmený</string>
     <string name="delivery_muted">ticho · telefón stlmený</string>
     <string name="delivery_silent">len upozornenie · zvuk a hlas vyp.</string>
+    <string name="delivery_sound_failed">zvuk zlyhal</string>
+    <string name="diag_first">Prvý alarm: %1$s</string>
+    <string name="diag_last">Posledné opakovanie %1$s: %2$s</string>
+    <string name="diag_screen_on">obrazovka zapnutá</string>
+    <string name="diag_screen_off">obrazovka vypnutá</string>
+    <string name="diag_volume_notification">hlasitosť upozornení %1$d/%2$d</string>
+    <string name="diag_volume_alarm">hlasitosť budíka %1$d/%2$d</string>
+    <string name="diag_dnd">Nerušiť zapnuté</string>
+    <string name="diag_no_focus">zvukový fokus odmietnutý</string>
+    <string name="diag_played">prehrané %1$s s</string>
+    <string name="diag_short">predčasne ukončené: %1$s z %2$s s</string>
+    <string name="diag_stopped">prerušené po %1$s s</string>
+    <string name="diag_error">chyba prehrávania %1$s</string>
+    <string name="diag_timeout">prehrávanie neskončilo</string>
+    <string name="diag_nothing">nič sa neprehralo</string>
     <string name="language_title">Jazyk</string>
     <string name="language_system">Jazyk telefónu</string>
     <string name="theme_title">Vzhľad</string>

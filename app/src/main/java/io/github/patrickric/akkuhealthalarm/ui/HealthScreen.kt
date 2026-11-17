@@ -85,6 +85,8 @@ fun HealthScreen(reading: BatteryReading?, settings: AlarmSettings, update: Upda
     val measured = sessions.filter { it.capacityMah != null }
     val basis = Capacity.basis(sessions)
     val estimate = Capacity.estimate(basis)
+    // Highest and lowest 20 % of the latest measurements: shown, but not counted.
+    val extremes = Capacity.extremes(basis)
 
     Scaffold(
         topBar = { TabTopBar(stringResource(R.string.health_title)) },
@@ -99,7 +101,7 @@ fun HealthScreen(reading: BatteryReading?, settings: AlarmSettings, update: Upda
             ConditionCard(estimate, design, reading, counterFromLevel = basis.any { it.counterFromLevel })
             if (measured.size >= 2) {
                 SectionCard(stringResource(R.string.capacity_trend), Icons.Rounded.Timeline) {
-                    CapacityChart(measured.reversed(), design, Modifier.fillMaxWidth().height(160.dp))
+                    CapacityChart(measured.reversed(), design, extremes, Modifier.fillMaxWidth().height(160.dp))
                 }
             }
             RunningSessionCard()
@@ -121,7 +123,7 @@ fun HealthScreen(reading: BatteryReading?, settings: AlarmSettings, update: Upda
                 }
                 SpeedCard(sessions)
             }
-            SessionsCard(sessions.take(10))
+            SessionsCard(sessions.take(10), extremes)
             MeasuresCard(reading, onShowChart)
             Spacer(Modifier.height(8.dp))
         }
@@ -173,6 +175,13 @@ private fun ConditionCard(estimate: Capacity.Estimate?, design: Int?, reading: B
                     pluralStringResource(R.plurals.health_from_sessions, estimate.sessions, estimate.sessions, estimate.totalPercent),
                     style = MaterialTheme.typography.bodyMedium,
                 )
+                if (estimate.measured > estimate.sessions) {
+                    Text(
+                        stringResource(R.string.health_trimmed, estimate.measured),
+                        style = MaterialTheme.typography.bodySmall,
+                        color = content.copy(alpha = 0.8f),
+                    )
+                }
                 Text(
                     stringResource(R.string.health_estimate_note),
                     style = MaterialTheme.typography.bodySmall,
@@ -204,7 +213,7 @@ private fun ConditionCard(estimate: Capacity.Estimate?, design: Int?, reading: B
 }
 
 @Composable
-private fun CapacityChart(sessions: List<ChargeSession>, design: Int?, modifier: Modifier) {
+private fun CapacityChart(sessions: List<ChargeSession>, design: Int?, extremes: List<ChargeSession>, modifier: Modifier) {
     val scheme = MaterialTheme.colorScheme
     val measurer = rememberTextMeasurer()
     val labelStyle = MaterialTheme.typography.labelSmall.copy(color = scheme.onSurfaceVariant)
@@ -235,8 +244,15 @@ private fun CapacityChart(sessions: List<ChargeSession>, design: Int?, modifier:
             val c = s.capacityMah!!.toFloat()
             // Error bar: about 95 % range of this single charge.
             val e = (2 * Capacity.sessionError(s) * c).toFloat()
-            drawLine(scheme.primary.copy(alpha = 0.6f), Offset(x(i), y(c - e)), Offset(x(i), y(c + e)), strokeWidth = 2.dp.toPx())
-            drawCircle(scheme.primary, 4.dp.toPx(), Offset(x(i), y(c)))
+            // Left-out extreme value: faint bar and an empty circle.
+            val left = extremes.any { it === s }
+            drawLine(scheme.primary.copy(alpha = if (left) 0.25f else 0.6f), Offset(x(i), y(c - e)), Offset(x(i), y(c + e)), strokeWidth = 2.dp.toPx())
+            if (left) {
+                drawCircle(scheme.surfaceContainer, 4.dp.toPx(), Offset(x(i), y(c)))
+                drawCircle(scheme.primary, 4.dp.toPx(), Offset(x(i), y(c)), style = Stroke(1.5.dp.toPx()))
+            } else {
+                drawCircle(scheme.primary, 4.dp.toPx(), Offset(x(i), y(c)))
+            }
         }
     }
 }
@@ -344,7 +360,7 @@ private fun SpeedCard(sessions: List<ChargeSession>) {
 }
 
 @Composable
-private fun SessionsCard(sessions: List<ChargeSession>) {
+private fun SessionsCard(sessions: List<ChargeSession>, extremes: List<ChargeSession>) {
     val context = LocalContext.current
     val scheme = MaterialTheme.colorScheme
     SectionCard(stringResource(R.string.sessions_title), Icons.Rounded.BatteryChargingFull) {
@@ -368,7 +384,7 @@ private fun SessionsCard(sessions: List<ChargeSession>) {
                             s.startTime,
                             android.text.format.DateUtils.FORMAT_SHOW_DATE or android.text.format.DateUtils.FORMAT_SHOW_TIME or
                                 android.text.format.DateUtils.FORMAT_ABBREV_MONTH or Format.clockFlag(context),
-                        ) + " · " + durationText(((s.endTime - s.startTime) / 60_000L).toInt()),
+                        ) + " · " + durationText(((s.endTime - s.startTime) / 60_000L).toInt()).replace(' ', '\u00a0'), // breaks at "·", not inside "2 h 18 min"
                         style = MaterialTheme.typography.bodySmall,
                         color = scheme.onSurfaceVariant,
                     )
@@ -379,8 +395,18 @@ private fun SessionsCard(sessions: List<ChargeSession>) {
                         color = scheme.onSurfaceVariant,
                     )
                 }
+                // Keeps "2 h 18 min" on the left from touching the value on the right.
+                Spacer(Modifier.width(8.dp))
                 s.capacityMah?.let {
-                    Text("≈ " + Format.milliAmpHours(it), style = MaterialTheme.typography.labelLarge, color = scheme.primary)
+                    if (extremes.any { e -> e === s }) {
+                        // Extreme value: still shown, but grey and marked, so the total stays understandable.
+                        Column(horizontalAlignment = Alignment.End) {
+                            Text("≈ " + Format.milliAmpHours(it), style = MaterialTheme.typography.labelLarge, color = scheme.onSurfaceVariant)
+                            Text(stringResource(R.string.session_not_counted), style = MaterialTheme.typography.labelSmall, color = scheme.onSurfaceVariant)
+                        }
+                    } else {
+                        Text("≈ " + Format.milliAmpHours(it), style = MaterialTheme.typography.labelLarge, color = scheme.primary)
+                    }
                 } ?: noCapacityText(s.noCapacityReason)?.let {
                     Text(it, style = MaterialTheme.typography.labelSmall, color = scheme.onSurfaceVariant, textAlign = TextAlign.End, modifier = Modifier.widthIn(max = 110.dp))
                 }

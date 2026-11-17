@@ -51,6 +51,13 @@ object Format {
         else -> R.string.health_unknown
     }
 
+    /** "25 min", "2 h", "1 h 5 min" – also used outside Compose (status notification). */
+    fun duration(context: android.content.Context, minutes: Int): String = when {
+        minutes < 60 -> context.getString(R.string.duration_min, minutes)
+        minutes % 60 == 0 || minutes >= 600 -> context.getString(R.string.duration_h, (minutes + 30) / 60)
+        else -> context.getString(R.string.duration_h_min, minutes / 60, minutes % 60)
+    }
+
     fun milliAmps(ma: Int): String = NumberFormat.getIntegerInstance().format(ma) + " mA"
 
     fun number(n: Int): String = NumberFormat.getIntegerInstance().format(n)

@@ -1,6 +1,8 @@
 package io.github.patrickric.akkuhealthalarm.service
 
 import android.app.AlarmManager
+import kotlinx.coroutines.withContext
+import io.github.patrickric.akkuhealthalarm.data.RemainingTime
 import android.app.PendingIntent
 import android.app.Service
 import android.content.BroadcastReceiver
@@ -15,7 +17,9 @@ import android.os.SystemClock
 import androidx.core.app.ServiceCompat
 import androidx.core.content.ContextCompat
 import io.github.patrickric.akkuhealthalarm.AppLanguage
+import io.github.patrickric.akkuhealthalarm.BuildConfig
 import io.github.patrickric.akkuhealthalarm.app
+import io.github.patrickric.akkuhealthalarm.data.AlarmDiag
 import io.github.patrickric.akkuhealthalarm.data.AlarmSettings
 import io.github.patrickric.akkuhealthalarm.data.BatteryReading
 import io.github.patrickric.akkuhealthalarm.data.Capacity
@@ -44,6 +48,11 @@ class MonitorService : Service() {
     private var lastLogTime = 0L
     private var lastPrune = 0L
     private var lastStatus: Notifications.StatusContent? = null
+
+    /** Readings of the last hours for the remaining time in the status notification. */
+    private var etaPoints: List<RemainingTime.Point> = emptyList()
+    private var etaKey: Pair<Int, Boolean>? = null
+    private var etaLoadedAt = 0L
 
     private val receiver = object : BroadcastReceiver() {
         override fun onReceive(context: Context, intent: Intent) {
@@ -120,12 +129,35 @@ class MonitorService : Service() {
         trackSession(r)
         val s = settings ?: return
         prune(s, force = false)
+        loadEtaPoints(r)
         updateStatus(r, s)
         evaluate(r, s)
     }
 
+    /** Reloads the recent readings when the level or the plug changed, at most every 2 minutes otherwise. */
+    private fun loadEtaPoints(r: BatteryReading) {
+        val key = r.level to r.isPlugged
+        val now = System.currentTimeMillis()
+        if (key == etaKey && now - etaLoadedAt < 2 * 60_000L) return
+        etaKey = key
+        etaLoadedAt = now
+        scope.launch {
+            val rows = withContext(Dispatchers.IO) { app.db.dao().readingsBetween(now - 4 * 60 * 60_000L, now) }
+            etaPoints = rows.map { RemainingTime.Point(it.time, it.level, it.plugged != 0) }
+            val s = settings ?: return@launch
+            last?.let { updateStatus(it, s) }
+        }
+    }
+
     private fun updateStatus(r: BatteryReading, s: AlarmSettings) {
-        val content = Notifications.statusContent(this, r, s)
+        val target = if (r.isPlugged) s.high else s.low
+        // Only while charging: on battery the time depends on screen on or off, which the lock screen cannot say.
+        val eta = if (s.enabled && r.isPlugged) {
+            RemainingTime.estimate(etaPoints + RemainingTime.Point(System.currentTimeMillis(), r.level, r.isPlugged), target)
+        } else {
+            null
+        }
+        val content = Notifications.statusContent(this, r, s, eta?.let { (it / 60_000L).toInt() })
         if (content == lastStatus) return
         lastStatus = content
         Notifications.updateStatus(this, content)
@@ -140,7 +172,9 @@ class MonitorService : Service() {
             stopRepeat(it)
         }
         // Only the first alarm makes a sound; the others are shown and logged as notifications.
-        val delivery = result.fire.firstOrNull()?.let { player.play(it, r.level, s) }
+        val delivery = result.fire.firstOrNull()?.let { type ->
+            player.play(type, r.level, s) { saveDiag(type, it, repeat = false) }
+        }
         result.fire.forEachIndexed { i, type ->
             scheduleRepeat(type, s, r.isPlugged)
             if (s.alarmNotification) Notifications.showAlarm(this, type, r, repeats[type]?.nextAt)
@@ -229,7 +263,7 @@ class MonitorService : Service() {
             stopRepeat(type)
             return
         }
-        player.play(type, r.level, s)
+        player.play(type, r.level, s) { saveDiag(type, it, repeat = true) }
         if (reschedule) scheduleRepeat(type, s, r.isPlugged)
         // The loop on the charger plans its next round itself, right after this call.
         val nextAt = if (reschedule) repeats[type]?.nextAt else System.currentTimeMillis() + s.repeatSeconds * 1000L
@@ -373,6 +407,26 @@ class MonitorService : Service() {
         scope.launch(Dispatchers.IO) { app.db.dao().insertEvent(entry) }
     }
 
+    /**
+     * Stores how the sound really went with the newest alarm row of this type (first alarm or latest
+     * repeat). Test builds also keep every single play in a small text log (readable with adb run-as).
+     */
+    private fun saveDiag(type: AlarmType, diag: AlarmDiag, repeat: Boolean) {
+        val text = diag.encode()
+        val now = System.currentTimeMillis()
+        scope.launch(Dispatchers.IO) {
+            val dao = app.db.dao()
+            if (repeat) dao.setLastDiag(eventType(type), text) else dao.setDiag(eventType(type), text)
+            if (BuildConfig.DEBUG) runCatching {
+                val f = java.io.File(filesDir, DIAG_LOG_FILE)
+                val stamp = java.text.SimpleDateFormat("yyyy-MM-dd HH:mm:ss", java.util.Locale.ROOT).format(java.util.Date(now))
+                f.appendText("$stamp ${eventType(type)} ${if (repeat) "repeat" else "first"} $text\n")
+                val lines = f.readLines()
+                if (lines.size > DIAG_LOG_LINES * 2) f.writeText(lines.takeLast(DIAG_LOG_LINES).joinToString("\n", postfix = "\n"))
+            }
+        }
+    }
+
     private fun eventType(type: AlarmType) = when (type) {
         AlarmType.HIGH -> EventType.ALARM_HIGH
         AlarmType.LOW -> EventType.ALARM_LOW
@@ -387,6 +441,8 @@ class MonitorService : Service() {
         private const val ACTION_REPEAT = "io.github.patrickric.akkuhealthalarm.REPEAT"
         private const val EXTRA_TYPE = "type"
         const val NEXT_REPEAT_FILE = "next_repeat.txt"
+        private const val DIAG_LOG_FILE = "alarm_sound.log"
+        private const val DIAG_LOG_LINES = 500
 
         /** Next planned repeat written by the watcher: wall-clock time and alarm type, or null. */
         fun readNextRepeat(context: Context): Pair<Long, AlarmType>? = runCatching {

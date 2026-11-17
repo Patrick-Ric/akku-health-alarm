@@ -62,6 +62,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
@@ -224,11 +225,7 @@ fun CheckRow(title: String, checked: Boolean, onChange: (Boolean) -> Unit) {
 
 /** "25 min", "3 h 10 min" or "12 h", in the app language. */
 @Composable
-fun durationText(minutes: Int): String = when {
-    minutes < 60 -> stringResource(R.string.duration_min, minutes)
-    minutes % 60 == 0 || minutes >= 600 -> stringResource(R.string.duration_h, (minutes + 30) / 60)
-    else -> stringResource(R.string.duration_h_min, minutes / 60, minutes % 60)
-}
+fun durationText(minutes: Int): String = Format.duration(LocalContext.current, minutes)
 
 /**
  * Exact setting of a limit: "−" and "+" change by one (holding repeats), a tap on the number

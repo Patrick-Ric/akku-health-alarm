@@ -69,7 +69,7 @@
 68|Nabíjanie v mraze batérii škodí, používanie takmer nie.
 69|Rýchle nabíjanie často dosahuje 35–40 °C, táto úroveň preto môže varovať často.
 70|Upozornenie
-71|Predvolene len úroveň nabitia a stav. Ďalšie hodnoty pridáš tu.
+71|Vždy zobrazuje úroveň nabitia, stav a čas do alarmu. Zobraziť aj:
 72|Prúd (mA)
 73|Teplota
 74|Napätie
@@ -80,167 +80,188 @@
 79|Alarmy batérie
 80|Alarm pri %d %%
 81|Alarm vyp.
-82|Batéria nabitá: %d %%
-83|Odpoj nabíjačku
-84|Batéria slabá: %d %%
-85|Pripoj nabíjačku
-86|Batéria horúca: %s
-87|Nechaj telefón vychladnúť
-88|Batéria studená: %s
-89|V mraze nenabíjaj
-90|Batéria nabitá.
-91|Batéria nabitá, %d percent.
-92|Batéria slabá.
-93|Batéria slabá, %d percent.
-94|Batéria horúca.
-95|Batéria studená.
-96|Zoznam
-97|Graf
-98|%d záznam
-99|%d záznamov
-98:few|%d záznamy
-98:many|%d záznamu
-100|Zatiaľ žiadne záznamy. Tu sa objaví každá zmena úrovne nabitia.
-101|Nabíjačka
-102|USB
-103|Bezdrôtovo
-104|Batéria
-105|Posledných 24 hodín
-106|Zatiaľ žiadne údaje. Záznam beží.
-107|teraz
-108|Udalosti
-109|Zatiaľ žiadne udalosti.
-110|Nabíjačka pripojená
-111|Nabíjačka odpojená
-112|Alarm: batéria nabitá
-113|Alarm: batéria slabá
-114|Alarm: batéria horúca
-115|Alarm: batéria studená
-116|Stav podľa Androidu
-117|Dobrý
-118|Prehriata
-119|Príliš studená
-120|Prepätie
-121|Chybná
-122|Neznáma chyba
-123|Nehlásené
-124|Technológia
-125|Počítadlo náboja
-126|Deň
-127|Týždeň
-128|Mesiac
-129|Všetko
-130|Teplota
-131|Priblíž dvoma prstami, dvojitým ťuknutím obnovíš.
-132|%1$d %% približne o %2$s
-133|%d min
-134|%d h
-135|%1$d h %2$d min
-136|História
-137|Ako dlho sa história uchováva. Staršie záznamy sa mažú.
-138|1 deň
-139|1 týždeň
-140|1 mesiac
-141|1 rok
-142|Navždy
-143|Vybíja sa
-144|Vypočuť
-145|Stav batérie
-146|Zatiaľ nezmerané
-147|%1$s z %2$s
-148|zmerané z %1$d nabíjania (spolu %2$d %%)
-149|zmerané z %1$d nabíjaní (spolu %2$d %%)
-148:few|zmerané z %1$d nabíjaní (spolu %2$d %%)
-148:many|zmerané z %1$d nabíjania (spolu %2$d %%)
-150|Nabi naraz aspoň 15 % a kapacita sa zmeria.
-151|Android hlási: %s
-152|± je neistota merania. Čím viac a dlhších nabíjaní, tým je menšia.
-153|Menovitá kapacita
-154|načítaná z telefónu
-155|zadaná tebou
-156|Neznáma. Zadaj ju, aby si videl stav v percentách.
-157|Zmeniť
-158|V mAh, pozri technický list tvojho telefónu
-159|Automaticky
-160|Nabíjacie cykly
-161|%1$s plných cyklov od začiatku záznamu
-162|Rýchlosť nabíjania
-163|Ø %1$s · %2$s %%/h
-164|Posledné nabíjania
-165|Zatiaľ nezaznamenané žiadne nabíjanie. Tu sa objaví každé nabíjanie od pripojenia po odpojenie.
-166|%s cyklov
-167|Kapacita v čase
-168|Aktuálne hodnoty
-169|Tipy
-170|Kapacita batérie len %d %%
-171|Batéria už pojme len asi %1$s z %2$s. Výmena sa môže oplatiť.
-172|Nabíjania
-173|Ťukni na orámovanú hodnotu a uvidíš jej krivku.
-174|Tento telefón počíta počítadlo nabitia len z percent, takže počítadlo nemôže ukázať opotrebenie. Aplikácia preto sama meria nabíjací prúd; je to menej presné.
-175|plná
-176|Aplikácia neaktívna · %s
-177|Spoľahlivosť
-178|Hotovo
-179|Navyše pre %s:
-180|Všeobecne:
-181|Otvoriť nastavenia
-182|Táto stránka v tvojom telefóne neexistuje. Otvorili sa informácie o aplikácii; postupuj podľa krokov vyššie.
-183|Ďalšia pomoc pre tvoj telefón (odkaz na skopírovanie):
-184|Odkaz skopírovaný
-185|Telefóny %s potrebujú ešte niekoľko nastavení.
-186|Zobraziť
-187|Hotovo
-188|Povoľ automatické spúšťanie pre Akku Health Alarm.
-189|Nastavenia → Aplikácie → Akku Health Alarm → Šetrič batérie: „Bez obmedzení“.
-190|V prehľade posledných aplikácií podrž aplikáciu a ťukni na zámok.
-191|Správca telefónu → Spúšťanie aplikácií: nastav Akku Health Alarm na „Spravovať ručne“ a zapni všetky tri prepínače.
-192|Staršie telefóny: Správca telefónu → „Čistenie pri zamknutej obrazovke“ alebo „Chránené aplikácie“: nenechaj Akku Health Alarm zatvárať.
-193|V prehľade posledných aplikácií stiahni aplikáciu nadol, kým sa neobjaví zámok.
-194|Nastavenia → Batéria → Limity používania na pozadí → „Nikdy neuspávané aplikácie“ → pridaj Akku Health Alarm.
-195|V prehľade posledných aplikácií ťukni na ikonu aplikácie a zvoľ „Zamknúť túto aplikáciu“.
-196|Nastavenia → Aplikácie → Akku Health Alarm → Batéria: povoľ automatické spúšťanie a činnosť na pozadí.
-197|Vypni „Zmraziť na pozadí“ a „Optimalizovať neobvyklé aplikácie“.
-198|Zamkni aplikáciu v prehľade posledných aplikácií.
-199|i Manager → Správca aplikácií → Automatické spúšťanie: zapni Akku Health Alarm.
-200|Nastavenia → Batéria → Vysoká spotreba na pozadí: povoľ Akku Health Alarm.
-201|Zamkni aplikáciu v prehľade posledných aplikácií.
-202|Nastavenia → Batéria → Optimalizácia batérie: nastav Akku Health Alarm na „Neoptimalizovať“.
-203|Nastavenia → Batéria → vypni pokročilú optimalizáciu.
+82|asi o %s
+83|každých %s
+84|raz
+85|Batéria nabitá: %d %%
+86|Odpoj nabíjačku
+87|Batéria slabá: %d %%
+88|Pripoj nabíjačku
+89|Batéria horúca: %s
+90|Nechaj telefón vychladnúť
+91|Batéria studená: %s
+92|V mraze nenabíjaj
+93|Batéria nabitá.
+94|Batéria nabitá, %d percent.
+95|Batéria slabá.
+96|Batéria slabá, %d percent.
+97|Batéria horúca.
+98|Batéria studená.
+99|Zoznam
+100|Graf
+101|%d záznam
+102|%d záznamov
+101:few|%d záznamy
+101:many|%d záznamu
+103|Zatiaľ žiadne záznamy. Tu sa objaví každá zmena úrovne nabitia.
+104|Nabíjačka
+105|USB
+106|Bezdrôtovo
+107|Batéria
+108|Posledných 24 hodín
+109|Zatiaľ žiadne údaje. Záznam beží.
+110|teraz
+111|Udalosti
+112|Zatiaľ žiadne udalosti.
+113|Nabíjačka pripojená
+114|Nabíjačka odpojená
+115|Alarm: batéria nabitá
+116|Alarm: batéria slabá
+117|Alarm: batéria horúca
+118|Alarm: batéria studená
+119|Stav podľa Androidu
+120|Dobrý
+121|Prehriata
+122|Príliš studená
+123|Prepätie
+124|Chybná
+125|Neznáma chyba
+126|Nehlásené
+127|Technológia
+128|Počítadlo náboja
+129|Deň
+130|Týždeň
+131|Mesiac
+132|Všetko
+133|Teplota
+134|Priblíž dvoma prstami, dvojitým ťuknutím obnovíš.
+135|%1$d %% približne o %2$s
+136|%d min
+137|%d h
+138|%1$d h %2$d min
+139|História
+140|Ako dlho sa história uchováva. Staršie záznamy sa mažú.
+141|1 deň
+142|1 týždeň
+143|1 mesiac
+144|1 rok
+145|Navždy
+146|Vybíja sa
+147|Zobraziť napätie a prúd
+148|Vypočuť
+149|Stav batérie
+150|Zatiaľ nezmerané
+151|%1$s z %2$s
+152|zmerané z %1$d nabíjania (spolu %2$d %%)
+153|zmerané z %1$d nabíjaní (spolu %2$d %%)
+152:few|zmerané z %1$d nabíjaní (spolu %2$d %%)
+152:many|zmerané z %1$d nabíjania (spolu %2$d %%)
+154|Nabi naraz aspoň 15 % a kapacita sa zmeria.
+155|Android hlási: %s
+156|± je neistota merania. Čím viac a dlhších nabíjaní, tým je menšia.
+157|Z %d meraní sa nepočíta najvyšších a najnižších 20 %%.
+158|nepočíta sa
+159|Menovitá kapacita
+160|načítaná z telefónu
+161|zadaná tebou
+162|Neznáma. Zadaj ju, aby si videl stav v percentách.
+163|Zmeniť
+164|V mAh, pozri technický list tvojho telefónu
+165|Automaticky
+166|Nabíjacie cykly
+167|%1$s plných cyklov od začiatku záznamu
+168|Rýchlosť nabíjania
+169|Ø %1$s · %2$s %%/h
+170|Posledné nabíjania
+171|Zatiaľ nezaznamenané žiadne nabíjanie. Tu sa objaví každé nabíjanie od pripojenia po odpojenie.
+172|%s cyklov
+173|Kapacita v čase
+174|Aktuálne hodnoty
+175|Tipy
+176|Kapacita batérie len %d %%
+177|Batéria už pojme len asi %1$s z %2$s. Výmena sa môže oplatiť.
+178|Nabíjania
+179|Ťukni na orámovanú hodnotu a uvidíš jej krivku.
+180|Tento telefón počíta počítadlo nabitia len z percent, takže počítadlo nemôže ukázať opotrebenie. Aplikácia preto sama meria nabíjací prúd; je to menej presné.
+181|plná
+182|Aplikácia neaktívna · %s
+183|Spoľahlivosť
+184|Hotovo
+185|Navyše pre %s:
+186|Všeobecne:
+187|Otvoriť nastavenia
+188|Táto stránka v tvojom telefóne neexistuje. Otvorili sa informácie o aplikácii; postupuj podľa krokov vyššie.
+189|Ďalšia pomoc pre tvoj telefón (odkaz na skopírovanie):
+190|Odkaz skopírovaný
+191|Telefóny %s potrebujú ešte niekoľko nastavení.
+192|Zobraziť
+193|Hotovo
+194|Povoľ automatické spúšťanie pre Akku Health Alarm.
+195|Nastavenia → Aplikácie → Akku Health Alarm → Šetrič batérie: „Bez obmedzení“.
+196|V prehľade posledných aplikácií podrž aplikáciu a ťukni na zámok.
+197|Správca telefónu → Spúšťanie aplikácií: nastav Akku Health Alarm na „Spravovať ručne“ a zapni všetky tri prepínače.
+198|Staršie telefóny: Správca telefónu → „Čistenie pri zamknutej obrazovke“ alebo „Chránené aplikácie“: nenechaj Akku Health Alarm zatvárať.
+199|V prehľade posledných aplikácií stiahni aplikáciu nadol, kým sa neobjaví zámok.
+200|Nastavenia → Batéria → Limity používania na pozadí → „Nikdy neuspávané aplikácie“ → pridaj Akku Health Alarm.
+201|V prehľade posledných aplikácií ťukni na ikonu aplikácie a zvoľ „Zamknúť túto aplikáciu“.
+202|Nastavenia → Aplikácie → Akku Health Alarm → Batéria: povoľ automatické spúšťanie a činnosť na pozadí.
+203|Vypni „Zmraziť na pozadí“ a „Optimalizovať neobvyklé aplikácie“.
 204|Zamkni aplikáciu v prehľade posledných aplikácií.
-205|Ak existuje nastavenie „Automatické spúšťanie“: povoľ ho pre Akku Health Alarm.
-206|Ak je to možné, zamkni aplikáciu v prehľade posledných aplikácií.
-207|so zvukom
-208|ticho · nočný pokoj
-209|len vibrácie · telefón stlmený
-210|ticho · telefón stlmený
-211|len upozornenie · zvuk a hlas vyp.
-212|Jazyk
-213|Jazyk telefónu
-214|Vzhľad
-215|Systém
-216|Svetlý
-217|Tmavý
-218|Všetko nastavené
-219|Tieto kroky mám hotové
-220|Menej
-221|Viac
-222|Štandard
-223|Rýchla voľba %d
-224|Upraviť rýchlu voľbu %d
-225|Prevziať aktuálny rozsah
-226|Obnoviť
-227|Podrž tlačidlo a uprav ho
-228|Opakovať alarm
-229|Raz
-230|%d s
-231|Na batérii so zhasnutým displejom to Android povolí len asi každých 9 minút.
-232|Ďalší alarm o %s
-233|do %s
-234|Prebieha nabíjanie
-235|od %s
-236|zatiaľ nabité asi %s
-237|Ešte %d %% do merania kapacity. Meria sa pri odpojení.
-238|Dosť na meranie. Kapacita sa vypočíta pri odpojení.
-239|bez merania: pod 15 %
-240|bez merania: záznam prerušený
-241|bez merania: nepravdepodobné hodnoty
+205|i Manager → Správca aplikácií → Automatické spúšťanie: zapni Akku Health Alarm.
+206|Nastavenia → Batéria → Vysoká spotreba na pozadí: povoľ Akku Health Alarm.
+207|Zamkni aplikáciu v prehľade posledných aplikácií.
+208|Nastavenia → Batéria → Optimalizácia batérie: nastav Akku Health Alarm na „Neoptimalizovať“.
+209|Nastavenia → Batéria → vypni pokročilú optimalizáciu.
+210|Zamkni aplikáciu v prehľade posledných aplikácií.
+211|Ak existuje nastavenie „Automatické spúšťanie“: povoľ ho pre Akku Health Alarm.
+212|Ak je to možné, zamkni aplikáciu v prehľade posledných aplikácií.
+213|so zvukom
+214|ticho · nočný pokoj
+215|len vibrácie · telefón stlmený
+216|ticho · telefón stlmený
+217|len upozornenie · zvuk a hlas vyp.
+218|zvuk zlyhal
+219|Prvý alarm: %1$s
+220|Posledné opakovanie %1$s: %2$s
+221|obrazovka zapnutá
+222|obrazovka vypnutá
+223|hlasitosť upozornení %1$d/%2$d
+224|hlasitosť budíka %1$d/%2$d
+225|Nerušiť zapnuté
+226|zvukový fokus odmietnutý
+227|prehrané %1$s s
+228|predčasne ukončené: %1$s z %2$s s
+229|prerušené po %1$s s
+230|chyba prehrávania %1$s
+231|prehrávanie neskončilo
+232|nič sa neprehralo
+233|Jazyk
+234|Jazyk telefónu
+235|Vzhľad
+236|Systém
+237|Svetlý
+238|Tmavý
+239|Všetko nastavené
+240|Tieto kroky mám hotové
+241|Menej
+242|Viac
+243|Štandard
+244|Rýchla voľba %d
+245|Upraviť rýchlu voľbu %d
+246|Prevziať aktuálny rozsah
+247|Obnoviť
+248|Podrž tlačidlo a uprav ho
+249|Opakovať alarm
+250|Raz
+251|%d s
+252|Na batérii so zhasnutým displejom to Android povolí len asi každých 9 minút.
+253|Ďalší alarm o %s
+254|do %s
+255|Prebieha nabíjanie
+256|od %s
+257|zatiaľ nabité asi %s
+258|Ešte %d %% do merania kapacity. Meria sa pri odpojení.
+259|Dosť na meranie. Kapacita sa vypočíta pri odpojení.
+260|bez merania: pod 15 %
+261|bez merania: záznam prerušený
+262|bez merania: nepravdepodobné hodnoty

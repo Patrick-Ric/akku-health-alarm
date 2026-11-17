@@ -1,6 +1,9 @@
 package io.github.patrickric.akkuhealthalarm.ui
 
 import android.Manifest
+import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.mutableStateListOf
+import io.github.patrickric.akkuhealthalarm.data.Capacity
 import android.content.ActivityNotFoundException
 import android.content.Intent
 import android.net.Uri
@@ -506,17 +509,47 @@ private fun QuickEditDialog(slot: Int, settings: AlarmSettings, current: Pair<In
     )
 }
 
-/** "80 % in about 25 min" towards the next alarm limit, or null while there is too little data. */
+/**
+ * "80 % in about 25 min" towards the next alarm limit, or null while there is too little data.
+ * Charging: from the level history. On battery: from the current of the last minute and the capacity,
+ * because the app is open, so the screen is on – the history may come from a time with the screen off.
+ */
 @Composable
 private fun remainingText(settings: AlarmSettings, reading: BatteryReading?): String? {
-    val dao = LocalContext.current.app.db.dao()
+    val context = LocalContext.current
+    val dao = context.app.db.dao()
     val readings by remember { dao.readingsSince(System.currentTimeMillis() - 4 * 60 * 60 * 1000L) }
         .collectAsStateWithLifecycle(emptyList())
+    val sessions by remember { dao.sessions() }.collectAsStateWithLifecycle(emptyList())
+    val systemDesign = remember { Capacity.designFromSystem(context) }
+    // Current samples of the last minute (the reading is renewed every 2 s), only on battery.
+    val currents = remember { mutableStateListOf<Pair<Long, Int>>() }
+    LaunchedEffect(reading) {
+        val ma = reading?.currentMa
+        if (reading == null || reading.isPlugged || ma == null) {
+            currents.clear()
+        } else {
+            val now = System.currentTimeMillis()
+            currents.add(now to ma)
+            currents.removeAll { it.first < now - 60_000L }
+        }
+    }
     if (reading == null) return null
+    // Just opened on battery: wait for a few current samples instead of showing the history first and then jumping.
+    if (!reading.isPlugged && reading.currentMa != null && currents.size < 3) return null
     val target = if (reading.isPlugged) settings.high else settings.low
-    val points = readings.map { RemainingTime.Point(it.time, it.level, it.plugged != 0) } +
-        RemainingTime.Point(System.currentTimeMillis(), reading.level, reading.isPlugged)
-    val ms = RemainingTime.estimate(points, target) ?: return null
+    val fromCurrent = if (!reading.isPlugged && currents.size >= 3) {
+        val capacity = Capacity.estimate(Capacity.basis(sessions))?.mah
+            ?: settings.designCapacityMah.takeIf { it > 0 } ?: systemDesign
+        capacity?.let { RemainingTime.fromCurrent(reading.level, target, currents.map { it.second }.average(), it) }
+    } else {
+        null
+    }
+    val ms = fromCurrent ?: run {
+        val points = readings.map { RemainingTime.Point(it.time, it.level, it.plugged != 0) } +
+            RemainingTime.Point(System.currentTimeMillis(), reading.level, reading.isPlugged)
+        RemainingTime.estimate(points, target)
+    } ?: return null
     val duration = durationText((ms / 60_000L).toInt())
     return stringResource(R.string.eta, target, duration)
 }

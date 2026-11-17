@@ -44,8 +44,29 @@ object Capacity {
         return constant && (design == null || kotlin.math.abs(mid - design) <= design * 0.01f)
     }
 
-    /** Capacity with its uncertainty (about 95 %, i.e. two standard deviations). */
-    data class Estimate(val mah: Int, val plusMinusMah: Int, val sessions: Int, val totalPercent: Int)
+    /**
+     * Capacity with its uncertainty (about 95 %, i.e. two standard deviations). [sessions] and [totalPercent]
+     * count the charges used; [measured] all measured ones, including the left-out extreme values.
+     */
+    data class Estimate(val mah: Int, val plusMinusMah: Int, val sessions: Int, val totalPercent: Int, val measured: Int = sessions)
+
+    /** From this many measurements on, the highest and the lowest [TRIM_SHARE] are left out. */
+    private const val TRIM_FROM = 5
+    private const val TRIM_SHARE = 0.2
+
+    /**
+     * Extreme values left out of the estimate: the highest and the lowest 20 % of the measurements (one each
+     * from 5, two each at 10). Short charges scatter a lot (level ±2 % per end, the G30's counter counts in
+     * 50 mAh steps), and a single odd value made the result jump (user, 17.11.: 3061 mAh among values near 4000).
+     * Returns the very objects of [sessions], so the screens can mark them.
+     */
+    fun extremes(sessions: List<ChargeSession>): List<ChargeSession> {
+        val valid = sessions.filter { it.capacityMah != null }
+        if (valid.size < TRIM_FROM) return emptyList()
+        val k = (valid.size * TRIM_SHARE).toInt()
+        val sorted = valid.sortedBy { it.capacityMah }
+        return sorted.take(k) + sorted.takeLast(k)
+    }
 
     /**
      * Full capacity estimated from one charge: charge put in, scaled to 100 %.
@@ -79,7 +100,9 @@ object Capacity {
      * with every charge, but grows again if the sessions scatter more than expected.
      */
     fun estimate(sessions: List<ChargeSession>): Estimate? {
-        val valid = sessions.filter { it.capacityMah != null }
+        val all = sessions.filter { it.capacityMah != null }
+        val left = extremes(all)
+        val valid = all.filter { s -> left.none { it === s } }
         if (valid.isEmpty()) return null
         val sigmas = valid.map { sessionError(it) * it.capacityMah!! }
         val weights = sigmas.map { 1.0 / (it * it) }
@@ -100,6 +123,7 @@ object Capacity {
             plusMinusMah = (2 * sigma).roundToInt().coerceAtLeast(1),
             sessions = n,
             totalPercent = valid.sumOf { it.endLevel - it.startLevel },
+            measured = all.size,
         )
     }
 
