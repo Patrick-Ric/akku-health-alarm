@@ -13,6 +13,8 @@ import androidx.room.Query
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import androidx.room.Update
+import androidx.room.migration.Migration
+import androidx.sqlite.db.SupportSQLiteDatabase
 import kotlinx.coroutines.flow.Flow
 
 @Entity(tableName = "readings", indices = [Index("time")])
@@ -146,7 +148,7 @@ interface LogDao {
 
 @Database(
     entities = [ReadingEntry::class, EventEntry::class, ChargeSession::class],
-    version = 7,
+    version = 8,
     exportSchema = true,
     autoMigrations = [AutoMigration(from = 1, to = 2), AutoMigration(from = 2, to = 3), AutoMigration(from = 3, to = 4), AutoMigration(from = 4, to = 5), AutoMigration(from = 5, to = 6), AutoMigration(from = 6, to = 7)],
 )
@@ -158,6 +160,18 @@ abstract class LogDatabase : RoomDatabase() {
             Room.databaseBuilder(context, LogDatabase::class.java, "log.db")
                 // The watcher process writes, the app process shows the changes live.
                 .enableMultiInstanceInvalidation()
+                .addMigrations(MIGRATION_7_8)
                 .build()
+
+        /**
+         * Version 8 stores the current with its direction (negative = out of the battery). Before, it was always
+         * positive. Unplugged, the battery can only discharge, so those rows can be corrected; plugged-in rows
+         * stay as they were, their direction was not recorded.
+         */
+        val MIGRATION_7_8 = object : Migration(7, 8) {
+            override fun migrate(db: SupportSQLiteDatabase) {
+                db.execSQL("UPDATE readings SET currentMa = -currentMa WHERE plugged = 0 AND currentMa > 0")
+            }
+        }
     }
 }

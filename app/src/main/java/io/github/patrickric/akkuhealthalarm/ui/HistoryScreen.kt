@@ -126,6 +126,7 @@ import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import io.github.patrickric.akkuhealthalarm.R
 import io.github.patrickric.akkuhealthalarm.app
 import io.github.patrickric.akkuhealthalarm.data.AlarmSettings
+import io.github.patrickric.akkuhealthalarm.data.CurrentDirection
 import io.github.patrickric.akkuhealthalarm.data.EventEntry
 import io.github.patrickric.akkuhealthalarm.data.EventType
 import io.github.patrickric.akkuhealthalarm.data.ReadingEntry
@@ -539,7 +540,7 @@ private fun rememberRowLayout(maxWidth: Dp, twelveHour: Boolean, electrical: Boo
         val level = width("100\u00a0%", base.copy(fontWeight = FontWeight.Bold))
         val temp = width(Format.celsius(38.8f), base)
         val volt = width(Format.volts(8888), base)
-        val amp = width(Format.milliAmps(8888), base)
+        val amp = width(Format.milliAmps(-8888), base)
         val status = 20.dp + statuses.maxOf { width(it, baseLabel) }
         val space = maxWidth - ROW_FIXED
 
@@ -606,9 +607,14 @@ private fun DayHeader(label: String) {
     }
 }
 
-/** Charging in the sense of the log: the status says so, or plugged in and neither full nor stopped. */
-private fun ReadingEntry.isCharging(): Boolean = status == BatteryManager.BATTERY_STATUS_CHARGING ||
-    (plugged != 0 && status != BatteryManager.BATTERY_STATUS_NOT_CHARGING && status != BatteryManager.BATTERY_STATUS_FULL)
+/**
+ * Charging in the sense of the log: the status says so, or plugged in and neither full nor stopped – unless the
+ * current runs out of the battery (the phone uses more than the charger gives); that row counts as plugged in only.
+ */
+private fun ReadingEntry.isCharging(): Boolean = (
+    status == BatteryManager.BATTERY_STATUS_CHARGING ||
+        (plugged != 0 && status != BatteryManager.BATTERY_STATUS_NOT_CHARGING && status != BatteryManager.BATTERY_STATUS_FULL)
+    ) && (currentMa ?: 0) > -CurrentDirection.DRAIN_MA
 
 @Composable
 private fun ReadingRow(r: ReadingEntry, timeFormat: java.text.DateFormat, layout: RowLayout) {
@@ -915,9 +921,21 @@ private fun LevelChart(
             val vMin = sorted[cut]
             val vMax = sorted[sorted.size - 1 - cut]
             val pad = ((vMax - vMin) * 0.1f).coerceAtLeast(if (overlay == Overlay.VOLTAGE) 0.02f else 1f)
-            oLo = if (overlay == Overlay.TEMP) vMin - pad else (vMin - pad).coerceAtLeast(0f)
-            oHi = vMax + pad
-            listOf(oLo, (oLo + oHi) / 2, oHi).forEach { v ->
+            // The current has a sign (negative = out of the battery): its scale always includes zero.
+            oLo = when (overlay) {
+                Overlay.TEMP -> vMin - pad
+                Overlay.CURRENT -> minOf(vMin - pad, 0f)
+                else -> (vMin - pad).coerceAtLeast(0f)
+            }
+            oHi = if (overlay == Overlay.CURRENT) maxOf(vMax + pad, 0f) else vMax + pad
+            // Current on both sides of zero: label the zero line instead of the middle (unless it is too close to an end).
+            val zeroAt = if (overlay == Overlay.CURRENT && oLo < 0f && oHi > 0f) -oLo / (oHi - oLo) else null
+            val labels = when {
+                zeroAt == null -> listOf(oLo, (oLo + oHi) / 2, oHi)
+                zeroAt in 0.12f..0.88f -> listOf(oLo, 0f, oHi)
+                else -> listOf(oLo, oHi)
+            }
+            labels.forEach { v ->
                 // The current has two colours, so its axis stays neutral.
                 val axisColor = if (overlay == Overlay.CURRENT) labelStyle.color else overlayLine
                 val m = measurer.measure(formatOverlay(overlay!!, v), labelStyle.copy(color = axisColor))
@@ -928,6 +946,11 @@ private fun LevelChart(
             oHi = 1f
         }
         val dash = PathEffect.dashPathEffect(floatArrayOf(10f, 8f))
+        // Zero line of the current when it has values on both sides: above = charging, below = discharging.
+        if (overlay == Overlay.CURRENT && values.isNotEmpty() && oLo < 0f && oHi > 0f) {
+            val y0 = top + h * (1f - (0f - oLo) / (oHi - oLo))
+            drawLine(labelStyle.color.copy(alpha = 0.5f), Offset(left, y0), Offset(left + w, y0), strokeWidth = 1.dp.toPx())
+        }
         listOf(low, high).forEach { v ->
             drawLine(line.copy(alpha = 0.7f), Offset(left, y(v.toFloat())), Offset(left + w, y(v.toFloat())), strokeWidth = 1.5.dp.toPx(), pathEffect = dash)
         }
@@ -954,7 +977,7 @@ private fun LevelChart(
             drawSeries(visible, { x(it.time) }, { y(it.level.toFloat()) }, line, fill = true, top = top, bottom = top + h)
             if (overlay != null && values.isNotEmpty()) {
                 val withValue = visible.filter { overlayValue(overlay, it) != null }
-                // Current: one run per charging state, each in its colour; a run ends on the first point
+                // Current: one run per direction, each in its colour; a run ends on the first point
                 // of the next one, so the line stays connected.
                 val runs = if (overlay == Overlay.CURRENT) splitRuns(withValue) else listOf(withValue)
                 runs.forEach { run ->
@@ -962,7 +985,7 @@ private fun LevelChart(
                         run,
                         { x(it.time) },
                         { top + h * (1f - (overlayValue(overlay, it)!! - oLo) / (oHi - oLo)) },
-                        if (overlay == Overlay.CURRENT && !run.first().isCharging()) dischargeLine else overlayLine,
+                        if (overlay == Overlay.CURRENT && (run.first().currentMa ?: 0) < 0) dischargeLine else overlayLine,
                         fill = false,
                         top = top,
                         bottom = top + h,
@@ -976,11 +999,13 @@ private fun LevelChart(
     }
 }
 
+/** Runs of the current by its sign: into the battery (charge colour) or out of it (discharge colour). */
 private fun splitRuns(points: List<ReadingEntry>): List<List<ReadingEntry>> {
     val runs = mutableListOf<MutableList<ReadingEntry>>()
+    fun ReadingEntry.out() = (currentMa ?: 0) < 0
     points.forEach { p ->
         val run = runs.lastOrNull()
-        if (run == null || run.first().isCharging() != p.isCharging()) {
+        if (run == null || run.first().out() != p.out()) {
             run?.add(p)
             runs += mutableListOf(p)
         } else {

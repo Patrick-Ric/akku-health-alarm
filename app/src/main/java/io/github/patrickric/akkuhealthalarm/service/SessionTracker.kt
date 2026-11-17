@@ -142,8 +142,14 @@ class SessionTracker(private val context: Context) {
         return session.takeIf { endLevel > startLevel && now - start >= 60_000L }
     }
 
-    /** Current counts only while the battery is really charging. */
-    private fun chargingCurrent(r: BatteryReading) = if (r.isCharging) r.currentMa ?: 0 else 0
+    /**
+     * Net current into the battery: while charging with its sign, so a phone that uses more than the charger
+     * gives takes charge away again; otherwise (full, paused) only a drain counts.
+     */
+    private fun chargingCurrent(r: BatteryReading): Int {
+        val ma = r.currentMa ?: 0
+        return if (r.isCharging) ma else minOf(ma, 0)
+    }
 
     companion object {
         const val RUNNING_FILE = "running_session.txt"

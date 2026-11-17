@@ -530,7 +530,8 @@ private fun remainingText(settings: AlarmSettings, reading: BatteryReading?): St
             currents.clear()
         } else {
             val now = System.currentTimeMillis()
-            currents.add(now to ma)
+            // Negative = out of the battery; the drain counts as a positive value here.
+            currents.add(now to -ma)
             currents.removeAll { it.first < now - 60_000L }
         }
     }
