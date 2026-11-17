@@ -1,0 +1,6 @@
+1.02:
+• Status-Meldung auf dem Sperrbildschirm: Ladestand, Alarm-Grenze, Zeit bis zum Alarm beim Laden, Wiederholung; dazu mA, °C, V.
+• Verlauf: Umschalter „V · mA“ für Spannung und Strom, flüssiges Scrollen mit Positionsbalken, Querformat.
+• Restzeit: Fehler „in ca. 1 Min.“ nach langem Warten behoben; im Akkubetrieb aus dem Stromverbrauch.
+• Kapazität: höchste und niedrigste 20 % der Messungen werden nicht gezählt.
+• Alarm endet sofort, wenn die Grenze am Ladestand vorbei verstellt wird.

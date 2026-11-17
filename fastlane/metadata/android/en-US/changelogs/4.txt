@@ -1,0 +1,6 @@
+1.02:
+• Status notification on the lock screen: level, alarm limit, time until the alarm while charging, repeat rhythm; expanded also mA, °C, V.
+• History: switch "V · mA" for voltage and current, smooth scrolling with a position bar, landscape layout.
+• Remaining time: fixed "in about 1 min" after a long wait; on battery from the current drain.
+• Capacity: highest and lowest 20 % of the measurements are left out.
+• Alarm ends at once when the limit is moved past the level.
