@@ -83,6 +83,18 @@ object EventType {
     const val ALARM_LOW = "alarm_low"
     const val ALARM_HOT = "alarm_hot"
     const val ALARM_COLD = "alarm_cold"
+
+    /** A new alarm this soon after the last sound of the same alarm continues that row. */
+    const val MERGE_WINDOW_MS = 10 * 60_000L
+
+    /**
+     * True if a new alarm of [type] belongs to the newest row [newest]: same alarm, nothing else logged since
+     * (no plugging in or out), and its last sound at most [MERGE_WINDOW_MS] ago. Happens when the limit is moved
+     * back and forth around the level: the alarm ends and starts again within seconds – one row "3×", not three.
+     */
+    fun continuesRow(newest: EventEntry?, type: String, now: Long): Boolean =
+        newest != null && newest.type == type && type.startsWith("alarm_") &&
+            now - (newest.lastRepeat ?: newest.time) in 0..MERGE_WINDOW_MS
 }
 
 @Dao
@@ -100,8 +112,15 @@ interface LogDao {
     )
     suspend fun countRepeat(type: String, time: Long)
 
-    @Query("UPDATE events SET diag = :diag WHERE id = (SELECT id FROM events WHERE type = :type ORDER BY time DESC LIMIT 1)")
+    /** Sound report of a first alarm; on a row continued by [EventType.continuesRow] it counts as the latest repeat. */
+    @Query(
+        "UPDATE events SET lastDiag = CASE WHEN diag IS NULL THEN lastDiag ELSE :diag END, diag = COALESCE(diag, :diag) " +
+            "WHERE id = (SELECT id FROM events WHERE type = :type ORDER BY time DESC LIMIT 1)",
+    )
     suspend fun setDiag(type: String, diag: String)
+
+    @Query("SELECT * FROM events ORDER BY time DESC LIMIT 1")
+    suspend fun newestEvent(): EventEntry?
 
     @Query("UPDATE events SET lastDiag = :diag WHERE id = (SELECT id FROM events WHERE type = :type ORDER BY time DESC LIMIT 1)")
     suspend fun setLastDiag(type: String, diag: String)

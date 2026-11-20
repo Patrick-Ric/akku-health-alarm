@@ -16,6 +16,7 @@ import android.os.PowerManager
 import android.os.SystemClock
 import androidx.core.app.ServiceCompat
 import androidx.core.content.ContextCompat
+import androidx.room.withTransaction
 import io.github.patrickric.akkuhealthalarm.AppLanguage
 import io.github.patrickric.akkuhealthalarm.BuildConfig
 import io.github.patrickric.akkuhealthalarm.app
@@ -404,7 +405,17 @@ class MonitorService : Service() {
             tempDeciC = r.tempDeciC,
             delivery = delivery,
         )
-        scope.launch(Dispatchers.IO) { app.db.dao().insertEvent(entry) }
+        scope.launch(Dispatchers.IO) {
+            val db = app.db
+            db.withTransaction {
+                val dao = db.dao()
+                if (EventType.continuesRow(dao.newestEvent(), type, entry.time)) {
+                    dao.countRepeat(type, entry.time)
+                } else {
+                    dao.insertEvent(entry)
+                }
+            }
+        }
     }
 
     /**
