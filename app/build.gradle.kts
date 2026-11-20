@@ -23,8 +23,8 @@ android {
         applicationId = "io.github.patrickric.akkuhealthalarm"
         minSdk = 24
         targetSdk = 36
-        versionCode = 5
-        versionName = "1.03"
+        versionCode = 6
+        versionName = "1.04"
     }
 
     signingConfigs {

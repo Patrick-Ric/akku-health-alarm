@@ -1,0 +1,4 @@
+1.04:
+• New switch "Alarm volume" (Settings → Sound, on): the alarm sounds with the alarm volume instead of the often very low notification volume. A muted phone stays silent unless "Also when muted" is on.
+• When an alarm starts again soon after (for example while moving a limit), it stays one row in the history.
+• Reliability: help for Motorola phones ("Background app management").

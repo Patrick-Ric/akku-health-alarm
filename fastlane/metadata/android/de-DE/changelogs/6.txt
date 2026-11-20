@@ -1,0 +1,4 @@
+1.04:
+• Neuer Schalter „Wecker-Lautstärke“ (Einstellungen → Ton, an): Der Alarm klingt mit der Lautstärke des Weckers statt der oft sehr leisen Benachrichtigungs-Lautstärke. Stumm geschaltet bleibt er still, außer „Auch wenn stumm“ ist an.
+• Startet ein Alarm kurz nacheinander neu (z. B. beim Verstellen der Grenze), bleibt es eine Zeile im Verlauf.
+• Zuverlässigkeit: Hilfe für Motorola-Handys („Background app management“).
