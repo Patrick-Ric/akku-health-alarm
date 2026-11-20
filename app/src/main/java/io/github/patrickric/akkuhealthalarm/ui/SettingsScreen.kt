@@ -572,7 +572,8 @@ private fun ReliabilityDetails(settings: AlarmSettings, update: Update) {
                 Text(step, style = MaterialTheme.typography.bodyMedium)
             }
         }
-        if (vendor.pages.isNotEmpty()) {
+        // Motorola has no known page to open directly: the button then opens the settings app for its search.
+        if (vendor.pages.isNotEmpty() || vendor.viaSettingsSearch) {
             FilledTonalButton(
                 onClick = { openFailed = !vendor.openSettings(context) },
                 modifier = Modifier.fillMaxWidth().padding(top = 12.dp),
