@@ -53,7 +53,9 @@
     <string name="tone_none_selected">Není vybrán žádný zvuk</string>
     <string name="vibration_title">Vibrace</string>
     <string name="loud_title">I při ztlumení</string>
-    <string name="loud_summary">Používá hlasitost budíku</string>
+    <string name="loud_summary">Zní i při ztlumení nebo vibracích</string>
+    <string name="alarm_volume_title">Hlasitost budíku</string>
+    <string name="alarm_volume_summary">Nyní %1$d z %2$d místo hlasitosti oznámení (%3$d z %4$d)</string>
     <string name="alarm_notif_title">Zobrazit oznámení</string>
     <string name="alarm_notif_summary">S odpočtem do dalšího opakování. Vypnuto: jen zvuk, hlášení a vibrace.</string>
     <string name="quiet_title">Noční klid</string>
@@ -230,6 +232,10 @@
         <item>Nastavení → Baterie → Optimalizace baterie: nastav Akku Health Alarm na „Neoptimalizovat“.</item>
         <item>Nastavení → Baterie → vypni pokročilou optimalizaci.</item>
         <item>Zamkni aplikaci v přehledu posledních aplikací.</item>
+    </string-array>
+    <string-array name="vendor_steps_motorola">
+        <item>Pokud má telefon seznam Motorola „Background app management“: zapni tam Akku Health Alarm. Nejrychleji ho najde hledání v nastavení.</item>
+        <item>Pokud je to možné, zamkni aplikaci v přehledu posledních aplikací.</item>
     </string-array>
     <string-array name="vendor_steps_other">
         <item>Pokud existuje nastavení „Automatické spouštění“: povol ho pro Akku Health Alarm.</item>

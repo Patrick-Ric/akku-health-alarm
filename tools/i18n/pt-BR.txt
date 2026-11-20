@@ -51,215 +51,219 @@
 50|Nenhum som escolhido
 51|Vibrar
 52|Também no silencioso
-53|Usa o volume do despertador
-54|Mostrar notificação
-55|Com contagem regressiva até a próxima repetição. Desligado: só som, aviso falado e vibração.
-56|Descanso noturno
-57|Somente uma notificação silenciosa neste período
-58|Das %s
-59|Até %s
-60|Alarme de temperatura
-61|Avisa quando a bateria fica quente ou fria demais
-62|Só perigo
-63|Normal
-64|Rigoroso
-65|Personalizado
-66|%1$d–%2$d °C
-67|Avisar frio só ao carregar
-68|Carregar no frio prejudica a bateria; usar quase não.
-69|O carregamento rápido costuma chegar a 35–40 °C, então este nível pode avisar com frequência.
-70|Notificação
-71|Sempre mostra nível de carga, status e o tempo até o alarme. Mostrar também:
-72|Corrente (mA)
-73|Temperatura
-74|Tensão
-75|Porcentagem como ícone na barra de status
-76|Sobre
-77|Versão %1$s · GPL-3.0 · Funciona totalmente offline
-78|Status da bateria
-79|Alarmes da bateria
-80|Alarme em %d %%
-81|Alarme desligado
-82|em cerca de %s
-83|a cada %s
-84|uma vez
-85|Bateria carregada: %d %%
-86|Desconecte o carregador
-87|Bateria fraca: %d %%
-88|Conecte o carregador
-89|Bateria quente: %s
-90|Deixe o celular esfriar
-91|Bateria fria: %s
-92|Não carregue no frio
-93|Bateria carregada.
-94|Bateria carregada, %d por cento.
-95|Bateria fraca.
-96|Bateria fraca, %d por cento.
-97|Bateria quente.
-98|Bateria fria.
-99|Lista
-100|Gráfico
-101|%d registro
-102|%d registros
-101:many|%d registros
-103|Ainda sem registros. Cada mudança do nível de carga aparecerá aqui.
-104|Carregador
-105|USB
-106|Sem fio
-107|Bateria
-108|Últimas 24 horas
-109|Ainda sem dados. A gravação está em andamento.
-110|agora
-111|Eventos
-112|Ainda sem eventos.
-113|Carregador conectado
-114|Carregador desconectado
-115|Alarme: bateria carregada
-116|Alarme: bateria fraca
-117|Alarme: bateria quente
-118|Alarme: bateria fria
-119|Estado informado pelo Android
-120|Bom
-121|Superaquecida
-122|Fria demais
-123|Sobretensão
-124|Defeituosa
-125|Erro desconhecido
-126|Não informado
-127|Tecnologia
-128|Contador de carga
-129|Dia
-130|Semana
-131|Mês
-132|Tudo
-133|Temperatura
-134|Amplie com dois dedos, toque duas vezes para redefinir.
-135|%1$d %% em cerca de %2$s
-136|%d min
-137|%d h
-138|%1$d h %2$d min
-139|Histórico
-140|Por quanto tempo o histórico é guardado. Registros mais antigos são apagados.
-141|1 dia
-142|1 semana
-143|1 mês
-144|1 ano
-145|Sempre
-146|Descarregando
-147|Mostrar tensão e corrente
-148|Ouvir
-149|Estado da bateria
-150|Ainda não medido
-151|%1$s de %2$s
-152|medido em %1$d carga (%2$d %% no total)
-153|medido em %1$d cargas (%2$d %% no total)
-152:many|medido em %1$d cargas (%2$d %% no total)
-154|Carregue pelo menos 15 % de uma vez e a capacidade será medida.
-155|O Android informa: %s
-156|± é a incerteza da medição. Quanto mais cargas e mais longas, menor ela fica.
-157|De %d medições, os 20 %% mais altos e mais baixos não são contados.
-158|não contado
-159|Capacidade nominal
-160|lida do celular
-161|digitada por você
-162|Desconhecida. Digite-a para ver o estado em porcentagem.
-163|Alterar
-164|Em mAh, veja a ficha técnica do seu celular
-165|Automático
-166|Ciclos de carga
-167|%1$s ciclos completos desde o início da gravação
-168|Velocidade de carga
-169|Ø %1$s · %2$s %%/h
-170|Cargas recentes
-171|Nenhuma carga gravada ainda. Aqui aparece cada carga, de conectar a desconectar.
-172|%s ciclos
-173|Capacidade ao longo do tempo
-174|Valores atuais
-175|Dicas
-176|Capacidade da bateria só %d %%
-177|A bateria guarda só cerca de %1$s de %2$s. Uma troca pode valer a pena.
-178|Cargas
-179|Toque em um valor emoldurado para ver a curva.
-180|Este celular calcula o contador de carga apenas a partir da porcentagem, então ele não consegue mostrar o desgaste. Por isso o app mede ele mesmo a corrente de carga; isso é menos preciso.
-181|cheia
-182|App inativo · %s
-183|Confiabilidade
-184|Pronto
-185|Além disso, para %s:
-186|Em geral:
-187|Abrir configurações
-188|Esta página não existe no seu celular. As informações do app estão abertas; siga os passos acima.
-189|Mais ajuda para o seu celular (link para copiar):
-190|Link copiado
-191|Celulares %s precisam de mais algumas configurações.
-192|Ver
-193|Pronto
-194|Permita a inicialização automática do Akku Health Alarm.
-195|Configurações → Apps → Akku Health Alarm → Economia de bateria: "Sem restrições".
-196|Na visão de apps recentes, segure o app e toque no cadeado.
-197|Gerenciador do telefone → Inicialização de apps: coloque o Akku Health Alarm em "Gerenciar manualmente" e ative os três interruptores.
-198|Celulares mais antigos: Gerenciador do telefone → "Limpeza com tela bloqueada" ou "Apps protegidos": não deixe o Akku Health Alarm ser fechado.
-199|Na visão de apps recentes, puxe o app para baixo até aparecer um cadeado.
-200|Configurações → Bateria → Limites de uso em segundo plano → "Apps que nunca dormem" → adicione o Akku Health Alarm.
-201|Na visão de apps recentes, toque no ícone do app e escolha "Bloquear este app".
-202|Configurações → Apps → Akku Health Alarm → Bateria: permita a inicialização automática e a atividade em segundo plano.
-203|Desative "Congelar em segundo plano" e "Otimizar apps anormais".
-204|Bloqueie o app na visão de apps recentes.
-205|i Manager → Gerenciador de apps → Inicialização automática: ative o Akku Health Alarm.
-206|Configurações → Bateria → Alto consumo em segundo plano: permita o Akku Health Alarm.
-207|Bloqueie o app na visão de apps recentes.
-208|Configurações → Bateria → Otimização de bateria: coloque o Akku Health Alarm em "Não otimizar".
-209|Configurações → Bateria → desative a otimização avançada.
-210|Bloqueie o app na visão de apps recentes.
-211|Se existir a configuração "Inicialização automática": permita para o Akku Health Alarm.
-212|Se possível, bloqueie o app na visão de apps recentes.
-213|com som
-214|silencioso · descanso noturno
-215|só vibração · celular no silencioso
-216|silencioso · celular no silencioso
-217|só notificação · som e voz desligados
-218|o som falhou
-219|Primeiro alarme: %1$s
-220|Última repetição %1$s: %2$s
-221|tela ligada
-222|tela desligada
-223|volume de notificações %1$d/%2$d
-224|volume do alarme %1$d/%2$d
-225|Não perturbe ativado
-226|foco de áudio recusado
-227|reproduzido %1$s s
-228|parou antes: %1$s de %2$s s
-229|interrompido após %1$s s
-230|erro de reprodução %1$s
-231|a reprodução não terminou
-232|nada foi reproduzido
-233|Idioma
-234|Idioma do celular
-235|Aparência
-236|Sistema
-237|Claro
-238|Escuro
-239|Tudo configurado
-240|Fiz estes passos
-241|Menos
-242|Mais
-243|Padrão
-244|Escolha rápida %d
-245|Alterar escolha rápida %d
-246|Usar a faixa atual
-247|Redefinir
-248|Segure um botão para alterá-lo
-249|Repetir alarme
-250|Uma vez
-251|%d s
-252|Na bateria com a tela desligada, o Android só permite isso a cada 9 minutos aprox.
-253|Próximo alarme em %s
-254|até %s
-255|Carregando agora
-256|desde %s
-257|cerca de %s carregados até agora
-258|Faltam %d %% para medir a capacidade. Ela é medida ao desconectar.
-259|Suficiente para medir. A capacidade é calculada ao desconectar.
-260|sem medição: abaixo de 15 %
-261|sem medição: gravação interrompida
-262|sem medição: valores implausíveis
+53|Toca também no silencioso ou no vibrar
+54|Volume do despertador
+55|Agora %1$d de %2$d em vez do volume de notificações (%3$d de %4$d)
+56|Mostrar notificação
+57|Com contagem regressiva até a próxima repetição. Desligado: só som, aviso falado e vibração.
+58|Descanso noturno
+59|Somente uma notificação silenciosa neste período
+60|Das %s
+61|Até %s
+62|Alarme de temperatura
+63|Avisa quando a bateria fica quente ou fria demais
+64|Só perigo
+65|Normal
+66|Rigoroso
+67|Personalizado
+68|%1$d–%2$d °C
+69|Avisar frio só ao carregar
+70|Carregar no frio prejudica a bateria; usar quase não.
+71|O carregamento rápido costuma chegar a 35–40 °C, então este nível pode avisar com frequência.
+72|Notificação
+73|Sempre mostra nível de carga, status e o tempo até o alarme. Mostrar também:
+74|Corrente (mA)
+75|Temperatura
+76|Tensão
+77|Porcentagem como ícone na barra de status
+78|Sobre
+79|Versão %1$s · GPL-3.0 · Funciona totalmente offline
+80|Status da bateria
+81|Alarmes da bateria
+82|Alarme em %d %%
+83|Alarme desligado
+84|em cerca de %s
+85|a cada %s
+86|uma vez
+87|Bateria carregada: %d %%
+88|Desconecte o carregador
+89|Bateria fraca: %d %%
+90|Conecte o carregador
+91|Bateria quente: %s
+92|Deixe o celular esfriar
+93|Bateria fria: %s
+94|Não carregue no frio
+95|Bateria carregada.
+96|Bateria carregada, %d por cento.
+97|Bateria fraca.
+98|Bateria fraca, %d por cento.
+99|Bateria quente.
+100|Bateria fria.
+101|Lista
+102|Gráfico
+103|%d registro
+104|%d registros
+103:many|%d registros
+105|Ainda sem registros. Cada mudança do nível de carga aparecerá aqui.
+106|Carregador
+107|USB
+108|Sem fio
+109|Bateria
+110|Últimas 24 horas
+111|Ainda sem dados. A gravação está em andamento.
+112|agora
+113|Eventos
+114|Ainda sem eventos.
+115|Carregador conectado
+116|Carregador desconectado
+117|Alarme: bateria carregada
+118|Alarme: bateria fraca
+119|Alarme: bateria quente
+120|Alarme: bateria fria
+121|Estado informado pelo Android
+122|Bom
+123|Superaquecida
+124|Fria demais
+125|Sobretensão
+126|Defeituosa
+127|Erro desconhecido
+128|Não informado
+129|Tecnologia
+130|Contador de carga
+131|Dia
+132|Semana
+133|Mês
+134|Tudo
+135|Temperatura
+136|Amplie com dois dedos, toque duas vezes para redefinir.
+137|%1$d %% em cerca de %2$s
+138|%d min
+139|%d h
+140|%1$d h %2$d min
+141|Histórico
+142|Por quanto tempo o histórico é guardado. Registros mais antigos são apagados.
+143|1 dia
+144|1 semana
+145|1 mês
+146|1 ano
+147|Sempre
+148|Descarregando
+149|Mostrar tensão e corrente
+150|Ouvir
+151|Estado da bateria
+152|Ainda não medido
+153|%1$s de %2$s
+154|medido em %1$d carga (%2$d %% no total)
+155|medido em %1$d cargas (%2$d %% no total)
+154:many|medido em %1$d cargas (%2$d %% no total)
+156|Carregue pelo menos 15 % de uma vez e a capacidade será medida.
+157|O Android informa: %s
+158|± é a incerteza da medição. Quanto mais cargas e mais longas, menor ela fica.
+159|De %d medições, os 20 %% mais altos e mais baixos não são contados.
+160|não contado
+161|Capacidade nominal
+162|lida do celular
+163|digitada por você
+164|Desconhecida. Digite-a para ver o estado em porcentagem.
+165|Alterar
+166|Em mAh, veja a ficha técnica do seu celular
+167|Automático
+168|Ciclos de carga
+169|%1$s ciclos completos desde o início da gravação
+170|Velocidade de carga
+171|Ø %1$s · %2$s %%/h
+172|Cargas recentes
+173|Nenhuma carga gravada ainda. Aqui aparece cada carga, de conectar a desconectar.
+174|%s ciclos
+175|Capacidade ao longo do tempo
+176|Valores atuais
+177|Dicas
+178|Capacidade da bateria só %d %%
+179|A bateria guarda só cerca de %1$s de %2$s. Uma troca pode valer a pena.
+180|Cargas
+181|Toque em um valor emoldurado para ver a curva.
+182|Este celular calcula o contador de carga apenas a partir da porcentagem, então ele não consegue mostrar o desgaste. Por isso o app mede ele mesmo a corrente de carga; isso é menos preciso.
+183|cheia
+184|App inativo · %s
+185|Confiabilidade
+186|Pronto
+187|Além disso, para %s:
+188|Em geral:
+189|Abrir configurações
+190|Esta página não existe no seu celular. As informações do app estão abertas; siga os passos acima.
+191|Mais ajuda para o seu celular (link para copiar):
+192|Link copiado
+193|Celulares %s precisam de mais algumas configurações.
+194|Ver
+195|Pronto
+196|Permita a inicialização automática do Akku Health Alarm.
+197|Configurações → Apps → Akku Health Alarm → Economia de bateria: "Sem restrições".
+198|Na visão de apps recentes, segure o app e toque no cadeado.
+199|Gerenciador do telefone → Inicialização de apps: coloque o Akku Health Alarm em "Gerenciar manualmente" e ative os três interruptores.
+200|Celulares mais antigos: Gerenciador do telefone → "Limpeza com tela bloqueada" ou "Apps protegidos": não deixe o Akku Health Alarm ser fechado.
+201|Na visão de apps recentes, puxe o app para baixo até aparecer um cadeado.
+202|Configurações → Bateria → Limites de uso em segundo plano → "Apps que nunca dormem" → adicione o Akku Health Alarm.
+203|Na visão de apps recentes, toque no ícone do app e escolha "Bloquear este app".
+204|Configurações → Apps → Akku Health Alarm → Bateria: permita a inicialização automática e a atividade em segundo plano.
+205|Desative "Congelar em segundo plano" e "Otimizar apps anormais".
+206|Bloqueie o app na visão de apps recentes.
+207|i Manager → Gerenciador de apps → Inicialização automática: ative o Akku Health Alarm.
+208|Configurações → Bateria → Alto consumo em segundo plano: permita o Akku Health Alarm.
+209|Bloqueie o app na visão de apps recentes.
+210|Configurações → Bateria → Otimização de bateria: coloque o Akku Health Alarm em "Não otimizar".
+211|Configurações → Bateria → desative a otimização avançada.
+212|Bloqueie o app na visão de apps recentes.
+213|Se o celular tiver a lista da Motorola "Background app management": ative ali o Akku Health Alarm. A busca nas configurações encontra mais rápido.
+214|Se possível, bloqueie o app na visão de apps recentes.
+215|Se existir a configuração "Inicialização automática": permita para o Akku Health Alarm.
+216|Se possível, bloqueie o app na visão de apps recentes.
+217|com som
+218|silencioso · descanso noturno
+219|só vibração · celular no silencioso
+220|silencioso · celular no silencioso
+221|só notificação · som e voz desligados
+222|o som falhou
+223|Primeiro alarme: %1$s
+224|Última repetição %1$s: %2$s
+225|tela ligada
+226|tela desligada
+227|volume de notificações %1$d/%2$d
+228|volume do alarme %1$d/%2$d
+229|Não perturbe ativado
+230|foco de áudio recusado
+231|reproduzido %1$s s
+232|parou antes: %1$s de %2$s s
+233|interrompido após %1$s s
+234|erro de reprodução %1$s
+235|a reprodução não terminou
+236|nada foi reproduzido
+237|Idioma
+238|Idioma do celular
+239|Aparência
+240|Sistema
+241|Claro
+242|Escuro
+243|Tudo configurado
+244|Fiz estes passos
+245|Menos
+246|Mais
+247|Padrão
+248|Escolha rápida %d
+249|Alterar escolha rápida %d
+250|Usar a faixa atual
+251|Redefinir
+252|Segure um botão para alterá-lo
+253|Repetir alarme
+254|Uma vez
+255|%d s
+256|Na bateria com a tela desligada, o Android só permite isso a cada 9 minutos aprox.
+257|Próximo alarme em %s
+258|até %s
+259|Carregando agora
+260|desde %s
+261|cerca de %s carregados até agora
+262|Faltam %d %% para medir a capacidade. Ela é medida ao desconectar.
+263|Suficiente para medir. A capacidade é calculada ao desconectar.
+264|sem medição: abaixo de 15 %
+265|sem medição: gravação interrompida
+266|sem medição: valores implausíveis

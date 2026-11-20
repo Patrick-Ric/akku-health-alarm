@@ -51,213 +51,217 @@
 50|Nincs kiválasztott hang
 51|Rezgés
 52|Némítva is
-53|Az ébresztő hangerejét használja
-54|Értesítés megjelenítése
-55|Visszaszámlálással a következő ismétlésig. Ki: csak hang, bemondás és rezgés.
-56|Éjszakai csend
-57|Ebben az időben csak néma értesítés
-58|%s-tól
-59|%s-ig
-60|Hőmérséklet-riasztás
-61|Figyelmeztet, ha az akku túl meleg vagy túl hideg
-62|Csak veszély
-63|Normál
-64|Szigorú
-65|Egyéni
-66|%1$d–%2$d °C
-67|Hideget csak töltés közben jelezzen
-68|Hidegben tölteni árt az akkunak, használni alig.
-69|A gyorstöltés gyakran eléri a 35–40 °C-ot, ezért ez a szint gyakran riaszthat.
-70|Értesítés
-71|Mindig mutatja a töltöttséget, az állapotot és a riasztásig hátralévő időt. Ezeket is mutasd:
-72|Áram (mA)
-73|Hőmérséklet
-74|Feszültség
-75|Százalék ikonként az állapotsorban
-76|Névjegy
-77|Verzió: %1$s · GPL-3.0 · Teljesen offline működik
-78|Akkumulátor állapota
-79|Akkumulátor-riasztások
-80|Riasztás %d %% esetén
-81|Riasztás ki
-82|kb. %s múlva
-83|ismétlés: %s
-84|egyszer
-85|Akku feltöltve: %d %%
-86|Húzd ki a töltőt
-87|Akku alacsony: %d %%
-88|Csatlakoztasd a töltőt
-89|Akku meleg: %s
-90|Hagyd lehűlni a telefont
-91|Akku hideg: %s
-92|Hidegben ne töltsd
-93|Akku feltöltve.
-94|Akku feltöltve, %d százalék.
-95|Akku alacsony.
-96|Akku alacsony, %d százalék.
-97|Akku meleg.
-98|Akku hideg.
-99|Lista
-100|Grafikon
-101|%d bejegyzés
-102|%d bejegyzés
-103|Még nincs bejegyzés. Itt jelenik meg a töltöttség minden változása.
-104|Töltő
-105|USB
-106|Vezeték nélküli
-107|Akkumulátor
-108|Utolsó 24 óra
-109|Még nincs adat. A rögzítés fut.
-110|most
-111|Események
-112|Még nincs esemény.
-113|Töltő csatlakoztatva
-114|Töltő leválasztva
-115|Riasztás: akku feltöltve
-116|Riasztás: akku alacsony
-117|Riasztás: akku meleg
-118|Riasztás: akku hideg
-119|Állapot az Android szerint
-120|Jó
-121|Túlmelegedett
-122|Túl hideg
-123|Túlfeszültség
-124|Hibás
-125|Ismeretlen hiba
-126|Nincs jelentve
-127|Technológia
-128|Töltésszámláló
-129|Nap
-130|Hét
-131|Hónap
-132|Összes
-133|Hőmérséklet
-134|Nagyíts két ujjal, dupla koppintással visszaállítod.
-135|%1$d %% kb. %2$s múlva
-136|%d perc
-137|%d óra
-138|%1$d óra %2$d perc
-139|Előzmények
-140|Meddig maradjanak meg az előzmények. A régebbi bejegyzések törlődnek.
-141|1 nap
-142|1 hét
-143|1 hónap
-144|1 év
-145|Mindig
-146|Merül
-147|Feszültség és áram megjelenítése
-148|Meghallgatás
-149|Akkumulátor állapota
-150|Még nincs mérve
-151|%1$s / %2$s
-152|%1$d töltésből mérve (összesen %2$d %%)
-153|%1$d töltésből mérve (összesen %2$d %%)
-154|Tölts egyszerre legalább 15 %-ot, akkor megméri a kapacitást.
-155|Az Android jelentése: %s
-156|A ± a mérési bizonytalanság. Minél több és hosszabb a töltés, annál kisebb.
-157|%d mérésből a legmagasabb és legalacsonyabb 20 %% nem számít bele.
-158|nem számít
-159|Névleges kapacitás
-160|a telefonból kiolvasva
-161|általad megadva
-162|Ismeretlen. Add meg, hogy százalékban lásd az állapotot.
-163|Módosítás
-164|mAh-ban, lásd a telefon adatlapját
-165|Automatikus
-166|Töltési ciklusok
-167|%1$s teljes ciklus a rögzítés kezdete óta
-168|Töltési sebesség
-169|Ø %1$s · %2$s %%/óra
-170|Legutóbbi töltések
-171|Még nincs rögzített töltés. Itt jelenik meg minden töltés a csatlakoztatástól a leválasztásig.
-172|%s ciklus
-173|Kapacitás az idő múlásával
-174|Aktuális értékek
-175|Tippek
-176|Az akku kapacitása már csak %d %%
-177|Az akku már csak kb. %1$s-t tárol a(z) %2$s-ből. A csere megérheti.
-178|Töltések
-179|Koppints egy keretes értékre a görbéjéhez.
-180|Ez a telefon a töltésszámlálót csak a százalékból számolja, ezért az nem mutatja a kopást. Az alkalmazás ezért maga méri a töltőáramot; ez kevésbé pontos.
-181|teli
-182|Az alkalmazás nem volt aktív · %s
-183|Megbízhatóság
-184|Kész
-185|Ezenkívül a(z) %s esetén:
-186|Általában:
-187|Beállítások megnyitása
-188|Ez az oldal nem létezik a telefonodon. Megnyílt az alkalmazás adatlapja; kövesd a fenti lépéseket.
-189|További segítség a telefonodhoz (másolható link):
-190|Link másolva
-191|A(z) %s telefonokhoz még néhány beállítás kell.
-192|Megtekintés
-193|Kész
-194|Engedélyezd az automatikus indítást az Akku Health Alarm számára.
-195|Beállítások → Alkalmazások → Akku Health Alarm → Energiatakarékosság: „Nincs korlátozás”.
-196|A legutóbbi alkalmazások nézetben tartsd nyomva az alkalmazást, és koppints a lakatra.
-197|Telefonkezelő → Alkalmazásindítás: állítsd az Akku Health Alarmot „Kézi kezelés” módra, és kapcsold be mindhárom kapcsolót.
-198|Régebbi telefonok: Telefonkezelő → „Tisztítás zárolt képernyőn” vagy „Védett alkalmazások”: ne engedd bezárni az Akku Health Alarmot.
-199|A legutóbbi alkalmazások nézetben húzd lefelé az alkalmazást, amíg meg nem jelenik egy lakat.
-200|Beállítások → Akkumulátor → Háttérhasználati korlátok → „Soha nem alvó alkalmazások” → add hozzá az Akku Health Alarmot.
-201|A legutóbbi alkalmazások nézetben koppints az alkalmazás ikonjára, és válaszd az „Alkalmazás zárolása” lehetőséget.
-202|Beállítások → Alkalmazások → Akku Health Alarm → Akkumulátor: engedélyezd az automatikus indítást és a háttértevékenységet.
-203|Kapcsold ki a „Fagyasztás a háttérben” és a „Rendellenes alkalmazások optimalizálása” lehetőséget.
-204|Zárold az alkalmazást a legutóbbi alkalmazások nézetben.
-205|i Manager → Alkalmazáskezelő → Automatikus indítás: kapcsold be az Akku Health Alarmot.
-206|Beállítások → Akkumulátor → Magas háttérfogyasztás: engedélyezd az Akku Health Alarmot.
-207|Zárold az alkalmazást a legutóbbi alkalmazások nézetben.
-208|Beállítások → Akkumulátor → Akkumulátor-optimalizálás: állítsd az Akku Health Alarmot „Nincs optimalizálás” értékre.
-209|Beállítások → Akkumulátor → kapcsold ki a speciális optimalizálást.
-210|Zárold az alkalmazást a legutóbbi alkalmazások nézetben.
-211|Ha van „Automatikus indítás” beállítás: engedélyezd az Akku Health Alarm számára.
-212|Ha lehet, zárold az alkalmazást a legutóbbi alkalmazások nézetben.
-213|hanggal
-214|némán · éjszakai csend
-215|csak rezgés · telefon némítva
-216|némán · telefon némítva
-217|csak értesítés · hang és beszéd ki
-218|hang sikertelen
-219|Első riasztás: %1$s
-220|Utolsó ismétlés %1$s: %2$s
-221|képernyő be
-222|képernyő ki
-223|értesítési hangerő %1$d/%2$d
-224|ébresztő hangerő %1$d/%2$d
-225|Ne zavarjanak be
-226|hangfókusz elutasítva
-227|lejátszva %1$s mp
-228|korán leállt: %1$s / %2$s mp
-229|megszakítva %1$s mp után
-230|lejátszási hiba %1$s
-231|a lejátszás nem fejeződött be
-232|semmi sem szólt
-233|Nyelv
-234|A telefon nyelve
-235|Megjelenés
-236|Rendszer
-237|Világos
-238|Sötét
-239|Minden be van állítva
-240|Ezeket a lépéseket elvégeztem
-241|Kevesebb
-242|Több
-243|Alapértelmezett
-244|%d. gyorsválasztás
-245|%d. gyorsválasztás módosítása
-246|Aktuális tartomány átvétele
-247|Visszaállítás
-248|Tartsd nyomva a gombot a módosításhoz
-249|Riasztás ismétlése
-250|Egyszer
-251|%d mp
-252|Akkuról, kikapcsolt képernyővel az Android ezt csak kb. 9 percenként engedi.
-253|Következő riasztás: %s múlva
-254|eddig: %s
-255|Töltés folyamatban
-256|%s óta
-257|eddig kb. %s töltődött
-258|Még %d %% a kapacitásméréshez. A mérés kihúzáskor történik.
-259|Elég a méréshez. A kapacitást kihúzáskor számolja ki.
-260|nincs mérés: 15 % alatt
-261|nincs mérés: a rögzítés megszakadt
-262|nincs mérés: valószínűtlen értékek
+53|Némítva vagy rezgő módban is szól
+54|Ébresztő hangereje
+55|Most %1$d / %2$d az értesítési hangerő helyett (%3$d / %4$d)
+56|Értesítés megjelenítése
+57|Visszaszámlálással a következő ismétlésig. Ki: csak hang, bemondás és rezgés.
+58|Éjszakai csend
+59|Ebben az időben csak néma értesítés
+60|%s-tól
+61|%s-ig
+62|Hőmérséklet-riasztás
+63|Figyelmeztet, ha az akku túl meleg vagy túl hideg
+64|Csak veszély
+65|Normál
+66|Szigorú
+67|Egyéni
+68|%1$d–%2$d °C
+69|Hideget csak töltés közben jelezzen
+70|Hidegben tölteni árt az akkunak, használni alig.
+71|A gyorstöltés gyakran eléri a 35–40 °C-ot, ezért ez a szint gyakran riaszthat.
+72|Értesítés
+73|Mindig mutatja a töltöttséget, az állapotot és a riasztásig hátralévő időt. Ezeket is mutasd:
+74|Áram (mA)
+75|Hőmérséklet
+76|Feszültség
+77|Százalék ikonként az állapotsorban
+78|Névjegy
+79|Verzió: %1$s · GPL-3.0 · Teljesen offline működik
+80|Akkumulátor állapota
+81|Akkumulátor-riasztások
+82|Riasztás %d %% esetén
+83|Riasztás ki
+84|kb. %s múlva
+85|ismétlés: %s
+86|egyszer
+87|Akku feltöltve: %d %%
+88|Húzd ki a töltőt
+89|Akku alacsony: %d %%
+90|Csatlakoztasd a töltőt
+91|Akku meleg: %s
+92|Hagyd lehűlni a telefont
+93|Akku hideg: %s
+94|Hidegben ne töltsd
+95|Akku feltöltve.
+96|Akku feltöltve, %d százalék.
+97|Akku alacsony.
+98|Akku alacsony, %d százalék.
+99|Akku meleg.
+100|Akku hideg.
+101|Lista
+102|Grafikon
+103|%d bejegyzés
+104|%d bejegyzés
+105|Még nincs bejegyzés. Itt jelenik meg a töltöttség minden változása.
+106|Töltő
+107|USB
+108|Vezeték nélküli
+109|Akkumulátor
+110|Utolsó 24 óra
+111|Még nincs adat. A rögzítés fut.
+112|most
+113|Események
+114|Még nincs esemény.
+115|Töltő csatlakoztatva
+116|Töltő leválasztva
+117|Riasztás: akku feltöltve
+118|Riasztás: akku alacsony
+119|Riasztás: akku meleg
+120|Riasztás: akku hideg
+121|Állapot az Android szerint
+122|Jó
+123|Túlmelegedett
+124|Túl hideg
+125|Túlfeszültség
+126|Hibás
+127|Ismeretlen hiba
+128|Nincs jelentve
+129|Technológia
+130|Töltésszámláló
+131|Nap
+132|Hét
+133|Hónap
+134|Összes
+135|Hőmérséklet
+136|Nagyíts két ujjal, dupla koppintással visszaállítod.
+137|%1$d %% kb. %2$s múlva
+138|%d perc
+139|%d óra
+140|%1$d óra %2$d perc
+141|Előzmények
+142|Meddig maradjanak meg az előzmények. A régebbi bejegyzések törlődnek.
+143|1 nap
+144|1 hét
+145|1 hónap
+146|1 év
+147|Mindig
+148|Merül
+149|Feszültség és áram megjelenítése
+150|Meghallgatás
+151|Akkumulátor állapota
+152|Még nincs mérve
+153|%1$s / %2$s
+154|%1$d töltésből mérve (összesen %2$d %%)
+155|%1$d töltésből mérve (összesen %2$d %%)
+156|Tölts egyszerre legalább 15 %-ot, akkor megméri a kapacitást.
+157|Az Android jelentése: %s
+158|A ± a mérési bizonytalanság. Minél több és hosszabb a töltés, annál kisebb.
+159|%d mérésből a legmagasabb és legalacsonyabb 20 %% nem számít bele.
+160|nem számít
+161|Névleges kapacitás
+162|a telefonból kiolvasva
+163|általad megadva
+164|Ismeretlen. Add meg, hogy százalékban lásd az állapotot.
+165|Módosítás
+166|mAh-ban, lásd a telefon adatlapját
+167|Automatikus
+168|Töltési ciklusok
+169|%1$s teljes ciklus a rögzítés kezdete óta
+170|Töltési sebesség
+171|Ø %1$s · %2$s %%/óra
+172|Legutóbbi töltések
+173|Még nincs rögzített töltés. Itt jelenik meg minden töltés a csatlakoztatástól a leválasztásig.
+174|%s ciklus
+175|Kapacitás az idő múlásával
+176|Aktuális értékek
+177|Tippek
+178|Az akku kapacitása már csak %d %%
+179|Az akku már csak kb. %1$s-t tárol a(z) %2$s-ből. A csere megérheti.
+180|Töltések
+181|Koppints egy keretes értékre a görbéjéhez.
+182|Ez a telefon a töltésszámlálót csak a százalékból számolja, ezért az nem mutatja a kopást. Az alkalmazás ezért maga méri a töltőáramot; ez kevésbé pontos.
+183|teli
+184|Az alkalmazás nem volt aktív · %s
+185|Megbízhatóság
+186|Kész
+187|Ezenkívül a(z) %s esetén:
+188|Általában:
+189|Beállítások megnyitása
+190|Ez az oldal nem létezik a telefonodon. Megnyílt az alkalmazás adatlapja; kövesd a fenti lépéseket.
+191|További segítség a telefonodhoz (másolható link):
+192|Link másolva
+193|A(z) %s telefonokhoz még néhány beállítás kell.
+194|Megtekintés
+195|Kész
+196|Engedélyezd az automatikus indítást az Akku Health Alarm számára.
+197|Beállítások → Alkalmazások → Akku Health Alarm → Energiatakarékosság: „Nincs korlátozás”.
+198|A legutóbbi alkalmazások nézetben tartsd nyomva az alkalmazást, és koppints a lakatra.
+199|Telefonkezelő → Alkalmazásindítás: állítsd az Akku Health Alarmot „Kézi kezelés” módra, és kapcsold be mindhárom kapcsolót.
+200|Régebbi telefonok: Telefonkezelő → „Tisztítás zárolt képernyőn” vagy „Védett alkalmazások”: ne engedd bezárni az Akku Health Alarmot.
+201|A legutóbbi alkalmazások nézetben húzd lefelé az alkalmazást, amíg meg nem jelenik egy lakat.
+202|Beállítások → Akkumulátor → Háttérhasználati korlátok → „Soha nem alvó alkalmazások” → add hozzá az Akku Health Alarmot.
+203|A legutóbbi alkalmazások nézetben koppints az alkalmazás ikonjára, és válaszd az „Alkalmazás zárolása” lehetőséget.
+204|Beállítások → Alkalmazások → Akku Health Alarm → Akkumulátor: engedélyezd az automatikus indítást és a háttértevékenységet.
+205|Kapcsold ki a „Fagyasztás a háttérben” és a „Rendellenes alkalmazások optimalizálása” lehetőséget.
+206|Zárold az alkalmazást a legutóbbi alkalmazások nézetben.
+207|i Manager → Alkalmazáskezelő → Automatikus indítás: kapcsold be az Akku Health Alarmot.
+208|Beállítások → Akkumulátor → Magas háttérfogyasztás: engedélyezd az Akku Health Alarmot.
+209|Zárold az alkalmazást a legutóbbi alkalmazások nézetben.
+210|Beállítások → Akkumulátor → Akkumulátor-optimalizálás: állítsd az Akku Health Alarmot „Nincs optimalizálás” értékre.
+211|Beállítások → Akkumulátor → kapcsold ki a speciális optimalizálást.
+212|Zárold az alkalmazást a legutóbbi alkalmazások nézetben.
+213|Ha a telefonon van Motorola „Background app management” lista: kapcsold be ott az Akku Health Alarmot. A beállítások keresője találja meg leggyorsabban.
+214|Ha lehet, zárold az alkalmazást a legutóbbi alkalmazások nézetben.
+215|Ha van „Automatikus indítás” beállítás: engedélyezd az Akku Health Alarm számára.
+216|Ha lehet, zárold az alkalmazást a legutóbbi alkalmazások nézetben.
+217|hanggal
+218|némán · éjszakai csend
+219|csak rezgés · telefon némítva
+220|némán · telefon némítva
+221|csak értesítés · hang és beszéd ki
+222|hang sikertelen
+223|Első riasztás: %1$s
+224|Utolsó ismétlés %1$s: %2$s
+225|képernyő be
+226|képernyő ki
+227|értesítési hangerő %1$d/%2$d
+228|ébresztő hangerő %1$d/%2$d
+229|Ne zavarjanak be
+230|hangfókusz elutasítva
+231|lejátszva %1$s mp
+232|korán leállt: %1$s / %2$s mp
+233|megszakítva %1$s mp után
+234|lejátszási hiba %1$s
+235|a lejátszás nem fejeződött be
+236|semmi sem szólt
+237|Nyelv
+238|A telefon nyelve
+239|Megjelenés
+240|Rendszer
+241|Világos
+242|Sötét
+243|Minden be van állítva
+244|Ezeket a lépéseket elvégeztem
+245|Kevesebb
+246|Több
+247|Alapértelmezett
+248|%d. gyorsválasztás
+249|%d. gyorsválasztás módosítása
+250|Aktuális tartomány átvétele
+251|Visszaállítás
+252|Tartsd nyomva a gombot a módosításhoz
+253|Riasztás ismétlése
+254|Egyszer
+255|%d mp
+256|Akkuról, kikapcsolt képernyővel az Android ezt csak kb. 9 percenként engedi.
+257|Következő riasztás: %s múlva
+258|eddig: %s
+259|Töltés folyamatban
+260|%s óta
+261|eddig kb. %s töltődött
+262|Még %d %% a kapacitásméréshez. A mérés kihúzáskor történik.
+263|Elég a méréshez. A kapacitást kihúzáskor számolja ki.
+264|nincs mérés: 15 % alatt
+265|nincs mérés: a rögzítés megszakadt
+266|nincs mérés: valószínűtlen értékek

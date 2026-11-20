@@ -53,7 +53,9 @@
     <string name="tone_none_selected">Звук не вибрано</string>
     <string name="vibration_title">Вібрація</string>
     <string name="loud_title">Навіть у беззвучному режимі</string>
-    <string name="loud_summary">Використовує гучність будильника</string>
+    <string name="loud_summary">Звучить і в беззвучному режимі чи з вібрацією</string>
+    <string name="alarm_volume_title">Гучність будильника</string>
+    <string name="alarm_volume_summary">Зараз %1$d з %2$d замість гучності сповіщень (%3$d з %4$d)</string>
     <string name="alarm_notif_title">Показувати сповіщення</string>
     <string name="alarm_notif_summary">Зі зворотним відліком до наступного повтору. Вимк.: лише звук, голосове повідомлення та вібрація.</string>
     <string name="quiet_title">Нічний спокій</string>
@@ -230,6 +232,10 @@
         <item>Налаштування → Батарея → Оптимізація батареї: встановіть для Akku Health Alarm «Не оптимізувати».</item>
         <item>Налаштування → Батарея → вимкніть розширену оптимізацію.</item>
         <item>Заблокуйте застосунок у списку недавніх застосунків.</item>
+    </string-array>
+    <string-array name="vendor_steps_motorola">
+        <item>Якщо на телефоні є список Motorola «Background app management»: увімкніть там Akku Health Alarm. Найшвидше його знайде пошук у налаштуваннях.</item>
+        <item>За можливості заблокуйте застосунок у списку недавніх застосунків.</item>
     </string-array>
     <string-array name="vendor_steps_other">
         <item>Якщо є налаштування «Автозапуск»: дозвольте його для Akku Health Alarm.</item>

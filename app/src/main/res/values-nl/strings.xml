@@ -53,7 +53,9 @@
     <string name="tone_none_selected">Geen geluid gekozen</string>
     <string name="vibration_title">Trillen</string>
     <string name="loud_title">Ook als het geluid uit staat</string>
-    <string name="loud_summary">Gebruikt het wekkervolume</string>
+    <string name="loud_summary">Klinkt ook bij stil of trillen</string>
+    <string name="alarm_volume_title">Wekkervolume</string>
+    <string name="alarm_volume_summary">Nu %1$d van %2$d in plaats van het meldingsvolume (%3$d van %4$d)</string>
     <string name="alarm_notif_title">Melding tonen</string>
     <string name="alarm_notif_summary">Met aftelling tot de volgende herhaling. Uit: alleen geluid, gesproken melding en trillen.</string>
     <string name="quiet_title">Nachtrust</string>
@@ -226,6 +228,10 @@
         <item>Instellingen → Batterij → Batterijoptimalisatie: zet Akku Health Alarm op \"Niet optimaliseren\".</item>
         <item>Instellingen → Batterij → schakel geavanceerde optimalisatie uit.</item>
         <item>Vergrendel de app in het overzicht van recente apps.</item>
+    </string-array>
+    <string-array name="vendor_steps_motorola">
+        <item>Als de telefoon de Motorola-lijst \"Background app management\" heeft: zet daar Akku Health Alarm aan. De zoekfunctie in de instellingen vindt hem het snelst.</item>
+        <item>Vergrendel indien mogelijk de app in het overzicht van recente apps.</item>
     </string-array>
     <string-array name="vendor_steps_other">
         <item>Als er een instelling \"Automatisch starten\" is: sta die toe voor Akku Health Alarm.</item>

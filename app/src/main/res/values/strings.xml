@@ -60,7 +60,9 @@
     <string name="tone_none_selected">No sound selected</string>
     <string name="vibration_title">Vibrate</string>
     <string name="loud_title">Also when muted</string>
-    <string name="loud_summary">Uses the alarm volume</string>
+    <string name="loud_summary">Sounds even when muted or on vibrate</string>
+    <string name="alarm_volume_title">Alarm volume</string>
+    <string name="alarm_volume_summary">Now %1$d of %2$d instead of the notification volume (%3$d of %4$d)</string>
     <string name="alarm_notif_title">Show notification</string>
     <string name="alarm_notif_summary">With a countdown to the next repeat. Off: only sound, announcement and vibration.</string>
     <string name="quiet_title">Night rest</string>
@@ -241,6 +243,10 @@
         <item>Settings → Battery → Battery optimization: set Akku Health Alarm to "Don't optimize".</item>
         <item>Settings → Battery → turn off Advanced optimization.</item>
         <item>Lock the app in the recent apps view.</item>
+    </string-array>
+    <string-array name="vendor_steps_motorola">
+        <item>If your phone has Motorola\'s list \"Background app management\": turn on Akku Health Alarm there. The search in the settings finds it fastest.</item>
+        <item>If possible, lock the app in the recent apps view.</item>
     </string-array>
     <string-array name="vendor_steps_other">
         <item>If there is an "Autostart" setting: allow it for Akku Health Alarm.</item>

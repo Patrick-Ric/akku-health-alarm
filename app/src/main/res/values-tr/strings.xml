@@ -53,7 +53,9 @@
     <string name="tone_none_selected">Ses seçilmedi</string>
     <string name="vibration_title">Titreşim</string>
     <string name="loud_title">Sessizdeyken de</string>
-    <string name="loud_summary">Alarm ses düzeyini kullanır</string>
+    <string name="loud_summary">Sessiz veya titreşimdeyken de çalar</string>
+    <string name="alarm_volume_title">Alarm ses düzeyi</string>
+    <string name="alarm_volume_summary">Şu an %1$d/%2$d, bildirim ses düzeyi yerine (%3$d/%4$d)</string>
     <string name="alarm_notif_title">Bildirim göster</string>
     <string name="alarm_notif_summary">Sonraki tekrara geri sayımla. Kapalı: yalnızca ses, sesli bildirim ve titreşim.</string>
     <string name="quiet_title">Gece sessizliği</string>
@@ -226,6 +228,10 @@
         <item>Ayarlar → Pil → Pil optimizasyonu: Akku Health Alarm\'ı \"Optimize etme\" yap.</item>
         <item>Ayarlar → Pil → gelişmiş optimizasyonu kapat.</item>
         <item>Uygulamayı son uygulamalar görünümünde kilitle.</item>
+    </string-array>
+    <string-array name="vendor_steps_motorola">
+        <item>Telefonda Motorola\'nın \"Background app management\" listesi varsa: orada Akku Health Alarm\'ı aç. Ayarlardaki arama onu en hızlı bulur.</item>
+        <item>Mümkünse uygulamayı son uygulamalar görünümünde kilitle.</item>
     </string-array>
     <string-array name="vendor_steps_other">
         <item>\"Otomatik başlatma\" ayarı varsa: Akku Health Alarm için izin ver.</item>

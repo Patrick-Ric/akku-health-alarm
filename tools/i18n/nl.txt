@@ -51,213 +51,217 @@
 50|Geen geluid gekozen
 51|Trillen
 52|Ook als het geluid uit staat
-53|Gebruikt het wekkervolume
-54|Melding tonen
-55|Met aftelling tot de volgende herhaling. Uit: alleen geluid, gesproken melding en trillen.
-56|Nachtrust
-57|In deze tijd alleen een stille melding
-58|Van %s
-59|Tot %s
-60|Temperatuuralarm
-61|Waarschuwt als de accu te warm of te koud wordt
-62|Alleen gevaar
-63|Normaal
-64|Streng
-65|Eigen
-66|%1$d–%2$d °C
-67|Kou alleen tijdens het laden melden
-68|Laden in de kou beschadigt de accu, gebruiken nauwelijks.
-69|Snelladen bereikt vaak 35–40 °C, dus dit niveau kan vaak waarschuwen.
-70|Melding
-71|Toont altijd laadniveau, status en de tijd tot het alarm. Ook tonen:
-72|Stroom (mA)
-73|Temperatuur
-74|Spanning
-75|Percentage als pictogram in de statusbalk
-76|Over
-77|Versie %1$s · GPL-3.0 · Werkt volledig offline
-78|Accustatus
-79|Accualarmen
-80|Alarm bij %d %%
-81|Alarm uit
-82|over ca. %s
-83|elke %s
-84|eenmalig
-85|Accu geladen: %d %%
-86|Koppel de lader los
-87|Accu laag: %d %%
-88|Sluit de lader aan
-89|Accu warm: %s
-90|Laat de telefoon afkoelen
-91|Accu koud: %s
-92|Niet laden in de kou
-93|Accu geladen.
-94|Accu geladen, %d procent.
-95|Accu laag.
-96|Accu laag, %d procent.
-97|Accu warm.
-98|Accu koud.
-99|Lijst
-100|Grafiek
-101|%d item
-102|%d items
-103|Nog geen items. Hier verschijnt elke verandering van het laadniveau.
-104|Lader
-105|USB
-106|Draadloos
-107|Accu
-108|Laatste 24 uur
-109|Nog geen gegevens. De opname loopt.
-110|nu
-111|Gebeurtenissen
-112|Nog geen gebeurtenissen.
-113|Lader aangesloten
-114|Lader losgekoppeld
-115|Alarm: accu geladen
-116|Alarm: accu laag
-117|Alarm: accu warm
-118|Alarm: accu koud
-119|Toestand volgens Android
-120|Goed
-121|Oververhit
-122|Te koud
-123|Overspanning
-124|Defect
-125|Onbekende fout
-126|Niet gemeld
-127|Technologie
-128|Ladingteller
-129|Dag
-130|Week
-131|Maand
-132|Alles
-133|Temperatuur
-134|Zoom met twee vingers, dubbeltik om te herstellen.
-135|%1$d %% over ongeveer %2$s
-136|%d min
-137|%d u
-138|%1$d u %2$d min
-139|Geschiedenis
-140|Hoe lang de geschiedenis bewaard wordt. Oudere items worden verwijderd.
-141|1 dag
-142|1 week
-143|1 maand
-144|1 jaar
-145|Altijd
-146|Ontlaadt
-147|Spanning en stroom tonen
-148|Beluisteren
-149|Accutoestand
-150|Nog niet gemeten
-151|%1$s van %2$s
-152|gemeten uit %1$d laadbeurt (%2$d %% in totaal)
-153|gemeten uit %1$d laadbeurten (%2$d %% in totaal)
-154|Laad minstens 15 % in één keer, dan wordt de capaciteit gemeten.
-155|Android meldt: %s
-156|± is de meetonzekerheid. Hoe meer en hoe langere laadbeurten, hoe kleiner ze wordt.
-157|Van %d metingen tellen de hoogste en laagste 20 %% niet mee.
-158|telt niet mee
-159|Nominale capaciteit
-160|van de telefoon gelezen
-161|door jou ingevoerd
-162|Onbekend. Voer ze in om de toestand in procent te zien.
-163|Wijzigen
-164|In mAh, zie het gegevensblad van je telefoon
-165|Automatisch
-166|Laadcycli
-167|%1$s volledige cycli sinds het begin van de opname
-168|Laadsnelheid
-169|Ø %1$s · %2$s %%/u
-170|Recente laadbeurten
-171|Nog geen laadbeurt opgenomen. Hier verschijnt elke laadbeurt van aansluiten tot loskoppelen.
-172|%s cycli
-173|Capaciteit in de loop van de tijd
-174|Actuele waarden
-175|Tips
-176|Accucapaciteit nog maar %d %%
-177|De accu bevat nog maar ongeveer %1$s van %2$s. Vervangen kan de moeite waard zijn.
-178|Laadbeurten
-179|Tik op een omkaderde waarde om de curve te zien.
-180|Deze telefoon berekent zijn ladingsteller alleen uit het percentage, dus de teller kan geen slijtage tonen. De app meet daarom zelf de laadstroom; dat is minder nauwkeurig.
-181|vol
-182|App niet actief · %s
-183|Betrouwbaarheid
-184|Klaar
-185|Extra voor %s:
-186|Algemeen:
-187|Instellingen openen
-188|Deze pagina bestaat niet op je telefoon. De app-info is geopend; volg de stappen hierboven.
-189|Meer hulp voor je telefoon (link om te kopiëren):
-190|Link gekopieerd
-191|Telefoons van %s hebben nog wat instellingen nodig.
-192|Bekijken
-193|Klaar
-194|Sta automatisch starten toe voor Akku Health Alarm.
-195|Instellingen → Apps → Akku Health Alarm → Batterijbesparing: "Geen beperkingen".
-196|Houd in het overzicht van recente apps de app ingedrukt en tik op het slot.
-197|Telefoonbeheer → App starten: zet Akku Health Alarm op "Handmatig beheren" en schakel alle drie de schakelaars in.
-198|Oudere telefoons: Telefoonbeheer → "Opschonen bij vergrendeld scherm" of "Beschermde apps": laat Akku Health Alarm niet sluiten.
-199|Trek in het overzicht van recente apps de app omlaag tot er een slot verschijnt.
-200|Instellingen → Batterij → Limieten voor achtergrondgebruik → "Apps die nooit slapen" → voeg Akku Health Alarm toe.
-201|Tik in het overzicht van recente apps op het app-pictogram en kies "Deze app vergrendelen".
-202|Instellingen → Apps → Akku Health Alarm → Batterij: sta automatisch starten en achtergrondactiviteit toe.
-203|Schakel "Bevriezen op de achtergrond" en "Abnormale apps optimaliseren" uit.
-204|Vergrendel de app in het overzicht van recente apps.
-205|i Manager → App-beheer → Automatisch starten: schakel Akku Health Alarm in.
-206|Instellingen → Batterij → Hoog stroomverbruik op de achtergrond: sta Akku Health Alarm toe.
-207|Vergrendel de app in het overzicht van recente apps.
-208|Instellingen → Batterij → Batterijoptimalisatie: zet Akku Health Alarm op "Niet optimaliseren".
-209|Instellingen → Batterij → schakel geavanceerde optimalisatie uit.
-210|Vergrendel de app in het overzicht van recente apps.
-211|Als er een instelling "Automatisch starten" is: sta die toe voor Akku Health Alarm.
-212|Vergrendel indien mogelijk de app in het overzicht van recente apps.
-213|met geluid
-214|stil · nachtrust
-215|alleen trillen · telefoon op stil
-216|stil · telefoon op stil
-217|alleen melding · geluid en stem uit
-218|geluid mislukt
-219|Eerste alarm: %1$s
-220|Laatste herhaling %1$s: %2$s
-221|scherm aan
-222|scherm uit
-223|meldingsvolume %1$d/%2$d
-224|alarmvolume %1$d/%2$d
-225|Niet storen aan
-226|audiofocus geweigerd
-227|afgespeeld %1$s s
-228|te vroeg gestopt: %1$s van %2$s s
-229|onderbroken na %1$s s
-230|afspeelfout %1$s
-231|afspelen eindigde niet
-232|niets afgespeeld
-233|Taal
-234|Taal van de telefoon
-235|Weergave
-236|Systeem
-237|Licht
-238|Donker
-239|Alles ingesteld
-240|Ik heb deze stappen gedaan
-241|Minder
-242|Meer
-243|Standaard
-244|Snelkeuze %d
-245|Snelkeuze %d aanpassen
-246|Huidig bereik overnemen
-247|Herstellen
-248|Houd een knop ingedrukt om hem aan te passen
-249|Alarm herhalen
-250|Eén keer
-251|%d s
-252|Op accu met scherm uit staat Android dit maar ongeveer elke 9 minuten toe.
-253|Volgend alarm over %s
-254|tot %s
-255|Laden bezig
-256|sinds %s
-257|tot nu toe ongeveer %s geladen
-258|Nog %d %% tot een capaciteitsmeting. Gemeten wordt bij het loskoppelen.
-259|Genoeg voor een meting. De capaciteit wordt berekend bij het loskoppelen.
-260|geen meting: onder 15 %
-261|geen meting: opname onderbroken
-262|geen meting: waarden onwaarschijnlijk
+53|Klinkt ook bij stil of trillen
+54|Wekkervolume
+55|Nu %1$d van %2$d in plaats van het meldingsvolume (%3$d van %4$d)
+56|Melding tonen
+57|Met aftelling tot de volgende herhaling. Uit: alleen geluid, gesproken melding en trillen.
+58|Nachtrust
+59|In deze tijd alleen een stille melding
+60|Van %s
+61|Tot %s
+62|Temperatuuralarm
+63|Waarschuwt als de accu te warm of te koud wordt
+64|Alleen gevaar
+65|Normaal
+66|Streng
+67|Eigen
+68|%1$d–%2$d °C
+69|Kou alleen tijdens het laden melden
+70|Laden in de kou beschadigt de accu, gebruiken nauwelijks.
+71|Snelladen bereikt vaak 35–40 °C, dus dit niveau kan vaak waarschuwen.
+72|Melding
+73|Toont altijd laadniveau, status en de tijd tot het alarm. Ook tonen:
+74|Stroom (mA)
+75|Temperatuur
+76|Spanning
+77|Percentage als pictogram in de statusbalk
+78|Over
+79|Versie %1$s · GPL-3.0 · Werkt volledig offline
+80|Accustatus
+81|Accualarmen
+82|Alarm bij %d %%
+83|Alarm uit
+84|over ca. %s
+85|elke %s
+86|eenmalig
+87|Accu geladen: %d %%
+88|Koppel de lader los
+89|Accu laag: %d %%
+90|Sluit de lader aan
+91|Accu warm: %s
+92|Laat de telefoon afkoelen
+93|Accu koud: %s
+94|Niet laden in de kou
+95|Accu geladen.
+96|Accu geladen, %d procent.
+97|Accu laag.
+98|Accu laag, %d procent.
+99|Accu warm.
+100|Accu koud.
+101|Lijst
+102|Grafiek
+103|%d item
+104|%d items
+105|Nog geen items. Hier verschijnt elke verandering van het laadniveau.
+106|Lader
+107|USB
+108|Draadloos
+109|Accu
+110|Laatste 24 uur
+111|Nog geen gegevens. De opname loopt.
+112|nu
+113|Gebeurtenissen
+114|Nog geen gebeurtenissen.
+115|Lader aangesloten
+116|Lader losgekoppeld
+117|Alarm: accu geladen
+118|Alarm: accu laag
+119|Alarm: accu warm
+120|Alarm: accu koud
+121|Toestand volgens Android
+122|Goed
+123|Oververhit
+124|Te koud
+125|Overspanning
+126|Defect
+127|Onbekende fout
+128|Niet gemeld
+129|Technologie
+130|Ladingteller
+131|Dag
+132|Week
+133|Maand
+134|Alles
+135|Temperatuur
+136|Zoom met twee vingers, dubbeltik om te herstellen.
+137|%1$d %% over ongeveer %2$s
+138|%d min
+139|%d u
+140|%1$d u %2$d min
+141|Geschiedenis
+142|Hoe lang de geschiedenis bewaard wordt. Oudere items worden verwijderd.
+143|1 dag
+144|1 week
+145|1 maand
+146|1 jaar
+147|Altijd
+148|Ontlaadt
+149|Spanning en stroom tonen
+150|Beluisteren
+151|Accutoestand
+152|Nog niet gemeten
+153|%1$s van %2$s
+154|gemeten uit %1$d laadbeurt (%2$d %% in totaal)
+155|gemeten uit %1$d laadbeurten (%2$d %% in totaal)
+156|Laad minstens 15 % in één keer, dan wordt de capaciteit gemeten.
+157|Android meldt: %s
+158|± is de meetonzekerheid. Hoe meer en hoe langere laadbeurten, hoe kleiner ze wordt.
+159|Van %d metingen tellen de hoogste en laagste 20 %% niet mee.
+160|telt niet mee
+161|Nominale capaciteit
+162|van de telefoon gelezen
+163|door jou ingevoerd
+164|Onbekend. Voer ze in om de toestand in procent te zien.
+165|Wijzigen
+166|In mAh, zie het gegevensblad van je telefoon
+167|Automatisch
+168|Laadcycli
+169|%1$s volledige cycli sinds het begin van de opname
+170|Laadsnelheid
+171|Ø %1$s · %2$s %%/u
+172|Recente laadbeurten
+173|Nog geen laadbeurt opgenomen. Hier verschijnt elke laadbeurt van aansluiten tot loskoppelen.
+174|%s cycli
+175|Capaciteit in de loop van de tijd
+176|Actuele waarden
+177|Tips
+178|Accucapaciteit nog maar %d %%
+179|De accu bevat nog maar ongeveer %1$s van %2$s. Vervangen kan de moeite waard zijn.
+180|Laadbeurten
+181|Tik op een omkaderde waarde om de curve te zien.
+182|Deze telefoon berekent zijn ladingsteller alleen uit het percentage, dus de teller kan geen slijtage tonen. De app meet daarom zelf de laadstroom; dat is minder nauwkeurig.
+183|vol
+184|App niet actief · %s
+185|Betrouwbaarheid
+186|Klaar
+187|Extra voor %s:
+188|Algemeen:
+189|Instellingen openen
+190|Deze pagina bestaat niet op je telefoon. De app-info is geopend; volg de stappen hierboven.
+191|Meer hulp voor je telefoon (link om te kopiëren):
+192|Link gekopieerd
+193|Telefoons van %s hebben nog wat instellingen nodig.
+194|Bekijken
+195|Klaar
+196|Sta automatisch starten toe voor Akku Health Alarm.
+197|Instellingen → Apps → Akku Health Alarm → Batterijbesparing: "Geen beperkingen".
+198|Houd in het overzicht van recente apps de app ingedrukt en tik op het slot.
+199|Telefoonbeheer → App starten: zet Akku Health Alarm op "Handmatig beheren" en schakel alle drie de schakelaars in.
+200|Oudere telefoons: Telefoonbeheer → "Opschonen bij vergrendeld scherm" of "Beschermde apps": laat Akku Health Alarm niet sluiten.
+201|Trek in het overzicht van recente apps de app omlaag tot er een slot verschijnt.
+202|Instellingen → Batterij → Limieten voor achtergrondgebruik → "Apps die nooit slapen" → voeg Akku Health Alarm toe.
+203|Tik in het overzicht van recente apps op het app-pictogram en kies "Deze app vergrendelen".
+204|Instellingen → Apps → Akku Health Alarm → Batterij: sta automatisch starten en achtergrondactiviteit toe.
+205|Schakel "Bevriezen op de achtergrond" en "Abnormale apps optimaliseren" uit.
+206|Vergrendel de app in het overzicht van recente apps.
+207|i Manager → App-beheer → Automatisch starten: schakel Akku Health Alarm in.
+208|Instellingen → Batterij → Hoog stroomverbruik op de achtergrond: sta Akku Health Alarm toe.
+209|Vergrendel de app in het overzicht van recente apps.
+210|Instellingen → Batterij → Batterijoptimalisatie: zet Akku Health Alarm op "Niet optimaliseren".
+211|Instellingen → Batterij → schakel geavanceerde optimalisatie uit.
+212|Vergrendel de app in het overzicht van recente apps.
+213|Als de telefoon de Motorola-lijst "Background app management" heeft: zet daar Akku Health Alarm aan. De zoekfunctie in de instellingen vindt hem het snelst.
+214|Vergrendel indien mogelijk de app in het overzicht van recente apps.
+215|Als er een instelling "Automatisch starten" is: sta die toe voor Akku Health Alarm.
+216|Vergrendel indien mogelijk de app in het overzicht van recente apps.
+217|met geluid
+218|stil · nachtrust
+219|alleen trillen · telefoon op stil
+220|stil · telefoon op stil
+221|alleen melding · geluid en stem uit
+222|geluid mislukt
+223|Eerste alarm: %1$s
+224|Laatste herhaling %1$s: %2$s
+225|scherm aan
+226|scherm uit
+227|meldingsvolume %1$d/%2$d
+228|alarmvolume %1$d/%2$d
+229|Niet storen aan
+230|audiofocus geweigerd
+231|afgespeeld %1$s s
+232|te vroeg gestopt: %1$s van %2$s s
+233|onderbroken na %1$s s
+234|afspeelfout %1$s
+235|afspelen eindigde niet
+236|niets afgespeeld
+237|Taal
+238|Taal van de telefoon
+239|Weergave
+240|Systeem
+241|Licht
+242|Donker
+243|Alles ingesteld
+244|Ik heb deze stappen gedaan
+245|Minder
+246|Meer
+247|Standaard
+248|Snelkeuze %d
+249|Snelkeuze %d aanpassen
+250|Huidig bereik overnemen
+251|Herstellen
+252|Houd een knop ingedrukt om hem aan te passen
+253|Alarm herhalen
+254|Eén keer
+255|%d s
+256|Op accu met scherm uit staat Android dit maar ongeveer elke 9 minuten toe.
+257|Volgend alarm over %s
+258|tot %s
+259|Laden bezig
+260|sinds %s
+261|tot nu toe ongeveer %s geladen
+262|Nog %d %% tot een capaciteitsmeting. Gemeten wordt bij het loskoppelen.
+263|Genoeg voor een meting. De capaciteit wordt berekend bij het loskoppelen.
+264|geen meting: onder 15 %
+265|geen meting: opname onderbroken
+266|geen meting: waarden onwaarschijnlijk

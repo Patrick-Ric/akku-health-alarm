@@ -53,7 +53,9 @@
     <string name="tone_none_selected">Nincs kiválasztott hang</string>
     <string name="vibration_title">Rezgés</string>
     <string name="loud_title">Némítva is</string>
-    <string name="loud_summary">Az ébresztő hangerejét használja</string>
+    <string name="loud_summary">Némítva vagy rezgő módban is szól</string>
+    <string name="alarm_volume_title">Ébresztő hangereje</string>
+    <string name="alarm_volume_summary">Most %1$d / %2$d az értesítési hangerő helyett (%3$d / %4$d)</string>
     <string name="alarm_notif_title">Értesítés megjelenítése</string>
     <string name="alarm_notif_summary">Visszaszámlálással a következő ismétlésig. Ki: csak hang, bemondás és rezgés.</string>
     <string name="quiet_title">Éjszakai csend</string>
@@ -226,6 +228,10 @@
         <item>Beállítások → Akkumulátor → Akkumulátor-optimalizálás: állítsd az Akku Health Alarmot „Nincs optimalizálás” értékre.</item>
         <item>Beállítások → Akkumulátor → kapcsold ki a speciális optimalizálást.</item>
         <item>Zárold az alkalmazást a legutóbbi alkalmazások nézetben.</item>
+    </string-array>
+    <string-array name="vendor_steps_motorola">
+        <item>Ha a telefonon van Motorola „Background app management” lista: kapcsold be ott az Akku Health Alarmot. A beállítások keresője találja meg leggyorsabban.</item>
+        <item>Ha lehet, zárold az alkalmazást a legutóbbi alkalmazások nézetben.</item>
     </string-array>
     <string-array name="vendor_steps_other">
         <item>Ha van „Automatikus indítás” beállítás: engedélyezd az Akku Health Alarm számára.</item>

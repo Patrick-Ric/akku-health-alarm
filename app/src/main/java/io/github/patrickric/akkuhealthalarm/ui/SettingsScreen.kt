@@ -57,6 +57,7 @@ import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.produceState
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
@@ -279,6 +280,14 @@ private fun ToneCard(settings: AlarmSettings, update: Update, onPreview: (AlarmS
         }
         Spacer(Modifier.height(8.dp))
         SwitchRow(stringResource(R.string.vibration_title), settings.vibrate, { on -> update { it.copy(vibrate = on) } })
+        val volumes = rememberStreamVolumes()
+        SwitchRow(
+            stringResource(R.string.alarm_volume_title),
+            // "Also when muted" always uses the alarm volume, so it counts as on then.
+            settings.alarmVolume || settings.loudWhenSilent,
+            { on -> update { it.copy(alarmVolume = on, loudWhenSilent = if (on) it.loudWhenSilent else false) } },
+            summary = stringResource(R.string.alarm_volume_summary, volumes[0], volumes[1], volumes[2], volumes[3]),
+        )
         SwitchRow(
             stringResource(R.string.loud_title),
             settings.loudWhenSilent,
@@ -292,6 +301,25 @@ private fun ToneCard(settings: AlarmSettings, update: Update, onPreview: (AlarmS
             summary = stringResource(R.string.alarm_notif_summary),
         )
     }
+}
+
+/**
+ * Alarm volume and notification volume as they are now (each value and its maximum), read every second
+ * so a change with the volume keys shows at once.
+ */
+@Composable
+private fun rememberStreamVolumes(): List<Int> {
+    val context = LocalContext.current
+    val audio = remember { context.getSystemService(android.content.Context.AUDIO_SERVICE) as android.media.AudioManager }
+    fun read() = listOf(android.media.AudioManager.STREAM_ALARM, android.media.AudioManager.STREAM_NOTIFICATION)
+        .flatMap { listOf(audio.getStreamVolume(it), audio.getStreamMaxVolume(it)) }
+    val volumes by produceState(read()) {
+        while (true) {
+            value = read()
+            kotlinx.coroutines.delay(1000)
+        }
+    }
+    return volumes
 }
 
 @Composable

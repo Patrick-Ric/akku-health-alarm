@@ -53,7 +53,9 @@
     <string name="tone_none_selected">Ääntä ei ole valittu</string>
     <string name="vibration_title">Värinä</string>
     <string name="loud_title">Myös äänettömällä</string>
-    <string name="loud_summary">Käyttää herätyksen äänenvoimakkuutta</string>
+    <string name="loud_summary">Soi myös äänettömällä tai värinällä</string>
+    <string name="alarm_volume_title">Herätyksen äänenvoimakkuus</string>
+    <string name="alarm_volume_summary">Nyt %1$d/%2$d ilmoitusten äänenvoimakkuuden sijaan (%3$d/%4$d)</string>
     <string name="alarm_notif_title">Näytä ilmoitus</string>
     <string name="alarm_notif_summary">Lähtölaskennalla seuraavaan toistoon. Pois: vain ääni, puheilmoitus ja värinä.</string>
     <string name="quiet_title">Yörauha</string>
@@ -226,6 +228,10 @@
         <item>Asetukset → Akku → Akun optimointi: aseta Akku Health Alarm tilaan ”Älä optimoi”.</item>
         <item>Asetukset → Akku → poista edistynyt optimointi käytöstä.</item>
         <item>Lukitse sovellus viimeisimpien sovellusten näkymässä.</item>
+    </string-array>
+    <string-array name="vendor_steps_motorola">
+        <item>Jos puhelimessa on Motorolan luettelo ”Background app management”: kytke Akku Health Alarm siellä päälle. Asetusten haku löytää sen nopeimmin.</item>
+        <item>Lukitse sovellus mahdollisuuksien mukaan viimeisimpien sovellusten näkymässä.</item>
     </string-array>
     <string-array name="vendor_steps_other">
         <item>Jos asetus ”Automaattinen käynnistys” on olemassa: salli se Akku Health Alarmille.</item>

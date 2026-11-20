@@ -93,15 +93,17 @@ class AlarmPlayer(context: Context) {
             }
         }
         if (steps.isEmpty()) return Delivery.SILENT_BY_SETTINGS
+        // Alarm volume: switched on, or needed anyway to sound on a muted phone.
+        val alarmStream = s.alarmVolume || s.loudWhenSilent
         val attrs = AudioAttributes.Builder()
-            .setUsage(if (s.loudWhenSilent) AudioAttributes.USAGE_ALARM else AudioAttributes.USAGE_NOTIFICATION)
+            .setUsage(if (alarmStream) AudioAttributes.USAGE_ALARM else AudioAttributes.USAGE_NOTIFICATION)
             .setContentType(AudioAttributes.CONTENT_TYPE_SONIFICATION)
             .build()
         val id = ++session
         if (steps.any { it is Step.Speak }) prepareTts()
         acquireWakeLock()
-        val focus = requestFocus(attrs, s.loudWhenSilent)
-        if (onDiag != null) diag = DiagRun(snapshot(s.loudWhenSilent, focus), onDiag)
+        val focus = requestFocus(attrs, alarmStream)
+        if (onDiag != null) diag = DiagRun(snapshot(alarmStream, focus), onDiag)
         runSteps(id, steps, attrs)
         return Delivery.SOUND
     }

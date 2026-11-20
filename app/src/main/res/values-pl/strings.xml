@@ -53,7 +53,9 @@
     <string name="tone_none_selected">Nie wybrano dźwięku</string>
     <string name="vibration_title">Wibracje</string>
     <string name="loud_title">Także przy wyciszeniu</string>
-    <string name="loud_summary">Używa głośności alarmu</string>
+    <string name="loud_summary">Dzwoni także przy wyciszeniu lub wibracjach</string>
+    <string name="alarm_volume_title">Głośność alarmu</string>
+    <string name="alarm_volume_summary">Teraz %1$d z %2$d zamiast głośności powiadomień (%3$d z %4$d)</string>
     <string name="alarm_notif_title">Pokaż powiadomienie</string>
     <string name="alarm_notif_summary">Z odliczaniem do następnego powtórzenia. Wyłączone: tylko dźwięk, komunikat głosowy i wibracja.</string>
     <string name="quiet_title">Cisza nocna</string>
@@ -230,6 +232,10 @@
         <item>Ustawienia → Bateria → Optymalizacja baterii: ustaw Akku Health Alarm na „Nie optymalizuj”.</item>
         <item>Ustawienia → Bateria → wyłącz zaawansowaną optymalizację.</item>
         <item>Zablokuj aplikację w widoku ostatnich aplikacji.</item>
+    </string-array>
+    <string-array name="vendor_steps_motorola">
+        <item>Jeśli telefon ma listę Motoroli „Background app management”: włącz tam Akku Health Alarm. Najszybciej znajdzie ją wyszukiwarka w ustawieniach.</item>
+        <item>Jeśli to możliwe, zablokuj aplikację w widoku ostatnich aplikacji.</item>
     </string-array>
     <string-array name="vendor_steps_other">
         <item>Jeśli jest ustawienie „Autostart”: zezwól na nie dla Akku Health Alarm.</item>

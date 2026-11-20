@@ -53,7 +53,9 @@
     <string name="tone_none_selected">Niciun sunet ales</string>
     <string name="vibration_title">Vibrații</string>
     <string name="loud_title">Și în modul silențios</string>
-    <string name="loud_summary">Folosește volumul alarmei</string>
+    <string name="loud_summary">Sună și în modul silențios sau pe vibrații</string>
+    <string name="alarm_volume_title">Volumul alarmei</string>
+    <string name="alarm_volume_summary">Acum %1$d din %2$d în loc de volumul notificărilor (%3$d din %4$d)</string>
     <string name="alarm_notif_title">Afișează notificarea</string>
     <string name="alarm_notif_summary">Cu numărătoare inversă până la următoarea repetare. Oprit: doar sunet, anunț și vibrație.</string>
     <string name="quiet_title">Liniște de noapte</string>
@@ -228,6 +230,10 @@
         <item>Setări → Baterie → Optimizarea bateriei: setează Akku Health Alarm pe „Nu optimiza”.</item>
         <item>Setări → Baterie → dezactivează optimizarea avansată.</item>
         <item>Blochează aplicația în vizualizarea aplicațiilor recente.</item>
+    </string-array>
+    <string-array name="vendor_steps_motorola">
+        <item>Dacă telefonul are lista Motorola „Background app management”: activează acolo Akku Health Alarm. Căutarea din setări o găsește cel mai repede.</item>
+        <item>Dacă se poate, blochează aplicația în vizualizarea aplicațiilor recente.</item>
     </string-array>
     <string-array name="vendor_steps_other">
         <item>Dacă există setarea „Pornire automată”: permite-o pentru Akku Health Alarm.</item>

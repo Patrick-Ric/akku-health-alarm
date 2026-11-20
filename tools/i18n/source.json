@@ -321,7 +321,19 @@ null,
 "s",
 "loud_summary",
 null,
-"Uses the alarm volume"
+"Sounds even when muted or on vibrate"
+],
+[
+"s",
+"alarm_volume_title",
+null,
+"Alarm volume"
+],
+[
+"s",
+"alarm_volume_summary",
+null,
+"Now %1$d of %2$d instead of the notification volume (%3$d of %4$d)"
 ],
 [
 "s",
@@ -1264,6 +1276,18 @@ null,
 "vendor_steps_oneplus",
 null,
 "Lock the app in the recent apps view."
+],
+[
+"a",
+"vendor_steps_motorola",
+null,
+"If your phone has Motorola's list \"Background app management\": turn on Akku Health Alarm there. The search in the settings finds it fastest."
+],
+[
+"a",
+"vendor_steps_motorola",
+null,
+"If possible, lock the app in the recent apps view."
 ],
 [
 "a",

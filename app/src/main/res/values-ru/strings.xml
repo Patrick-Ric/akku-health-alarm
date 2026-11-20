@@ -53,7 +53,9 @@
     <string name="tone_none_selected">Звук не выбран</string>
     <string name="vibration_title">Вибрация</string>
     <string name="loud_title">Даже в беззвучном режиме</string>
-    <string name="loud_summary">Использует громкость будильника</string>
+    <string name="loud_summary">Звучит и в беззвучном режиме или при вибрации</string>
+    <string name="alarm_volume_title">Громкость будильника</string>
+    <string name="alarm_volume_summary">Сейчас %1$d из %2$d вместо громкости уведомлений (%3$d из %4$d)</string>
     <string name="alarm_notif_title">Показывать уведомление</string>
     <string name="alarm_notif_summary">С обратным отсчётом до следующего повтора. Выкл.: только звук, голосовое сообщение и вибрация.</string>
     <string name="quiet_title">Ночной покой</string>
@@ -230,6 +232,10 @@
         <item>Настройки → Батарея → Оптимизация батареи: установите для Akku Health Alarm «Не оптимизировать».</item>
         <item>Настройки → Батарея → отключите расширенную оптимизацию.</item>
         <item>Заблокируйте приложение в списке недавних приложений.</item>
+    </string-array>
+    <string-array name="vendor_steps_motorola">
+        <item>Если на телефоне есть список Motorola «Background app management»: включите там Akku Health Alarm. Быстрее всего его найдёт поиск в настройках.</item>
+        <item>По возможности заблокируйте приложение в списке недавних приложений.</item>
     </string-array>
     <string-array name="vendor_steps_other">
         <item>Если есть настройка «Автозапуск»: разрешите её для Akku Health Alarm.</item>

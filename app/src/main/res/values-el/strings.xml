@@ -53,7 +53,9 @@
     <string name="tone_none_selected">Δεν επιλέχθηκε ήχος</string>
     <string name="vibration_title">Δόνηση</string>
     <string name="loud_title">Και σε σίγαση</string>
-    <string name="loud_summary">Χρησιμοποιεί την ένταση του ξυπνητηριού</string>
+    <string name="loud_summary">Ηχεί και σε σίγαση ή δόνηση</string>
+    <string name="alarm_volume_title">Ένταση ξυπνητηριού</string>
+    <string name="alarm_volume_summary">Τώρα %1$d από %2$d αντί της έντασης ειδοποιήσεων (%3$d από %4$d)</string>
     <string name="alarm_notif_title">Εμφάνιση ειδοποίησης</string>
     <string name="alarm_notif_summary">Με αντίστροφη μέτρηση ως την επόμενη επανάληψη. Ανενεργό: μόνο ήχος, φωνητικό μήνυμα και δόνηση.</string>
     <string name="quiet_title">Νυχτερινή ησυχία</string>
@@ -226,6 +228,10 @@
         <item>Ρυθμίσεις → Μπαταρία → Βελτιστοποίηση μπαταρίας: όρισε το Akku Health Alarm σε «Χωρίς βελτιστοποίηση».</item>
         <item>Ρυθμίσεις → Μπαταρία → απενεργοποίησε την προηγμένη βελτιστοποίηση.</item>
         <item>Κλείδωσε την εφαρμογή στην προβολή πρόσφατων εφαρμογών.</item>
+    </string-array>
+    <string-array name="vendor_steps_motorola">
+        <item>Αν το τηλέφωνο έχει τη λίστα της Motorola «Background app management»: ενεργοποίησε εκεί το Akku Health Alarm. Η αναζήτηση στις ρυθμίσεις τη βρίσκει πιο γρήγορα.</item>
+        <item>Αν γίνεται, κλείδωσε την εφαρμογή στην προβολή πρόσφατων εφαρμογών.</item>
     </string-array>
     <string-array name="vendor_steps_other">
         <item>Αν υπάρχει ρύθμιση «Αυτόματη εκκίνηση»: επίτρεψέ την για το Akku Health Alarm.</item>

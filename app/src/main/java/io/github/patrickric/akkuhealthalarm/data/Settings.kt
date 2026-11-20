@@ -50,6 +50,9 @@ data class AlarmSettings(
     val toneMode: ToneMode = ToneMode.BUILTIN,
     val toneUri: String? = null,
     val vibrate: Boolean = true,
+    /** Sound with the alarm volume instead of the notification volume (many keep that one low). */
+    val alarmVolume: Boolean = true,
+    /** Sound even when the phone is muted or on vibrate; uses the alarm volume as well. */
     val loudWhenSilent: Boolean = false,
     /** Show a notification for each alarm; off = only tone, voice and vibration. */
     val alarmNotification: Boolean = true,
@@ -144,6 +147,7 @@ class SettingsRepository(private val context: Context) {
         val TONE_URI = stringPreferencesKey("tone_uri")
         val VIBRATE = booleanPreferencesKey("vibrate")
         val LOUD_WHEN_SILENT = booleanPreferencesKey("loud_when_silent")
+        val ALARM_VOLUME = booleanPreferencesKey("alarm_volume")
         val ALARM_NOTIFICATION = booleanPreferencesKey("alarm_notification")
         val QUIET_ENABLED = booleanPreferencesKey("quiet_enabled")
         val QUIET_START = intPreferencesKey("quiet_start")
@@ -187,6 +191,7 @@ class SettingsRepository(private val context: Context) {
             toneUri = p[Keys.TONE_URI],
             vibrate = p[Keys.VIBRATE] ?: d.vibrate,
             loudWhenSilent = p[Keys.LOUD_WHEN_SILENT] ?: d.loudWhenSilent,
+            alarmVolume = p[Keys.ALARM_VOLUME] ?: d.alarmVolume,
             alarmNotification = p[Keys.ALARM_NOTIFICATION] ?: d.alarmNotification,
             quietEnabled = p[Keys.QUIET_ENABLED] ?: d.quietEnabled,
             quietStart = p[Keys.QUIET_START] ?: d.quietStart,
@@ -223,6 +228,7 @@ class SettingsRepository(private val context: Context) {
         if (s.toneUri != null) p[Keys.TONE_URI] = s.toneUri else p.remove(Keys.TONE_URI)
         p[Keys.VIBRATE] = s.vibrate
         p[Keys.LOUD_WHEN_SILENT] = s.loudWhenSilent
+        p[Keys.ALARM_VOLUME] = s.alarmVolume
         p[Keys.ALARM_NOTIFICATION] = s.alarmNotification
         p[Keys.QUIET_ENABLED] = s.quietEnabled
         p[Keys.QUIET_START] = s.quietStart

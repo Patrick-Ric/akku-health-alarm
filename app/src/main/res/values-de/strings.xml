@@ -53,7 +53,9 @@
     <string name="tone_none_selected">Kein Ton gewählt</string>
     <string name="vibration_title">Vibration</string>
     <string name="loud_title">Auch wenn stumm</string>
-    <string name="loud_summary">Nutzt die Wecker-Lautstärke</string>
+    <string name="loud_summary">Klingt auch bei stumm oder Vibration</string>
+    <string name="alarm_volume_title">Wecker-Lautstärke</string>
+    <string name="alarm_volume_summary">Jetzt %1$d von %2$d statt der Benachrichtigungs-Lautstärke (%3$d von %4$d)</string>
     <string name="alarm_notif_title">Benachrichtigung anzeigen</string>
     <string name="alarm_notif_summary">Mit Countdown bis zur nächsten Wiederholung. Aus: nur Ton, Ansage und Vibration.</string>
     <string name="quiet_title">Nachtruhe</string>
@@ -226,6 +228,10 @@
         <item>Einstellungen → Akku → Akku-Optimierung: Akku Health Alarm auf „Nicht optimieren“.</item>
         <item>Einstellungen → Akku → Erweiterte Optimierung ausschalten.</item>
         <item>In der Übersicht der letzten Apps die App sperren (Schloss).</item>
+    </string-array>
+    <string-array name="vendor_steps_motorola">
+        <item>Falls es auf dem Handy die Motorola-Liste „Background app management“ gibt: dort Akku Health Alarm einschalten. Am schnellsten über die Suche in den Einstellungen.</item>
+        <item>Wenn möglich, die App in der Übersicht der letzten Apps sperren.</item>
     </string-array>
     <string-array name="vendor_steps_other">
         <item>Falls es die Einstellung „Autostart“ gibt: für Akku Health Alarm erlauben.</item>

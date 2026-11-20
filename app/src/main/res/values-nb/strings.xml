@@ -53,7 +53,9 @@
     <string name="tone_none_selected">Ingen lyd valgt</string>
     <string name="vibration_title">Vibrer</string>
     <string name="loud_title">Også ved lydløs</string>
-    <string name="loud_summary">Bruker alarmvolumet</string>
+    <string name="loud_summary">Lyder også ved lydløs eller vibrering</string>
+    <string name="alarm_volume_title">Alarmvolum</string>
+    <string name="alarm_volume_summary">Nå %1$d av %2$d i stedet for varselvolumet (%3$d av %4$d)</string>
     <string name="alarm_notif_title">Vis varsel</string>
     <string name="alarm_notif_summary">Med nedtelling til neste gjentakelse. Av: bare lyd, talemelding og vibrasjon.</string>
     <string name="quiet_title">Nattero</string>
@@ -226,6 +228,10 @@
         <item>Innstillinger → Batteri → Batterioptimalisering: sett Akku Health Alarm til «Ikke optimaliser».</item>
         <item>Innstillinger → Batteri → slå av avansert optimalisering.</item>
         <item>Lås appen i oversikten over nylige apper.</item>
+    </string-array>
+    <string-array name="vendor_steps_motorola">
+        <item>Hvis telefonen har Motorolas liste «Background app management»: slå på Akku Health Alarm der. Søket i innstillingene finner den raskest.</item>
+        <item>Lås om mulig appen i oversikten over nylige apper.</item>
     </string-array>
     <string-array name="vendor_steps_other">
         <item>Hvis det finnes en innstilling «Autostart»: tillat den for Akku Health Alarm.</item>

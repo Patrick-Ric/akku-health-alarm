@@ -19,6 +19,8 @@ enum class Vendor(
     val steps: Int,
     /** Settings pages that differ between models and versions; tried one after the other. */
     val pages: List<Pair<String, String>>,
+    /** No known page to open directly: open the settings app, whose search finds the page by name. */
+    val viaSettingsSearch: Boolean = false,
 ) {
     XIAOMI(
         "Xiaomi", "xiaomi", R.array.vendor_steps_xiaomi,
@@ -58,6 +60,11 @@ enum class Vendor(
         "OnePlus", "oneplus", R.array.vendor_steps_oneplus,
         listOf("com.oneplus.security" to "com.oneplus.security.chainlaunch.view.ChainLaunchAppListActivity"),
     ),
+    /**
+     * Newer Motorola phones (seen on a moto g15, Android 15) have their own list "Background app management";
+     * apps not switched on there are stopped in the background. Older ones (moto g30, g14) do not have it.
+     */
+    MOTOROLA("Motorola", "motorola", R.array.vendor_steps_motorola, emptyList(), viaSettingsSearch = true),
     OTHER("", "", R.array.vendor_steps_other, emptyList()),
     ;
 
@@ -76,6 +83,12 @@ enum class Vendor(
             } catch (e: Exception) {
                 // Not on this model or version; try the next one.
             }
+        }
+        if (viaSettingsSearch) {
+            val opened = runCatching {
+                context.startActivity(Intent(Settings.ACTION_SETTINGS).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK))
+            }.isSuccess
+            if (opened) return true
         }
         runCatching {
             context.startActivity(
@@ -96,6 +109,7 @@ enum class Vendor(
                 listOf("oppo", "realme").any { it in maker } -> OPPO
                 listOf("vivo", "iqoo").any { it in maker } -> VIVO
                 "oneplus" in maker -> ONEPLUS
+                "motorola" in maker -> MOTOROLA
                 else -> OTHER
             }
         }

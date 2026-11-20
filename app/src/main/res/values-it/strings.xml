@@ -53,7 +53,9 @@
     <string name="tone_none_selected">Nessun suono scelto</string>
     <string name="vibration_title">Vibrazione</string>
     <string name="loud_title">Anche in silenzioso</string>
-    <string name="loud_summary">Usa il volume della sveglia</string>
+    <string name="loud_summary">Suona anche in silenzioso o in vibrazione</string>
+    <string name="alarm_volume_title">Volume della sveglia</string>
+    <string name="alarm_volume_summary">Ora %1$d su %2$d invece del volume delle notifiche (%3$d su %4$d)</string>
     <string name="alarm_notif_title">Mostra notifica</string>
     <string name="alarm_notif_summary">Con il conto alla rovescia fino alla prossima ripetizione. Disattivato: solo suono, annuncio e vibrazione.</string>
     <string name="quiet_title">Riposo notturno</string>
@@ -228,6 +230,10 @@
         <item>Impostazioni → Batteria → Ottimizzazione batteria: imposta Akku Health Alarm su «Non ottimizzare».</item>
         <item>Impostazioni → Batteria → disattiva l\'ottimizzazione avanzata.</item>
         <item>Blocca l\'app nella vista delle app recenti.</item>
+    </string-array>
+    <string-array name="vendor_steps_motorola">
+        <item>Se il telefono ha la lista Motorola «Background app management»: attiva lì Akku Health Alarm. La ricerca nelle impostazioni la trova prima.</item>
+        <item>Se possibile, blocca l\'app nella vista delle app recenti.</item>
     </string-array>
     <string-array name="vendor_steps_other">
         <item>Se esiste l\'impostazione «Avvio automatico»: consentila per Akku Health Alarm.</item>

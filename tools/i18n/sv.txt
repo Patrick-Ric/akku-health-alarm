@@ -51,213 +51,217 @@
 50|Inget ljud valt
 51|Vibrera
 52|Även vid ljudlöst
-53|Använder larmvolymen
-54|Visa avisering
-55|Med nedräkning till nästa upprepning. Av: bara ljud, röstmeddelande och vibration.
-56|Nattro
-57|Under denna tid bara en tyst avisering
-58|Från %s
-59|Till %s
-60|Temperaturlarm
-61|Varnar när batteriet blir för varmt eller för kallt
-62|Bara fara
-63|Normal
-64|Strikt
-65|Eget
-66|%1$d–%2$d °C
-67|Rapportera kyla bara vid laddning
-68|Laddning i kyla skadar batteriet, användning knappt.
-69|Snabbladdning når ofta 35–40 °C, så den här nivån kan larma ofta.
-70|Avisering
-71|Visar alltid laddnivå, status och tiden till larmet. Visa även:
-72|Ström (mA)
-73|Temperatur
-74|Spänning
-75|Procent som ikon i statusfältet
-76|Om
-77|Version %1$s · GPL-3.0 · Fungerar helt offline
-78|Batteristatus
-79|Batterilarm
-80|Larm vid %d %%
-81|Larm av
-82|om cirka %s
-83|upprepas var %s
-84|en gång
-85|Batteriet laddat: %d %%
-86|Koppla bort laddaren
-87|Batteriet lågt: %d %%
-88|Anslut laddaren
-89|Batteriet varmt: %s
-90|Låt telefonen svalna
-91|Batteriet kallt: %s
-92|Ladda inte i kyla
-93|Batteriet laddat.
-94|Batteriet laddat, %d procent.
-95|Batteriet lågt.
-96|Batteriet lågt, %d procent.
-97|Batteriet varmt.
-98|Batteriet kallt.
-99|Lista
-100|Diagram
-101|%d post
-102|%d poster
-103|Inga poster ännu. Varje ändring av laddnivån visas här.
-104|Laddare
-105|USB
-106|Trådlöst
-107|Batteri
-108|Senaste 24 timmarna
-109|Inga data ännu. Inspelningen pågår.
-110|nu
-111|Händelser
-112|Inga händelser ännu.
-113|Laddare ansluten
-114|Laddare bortkopplad
-115|Larm: batteriet laddat
-116|Larm: batteriet lågt
-117|Larm: batteriet varmt
-118|Larm: batteriet kallt
-119|Skick enligt Android
-120|Bra
-121|Överhettat
-122|För kallt
-123|Överspänning
-124|Defekt
-125|Okänt fel
-126|Inte rapporterat
-127|Teknik
-128|Laddningsräknare
-129|Dag
-130|Vecka
-131|Månad
-132|Allt
-133|Temperatur
-134|Zooma med två fingrar, dubbeltryck för att återställa.
-135|%1$d %% om cirka %2$s
-136|%d min
-137|%d tim
-138|%1$d tim %2$d min
-139|Historik
-140|Hur länge historiken sparas. Äldre poster raderas.
-141|1 dag
-142|1 vecka
-143|1 månad
-144|1 år
-145|Alltid
-146|Laddas ur
-147|Visa spänning och ström
-148|Lyssna
-149|Batteriets skick
-150|Inte mätt ännu
-151|%1$s av %2$s
-152|mätt från %1$d laddning (totalt %2$d %%)
-153|mätt från %1$d laddningar (totalt %2$d %%)
-154|Ladda minst 15 % i ett svep, så mäts kapaciteten.
-155|Android rapporterar: %s
-156|± är mätosäkerheten. Ju fler och längre laddningar, desto mindre blir den.
-157|Av %d mätningar räknas de högsta och lägsta 20 %% inte med.
-158|räknas inte
-159|Märkkapacitet
-160|läst från telefonen
-161|angiven av dig
-162|Okänd. Ange den för att se skicket i procent.
-163|Ändra
-164|I mAh, se telefonens datablad
-165|Automatisk
-166|Laddningscykler
-167|%1$s fulla cykler sedan inspelningen började
-168|Laddningshastighet
-169|Ø %1$s · %2$s %%/tim
-170|Senaste laddningar
-171|Ingen laddning sparad ännu. Varje laddning från anslutning till bortkoppling visas här.
-172|%s cykler
-173|Kapacitet över tid
-174|Aktuella värden
-175|Tips
-176|Batterikapaciteten bara %d %%
-177|Batteriet rymmer bara cirka %1$s av %2$s. Ett byte kan vara värt det.
-178|Laddningar
-179|Tryck på ett inramat värde för att se dess kurva.
-180|Den här telefonen räknar ut sin laddningsräknare bara från procenten, så räknaren kan inte visa slitage. Appen mäter därför laddströmmen själv; det är mindre exakt.
-181|fullt
-182|Appen inte aktiv · %s
-183|Tillförlitlighet
-184|Klart
-185|Dessutom för %s:
-186|Allmänt:
-187|Öppna inställningar
-188|Den här sidan finns inte på din telefon. Appinformationen är öppen; följ stegen ovan.
-189|Mer hjälp för din telefon (länk att kopiera):
-190|Länk kopierad
-191|%s-telefoner behöver några fler inställningar.
-192|Visa
-193|Klart
-194|Tillåt autostart för Akku Health Alarm.
-195|Inställningar → Appar → Akku Health Alarm → Batterisparläge: ”Inga begränsningar”.
-196|I vyn för senaste appar, håll in appen och tryck på låset.
-197|Telefonhanteraren → Appstart: ställ in Akku Health Alarm på ”Hantera manuellt” och slå på alla tre reglagen.
-198|Äldre telefoner: Telefonhanteraren → ”Rensning vid låst skärm” eller ”Skyddade appar”: låt inte Akku Health Alarm stängas.
-199|I vyn för senaste appar, dra ned appen tills ett lås visas.
-200|Inställningar → Batteri → Gränser för bakgrundsanvändning → ”Appar som aldrig sover” → lägg till Akku Health Alarm.
-201|I vyn för senaste appar, tryck på appikonen och välj ”Lås den här appen”.
-202|Inställningar → Appar → Akku Health Alarm → Batteri: tillåt autostart och bakgrundsaktivitet.
-203|Stäng av ”Frys i bakgrunden” och ”Optimera avvikande appar”.
-204|Lås appen i vyn för senaste appar.
-205|i Manager → Apphanterare → Autostart: slå på Akku Health Alarm.
-206|Inställningar → Batteri → Hög strömförbrukning i bakgrunden: tillåt Akku Health Alarm.
-207|Lås appen i vyn för senaste appar.
-208|Inställningar → Batteri → Batterioptimering: ställ in Akku Health Alarm på ”Optimera inte”.
-209|Inställningar → Batteri → stäng av avancerad optimering.
-210|Lås appen i vyn för senaste appar.
-211|Om det finns en inställning ”Autostart”: tillåt den för Akku Health Alarm.
-212|Om möjligt, lås appen i vyn för senaste appar.
-213|med ljud
-214|tyst · nattro
-215|bara vibration · telefonen ljudlös
-216|tyst · telefonen ljudlös
-217|bara avisering · ljud och röst av
-218|ljudet misslyckades
-219|Första larm: %1$s
-220|Senaste upprepning %1$s: %2$s
-221|skärm på
-222|skärm av
-223|aviseringsvolym %1$d/%2$d
-224|alarmvolym %1$d/%2$d
-225|Stör ej på
-226|ljudfokus nekades
-227|spelades %1$s s
-228|stoppades tidigt: %1$s av %2$s s
-229|avbröts efter %1$s s
-230|uppspelningsfel %1$s
-231|uppspelningen tog inte slut
-232|inget spelades
-233|Språk
-234|Telefonens språk
-235|Utseende
-236|System
-237|Ljust
-238|Mörkt
-239|Allt är inställt
-240|Jag har gjort de här stegen
-241|Mindre
-242|Mer
-243|Standard
-244|Snabbval %d
-245|Ändra snabbval %d
-246|Använd aktuellt intervall
-247|Återställ
-248|Håll in en knapp för att ändra den
-249|Upprepa larm
-250|En gång
-251|%d s
-252|På batteri med skärmen av tillåter Android detta bara ungefär var 9:e minut.
-253|Nästa larm om %s
-254|till %s
-255|Laddning pågår
-256|sedan %s
-257|hittills cirka %s laddat
-258|%d %% till för en kapacitetsmätning. Den mäts när du kopplar bort.
-259|Tillräckligt för en mätning. Kapaciteten beräknas när du kopplar bort.
-260|ingen mätning: under 15 %
-261|ingen mätning: inspelningen avbröts
-262|ingen mätning: orimliga värden
+53|Låter även vid ljudlöst eller vibration
+54|Larmvolym
+55|Nu %1$d av %2$d i stället för aviseringsvolymen (%3$d av %4$d)
+56|Visa avisering
+57|Med nedräkning till nästa upprepning. Av: bara ljud, röstmeddelande och vibration.
+58|Nattro
+59|Under denna tid bara en tyst avisering
+60|Från %s
+61|Till %s
+62|Temperaturlarm
+63|Varnar när batteriet blir för varmt eller för kallt
+64|Bara fara
+65|Normal
+66|Strikt
+67|Eget
+68|%1$d–%2$d °C
+69|Rapportera kyla bara vid laddning
+70|Laddning i kyla skadar batteriet, användning knappt.
+71|Snabbladdning når ofta 35–40 °C, så den här nivån kan larma ofta.
+72|Avisering
+73|Visar alltid laddnivå, status och tiden till larmet. Visa även:
+74|Ström (mA)
+75|Temperatur
+76|Spänning
+77|Procent som ikon i statusfältet
+78|Om
+79|Version %1$s · GPL-3.0 · Fungerar helt offline
+80|Batteristatus
+81|Batterilarm
+82|Larm vid %d %%
+83|Larm av
+84|om cirka %s
+85|upprepas var %s
+86|en gång
+87|Batteriet laddat: %d %%
+88|Koppla bort laddaren
+89|Batteriet lågt: %d %%
+90|Anslut laddaren
+91|Batteriet varmt: %s
+92|Låt telefonen svalna
+93|Batteriet kallt: %s
+94|Ladda inte i kyla
+95|Batteriet laddat.
+96|Batteriet laddat, %d procent.
+97|Batteriet lågt.
+98|Batteriet lågt, %d procent.
+99|Batteriet varmt.
+100|Batteriet kallt.
+101|Lista
+102|Diagram
+103|%d post
+104|%d poster
+105|Inga poster ännu. Varje ändring av laddnivån visas här.
+106|Laddare
+107|USB
+108|Trådlöst
+109|Batteri
+110|Senaste 24 timmarna
+111|Inga data ännu. Inspelningen pågår.
+112|nu
+113|Händelser
+114|Inga händelser ännu.
+115|Laddare ansluten
+116|Laddare bortkopplad
+117|Larm: batteriet laddat
+118|Larm: batteriet lågt
+119|Larm: batteriet varmt
+120|Larm: batteriet kallt
+121|Skick enligt Android
+122|Bra
+123|Överhettat
+124|För kallt
+125|Överspänning
+126|Defekt
+127|Okänt fel
+128|Inte rapporterat
+129|Teknik
+130|Laddningsräknare
+131|Dag
+132|Vecka
+133|Månad
+134|Allt
+135|Temperatur
+136|Zooma med två fingrar, dubbeltryck för att återställa.
+137|%1$d %% om cirka %2$s
+138|%d min
+139|%d tim
+140|%1$d tim %2$d min
+141|Historik
+142|Hur länge historiken sparas. Äldre poster raderas.
+143|1 dag
+144|1 vecka
+145|1 månad
+146|1 år
+147|Alltid
+148|Laddas ur
+149|Visa spänning och ström
+150|Lyssna
+151|Batteriets skick
+152|Inte mätt ännu
+153|%1$s av %2$s
+154|mätt från %1$d laddning (totalt %2$d %%)
+155|mätt från %1$d laddningar (totalt %2$d %%)
+156|Ladda minst 15 % i ett svep, så mäts kapaciteten.
+157|Android rapporterar: %s
+158|± är mätosäkerheten. Ju fler och längre laddningar, desto mindre blir den.
+159|Av %d mätningar räknas de högsta och lägsta 20 %% inte med.
+160|räknas inte
+161|Märkkapacitet
+162|läst från telefonen
+163|angiven av dig
+164|Okänd. Ange den för att se skicket i procent.
+165|Ändra
+166|I mAh, se telefonens datablad
+167|Automatisk
+168|Laddningscykler
+169|%1$s fulla cykler sedan inspelningen började
+170|Laddningshastighet
+171|Ø %1$s · %2$s %%/tim
+172|Senaste laddningar
+173|Ingen laddning sparad ännu. Varje laddning från anslutning till bortkoppling visas här.
+174|%s cykler
+175|Kapacitet över tid
+176|Aktuella värden
+177|Tips
+178|Batterikapaciteten bara %d %%
+179|Batteriet rymmer bara cirka %1$s av %2$s. Ett byte kan vara värt det.
+180|Laddningar
+181|Tryck på ett inramat värde för att se dess kurva.
+182|Den här telefonen räknar ut sin laddningsräknare bara från procenten, så räknaren kan inte visa slitage. Appen mäter därför laddströmmen själv; det är mindre exakt.
+183|fullt
+184|Appen inte aktiv · %s
+185|Tillförlitlighet
+186|Klart
+187|Dessutom för %s:
+188|Allmänt:
+189|Öppna inställningar
+190|Den här sidan finns inte på din telefon. Appinformationen är öppen; följ stegen ovan.
+191|Mer hjälp för din telefon (länk att kopiera):
+192|Länk kopierad
+193|%s-telefoner behöver några fler inställningar.
+194|Visa
+195|Klart
+196|Tillåt autostart för Akku Health Alarm.
+197|Inställningar → Appar → Akku Health Alarm → Batterisparläge: ”Inga begränsningar”.
+198|I vyn för senaste appar, håll in appen och tryck på låset.
+199|Telefonhanteraren → Appstart: ställ in Akku Health Alarm på ”Hantera manuellt” och slå på alla tre reglagen.
+200|Äldre telefoner: Telefonhanteraren → ”Rensning vid låst skärm” eller ”Skyddade appar”: låt inte Akku Health Alarm stängas.
+201|I vyn för senaste appar, dra ned appen tills ett lås visas.
+202|Inställningar → Batteri → Gränser för bakgrundsanvändning → ”Appar som aldrig sover” → lägg till Akku Health Alarm.
+203|I vyn för senaste appar, tryck på appikonen och välj ”Lås den här appen”.
+204|Inställningar → Appar → Akku Health Alarm → Batteri: tillåt autostart och bakgrundsaktivitet.
+205|Stäng av ”Frys i bakgrunden” och ”Optimera avvikande appar”.
+206|Lås appen i vyn för senaste appar.
+207|i Manager → Apphanterare → Autostart: slå på Akku Health Alarm.
+208|Inställningar → Batteri → Hög strömförbrukning i bakgrunden: tillåt Akku Health Alarm.
+209|Lås appen i vyn för senaste appar.
+210|Inställningar → Batteri → Batterioptimering: ställ in Akku Health Alarm på ”Optimera inte”.
+211|Inställningar → Batteri → stäng av avancerad optimering.
+212|Lås appen i vyn för senaste appar.
+213|Om telefonen har Motorolas lista ”Background app management”: slå på Akku Health Alarm där. Sökfunktionen i inställningarna hittar den snabbast.
+214|Om möjligt, lås appen i vyn för senaste appar.
+215|Om det finns en inställning ”Autostart”: tillåt den för Akku Health Alarm.
+216|Om möjligt, lås appen i vyn för senaste appar.
+217|med ljud
+218|tyst · nattro
+219|bara vibration · telefonen ljudlös
+220|tyst · telefonen ljudlös
+221|bara avisering · ljud och röst av
+222|ljudet misslyckades
+223|Första larm: %1$s
+224|Senaste upprepning %1$s: %2$s
+225|skärm på
+226|skärm av
+227|aviseringsvolym %1$d/%2$d
+228|alarmvolym %1$d/%2$d
+229|Stör ej på
+230|ljudfokus nekades
+231|spelades %1$s s
+232|stoppades tidigt: %1$s av %2$s s
+233|avbröts efter %1$s s
+234|uppspelningsfel %1$s
+235|uppspelningen tog inte slut
+236|inget spelades
+237|Språk
+238|Telefonens språk
+239|Utseende
+240|System
+241|Ljust
+242|Mörkt
+243|Allt är inställt
+244|Jag har gjort de här stegen
+245|Mindre
+246|Mer
+247|Standard
+248|Snabbval %d
+249|Ändra snabbval %d
+250|Använd aktuellt intervall
+251|Återställ
+252|Håll in en knapp för att ändra den
+253|Upprepa larm
+254|En gång
+255|%d s
+256|På batteri med skärmen av tillåter Android detta bara ungefär var 9:e minut.
+257|Nästa larm om %s
+258|till %s
+259|Laddning pågår
+260|sedan %s
+261|hittills cirka %s laddat
+262|%d %% till för en kapacitetsmätning. Den mäts när du kopplar bort.
+263|Tillräckligt för en mätning. Kapaciteten beräknas när du kopplar bort.
+264|ingen mätning: under 15 %
+265|ingen mätning: inspelningen avbröts
+266|ingen mätning: orimliga värden
